@@ -1,0 +1,18 @@
+.services{
+    position: relative;
+    &__zIn{
+    }
+    &__imgW{
+      z-index: 1;
+      height: 300vh;
+      // width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &_imgBack{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+  }
+}

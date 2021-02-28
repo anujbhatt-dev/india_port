@@ -1,0 +1,120 @@
+.about{
+    position: relative;
+    background: $color-india-yellow;
+    &__zIn{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20rem 1rem;
+      padding-top: 22rem;
+      &_blue{
+        color: $color-india-blue;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+      &_brand{
+        color: $color-white;
+        font-size: 14rem;
+        line-height: .9;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-left: -6rem;
+        margin-bottom: 15rem;
+      }
+      &_head{
+         font-size: 3rem;
+         color: $color-white;
+         font-weight: 100;
+         margin: 5rem 0;
+         &_black{
+           color: $color-black;
+         }
+         & strong{
+          font-weight: 400;
+         }
+      }
+      &_flex{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        &-card{
+          height: 30rem;
+          width: 30rem;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-direction: column;
+          text-align:center;
+          text-transform: uppercase;
+          &--side{
+            background: $color-white;
+            margin: 5rem;
+            padding: 3rem;
+            border: 1px solid rgba($color-grey-light,.8);
+          }
+          &--mid{
+            position: relative;
+            padding: 3rem;
+            background: transparent;
+            background-image: radial-gradient(ellipse at center,rgba($color-white,.8) 30%,transparent 100%);
+          }
+          & svg{
+            margin-bottom: 2rem;
+          }
+          & div{
+            font-size: 2.5rem;
+          }
+        }
+        margin-bottom: 5rem;
+      }
+    }
+    &__imgW{
+      z-index: -1;
+      height: 100%;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &_imgBack{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        // transition: all .1s;
+      }
+  }
+
+
+  &__3{
+    padding: 5rem;
+    &_row{
+
+      display: flex;
+      // justify-content: space-between;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      &-box{
+        flex-basis: 25%;
+        margin-top: 5rem;
+        text-transform: uppercase;
+        // flex-grow: 1;
+        &--head{
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+
+        }
+        & ul{
+          & li{
+            font-size: 1.2rem;
+            color: $color-black;
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

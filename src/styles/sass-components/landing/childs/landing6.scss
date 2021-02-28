@@ -1,0 +1,58 @@
+&6{
+  &__heading{
+    font-size: 5.6rem;
+    color: $color-india-blue;
+    margin: 5rem;
+    text-align: center;
+    font-weight: 300;
+  }
+  &__1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img{
+      margin: 5rem;
+    }
+  }
+  &__2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &_img1{
+      // margin-top: 5rem;
+      // margin-right: 3vw;
+      // margin-left: 15vw;
+      // margin-bottom: 5rem;
+      // width:82vw;
+      margin: 5rem;
+      width: 75vw;
+    }
+    &_img2{
+      position: absolute;
+      right: 0;
+      width: 60vw;
+    }
+    &_text{
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 15vw;
+      color: $color-white;
+      text-align: center;
+      &-large{
+         font-size: 14rem;
+         // letter-spacing: 2px;
+      }
+      &-medium{
+         font-size:3.6rem;
+         margin-bottom: 5rem;
+         letter-spacing: 20px;
+         margin-left: 3rem;
+      }
+      &-small{
+         font-size: 2.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin: 0 25rem;
+  // width: 80vw;
+  top: 0;
+  z-index: 1000;
+  &__brandLogo{
+
+  }
+
+  &__items{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.2rem;
+    &_item{
+       margin: 1rem 1rem;
+       padding:1rem 2rem;
+       text-decoration: none;
+       color: black;
+       border-radius: 14px;
+    }
+  }
+}

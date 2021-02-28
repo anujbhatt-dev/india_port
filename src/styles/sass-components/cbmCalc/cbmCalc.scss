@@ -1,0 +1,12 @@
+.cbmCalc{
+  background-image: url(../../../assets/images/cbmBack.svg);
+  background-repeat: repeat-y;
+  padding: 5rem 0;
+  &__box{
+    &_big{
+      height: 20rem;
+      bottom: -10%;
+      left: 10%;
+    }
+  }
+}

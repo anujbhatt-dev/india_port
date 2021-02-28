@@ -1,0 +1,55 @@
+&7{
+  background: rgba($color-grey-dark-2,.2);
+  &__heading{
+    font-size: 5.6rem;
+    color: $color-grey-dark-3;
+    margin: 5rem;
+    padding-top: 5rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  // height: 80vh;
+  &__items{
+    animation: marquee 30s linear infinite;
+    animation-fill-mode: both;
+    padding:  5rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    width: 200vw;
+
+    &_card{
+      transition : all .3s;
+      border-radius: 10px;
+      &:hover{
+        box-shadow: 0 0 1.5rem rgba($color-grey-dark-2,1);
+      }
+      height: 40rem;
+      width: 30rem;
+      overflow: hidden;
+      position: relative;
+      // border-radius: 28px;
+      margin: 0rem 3rem;
+      & img{
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+      &-title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        background: $color-white;
+        padding: 2rem;
+        border-radius: 10px;
+        font-size: 2.5rem;
+
+      }
+    }
+  }
+}

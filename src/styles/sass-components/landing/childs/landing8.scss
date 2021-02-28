@@ -1,0 +1,30 @@
+&8{
+  position: relative;
+  &__text{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 25rem;
+    color: $color-white;
+   &_large{
+     font-size: 8.5rem;
+     margin-bottom: 1rem;
+   }
+   &_small{
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+   }
+   &_btn{
+     padding: 3rem 12rem;
+     font-size: 2.5rem;
+     background: $color-white;
+     color: $color-india-blue;
+     border: none;
+     border-radius: 18px;
+   }
+  }
+  & img{
+    width: 100vw;
+    margin-bottom: -1rem;
+  }
+}

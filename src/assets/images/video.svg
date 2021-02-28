@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1472" height="708" viewBox="0 0 1472 708">
+  <defs>
+    <filter id="Rectangle_217" x="0" y="0" width="1472" height="708" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3232" data-name="Group 3232" transform="translate(-199 -2836)">
+    <g transform="matrix(1, 0, 0, 1, 199, 2836)" filter="url(#Rectangle_217)">
+      <rect id="Rectangle_217-2" data-name="Rectangle 217" width="1454" height="690" rx="29" transform="translate(9 6)" fill="#fff7e5"/>
+    </g>
+    <path id="Icon_awesome-play-circle" data-name="Icon awesome-play-circle" d="M73.438.563a72.875,72.875,0,1,0,72.875,72.875A72.862,72.862,0,0,0,73.438.563Zm34,79.927L55.718,110.169A7.065,7.065,0,0,1,45.228,104V42.877a7.069,7.069,0,0,1,10.49-6.171l51.718,31.442A7.075,7.075,0,0,1,107.436,80.49Z" transform="translate(861.688 3113.563)" fill="#16354e"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+@keyframes marquee {
+  0%{
+    margin-left: 0;
+  }
+  50%{
+    margin-left: -100%;
+  }
+  100%{
+    margin-left: 0;
+  }
+}
+@keyframes swing {
+    0%{
+      transform: rotate(0deg);
+    }
+    25%{
+      transform: rotate(-45deg);
+    }
+    50%{
+      transform: rotate(0deg);
+    }
+    75%{
+      transform: rotate(65deg);
+    }
+    100%{
+       transform: rotate(0deg);
+    }
+}

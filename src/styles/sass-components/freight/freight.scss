@@ -1,0 +1,114 @@
+.freight{
+  &__blue{
+     margin: -2rem 40rem;
+     color: $color-india-blue;
+     font-size: 2rem;
+     font-weight: bold;
+     margin-top: 5rem;
+  }
+  &__head{
+     margin: 1rem 40rem;
+     font-size: 6.5rem;
+     letter-spacing: 1px;
+     font-weight: 300;
+     text-transform: uppercase;
+     &--ins{
+       text-align: center;
+       margin-top: 5rem;
+     }
+  }
+  &__black{
+     font-size: 1.5rem;
+     margin: 1rem 25rem;
+     text-align: center;
+     color: $color-india-font;
+  }
+  &__flex{
+    margin: 10rem 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    &_btn{
+      padding: 2rem 6rem;
+      margin: 3rem;
+      border: 1px solid rgba($color-grey-light,.5);
+      background: transparent;
+      border-radius: 22px;
+      font-size: 2rem;
+    }
+    & img{
+      height: 100%;
+      transform: translateX(-10rem);
+    }
+    &_text{
+      text-align: right;
+      &--ins{
+        max-width: 40rem;
+      }
+
+      &--left{
+          text-align: left;
+
+      }
+      &-l{
+        font-size: 4.5rem;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-transform: capitalize;
+      }
+      &-s{
+        font-size: 2rem;
+        color: $color-india-font;
+        font-weight: 200;
+        margin-top: 1rem;
+      }
+    }
+  }
+  &__exim{
+
+    position: relative;
+    margin: 8rem 0;
+    height: 80vh;
+    &_img{
+      position: absolute;
+      right:0;
+      top: 0;
+      width: 50vw;
+      &--ins{
+        width: 50vw;
+        transform: translateX(65%);
+        // right:30%;
+      }
+    }
+    &_text{
+      max-width: 50rem;
+      position: absolute;
+      left:35rem;
+      transform: translateY(-50%);
+      top: 50%;
+      font-size: 8rem;
+      text-transform: uppercase;
+      font-weight: 200;
+      &-l{
+        font-size: 5.5rem;
+        letter-spacing: 1px;
+        font-weight: 200;
+        text-transform: uppercase;
+      }
+      &-s{
+        font-size: 3rem;
+        color: $color-india-font;
+        font-weight: 200;
+        margin-top: 1rem;
+      }
+    }
+  }
+  &__quote{
+    text-align: center;
+    color: $color-india-font;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 5rem 0;
+  }
+}
