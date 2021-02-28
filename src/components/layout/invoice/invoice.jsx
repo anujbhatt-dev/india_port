@@ -9,7 +9,7 @@ import halfArrowRev from "../../../assets/images/halfArrowRev.svg"
 import leaf3 from "../../../assets/images/leaf3.svg"
 import video from "../../../assets/images/video.svg"
 import swing from "../../../assets/images/swing.svg"
-import s1 from "../../../assets/images/s1.svg"
+import s1 from "../../../assets/images/s1.png"
 
 class Invoice extends Component{
 

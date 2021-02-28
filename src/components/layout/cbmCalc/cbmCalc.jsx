@@ -4,7 +4,7 @@ import i from "../../../assets/images/i.svg"
 import leaf2 from "../../../assets/images/leaf2.svg"
 import halfArrow from "../../../assets/images/halfArrow.svg"
 import box from "../../../assets/images/box.svg"
-import s1 from "../../../assets/images/s1.svg"
+import s1 from "../../../assets/images/s1.png"
 import video from "../../../assets/images/video.svg"
 
 class CbmCalc extends Component{

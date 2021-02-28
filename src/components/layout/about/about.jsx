@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import $ from "jquery"
 import ripples from 'jquery.ripples'
-// import about from "../../../assets/images/about.jpg"
+import about from "../../../assets/images/about.png"
 
 class About extends Component{
 
@@ -16,11 +16,11 @@ class About extends Component{
       $(".navigation").css("position", "fixed");
       $(".navigation").css("margin", "0 10vw");
 
-      // window.addEventListener("scroll",()=>{
-      //    console.log(window.pageYOffset);
-      //    let y = "scale(" + (1+ (window.pageYOffset/10000)).toString() + ")";
-      //    $(".about__imgW_imgBack").css("transform",y);
-      // })
+      window.addEventListener("scroll",()=>{
+         console.log(window.pageYOffset);
+         let y = "scale(" + (1+ (window.pageYOffset/10000)).toString() + ")";
+         $(".about__imgW_imgBack").css("transform",y);
+      })
 
     }
 
@@ -30,12 +30,12 @@ class About extends Component{
       $(".navigation").css("margin", "0 10vw");
     }
 
-    // <img className="about__imgW_imgBack" src={about} alt=""/>
     render(){
 
       return (
          <div className="about">
              <div className="about__imgW">
+             <img className="about__imgW_imgBack" src={about} alt=""/>
              </div>
              <div className="about__zIn">
                 <div className="about__zIn_blue">digital</div>
