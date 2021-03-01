@@ -10,7 +10,7 @@
   }
   &__box{
     position: relative;
-    height: 70vh;
+    height: 75vh;
     background: $color-india-yellowLight;
     border-radius: 10rem;
     margin: 8rem 15rem;
@@ -66,6 +66,37 @@
         left: -2%;
         bottom: 45%;
       }
+    }
+
+    &_step{
+      position:absolute;
+      top: 2rem;
+      left: 16rem;
+      color:$color-india-font;
+      text-align: center;
+      &_1{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+      }
+      &_2{
+        font-size: 3rem;
+      }
+    }
+    &_go{
+      position:absolute;
+      cursor: pointer;
+      bottom: 4rem;
+      right: 10rem;
+      color: $color-white;
+      font-size: 3.5rem;
+    }
+    &_back{
+      position:absolute;
+      cursor: pointer;
+      bottom: 4rem;
+      left: 9rem;
+      color: $color-white;
+      font-size: 3.5rem;
     }
   }
   &__head{
