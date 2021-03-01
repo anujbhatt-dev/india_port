@@ -14,7 +14,8 @@ import Insurance from "./insurance/insurance"
 import CustomClearance from "./customClearance/customClearance"
 import Invoice from "./invoice/invoice"
 import CbmCalc from "./cbmCalc/cbmCalc"
-
+import Diary from "./diary/diary"
+import Log from "./diary/log"
 
 class Layout extends Component{
 
@@ -63,6 +64,12 @@ class Layout extends Component{
                    </Route>
                    <Route path='/cbmCalc' exact>
                        <CbmCalc/>
+                   </Route>
+                   <Route path='/diary' exact>
+                       <Diary/>
+                   </Route>
+                   <Route path='/diary/blogs/:blogId/posts/:postId' exact>
+                       <Log/>
                    </Route>
               </Switch>
           </div>
