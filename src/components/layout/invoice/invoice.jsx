@@ -25,6 +25,11 @@ class Invoice extends Component{
                 <img className="invoice__box_i1" src={i} alt=""/>
                 <img className="invoice__box_i2" src={i} alt=""/>
                 <img className="invoice__box_arr" src={halfArrow} alt=""/>
+                <div className="invoice__box_step">
+                       <div className="invoice__box_step_1">cif in inr</div>
+                       <div className="invoice__box_step_2">Step 1</div>
+                </div>
+                <div className="invoice__box_go">GO</div>
 
             </div>
 
@@ -39,6 +44,13 @@ class Invoice extends Component{
                 <img className="invoice__box_i2" src={i} alt=""/>
                 <img className="invoice__box_arr" src={halfArrow} alt=""/>
                 <img className="invoice__box_arr-rev" src={halfArrowRev} alt=""/>
+                <div className="invoice__box_step">
+                       <div className="invoice__box_step_1">cif in inr</div>
+                       <div className="invoice__box_step_2">Step 1</div>
+                </div>
+                <div className="invoice__box_go">GO</div>
+                <div className="invoice__box_back">BACK</div>
+
 
             </div>
 
@@ -50,7 +62,13 @@ class Invoice extends Component{
                 <img className="invoice__box_i1" src={i} alt=""/>
                 <img className="invoice__box_i2" src={i} alt=""/>
                 <img className="invoice__box_arr" src={halfArrow} alt=""/>
+                <div className="invoice__box_step">
+                       <div className="invoice__box_step_1">cif in inr</div>
+                       <div className="invoice__box_step_2">Step 1</div>
+                </div>
+                <div className="invoice__box_go">GO</div>
 
+                
             </div>
 
 
