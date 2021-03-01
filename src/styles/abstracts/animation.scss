@@ -10,6 +10,25 @@
   }
 }
 
+
+@keyframes slide__right {
+    0%{
+      right:90%;
+    }
+    100%{
+      right:10%;
+    }
+}
+
+@keyframes slide__left {
+    0%{
+      left:90%;
+    }
+    100%{
+      left:10%;
+    }
+}
+
 //landing2
 
 

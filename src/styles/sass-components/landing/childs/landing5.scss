@@ -1,0 +1,40 @@
+&5{
+  position: relative;
+  &__box{
+    &--position1{
+      justify-content: flex-start;
+    }
+    &--position2{
+      justify-content: flex-end;
+    }
+    transition: all 1s;
+    display: flex;
+    align-items:center;
+    flex-wrap: nowrap;
+    margin: 5rem 0;
+    margin-left: 10rem;
+    // overflow-x: scroll;
+    & img{
+      width: 80vw;
+      margin-right: 5rem;
+      padding: 5rem;
+    }
+  }
+  &__arr{
+    position: absolute;
+    top: 50%;
+    height: 15rem;
+    transition: all .5s;
+    cursor: pointer;
+    &--right{
+      transform: translateY(-50%);
+      right: 10%;
+      animation: slide__right .5s linear;
+    }
+    &--left{
+      left: 10%;
+      transform: translateY(-50%) rotate(180deg);
+      animation: slide__left .5s linear;
+    }
+  }
+}
