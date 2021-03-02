@@ -14,8 +14,10 @@ import Insurance from "./insurance/insurance"
 import CustomClearance from "./customClearance/customClearance"
 import Invoice from "./invoice/invoice"
 import CbmCalc from "./cbmCalc/cbmCalc"
-import Exim from "./exim/exim"
 
+import Exim from "./exim/exim"
+import Diary from "./diary/diary"
+import Log from "./diary/log"
 
 class Layout extends Component{
 
@@ -67,7 +69,14 @@ class Layout extends Component{
                    </Route>
                    <Route path='/exim' exact>
                        <Exim/>
+                  </Route>
+                   <Route path='/diary' exact>
+                       <Diary/>
                    </Route>
+                   <Route path='/diary/blogs/:blogId/posts/:postId' exact>
+                       <Log/>
+                   </Route>
+
               </Switch>
           </div>
       )
