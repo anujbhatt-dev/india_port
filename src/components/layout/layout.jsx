@@ -14,6 +14,7 @@ import Insurance from "./insurance/insurance"
 import CustomClearance from "./customClearance/customClearance"
 import Invoice from "./invoice/invoice"
 import CbmCalc from "./cbmCalc/cbmCalc"
+import Exim from "./exim/exim"
 
 
 class Layout extends Component{
@@ -63,6 +64,9 @@ class Layout extends Component{
                    </Route>
                    <Route path='/cbmCalc' exact>
                        <CbmCalc/>
+                   </Route>
+                   <Route path='/exim' exact>
+                       <Exim/>
                    </Route>
               </Switch>
           </div>

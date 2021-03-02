@@ -1,4 +1,14 @@
+.imp{
+  position: absolute;
+  top: -1rem; 
+  right:-1rem;
+}
+
 .invoice{
+  & #invoice__head{
+    text-transform: capitalize;
+    top: 0rem;
+  }
   &__swing{
     position:fixed;
     top: 0;

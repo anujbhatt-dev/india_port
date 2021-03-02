@@ -1,4 +1,14 @@
 .cbmCalc{
+  &__head{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 3rem;
+    color: $color-india-font;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
   background-image: url(../../../assets/images/cbmBack.svg);
   background-repeat: repeat-y;
   padding: 5rem 0;
@@ -7,6 +17,87 @@
       height: 20rem;
       bottom: -10%;
       left: 10%;
+    }
+    &_total{
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 7rem;
+      &-text{
+        font-size: 3rem;
+        color: $color-india-font;
+        font-weight: 500;
+        margin-right: 8rem;
+      }
+      &-number{
+        font-size: 2rem;
+        background: $color-india-font;
+        font-weight: 400;
+        color: $color-white;
+        border-radius: 10px;
+        padding: 1rem 8rem;
+        &--background{
+          background-color: $color-grey-light;
+        }
+      }
+    }
+  }
+
+  &__table{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 10rem;
+    left: 50%;
+
+    }
+    & thead{
+      & td{
+        color: $color-india-font;
+        font-size: 2rem;
+        text-align: center;
+        // padding-bottom: 2rem;
+        font-weight: bold;
+      }
+    }
+    & tbody{
+      & tr{
+        & td{
+          margin:0 2rem;
+          & input{
+            text-align: center;
+            color: $color-india-font;
+            font-size: 2rem;
+            width: 15rem;
+            padding: 1rem 0;
+            font-weight: bold;
+            border-radius: 12px;
+            border: 1px solid rgba($color-india-font,.3);
+            &::placeholder{
+              color: $color-grey-light;
+              font-size: 2rem;
+              font-weight: bold;
+            }
+        }
+      }
+    }
+  }
+
+  &__p{
+    padding: 1rem 2rem;
+    background: $color-india-font;
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 12px;
+  }
+  &__secP{
+    background: $color-grey-light;
+    border-radius: 12px;
+    display: flex;justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    & img[alt="plus"]{
+       transform: translateY(-.5rem);
     }
   }
 }

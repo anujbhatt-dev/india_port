@@ -10,6 +10,8 @@ import leaf3 from "../../../assets/images/leaf3.svg"
 import video from "../../../assets/images/video.svg"
 import swing from "../../../assets/images/swing.svg"
 import s1 from "../../../assets/images/s1.png"
+import imp from "../../../assets/images/imp.svg"
+
 
 class Invoice extends Component{
 
@@ -30,7 +32,7 @@ class Invoice extends Component{
                        <div className="invoice__box_step_2">Step 1</div>
                 </div>
                 <div className="invoice__box_go">GO</div>
-
+                <div className="cbmCalc__head invoice__head" id="invoice__head">Invoice CALCULATOR</div>
             </div>
 
 
@@ -50,7 +52,7 @@ class Invoice extends Component{
                 </div>
                 <div className="invoice__box_go">GO</div>
                 <div className="invoice__box_back">BACK</div>
-
+                <div className="cbmCalc__head invoice__head" id="invoice__head">Duty CALCULATOR</div>
 
             </div>
 
@@ -67,8 +69,8 @@ class Invoice extends Component{
                        <div className="invoice__box_step_2">Step 1</div>
                 </div>
                 <div className="invoice__box_go">GO</div>
+                <div className="cbmCalc__head invoice__head" id="invoice__head">RESULT</div>
 
-                
             </div>
 
 
