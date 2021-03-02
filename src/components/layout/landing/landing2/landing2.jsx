@@ -18,11 +18,11 @@ class Landing2 extends Component{
       window.addEventListener("scroll",()=>{
         console.log(window.pageYOffset);
         let y = window.pageYOffset;
-        if(y>0 && y<900){
+        if(y>0 && y<930){
           this.setState({
             number:0
           })
-        }else if(y>=900 && y<1050){
+        }else if(y>=930 && y<1080){
           this.setState({
             number:1
           })
