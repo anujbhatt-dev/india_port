@@ -1,14 +1,19 @@
 .imp{
   position: absolute;
-  top: -1rem; 
-  right:-1rem;
+  top: -.5rem;
+  right:-.5rem;
+  &Wrap{
+    position:relative;
+  }
 }
 
 .invoice{
+  animation: reach 1s linear;
   & #invoice__head{
     text-transform: capitalize;
     top: 0rem;
   }
+
   &__swing{
     position:fixed;
     top: 0;
@@ -19,6 +24,113 @@
     transform-origin: 1rem 0rem;
   }
   &__box{
+    // position: relative;
+
+    &_quater{
+      position: absolute;
+      &--1{
+        top:25%;
+        left: 20%;
+      }
+      &--2{
+        top:25%;
+        right: 20%;
+      }
+      &--3{
+        bottom:25%;
+        left: 20%;
+      }
+      &--4{
+        bottom:25%;
+        right: 20%;
+      }
+      &-step{
+        border-radius: 10px;
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 1px solid $color-india-blue;
+        font-weight: bold;
+        color: $color-india-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        transform: translateX(-100%);
+      }
+      &-text{
+        font-size: 1.5rem;
+        color: $color-india-font;
+        text-align: center;
+      }
+      &-bet{
+        color: $color-india-font;
+        font-size: 2rem;
+        font-weight: bold;
+
+      }
+      & > div{
+
+        display: flex;justify-content: flex-start;align-items: center;
+
+        & > *{
+          margin: .5rem;
+          z-index: 10000;
+
+        }
+      }
+    }
+
+    &_flex{
+      display: flex;justify-content: center;align-items: center;margin-bottom: 2rem;
+      &-smallHead{
+        text-align: center;
+        color: $color-india-font;
+        font-size: 1.5rem;
+      }
+      &Wrap{
+        position: absolute;
+        top: 12rem;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+      & > *{
+        z-index: 1;
+        margin: 1rem;
+        position: relative;
+      }
+      &-head{
+        color: $color-india-font;
+        font-size: 2rem;
+        width: 15rem;
+        text-align: center;
+        font-weight: bold;
+        &-2{
+          color: $color-grey-light;
+          font-size: 1.2rem;
+        }
+      }
+      &-input{
+          padding: 1rem;
+          width: 12rem;
+          border-radius: 10px;
+          border: 1px solid rgba($color-india-font,.5);
+          text-align: center;
+          font-size: 2rem;
+          color: $color-india-font;
+          &:focus{
+            outline: none;
+            border: 1px solid rgba($color-india-font,1);
+          }
+          &--ex{
+            background: $color-india-font;
+            color: $color-white;
+            &::placeholder{
+              background: $color-india-font;
+              color: $color-white;
+            }
+          }
+      }
+    }
     position: relative;
     height: 75vh;
     background: $color-india-yellowLight;
@@ -36,21 +148,31 @@
       height: 15.5rem;
       right: -1.5rem;
       bottom: -1.5rem;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover{
+        transform: scale(1.1);
+      }
       &-left{
         height: 15.5rem;
         left: -1.5rem;
         bottom: -1.5rem;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover{
+          transform: scale(1.1);
+        }
       }
     }
     &_i1{
       height: 5rem;
       top: 10%;
-      right:10%;
+      right:5%;
     }
     &_i2{
       height: 3rem;
       top: 25%;
-      right: 19%;
+      right: 9%;
     }
     &_arr{
       right: 5.1rem;
@@ -63,21 +185,35 @@
       }
     }
     &_big{
-      height: 20rem;
+      height: 12rem;
       bottom: 15%;
       left: 0%;
       &-duty{
-        height: 20rem;
+        height: 12rem;
         left: -6%;
         bottom: 40%;
       }
       &-res{
-        height: 13rem;
+        height: 10rem;
         left: -2%;
         bottom: 45%;
       }
     }
-
+    &_cash{
+      height: 22rem;
+      bottom: 20%;
+      left: 12%;
+      &--2{
+        height: 18rem;
+        bottom: 45%;
+        left: 8%;
+      }
+      &--3{
+        height: 12rem;
+        top: 20%;
+        left: 8%;
+      }
+    }
     &_step{
       position:absolute;
       top: 2rem;
@@ -165,4 +301,15 @@
       }
     }
   }
+}
+.tots{
+  position: absolute;
+  bottom: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
 }

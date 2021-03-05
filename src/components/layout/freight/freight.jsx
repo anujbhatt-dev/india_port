@@ -1,9 +1,20 @@
 import React, {Component} from "react"
 import eximPic from "../../../assets/images/eximPic.png"
 import freight from "../../../assets/images/freight.svg"
+import plane from "../../../assets/images/plane.svg"
 import mob1 from "../../../assets/images/mob1.svg"
 
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 class Freight extends Component{
+
+    componentDidMount=()=>{
+      Aos.init({
+        duration: 2000,
+        delay: 100
+      });
+    }
 
     render(){
 
@@ -15,6 +26,7 @@ class Freight extends Component{
 
                 <div className="freight__flex">
                     <img src={freight} alt=""/>
+                    <img data-aos="fade-right" id="freight__flex_plane" src={plane} alt=""/>
                     <div className="freight__flex_text">
                         <div className="freight__flex_text-l">
                           Digital Freight<br/>Forwarding
@@ -34,7 +46,7 @@ class Freight extends Component{
                            Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy
                         </div>
                     </div>
-                    <img src={mob1} alt=""/>
+                    <img data-aos="fade-left" src={mob1} alt=""/>
                 </div>
 
                 <div className="freight__exim">

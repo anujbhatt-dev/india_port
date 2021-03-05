@@ -10,6 +10,17 @@
   }
 }
 
+@keyframes reach {
+   0%{
+     clip-path: polygon(75% 0, 100% 0, 100% 30%, 88% 16%);
+   }
+   50%{
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
+   }
+   100%{
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }
+}
 
 @keyframes slide__right {
     0%{

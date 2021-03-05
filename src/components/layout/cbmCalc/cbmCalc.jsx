@@ -8,14 +8,23 @@ import s1 from "../../../assets/images/s1.png"
 import plus from "../../../assets/images/plus.svg"
 import dash from "../../../assets/images/dash.svg"
 import video from "../../../assets/images/video.svg"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 class CbmCalc extends Component{
+
+
 
 
   componentDidMount=()=>{
     $(".navigation").css("background-color", "transparent");
     $(".navigation").css("position", "fixed");
     $(".navigation").css("margin", "0 25rem");
+
+    Aos.init({
+      duration: 2000,
+      delay: 100
+    });
 
   }
 
@@ -31,10 +40,11 @@ class CbmCalc extends Component{
          <div className="cbmCalc ">
              <div className="invoice__box">
                  <img className="invoice__box_bot" src={leaf2} alt=""/>
-                 <img className="invoice__box_big cbmCalc__box_big" src={box} alt=""/>
+                 <img data-aos="fade-up" className="invoice__box_big cbmCalc__box_big" src={box} alt=""/>
                  <img className="invoice__box_i1" src={i} alt=""/>
                  <img className="invoice__box_arr" src={halfArrow} alt=""/>
                  <div className="cbmCalc__head">CBM Calculator</div>
+                 <div className="invoice__box_go">GO</div>
                  <div className="cbmCalc__box_total">
                     <span className="cbmCalc__box_total-text">Total</span> <span className="cbmCalc__box_total-number">123456</span>
                  </div>
