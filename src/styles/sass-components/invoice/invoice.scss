@@ -2,6 +2,9 @@
   position: absolute;
   top: -.5rem;
   right:-.5rem;
+  &Wrap{
+    position:relative;
+  }
 }
 
 .invoice{
@@ -21,6 +24,61 @@
     transform-origin: 1rem 0rem;
   }
   &__box{
+    // position: relative;
+
+    &_quater{
+      position: absolute;
+      &--1{
+        top:25%;
+        left: 20%;
+      }
+      &--2{
+        top:25%;
+        right: 20%;
+      }
+      &--3{
+        bottom:25%;
+        left: 20%;
+      }
+      &--4{
+        bottom:25%;
+        right: 20%;
+      }
+      &-step{
+        border-radius: 10px;
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 1px solid $color-india-blue;
+        font-weight: bold;
+        color: $color-india-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        transform: translateX(-100%);
+      }
+      &-text{
+        font-size: 1.5rem;
+        color: $color-india-font;
+        text-align: center;
+      }
+      &-bet{
+        color: $color-india-font;
+        font-size: 2rem;
+        font-weight: bold;
+
+      }
+      & > div{
+
+        display: flex;justify-content: flex-start;align-items: center;
+
+        & > *{
+          margin: .5rem;
+          z-index: 10000;
+
+        }
+      }
+    }
 
     &_flex{
       display: flex;justify-content: center;align-items: center;margin-bottom: 2rem;
@@ -80,7 +138,6 @@
     margin: 8rem 15rem;
     & img{
       position: absolute;
-      z-index: 0;
     }
     &_top{
       height: 15.5rem;
@@ -244,4 +301,15 @@
       }
     }
   }
+}
+.tots{
+  position: absolute;
+  bottom: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
 }

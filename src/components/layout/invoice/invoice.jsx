@@ -122,8 +122,59 @@ class Invoice extends Component{
                 <div  data-aos="fade-down" className="invoice__box_back">BACK</div>
                 <div className="cbmCalc__head invoice__head" id="invoice__head">Duty CALCULATOR</div>
                 <div className="invoice__box_quater invoice__box_quater--1">
-                      <div className="invoice__box_quater-step">1</div>
-                      <div className="impWrap invoice__box_quater-text">Basic duty %<br/>(20%) <img className="imp" src={imp} alt=""/>  </div>
+                      <div>
+                          <div className="invoice__box_quater-step">1</div>
+                          <div className="impWrap invoice__box_quater-text">Basic duty %<br/>(20%) <img className="imp" src={imp} alt=""/>  </div>
+                      </div>
+                      <div>
+                          <input className="invoice__box_flex-input" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">%</div>
+                          <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">INR</div>
+                      </div>
+
+                </div>
+
+                <div className="invoice__box_quater invoice__box_quater--2">
+                      <div>
+                          <div className="invoice__box_quater-step">2</div>
+                          <div className="impWrap invoice__box_quater-text">SWS %<br/>(20%) <img className="imp" src={imp} alt=""/>  </div>
+                      </div>
+                      <div>
+                          <input className="invoice__box_flex-input" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">%</div>
+                          <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">INR</div>
+                      </div>
+
+                </div>
+
+                <div className="invoice__box_quater invoice__box_quater--3">
+                      <div>
+                          <div className="invoice__box_quater-step">3</div>
+                          <div className="impWrap invoice__box_quater-text">Basic duty %<br/>(20%) <img className="imp" src={imp} alt=""/>  </div>
+                      </div>
+                      <div>
+                          <input className="invoice__box_flex-input" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">%</div>
+                          <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">INR</div>
+                      </div>
+
+                </div>
+
+                <div className="invoice__box_quater invoice__box_quater--4">
+                      <div>
+                          <div className="invoice__box_quater-step">4</div>
+                          <div className="impWrap invoice__box_quater-text">Basic duty %<br/>(20%) <img className="imp" src={imp} alt=""/>  </div>
+                      </div>
+                      <div>
+                          <input className="invoice__box_flex-input" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">%</div>
+                          <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                          <div className="invoice__box_quater-bet">INR</div>
+                      </div>
+
                 </div>
             </div>
 
@@ -131,17 +182,64 @@ class Invoice extends Component{
             <div className="invoice__box">
                 <img className="invoice__box_top" src={leaf1} alt=""/>
                 <img className="invoice__box_bot" src={leaf2} alt=""/>
+                <img className="invoice__box_bot-left" src={leaf3} alt=""/>
                 <img data-aos="fade-right" className="invoice__box_big-res" src={result} alt=""/>
                 <img className="invoice__box_i1" src={i} alt=""/>
                 <img className="invoice__box_i2" src={i} alt=""/>
                 <img data-aos="fade-down" className="invoice__box_cash invoice__box_cash--3 " src={cash2} alt=""/>
                 <img data-aos="fade-right" className="invoice__box_arr" src={halfArrow} alt=""/>
+                <img data-aos="fade-left" className="invoice__box_arr-rev" src={halfArrowRev} alt=""/>
                 <div className="invoice__box_step">
                        <div className="invoice__box_step_1">cif in inr</div>
                        <div className="invoice__box_step_2">Step 1</div>
                 </div>
                 <div data-aos="fade-down" className="invoice__box_go">GO</div>
+                <div data-aos="fade-down" className="invoice__box_back">Back</div>
                 <div className="cbmCalc__head invoice__head" id="invoice__head">RESULT</div>
+
+                <div style={{marginTop:"6rem",marginleft:"16rem"}} className="invoice__box_flexWrap">
+                    <div style={{marginBottom:"6rem"}} className="invoice__box_flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="55" viewBox="0 0 58 55">
+                          <g id="Group_3232" data-name="Group 3232" transform="translate(-608 -497)">
+                            <g id="Rectangle_314" data-name="Rectangle 314" transform="translate(608 497)" fill="none" stroke="#0239ff" stroke-width="2">
+                              <rect width="58" height="55" rx="10" stroke="none"/>
+                              <rect x="1" y="1" width="56" height="53" rx="9" fill="none"/>
+                            </g>
+                            <path id="Icon_simple-verizon" data-name="Icon simple-verizon" d="M26.59,5.262c4.28-3.593.023,1.654-2.821,6.51s-8.037,15.977-8.037,15.977-4.254,2.618-6.6-.63S3,14.126,3,14.126s2.093-1.986,4.035,0,5.254,6.183,5.254,6.183S22.31,8.855,26.59,5.262Z" transform="translate(623.695 506.255)" fill="#0045ff"/>
+                          </g>
+                        </svg>
+
+                        <div className="invoice__box_flex-head">Anti Dumping Usd</div>
+                        <input className="invoice__box_flex-input" placeholder="1213" type="text"/>
+                        <div className="invoice__box_flex-head">Anti Dumping %</div>
+                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                    </div>
+
+                    <div className="invoice__box_flex">
+                        <div className="impWrap">
+                           <img className="imp" src={imp} alt=""/>
+                           <div className="invoice__box_flex-head">Total Duties</div>
+                        </div>
+                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                        <div className="invoice__box_flex-head">Anti Dumping INR</div>
+                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                        <div className="impWrap">
+                           <img className="imp" src={imp} alt=""/>
+                           <div className="invoice__box_flex-head"><div>CIF Total</div><div className="invoice__box_flex-head-2">(in selected currencies)</div></div>
+                        </div>
+                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+
+
+                    </div>
+                    <div className="tots">
+
+                        <div className="tots__div">
+                          <div className="invoice__box_flex-head" style={{marginRight:"3rem"}}><div style={{fontSize:"3rem"}}>Total</div><div className="invoice__box_flex-head-2">(Including Dities)</div></div>
+                        </div>
+
+                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder="1213" type="text"/>
+                    </div>
+                </div>
 
             </div>
 

@@ -3,6 +3,7 @@
     position: relative;
     max-height: 400vh;
     background: $color-india-yellow;
+    overflow: hidden;
     &__zIn{
       display: flex;
       justify-content:center;
