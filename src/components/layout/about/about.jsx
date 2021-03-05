@@ -18,7 +18,7 @@ class About extends Component{
 
       window.addEventListener("scroll",()=>{
          console.log(window.pageYOffset);
-         let y = "scale(" + (1+ (window.pageYOffset/10000)).toString() + ")";
+         let y = "scale(" + (1+ (window.pageYOffset/1000)).toString() + ")";
          $(".about__imgW_imgBack").css("transform",y);
       })
 

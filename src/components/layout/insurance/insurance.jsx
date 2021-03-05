@@ -1,10 +1,21 @@
 import React, {Component} from "react"
 import insure from "../../../assets/images/insure.svg"
+import yellowPlane from "../../../assets/images/yellowPlane.svg"
 import mob1 from "../../../assets/images/mob1.svg"
 import man from "../../../assets/images/man.png"
 
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 class Insurance extends Component{
+
+
+  componentDidMount=()=>{
+    Aos.init({
+      duration: 2000,
+      delay: 100
+    });
+  }
 
     render(){
 
@@ -15,6 +26,7 @@ class Insurance extends Component{
 
              <div className="freight__flex">
                  <img src={insure} alt=""/>
+                 <img data-aos="fade-right" id="freight__flex_plane" src={yellowPlane} alt=""/>
                  <div className="freight__flex_text ">
                      <div className="freight__flex_text-l">
                        Shipment<br/>Insurance
@@ -34,7 +46,7 @@ class Insurance extends Component{
                         Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy
                      </div>
                  </div>
-                 <img src={mob1} alt=""/>
+                 <img data-aos="fade-left" src={mob1} alt=""/>
              </div>
 
              <div className="freight__exim">
