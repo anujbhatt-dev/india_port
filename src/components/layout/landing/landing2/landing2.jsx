@@ -19,6 +19,7 @@ class Landing2 extends Component{
         console.log(window.pageYOffset);
         let y = window.pageYOffset;
         if(y>0 && y<930){
+          // $("body").css("overflow","hidden");
           this.setState({
             number:0
           })
