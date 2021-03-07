@@ -1,18 +1,25 @@
 &7{
   background: rgba($color-grey-dark-2,.2);
   position: relative;
+  // height: 80vh;
   &__btn{
-    padding: 1rem 4rem;
+    cursor: pointer;
+    padding: .5rem 4rem;
     position: absolute;
     bottom: 10rem;
     right: 10rem;
     z-index: 10000;
-    font-size: 3rem;
+    font-size: 2rem;
     border: 1px solid $color-india-blue;
     color: $color-india-blue;
     display: flex;
     align-items:center;
     justify-content: center;
+    transition: all .5s;
+    border-radius: 5px;
+    &:hover{
+      background: $color-white;
+    }
     & > *{
       margin: 1rem;
     }
@@ -35,7 +42,7 @@
     align-items:center;
     overflow: hidden;
     width: 200vw;
-
+    position: relative;
     &_card{
       transition : all .3s;
       border-radius: 10px;
@@ -48,6 +55,7 @@
       position: relative;
       // border-radius: 28px;
       margin: 0rem 3rem;
+      margin-bottom: 10rem;
       & img{
         height: 100%;
         width: 100%;
@@ -65,7 +73,6 @@
         padding: 2rem;
         border-radius: 10px;
         font-size: 2.5rem;
-
       }
     }
   }

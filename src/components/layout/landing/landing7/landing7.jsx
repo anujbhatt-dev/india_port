@@ -8,6 +8,7 @@ class Landing7 extends Component{
 
       return (
          <div className="landing7">
+
              <div className="landing7__heading">
                  BLOGS
              </div>
