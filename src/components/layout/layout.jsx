@@ -18,11 +18,29 @@ import CbmCalc from "./cbmCalc/cbmCalc"
 import Exim from "./exim/exim"
 import Diary from "./diary/diary"
 import Log from "./diary/log"
+import BlogsBootstrap from "./diary/blogs-bootstrap"
+import Updates from "./diary/updates/updates"
+import axios from "axios"
 
 class Layout extends Component{
 
-    state={
-     mobile:false
+    // state={
+    
+    // }
+
+    GOOGLE_APP_KEY = `AIzaSyBfhPkgmqU6VTigT8WRzhaHbcjeKGD11HQ`;
+    UDATES_BLOG_ID = `2657090034952578845`;
+    UDATES_BLOGGER_POSTS_API = `https://www.googleapis.com/blogger/v3/blogs/${this.UDATES_BLOG_ID}/posts?key=${this.GOOGLE_APP_KEY}`
+    NEWS_BLOG_ID = `9075147176992920351`;
+    NEWS_BLOGGER_POSTS_API = `https://www.googleapis.com/blogger/v3/blogs/${this.NEWS_BLOG_ID}/posts?key=${this.GOOGLE_APP_KEY}`
+    BLOGS_BLOG_ID = `188050538809435730`;
+    BLOGS_BLOGGER_POSTS_API = `https://www.googleapis.com/blogger/v3/blogs/${this.BLOGS_BLOG_ID}/posts?key=${this.GOOGLE_APP_KEY}`
+
+    state = {
+        updates: [],
+        mobile:false,
+        news: [],
+        blogs:[],
     }
 
 
@@ -34,7 +52,28 @@ class Layout extends Component{
           mobile:true
         })
       }
+     
+      //getting updates
+      axios.get(this.UDATES_BLOGGER_POSTS_API)
+      .then(res =>
+          this.setState({ updates: [...res.data.items] })
+      )
+      .catch(err => alert("something went wrong-> UPdate.jsx"));
+      axios.get(this.NEWS_BLOGGER_POSTS_API)
+      .then(res =>
+          // console.log(res.data)
+          this.setState({ news: res.data.items })
+      )
+      .catch(err => alert("something went wrong-> News.jsx"));
+      axios.get(this.BLOGS_BLOGGER_POSTS_API)
+      .then(res =>
+          // console.log(res.data)
+          this.setState({ blogs: res.data.items })
+      )
+      .catch(err => alert("something went wrong-> Blogs.jsx"));
+
     }
+
 
     render(){
 
@@ -71,13 +110,14 @@ class Layout extends Component{
                        <Exim/>
                   </Route>
                    <Route path='/diary' exact>
-                       <Diary/>
+                       <Diary {... this.state}/>
                    </Route>
                    <Route path='/diary/blogs/:blogId/posts/:postId' exact>
                        <Log/>
                    </Route>
 
               </Switch>
+             
           </div>
       )
     }

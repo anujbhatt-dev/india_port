@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class Log extends Component {
 
 
-    GOOGLE_APP_KEY=`AIzaSyApP91744TCcH17bAx-X76DbFYRs-bqllk`;
+    GOOGLE_APP_KEY=`AIzaSyBfhPkgmqU6VTigT8WRzhaHbcjeKGD11HQ`;
     // UDATES_BLOG_ID=`753366898998375447`;
     
 

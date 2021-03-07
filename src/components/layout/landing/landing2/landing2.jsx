@@ -18,19 +18,44 @@ class Landing2 extends Component{
       window.addEventListener("scroll",()=>{
         console.log(window.pageYOffset);
         let y = window.pageYOffset;
-        if(y>0 && y<930){
-          // $("body").css("overflow","hidden");
+        if(y>=970 && y<1370){
+          let lastScrollTop = 0;
+          $(window).scroll(function(event){
+             let st = $(this).scrollTop();
+             if (st > lastScrollTop){
+                 // downscroll code
+                 $(".landing2__flexWrapper").css("position","fixed");
+             } else {
+                // upscroll code
+                $(".landing2__flexWrapper").css("position","static");
+             }
+             lastScrollTop = st;
+          });
           this.setState({
             number:0
           })
-        }else if(y>=930 && y<1080){
+        }else if(y>=1370 && y<1770){
           this.setState({
             number:1
           })
-        }else{
+        }else if(y>=1770 && y<2370){
+          let lastScrollTop = 0;
+          $(window).scroll(function(event){
+             let st = $(this).scrollTop();
+             if ((st > lastScrollTop) && (y>2360)){
+                 // downscroll code
+                 $(".landing2__flexWrapper").css("position","static");
+             } else {
+                // upscroll code
+                $(".landing2__flexWrapper").css("position","fixed");
+             }
+             lastScrollTop = st;
+          });
           this.setState({
             number:2
           })
+        }else{
+          $(".landing2__flexWrapper").css("position","static");
         }
       })
 
