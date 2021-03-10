@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 export default class Blogs extends Component {
 
-    GOOGLE_APP_KEY = `AIzaSyApP91744TCcH17bAx-X76DbFYRs-bqllk`;
-    BLOGS_BLOG_ID = `1473439736625879886`;
+    GOOGLE_APP_KEY = `AIzaSyBfhPkgmqU6VTigT8WRzhaHbcjeKGD11HQ`;
+    BLOGS_BLOG_ID = `188050538809435730`;
     BLOGS_BLOGGER_POSTS_API = `https://www.googleapis.com/blogger/v3/blogs/${this.BLOGS_BLOG_ID}/posts?key=${this.GOOGLE_APP_KEY}`
 
     state = {
@@ -15,13 +15,16 @@ export default class Blogs extends Component {
 
     componentDidMount = () => {
 
+
+        if(this.props.blogs.length===0)
         axios.get(this.BLOGS_BLOGGER_POSTS_API)
             .then(res =>
                 // console.log(res.data)
                 this.setState({ blogs: res.data.items })
             )
             .catch(err => alert("something went wrong-> Blogs.jsx"));
-
+        else 
+          this.setState({blogs:this.props.blogs});
     }
 
 

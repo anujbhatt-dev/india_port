@@ -8,9 +8,9 @@ export default class Diary extends Component {
 
         return (
             <div>
-             <Updates/>
-             <News/>
-             <Blogs/>
+             <Updates updates={this.props.updates}/>
+             <News news={this.props.news}/>
+             <Blogs blogs={this.props.blogs}/>
 
             </div>
         )
