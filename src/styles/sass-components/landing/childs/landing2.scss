@@ -1,7 +1,7 @@
 &2{
   margin: 5rem 0;
   margin-top: 15rem;
-  height: 200vh;
+  height: 100vh;
   &__flexWrapper{
     background: $color-white;
     height: 100vh;
@@ -9,7 +9,7 @@
     z-index: 100000;
     overflow: hidden;
     // position: fixed;
-
+    transition: .5s;
     top: 0;
     left: 0;
   }

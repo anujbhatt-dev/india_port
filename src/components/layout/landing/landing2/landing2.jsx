@@ -15,49 +15,49 @@ class Landing2 extends Component{
     }
 
     componentDidMount=()=>{
-      window.addEventListener("scroll",()=>{
-        console.log(window.pageYOffset);
-        let y = window.pageYOffset;
-        if(y>=970 && y<1370){
-          let lastScrollTop = 0;
-          $(window).scroll(function(event){
-             let st = $(this).scrollTop();
-             if (st > lastScrollTop){
-                 // downscroll code
-                 $(".landing2__flexWrapper").css("position","fixed");
-             } else {
-                // upscroll code
-                $(".landing2__flexWrapper").css("position","static");
-             }
-             lastScrollTop = st;
-          });
-          this.setState({
-            number:0
-          })
-        }else if(y>=1370 && y<1770){
-          this.setState({
-            number:1
-          })
-        }else if(y>=1770 && y<2370){
-          let lastScrollTop = 0;
-          $(window).scroll(function(event){
-             let st = $(this).scrollTop();
-             if ((st > lastScrollTop) && (y>2360)){
-                 // downscroll code
-                 $(".landing2__flexWrapper").css("position","static");
-             } else {
-                // upscroll code
-                $(".landing2__flexWrapper").css("position","fixed");
-             }
-             lastScrollTop = st;
-          });
-          this.setState({
-            number:2
-          })
-        }else{
-          $(".landing2__flexWrapper").css("position","static");
-        }
-      })
+      // window.addEventListener("scroll",()=>{
+      //   console.log(window.pageYOffset);
+      //   let y = window.pageYOffset;
+      //   if(y>=970 && y<1370){
+      //     let lastScrollTop = 0;
+      //     $(window).scroll(function(event){
+      //        let st = $(this).scrollTop();
+      //        if (st > lastScrollTop){
+      //            // downscroll code
+      //            $(".landing2__flexWrapper").css("position","fixed");
+      //        } else {
+      //           // upscroll code
+      //           $(".landing2__flexWrapper").css("position","static");
+      //        }
+      //        lastScrollTop = st;
+      //     });
+      //     this.setState({
+      //       number:0
+      //     })
+      //   }else if(y>=1370 && y<1770){
+      //     this.setState({
+      //       number:1
+      //     })
+      //   }else if(y>=1770 && y<2370){
+      //     let lastScrollTop = 0;
+      //     $(window).scroll(function(event){
+      //        let st = $(this).scrollTop();
+      //        if ((st > lastScrollTop) && (y>2300)){
+      //            // downscroll code
+      //            $(".landing2__flexWrapper").css("position","static");
+      //        } else {
+      //           // upscroll code
+      //           $(".landing2__flexWrapper").css("position","fixed");
+      //        }
+      //        lastScrollTop = st;
+      //     });
+      //     this.setState({
+      //       number:2
+      //     })
+      //   }else{
+      //     $(".landing2__flexWrapper").css("position","static");
+      //   }
+      // })
 
     }
 
@@ -76,7 +76,8 @@ class Landing2 extends Component{
                <img className={this.state.number===0?" img dissolve":this.state.number===1?"img dissolve1":"img dissolve2"} src={this.state.number===0?boat1:this.state.number===1?boat2:boat3} alt=""/>
              </div>
 
-         </div>      )
+         </div>
+      )
     }
 }
 

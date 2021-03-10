@@ -29,7 +29,7 @@ class Layout extends Component{
     componentDidMount=()=>{
 
       let width= Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-      if(width<=500){
+      if(width<=600){
         this.setState({
           mobile:true
         })

@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 import join from "../../../../assets/images/join.svg"
+import join2 from "../../../../assets/images/join2.svg"
+
 
 class Landing8 extends Component{
 
@@ -7,7 +9,7 @@ class Landing8 extends Component{
 
       return (
          <div className="landing8">
-             <img src={join} alt=""/>
+             <img src={join2} alt=""/>
              <div className="landing8__text">
                 <div className="landing8__text_large">
                     INDIA  LEADING

@@ -2,12 +2,21 @@
   animation: reach .5s linear;
   margin: 0 25rem;
   color: $color-grey-light;
+  @include respond(phone){
+    margin: 0 1rem;
+    // overflow:hidden;
+  }
   &__1{
     font-size: 2.7rem;
     color: $color-india-blue;
     margin-top: 15rem;
     // font-weight: bold;
     // margin-bottom: 2rem;
+    @include respond(phone){
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      margin-left: 5rem;
+    }
   }
   &__2{
     font-size: 13.3rem;
@@ -20,6 +29,12 @@
     margin-bottom: -2rem;
     margin-left: -1rem;
     margin-top: -1rem;
+    @include respond(phone){
+      justify-content: center;
+      text-align: center;
+      font-size: 6.5rem;
+      margin-bottom: 1.5rem;
+    }
   }
   &__3{
     font-size: 5.6rem;
@@ -29,81 +44,256 @@
     margin-bottom: 1rem;
     letter-spacing: 1.5rem;
     word-spacing: 2.5rem;
+    @include respond(phone){
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      margin-left: 5rem;
+      word-spacing: 1.5rem;
+    }
   }
   &__4{
     font-size: 2.2rem;
     color: $color-grey-light;
     font-weight: bold;
     margin-bottom: 1rem;
+    @include respond(phone){
+      font-size: 1.5rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+      margin-left: 5rem;
+    }
   }
   &__5{
-    & svg{
-      margin-bottom: .5rem;
-    }
-    & > *{
-      margin: 0 .3rem;
-    }
-    margin: 2rem 0;
-    padding: .3rem;
-    box-shadow: 0 0 0.9rem rgba($color-grey-light,1);
-    text-align: center;
-    border-radius: 4px;
-    & input,& select{
-      color: $color-grey-light;
-      margin: 0 .5rem;
-      padding-left: 2rem;
-      // font-size: 1.8rem;
-      font-family: "roboto",sans-serif;
-      &::placeholder{
-        color: $color-grey-light;
-      }
-      border: none;
-      &:focus{
-        outline: none;
-      }
-    }
-    background: $color-white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: 5rem;
+    &_r1{
+       display: flex;
+       justify-content:flex-start;
+       align-items: center;
+       @include respond(phone){
+        justify-content: space-around;
+        margin: 1rem;
+        margin-top: 5rem;
+        border-radius: 18px;
+       }
+       &-item{
+         cursor: pointer;
+         background: $color-india-font;
+         height: 5rem;
+         padding: 2rem 3rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: $color-india-fontLight;
+         border-bottom: 1px solid  rgba($color-india-fontLight,.5);
+         transition: all .3s;
+         &--selected{
+           background: $color-india-blue;
+           color: $color-white;
+         }
 
-    &_smbox{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      height: 5rem;
-      width: 5rem;
-      flex-flow: column;
-      & > div{
-        margin-top: 1rem;
-        justify-content: space-between;
-      }
-    }
-    &_active{
-      border-radius: 4px;
-      background: $color-india-yellow;
+         &--2{
+           border-left: 1px solid  rgba($color-india-fontLight,.5);
+           border-right: 1px solid  rgba($color-india-fontLight,.5);
+           & svg{
+             position: relative;
+             top: -.4rem;
+           }
+           @include respond(phone){
+            border-radius: 5px;
+            border: 1px solid  rgba($color-india-fontLight,.5);
+           }
+         }
+         &--1{
+           border-top-left-radius: 18px;
+           @include respond(phone){
+            border-radius: 5px;
+            border: 1px solid  rgba($color-india-fontLight,.5);
+           }
+
+         }
+         &--3{
+           border-top-right-radius: 18px;
+           @include respond(phone){
+            border-radius: 5px;
+            border: 1px solid  rgba($color-india-fontLight,.5);
+           }
+         }
+         & svg{
+           width: 4rem;
+           margin-right: 1rem;
+         }
+         font-size: 1.7rem;
+       }
        color: $color-white;
     }
-    &_lrbox,&_mdbox{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      & svg{
-        margin: 0 .5rem;
+    &_r2{
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items:center;
+       border-top-right-radius: 18px;
+       border-bottom-right-radius: 18px;
+       border-bottom-left-radius: 18px;
+       padding-bottom: 3rem;
+       @include respond(phone){
+        flex-direction: column;
+        border-radius: 5px;
+       }
+      &-bWrap{
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+        position: relative;
+        @include respond(phone){
+         flex-direction: column;
+        }
+        &-svg{
+           position: absolute;
+           transform: translate(-50%,-50%);
+           top: 50%;
+           left: 50%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           padding: 0 .5rem;
+           background: $color-india-font;
+           border-right: 3px solid $color-india-fontLight;
+           border-left: 3px solid $color-india-fontLight;
+           border-radius: 50%;
+           height: 5rem;
+           width: 5rem;
+           @include respond(phone){
+            transform: translate(-50%,-50%) rotate(90deg);
+           }
+        }
       }
-      // flex-flow: column;
+       &-b1{
+         margin: 0 1rem;
+         padding: 1rem;
+         padding-left: 5rem;
+         border: 2px solid  rgba($color-india-fontLight,1);
+         border-radius: 5px;
+         min-height: 10rem;
+         @include respond(phone){
+          width: 80%;
+          margin: 1rem;
+          padding-left: 1rem;
+         }
+         &--flex{
+           display: flex;
+           justify-content: flex-start;
+           align-items:center;
+           padding-left: 1rem;
+           @include respond(phone){
+
+           }
+         }
+         &-place{
+           text-transform: uppercase;
+           margin: .5rem 0;
+         }
+         &-date{
+           background: inherit;
+           color: $color-white;
+           border: none;
+           font-size: 2rem;
+           width: 15rem;
+         }
+         & svg{
+           height: 3rem;
+           margin: 0 1rem;
+         }
+         & select{
+           background: inherit;
+           color: $color-white;
+           border: none;
+           font-size: 2rem;
+         }
+         &-input{
+           background: inherit;
+           color: $color-white;
+           border: none;
+           font-size: 2rem;
+           &::placeholder{
+             color: $color-white;
+           }
+           @include respond(phone){
+              width: 20rem;
+           }
+         }
+       }
+       background: $color-india-font;
+       padding: 3rem 5rem;
+    }
+    &_btn{
+      position: absolute;
+      bottom: 3rem;
+      right:31rem;
+      transform: translateY(-50%);
+        cursor: pointer;
+        color: $color-white;
+        background: $color-india-blue;
+        padding: 1.5rem 3rem;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 23rem;
+        font-size: 2rem;
+        border: none;
+        border-radius: 18px;
+        @include respond(phone){
+          position: static;
+          transform: translateY(0%);
+          margin: 1rem;
+          font-size: 1.8rem;
+          width: 20rem;
+          margin-left: auto;
+          margin-right: 0;
+          border-radius: 5px;
+        }
+        &:focus{
+          outline: none;
+        }
+        & span{
+          padding-right: 2rem;
+          z-index: 2;
+          background: $color-india-blue;
+          clip-path: polygon(0 0, 72% 0, 100% 40%, 100% 60%, 75% 100%, 0 100%);
+        }
+        & svg{
+          position: relative;
+          right: 4.5rem;
+          transition: all .3s;
+          @include respond(phone){
+             right: 5.5rem;
+          }
+        }
+        &:hover >  svg{
+           right: 0;
+        }
     }
   }
   &__6{
     position: relative;
     height: 55vh;
+    @include respond(phone){
+       width: 100%;
+       height: 18vh;
+    }
     & img{
       position: absolute;
       // width: 120%;
       height: 100%;
       top: 0;
       left: -5%;
+      @include respond(phone){
+         left: 0;
+      }
     }
   }
 }
+
+
+// .landing1__5_btn:hover >  svg{
+//    right: 0;
+// }
