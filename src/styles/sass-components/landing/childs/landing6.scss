@@ -12,6 +12,9 @@
     align-items: center;
     & img{
       margin: 5rem;
+      @include respond(phone){
+        margin: 0;
+      }
     }
   }
   &__2{
@@ -19,6 +22,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
     &_img1{
       // margin-top: 5rem;
       // margin-right: 3vw;
@@ -27,11 +31,30 @@
       // width:82vw;
       margin: 5rem;
       width: 75vw;
+      @include respond(phone){
+        width: 100vw;
+        height: 80vh;
+        margin: 0;
+        transform: scale(5);
+
+      }
     }
     &_img2{
       position: absolute;
       right: 0;
       width: 60vw;
+      @include respond(phone){
+        width: 90vw;
+        right: -35%;
+      }
+    }
+    &_img3{
+      position: absolute;
+      @include respond(phone){
+        width: 90vw;
+        left: -40%;
+        bottom: 5rem;
+      }
     }
     &_text{
       position: absolute;
@@ -40,18 +63,32 @@
       left: 15vw;
       color: $color-white;
       text-align: center;
+      @include respond(phone){
+        left: 20%;
+        top: 15%
+      }
       &-large{
          font-size: 14rem;
          // letter-spacing: 2px;
+         @include respond(phone){
+           font-size: 7.5rem;
+         }
       }
       &-medium{
          font-size:3.6rem;
          margin-bottom: 5rem;
          letter-spacing: 20px;
          margin-left: 3rem;
+         @include respond(phone){
+           font-size: 2.5rem;
+           margin-bottom: 2rem;
+           letter-spacing: 5px;
+           margin-left: 0;
+         }
       }
       &-small{
          font-size: 2.2rem;
+
       }
     }
   }

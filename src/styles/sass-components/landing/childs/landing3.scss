@@ -1,0 +1,32 @@
+&3{
+  overflow: hidden;
+  &__mob{
+    &_dots{
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      margin: 1rem;
+    }
+    & svg{
+      margin-right: .5rem;
+    }
+    &_main{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      flex-direction: column;
+      & img{
+        width: 40rem;
+        margin: 5rem 0;
+      }
+      &-name{
+        text-transform: uppercase;
+        font-size: 5rem;
+        text-align: center;
+        margin-bottom:  5rem;
+      }
+    }
+  }
+
+
+}

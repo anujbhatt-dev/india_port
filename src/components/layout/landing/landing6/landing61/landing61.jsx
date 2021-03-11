@@ -9,7 +9,7 @@ class Landing61 extends Component{
 
       return (
          <div className="landing6__1">
-             <Magnifier src={colab} width={500} mgWidth={200} mgHeight={200} zoomFactor={1.1}/>
+             <Magnifier src={colab} width={this.props.mobile?200:500} mgWidth={200} mgHeight={200} zoomFactor={1.1}/>
          </div>
       )
     }

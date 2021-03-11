@@ -5,6 +5,9 @@
   align-items: center;
   position: relative;
   background: rgba($color-grey-light,.2);
+  @include respond(phone){
+    height: 60vh;
+  }
   &__text{
     text-align: center;
     z-index: 111;
@@ -12,11 +15,17 @@
       color: $color-black;
       font-size: 6rem;
       font-weight: 100;
+      @include respond(phone){
+        font-size: 2.7rem;
+      }
     }
     &_secondary{
       color: $color-india-blue;
       font-size: 6rem;
       text-transform: uppercase;
+      @include respond(phone){
+        font-size: 2.7rem;
+      }
     }
   }
   & img{
@@ -27,16 +36,25 @@
     top: 50%;
     left: 50%;
     height: 90vh;
+    @include respond(phone){
+      height: 90%;
+    }
   }
   &__smallShip{
     top: 20%;
     width: 10rem;
     left: 40%;
+    @include respond(phone){
+      left: 30%;
+    }
   }
   &__yellowPlane{
     top: 30%;
     width: 10rem;
     right: 30%;
+    @include respond(phone){
+      right: -2%;
+    }
   }
   &__smallTruck{
     bottom: 5%;

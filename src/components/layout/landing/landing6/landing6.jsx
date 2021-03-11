@@ -9,8 +9,8 @@ class Landing6 extends Component{
       return (
          <div className="landing6">
              <h1 className="landing6__heading">Our Colaboration</h1>
-             <Landing61/>
-             <Landing62/>
+             <Landing61  mobile={this.props.mobile}/>
+             <Landing62  mobile={this.props.mobile}/>
          </div>
       )
     }

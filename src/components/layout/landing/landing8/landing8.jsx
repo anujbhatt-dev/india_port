@@ -9,7 +9,7 @@ class Landing8 extends Component{
 
       return (
          <div className="landing8">
-             <img src={join2} alt=""/>
+             <img src={this.props.mobile?join:join2} alt=""/>
              <div className="landing8__text">
                 <div className="landing8__text_large">
                     INDIA  LEADING

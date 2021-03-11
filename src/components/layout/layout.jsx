@@ -25,7 +25,7 @@ import axios from "axios"
 class Layout extends Component{
 
     // state={
-    
+
     // }
 
     GOOGLE_APP_KEY = `AIzaSyBfhPkgmqU6VTigT8WRzhaHbcjeKGD11HQ`;
@@ -52,7 +52,7 @@ class Layout extends Component{
           mobile:true
         })
       }
-     
+
       //getting updates
       axios.get(this.UDATES_BLOGGER_POSTS_API)
       .then(res =>
@@ -83,41 +83,41 @@ class Layout extends Component{
               <GoToTop/>
               <Switch>
                    <Route path='/' exact>
-                       <Landing/>
+                       <Landing mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/about' exact>
-                       <About/>
+                       <About mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/contact' exact>
-                       <Contact/>
+                       <Contact mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/freight' exact>
-                       <Freight/>
+                       <Freight mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/insurance' exact>
-                       <Insurance/>
+                       <Insurance mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/customClearance' exact>
-                       <CustomClearance/>
+                       <CustomClearance mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/invoice' exact>
-                       <Invoice/>
+                       <Invoice mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/cbmCalc' exact>
-                       <CbmCalc/>
+                       <CbmCalc mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/exim' exact>
-                       <Exim/>
+                       <Exim mobile={this.state.mobile}/>
                   </Route>
                    <Route path='/diary' exact>
-                       <Diary {... this.state}/>
+                       <Diary mobile={this.state.mobile} {... this.state}/>
                    </Route>
                    <Route path='/diary/blogs/:blogId/posts/:postId' exact>
-                       <Log/>
+                       <Log mobile={this.state.mobile}/>
                    </Route>
 
               </Switch>
-             
+
           </div>
       )
     }

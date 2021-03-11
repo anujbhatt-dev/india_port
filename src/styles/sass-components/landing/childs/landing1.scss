@@ -2,6 +2,7 @@
   animation: reach .5s linear;
   margin: 0 25rem;
   color: $color-grey-light;
+  overflow: hidden;
   @include respond(phone){
     margin: 0 1rem;
     // overflow:hidden;

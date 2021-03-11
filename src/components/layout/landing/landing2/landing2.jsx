@@ -15,56 +15,20 @@ class Landing2 extends Component{
     }
 
     componentDidMount=()=>{
-      // window.addEventListener("scroll",()=>{
-      //   console.log(window.pageYOffset);
-      //   let y = window.pageYOffset;
-      //   if(y>=970 && y<1370){
-      //     let lastScrollTop = 0;
-      //     $(window).scroll(function(event){
-      //        let st = $(this).scrollTop();
-      //        if (st > lastScrollTop){
-      //            // downscroll code
-      //            $(".landing2__flexWrapper").css("position","fixed");
-      //        } else {
-      //           // upscroll code
-      //           $(".landing2__flexWrapper").css("position","static");
-      //        }
-      //        lastScrollTop = st;
-      //     });
-      //     this.setState({
-      //       number:0
-      //     })
-      //   }else if(y>=1370 && y<1770){
-      //     this.setState({
-      //       number:1
-      //     })
-      //   }else if(y>=1770 && y<2370){
-      //     let lastScrollTop = 0;
-      //     $(window).scroll(function(event){
-      //        let st = $(this).scrollTop();
-      //        if ((st > lastScrollTop) && (y>2300)){
-      //            // downscroll code
-      //            $(".landing2__flexWrapper").css("position","static");
-      //        } else {
-      //           // upscroll code
-      //           $(".landing2__flexWrapper").css("position","fixed");
-      //        }
-      //        lastScrollTop = st;
-      //     });
-      //     this.setState({
-      //       number:2
-      //     })
-      //   }else{
-      //     $(".landing2__flexWrapper").css("position","static");
-      //   }
-      // })
 
+
+    }
+
+    numberHandler=(num)=>{
+      this.setState({
+        number:num
+      })
     }
 
     render(){
 
       return (
-         <div className="landing2">
+         !this.props.mobile?<div className="landing2">
             <div className="landing2__flexWrapper slide_up">
                <div className="landing2__flex">
                    <div className={(this.state.number===0)?"landing2__flex_text slide_down":(this.state.number===1)?"landing2__flex_text slide_down1":"landing2__flex_text slide_down2"}>
@@ -77,6 +41,32 @@ class Landing2 extends Component{
              </div>
 
          </div>
+         :
+         <div className="landing2__mob">
+               <div className="landing2__mob_head">Tools</div>
+              <div className="landing2__mob_dots">
+
+                  <svg onClick={()=>this.numberHandler(0)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.number===0?"#0239ff":"white"}/>
+                  </svg>
+
+                  <svg onClick={()=>this.numberHandler(1)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.number===1?"#0239ff":"white"}/>
+                  </svg>
+
+                  <svg onClick={()=>this.numberHandler(2)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.number===2?"#0239ff":"white"}/>
+                  </svg>
+
+              </div>
+              <div className="landing2__mob_main">
+                   <img  src={this.state.number===0?mob1:this.state.number===1?mob2:mob1} alt=""/>
+                   <div className="landing2__mob_main-name">
+                       {this.state.number===0?"mob1":this.state.number===1?"mob2":"mob1"} Calculator
+                   </div>
+              </div>
+         </div>
+
       )
     }
 }

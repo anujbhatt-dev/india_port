@@ -1,5 +1,22 @@
 &5{
   position: relative;
+  overflow: hidden;
+  &__main{
+    position: absolute;
+    z-index: 100;
+    color: $color-white;
+    top: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align:center;
+    & h1{
+      font-weight: 100;
+       font-size: 7.5rem;
+    }
+    & h2{
+      font-size: 2rem;
+    }
+  }
   &__box{
     &--position1{
       justify-content: flex-start;
@@ -13,11 +30,17 @@
     flex-wrap: nowrap;
     margin: 5rem 0;
     margin-left: 10rem;
+    @include respond(phone){
+      margin: 2rem;
+    }
     // overflow-x: scroll;
     & img{
       width: 80vw;
       margin-right: 5rem;
       padding: 5rem;
+      @include respond(phone){
+        width: 96%;
+      }
     }
   }
   &__arr{
@@ -26,6 +49,9 @@
     height: 15rem;
     transition: all .5s;
     cursor: pointer;
+    @include respond(phone){
+      height: 8rem;
+    }
     &--right{
       transform: translateY(-50%);
       right: 10%;

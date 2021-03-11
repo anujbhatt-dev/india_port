@@ -2,6 +2,7 @@
   background: rgba($color-grey-dark-2,.2);
   position: relative;
   // height: 80vh;
+  overflow: hidden;
   &__btn{
     cursor: pointer;
     padding: .5rem 4rem;
@@ -17,6 +18,12 @@
     justify-content: center;
     transition: all .5s;
     border-radius: 5px;
+    @include respond(phone){
+      bottom: 5rem;
+      right: 5rem;
+      font-size: 1.8rem;
+      padding: .2rem 3rem;
+    }
     &:hover{
       background: $color-white;
     }
@@ -38,11 +45,15 @@
     animation-fill-mode: both;
     padding:  5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
     overflow: hidden;
     width: 200vw;
     position: relative;
+    @include respond(phone){
+        width: 310vh;
+        padding:  2rem;
+    }
     &_card{
       transition : all .3s;
       border-radius: 10px;
@@ -56,6 +67,10 @@
       // border-radius: 28px;
       margin: 0rem 3rem;
       margin-bottom: 10rem;
+      @include respond(phone){
+        margin: 0rem 1rem;
+        margin-bottom: 15rem;
+      }
       & img{
         height: 100%;
         width: 100%;

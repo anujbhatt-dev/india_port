@@ -17,14 +17,14 @@ class Landing extends Component{
 
       return (
           <div classname="landing">
-               <Landing1/>
-               <Landing2/>
-               <Landing3/>
-               <Landing4/>
-               <Landing5/>
-               <Landing6/>
-               <Landing7/>
-               <Landing8/>
+               <Landing1 mobile={this.props.mobile}/>
+               <Landing2 mobile={this.props.mobile}/>
+               <Landing3 mobile={this.props.mobile}/>
+               <Landing4 mobile={this.props.mobile}/>
+               <Landing5 mobile={this.props.mobile}/>
+               <Landing6 mobile={this.props.mobile}/>
+               <Landing7 mobile={this.props.mobile}/>
+               <Landing8 mobile={this.props.mobile}/>
           </div>
       )
     }
