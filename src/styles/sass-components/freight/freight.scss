@@ -6,6 +6,11 @@
      font-size: 2rem;
      font-weight: bold;
      margin-top: 5rem;
+     @include respond(phone){
+           text-align: center;
+           margin: 1rem;
+           margin-top: 10rem;
+     }
   }
   &__head{
      margin: 1rem 40rem;
@@ -13,6 +18,11 @@
      letter-spacing: 1px;
      font-weight: 300;
      text-transform: uppercase;
+     @include respond(phone){
+           text-align: center;
+           margin: 1rem;
+           font-size: 3rem;
+     }
      &--ins{
        text-align: center;
        margin-top: 5rem;
@@ -23,6 +33,10 @@
      margin: 1rem 25rem;
      text-align: center;
      color: $color-india-font;
+     @include respond(phone){
+           text-align: center;
+           margin: 1rem;
+     }
   }
   &__flex{
     margin: 10rem 35rem;
@@ -31,6 +45,21 @@
     align-items: center;
     position: relative;
     height: 50vh;
+
+
+    @include respond(phone){
+          text-align: center;
+          margin: 2rem;
+          margin-top: 10rem;
+          flex-direction: column;
+          height: auto;
+          &--mod{
+            flex-direction: row;
+          }
+          &--rev{
+            flex-direction: column-reverse;
+          }
+    }
     &_btn{
       padding: 2rem 6rem;
       margin: 3rem;
@@ -38,27 +67,49 @@
       background: transparent;
       border-radius: 22px;
       font-size: 2rem;
+      @include respond(phone){
+            font-size: 1.5rem;
+            border-radius: 5px;
+            padding: 1rem 3rem;
+            margin: 1rem;
+      }
     }
 
     & img{
       height: 100%;
       transform: translateX(-10rem);
+      @include respond(phone){
+            width: 90%;
+            height: auto;
+            transform: translateX(0rem);
+            margin-bottom: 3rem;
+      }
     }
     &_text{
       text-align: right;
       max-width: 40rem;
+      @include respond(phone){
+            text-align:center;
+      }
       &--ins{
+
       }
 
       &--left{
           text-align: left;
-
+          @include respond(phone){
+                text-align:center;
+          }
       }
       &-l{
         font-size: 4.5rem;
         letter-spacing: 1px;
         font-weight: 300;
         text-transform: capitalize;
+        @include respond(phone){
+            font-weight: bold;
+            font-size: 4rem;
+        }
       }
       &-s{
         font-size: 2rem;
@@ -67,34 +118,89 @@
         margin-top: 1rem;
       }
     }
+    &--mod2{
+      margin: 10rem ;
+      height: auto;
+      // justify-content: center;
+      @include respond(phone){
+         flex-direction: column-reverse;
+      }
+    }
   }
   &__exim{
 
     position: relative;
     margin: 8rem 0;
-    height: 80vh;
+    // height: 80vh;
+    @include respond(phone){
+      height:auto;
+    }
     &_img{
-      position: absolute;
+      // position: absolute;
       right:0;
       top: 0;
       width: 50vw;
+      margin-right: -10rem;
       &--ins{
         width: 50vw;
         transform: translateX(65%);
         // right:30%;
       }
+      border-radius: 18px;
+      @include respond(phone){
+        position: static;
+        width: calc( 100% - 2rem);
+        margin-left: 2rem;
+        margin-bottom: 5rem;
+        margin-right: 0;
+      }
     }
     &_text{
       max-width: 50rem;
-      position: absolute;
+      // position: absolute;
       left:35rem;
-      transform: translateY(-50%);
+      text-align: right;
+      // transform: translateY(-50%);
       top: 50%;
       font-size: 8rem;
       text-transform: uppercase;
       font-weight: 200;
+      margin-left: 25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @include respond(phone){
+        text-align: center;
+        flex-direction: row;
+        margin-left: 0rem;
+      }
+      & strong{
+         font-size: 12rem;
+         margin-bottom: -2rem;
+         @include respond(phone){
+           font-size: 4rem;
+           margin-bottom: 0rem;
+           font-weight:bold;
+         }
+      }
+      & span{
+        font-size: 5rem;
+        @include respond(phone){
+          font-size: 4rem;
+          font-weight:bold;
+        }
+      }
+      @include respond(phone){
+        position: static;
+        transform: translateY(0%);
+        text-align: center;
+        font-weight: bold;
+        font-size: 5rem;
+
+      }
       &-l{
-        font-size: 5.5rem;
+        font-size: 7.5rem;
         letter-spacing: 1px;
         font-weight: 200;
         text-transform: uppercase;
@@ -113,6 +219,13 @@
     font-size: 3rem;
     font-weight: 400;
     margin: 5rem 0;
+    @include respond(phone){
+      font-size: 2rem;
+      padding: 1rem;
+      width: calc(100vw - 2rem);
+      margin-left: 2rem;
+    }
+
   }
 }
 #freight__flex_plane{

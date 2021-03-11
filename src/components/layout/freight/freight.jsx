@@ -37,7 +37,7 @@ class Freight extends Component{
                     </div>
                 </div>
 
-                <div className="freight__flex">
+                <div className="freight__flex freight__flex--rev">
                     <div className="freight__flex_text freight__flex_text--left">
                         <div className="freight__flex_text-l">
                         Compare &<br/>Book
@@ -49,11 +49,11 @@ class Freight extends Component{
                     <img data-aos="fade-left" src={mob1} alt=""/>
                 </div>
 
-                <div className="freight__exim">
-                    <img className="freight__exim_img" src={eximPic} alt=""/>
+                <div className="freight__flex freight__flex--mod2">
                     <div className="freight__exim_text">
-                       exim <strong>education</strong>
+                       <strong>Exim</strong><span>Education</span>
                     </div>
+                    <img className="freight__exim_img" src={eximPic} alt=""/>
                 </div>
 
                 <div className="freight__quote">
@@ -61,7 +61,7 @@ class Freight extends Component{
                     <br/>diam nonumy eirmod tempor invidunt ut labore et dolore
                     <br/>uyam erat, sed diam volu.
                 </div>
-                <div className="freight__flex">
+                <div className="freight__flex freight__flex--mod">
                       <button className="freight__flex_btn">Get Quote</button>
                       <button className="freight__flex_btn">Get Quote</button>
                       <button className="freight__flex_btn">Contact Us</button>

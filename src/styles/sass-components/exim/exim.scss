@@ -7,6 +7,10 @@
     margin: 10rem 10vw 0 20vw;
     width: 70vw;
     margin-top: 10rem;
+    @include respond(phone){
+      margin: 0rem;
+      width: 100vw;
+    }
   }
   & a{
     display: inline-block;

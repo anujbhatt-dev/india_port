@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import cc from "../../../assets/images/cc.svg"
 import mob1 from "../../../assets/images/mob1.svg"
+import board from "../../../assets/images/board.svg"
 
 
 class CustomClearance extends Component{
@@ -24,7 +25,7 @@ class CustomClearance extends Component{
                  </div>
              </div>
 
-             <div className="freight__flex">
+             <div className="freight__flex freight__flex--rev">
                  <div className="freight__flex_text freight__flex_text--left">
                      <div className="freight__flex_text-l">
                      Handling<br/>Documents
@@ -36,17 +37,16 @@ class CustomClearance extends Component{
                  <img src={mob1} alt=""/>
              </div>
 
-             <div className="freight__exim">
-
-                 <div className="freight__exim_text">
-                     <div className="freight__exim_text-l">
-                         Professional
-                         <br/>Only <strong>CHA</strong>
+             <div className="freight__flex freight__flex--rev">
+                 <div className="freight__flex_text freight__flex_text--left">
+                     <div className="freight__flex_text-l">
+                     Transparency<br/>Only <strong>CHA</strong>
                      </div>
-                     <div className="freight__exim_text-s">
-                        Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing.
+                     <div className="freight__flex_text-s">
+                        Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy
                      </div>
                  </div>
+                 <img src={board} alt=""/>
              </div>
 
              <div className="freight__quote">
@@ -54,7 +54,7 @@ class CustomClearance extends Component{
                  <br/>diam nonumy eirmod tempor invidunt ut labore et dolore
                  <br/>uyam erat, sed diam volu.
              </div>
-             <div className="freight__flex">
+             <div className="freight__flex freight__flex--mod">
                    <button className="freight__flex_btn">Get Quote</button>
                    <button className="freight__flex_btn">Get Quote</button>
                    <button className="freight__flex_btn">Contact Us</button>
