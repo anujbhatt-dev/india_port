@@ -10,7 +10,7 @@ class Landing62 extends Component{
          <div className="landing6__2">
             <img className="landing6__2_img1" src={eximBack} alt=""/>
             <img className="landing6__2_img2" src={eximLap} alt=""/>
-            <img className="landing6__2_img3" src={eximLap} alt=""/>
+            {this.props.mobile?<img className="landing6__2_img3" src={eximLap} alt=""/>:null}
             <div className="landing6__2_text">
                 <div className="landing6__2_text-large">EXIM</div>
                 <div className="landing6__2_text-medium">EDUCATION</div>
