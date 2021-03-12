@@ -1,7 +1,16 @@
 import React, {Component} from "react"
+import {Link} from "react-router-dom"
 import cc from "../../../../assets/images/cc.svg"
 import freight from "../../../../assets/images/freight.svg"
 import insure from "../../../../assets/images/insure.svg"
+import truck from "../../../../assets/images/smallTruck.svg"
+import plane from "../../../../assets/images/plane.svg"
+import cargo from "../../../../assets/images/cargo.svg"
+import box2 from "../../../../assets/images/box2.svg"
+import yellowPlane from "../../../../assets/images/yellowPlane.svg"
+
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 class Landing3 extends Component{
 
@@ -15,11 +24,47 @@ class Landing3 extends Component{
       })
     }
 
+    componentDidMount=()=>{
+      Aos.init({
+        duration: 1000,
+        delay: 100
+      });
+    }
+
     render(){
 
       return (
-         !this.props.mobile?<div className="landing3">
-             landing3
+         !this.props.mobile?
+         <div className="landing3">
+             <Link className="landing3__link" to="/freight">
+                  <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
+                  <img className="landing3__link_img" src={freight} alt=""/>
+                  <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
+                  <div className="landing3__link_text">
+                      <div className='landing3__link_text-title'>Freight Forwarding</div>
+                      <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                  </div>
+             </Link>
+             <Link className="landing3__link" to="/customClearance">
+                 <img className="landing3__link_img" src={cc} alt=""/>
+                 <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
+                 <div className="landing3__link_text">
+                     <div className='landing3__link_text-title'>Customer<br/>Clearance</div>
+                     <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                 </div>
+             </Link>
+             <Link className="landing3__link" to="/insurance">
+                 <img data-aos="fade-right" className="landing3__link_img--plane" src={yellowPlane} alt=""/>
+                 <img className="landing3__link_img" src={insure} alt=""/>
+                 <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
+                 <div className="landing3__link_text">
+                     <div className='landing3__link_text-title'>Insurance<br/>for Product</div>
+                     <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                 </div>
+
+             </Link>
+
+
          </div>
          :
          <div className="landing3__mob">

@@ -7,10 +7,10 @@ class Log extends Component {
 
     GOOGLE_APP_KEY=`AIzaSyBfhPkgmqU6VTigT8WRzhaHbcjeKGD11HQ`;
     // UDATES_BLOG_ID=`753366898998375447`;
-    
+
 
     state={
-     
+
         content:null,
     }
 
@@ -30,14 +30,16 @@ class Log extends Component {
     render() {
 
         if(!this.state.content)
-          return <h1>LOADING</h1>;
+          return <div className="diary__blogPost--loading">
+                     <h1>loading...</h1>
+                </div>
 
 
         return (
-            <div>
+            <div className="diary__blogPost">
                 <td dangerouslySetInnerHTML={{__html: this.state.content.content}} />
 
-              
+
             </div>
         )
     }

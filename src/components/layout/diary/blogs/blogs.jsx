@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import diary3 from "../../../../assets/images/diary3.png"
+import diary4 from "../../../../assets/images/diary4.png"
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -23,21 +25,30 @@ export default class Blogs extends Component {
                 this.setState({ blogs: res.data.items })
             )
             .catch(err => alert("something went wrong-> Blogs.jsx"));
-        else 
+        else
           this.setState({blogs:this.props.blogs});
     }
 
 
     render() {
         return (
-            <div>
-                <h1>BLOGS</h1>
+            <div className="diary__3">
+
 
                 {
                     this.state.blogs.length === 0 ? <h2>LOADING BLOGS..</h2> :
                         this.state.blogs.map(blog =>
 
-                            <Link to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>{blog.title}</Link>
+                            [
+                              <Link className="diary__3_a" to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}><img src={diary3} alt=""/><div className="diary__3_a-title">{blog.title}</div><div className="diary__3_a-date">13 feb 2021</div></Link>,
+                              <Link className="diary__3_a" to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}><img src={diary4} alt=""/><div className="diary__3_a-title">{blog.title}</div><div className="diary__3_a-date">13 feb 2021</div></Link>,
+                              <Link className="diary__3_a" to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}><img src={diary3} alt=""/><div className="diary__3_a-title">{blog.title}</div><div className="diary__3_a-date">13 feb 2021</div></Link>,
+                              <Link className="diary__3_a diary__3_a--4" to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}><img src={diary3} alt=""/><div className="diary__3_a-title">{blog.title}</div><div className="diary__3_a-date">13 feb 2021</div></Link>,
+                              <Link className="diary__3_a" to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}><img src={diary4} alt=""/><div className="diary__3_a-title">{blog.title}</div><div className="diary__3_a-date">13 feb 2021</div></Link>,
+                              <Link className="diary__3_a" to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}><img src={diary3} alt=""/><div className="diary__3_a-title">{blog.title}</div><div className="diary__3_a-date">13 feb 2021</div></Link>,
+                              <Link className="diary__3_a diary__3_a--7" to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}><img src={diary4} alt=""/><div className="diary__3_a-title">{blog.title}</div><div className="diary__3_a-date">13 feb 2021</div></Link>,
+                            ]
+
 
                         )}
             </div>

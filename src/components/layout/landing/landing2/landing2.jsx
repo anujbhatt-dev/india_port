@@ -15,7 +15,9 @@ class Landing2 extends Component{
     }
 
     componentDidMount=()=>{
-
+        window.addEventListener("scroll",(e)=>{
+           console.log(window.pageYOffset);
+        })
 
     }
 
@@ -37,7 +39,7 @@ class Landing2 extends Component{
                    </div>
                    <img className={this.state.number===0?"slide_up":this.state.number===1?"slide_up1":"slide_up2"} src={this.state.number===0?mob1:this.state.number===1?mob2:mob1} alt=""/>
                </div>
-               <img className={this.state.number===0?" img dissolve":this.state.number===1?"img dissolve1":"img dissolve2"} src={this.state.number===0?boat1:this.state.number===1?boat2:boat3} alt=""/>
+               <img className={this.state.number===0?"img dissolve":this.state.number===1?"img dissolve1":"img dissolve2"} src={this.state.number===0?boat1:this.state.number===1?boat2:boat3} alt=""/>
              </div>
 
          </div>

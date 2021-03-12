@@ -9,6 +9,7 @@
 
 .invoice{
   animation: reach 1s linear;
+  // width: 100vw;
   & #invoice__head{
     text-transform: capitalize;
     top: 0rem;
@@ -189,6 +190,7 @@
         @include respond(tab-land){
            height: 12rem;
         }
+
       &:hover{
         transform: scale(1.1);
       }
@@ -326,7 +328,7 @@
     }
   }
   &__video{
-    width: 70vW;
+    width: 90vW;
     margin: 5rem auto;
     display: flex;justify-content: center;align-items: center;
 

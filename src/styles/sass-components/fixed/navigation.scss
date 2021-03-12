@@ -1,11 +1,12 @@
 .navigation{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items:center;
-  margin: 0 25rem;
-  // width: 80vw;
+  padding: 0 25rem;
+  width: 100vw;
   top: 0;
   z-index: 100000;
+  background: #F7F7F7;
   &__brandLogo{
 
   }
@@ -73,8 +74,8 @@
   }
 
   &__items{
-    background: $color-white;
     background: $color-india-fontLight;
+    background: $color-white;
     // background: tomato;
     position: fixed;
     left: 0;

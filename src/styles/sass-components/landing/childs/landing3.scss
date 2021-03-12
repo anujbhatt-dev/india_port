@@ -1,5 +1,56 @@
 &3{
   overflow: hidden;
+  &__link{
+    height: 70vh;
+    width: 70vw;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem;
+    background: $color-white;
+    border: 1rem solid $color-black;
+    border-radius: 10px;
+    text-decoration: none;
+    position: relative;
+    overflow:hidden;
+    &_img{
+      width: 45%;
+      margin-right: 5rem;
+      &--plane{
+        position: absolute;
+        top: 19%;
+        left: 18rem;
+        width: 15rem;
+        z-index: 5;
+      }
+      &--abs{
+        position: absolute;
+        bottom: 0rem;
+        right: 15rem;
+        width: 20rem;
+        z-index: 0;
+      }
+      &--truck{
+        transform: translate(-50%,0%) rotate(180deg) rotateY(180deg);
+        animation: ride 5s linear infinite;
+      }
+    }
+    &_text{
+      width: 45%;
+      text-align: center;
+      color: $color-black;
+      z-index: 5;
+      &-title{
+         font-size: 5rem;
+         font-weight: 300;
+         margin-bottom: 3rem;
+      }
+      &-content{
+          font-size: 1.2rem;
+      }
+    }
+  }
   &__mob{
     &_dots{
       display: flex;

@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import diary1 from "../../../../assets/images/diary1.png"
+import diary2 from "../../../../assets/images/diary2.png"
+
+
 import BlogsBootstrap from "../blogs-bootstrap";
+
+
 
 export default class Updates extends Component {
 
@@ -10,7 +16,7 @@ export default class Updates extends Component {
     UDATES_BLOGGER_POSTS_API = `https://www.googleapis.com/blogger/v3/blogs/${this.UDATES_BLOG_ID}/posts?key=${this.GOOGLE_APP_KEY}`
 
     state = {
-        updates: [],
+        updates: []
     }
 
 
@@ -31,15 +37,25 @@ export default class Updates extends Component {
 
     render() {
         return (
-            <div>
-                <h1>UPDATES</h1>
-                {
-                    this.state.updates.length === 0 ? <h2>LOADING Updates..</h2> :
-                        this.state.updates.map(update =>
-
-                            <Link to={`/diary/blogs/${update.blog.id}/posts/${update.id}`}>{update.title}</Link>
-
+            <div className="diary__1">
+                <div className="diary__1_1">
+                    <img src={diary1} alt=""/>
+                    <div  className="diary__1_1-text">
+                        <div  className="diary__1_1-text-title">How to Start Import Export Business in India?</div>
+                        <div className="diary__1_1-text-date">12 nov 2222</div>
+                    </div>
+                </div>
+                <div className="diary__1_updates">
+                        <div className="diary__1_updates-head">Updates</div>
+                       {
+                    this.state.updates.length === 0 ? [<Link to='/'> <span>1.</span> loading updates...</Link>,<Link to='/'> <span>2.</span> loading updates...</Link>,<Link to='/'> <span>3.</span> loading updates...</Link>,<Link to='/'> <span>4.</span> loading updates...</Link>,] :
+                        this.state.updates.map((update,i) =>
+                            [<Link to={`/diary/blogs/${update.blog.id}/posts/${update.id}`}><span>1</span>{update.title}</Link>,
+                            <Link to={`/diary/blogs/${update.blog.id}/posts/${update.id}`}><span>2</span>{update.title}</Link>,
+                            <Link to={`/diary/blogs/${update.blog.id}/posts/${update.id}`}><span>3</span>{update.title}</Link>,
+                            <Link to={`/diary/blogs/${update.blog.id}/posts/${update.id}`}><span>4</span>{update.title}</Link>]
                         )}
+                </div>
             </div>
         )
     }

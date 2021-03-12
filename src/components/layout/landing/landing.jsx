@@ -16,7 +16,7 @@ class Landing extends Component{
     render(){
 
       return (
-          <div classname="landing">
+          <div className="landing">
                <Landing1 mobile={this.props.mobile}/>
                <Landing2 mobile={this.props.mobile}/>
                <Landing3 mobile={this.props.mobile}/>

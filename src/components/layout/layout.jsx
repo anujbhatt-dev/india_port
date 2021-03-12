@@ -121,7 +121,7 @@ class Layout extends Component{
                        <Exim mobile={this.state.mobile}/>
                   </Route>
                    <Route path='/diary' exact>
-                       <Diary mobile={this.state.mobile} {... this.state}/>
+                       <Diary mobile={this.state.mobile} {...this.state}/>
                    </Route>
                    <Route path='/diary/blogs/:blogId/posts/:postId' exact>
                        <Log mobile={this.state.mobile}/>

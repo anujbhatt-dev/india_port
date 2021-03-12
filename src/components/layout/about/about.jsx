@@ -17,7 +17,7 @@ class About extends Component{
 
       $(".navigation").css("background-color", "transparent");
       $(".navigation").css("position", "fixed");
-      $(".navigation").css("margin", "0 10vw");
+      // $(".navigation").css("margin", "0 10vw");
 
       window.addEventListener("scroll",()=>{
          console.log(window.pageYOffset);
@@ -28,9 +28,9 @@ class About extends Component{
     }
 
     componentWillUnmount=()=>{
-      $(".navigation").css("background-color", "white");
+      $(".navigation").css("background-color", "#F7F7F7");
       $(".navigation").css("position", "static");
-      $(".navigation").css("margin", "0 10vw");
+      // $(".navigation").css("margin", "0 10vw");
     }
 
     render(){

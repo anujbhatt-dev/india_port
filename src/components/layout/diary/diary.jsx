@@ -7,7 +7,7 @@ export default class Diary extends Component {
     render() {
 
         return (
-            <div>
+            <div className="diary">
              <Updates updates={this.props.updates}/>
              <News news={this.props.news}/>
              <Blogs blogs={this.props.blogs}/>
