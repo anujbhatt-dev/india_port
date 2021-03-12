@@ -18,7 +18,7 @@
     justify-content: center;
     transition: all .5s;
     border-radius: 5px;
-    @include respond(phone){
+    @include respond(tab-land){
       bottom: 5rem;
       right: 5rem;
       font-size: 1.8rem;
@@ -50,7 +50,7 @@
     overflow: hidden;
     width: 200vw;
     position: relative;
-    @include respond(phone){
+    @include respond(tab-land){
         width: 310vh;
         padding:  2rem;
     }
@@ -67,7 +67,7 @@
       // border-radius: 28px;
       margin: 0rem 3rem;
       margin-bottom: 10rem;
-      @include respond(phone){
+      @include respond(tab-land){
         margin: 0rem 1rem;
         margin-bottom: 15rem;
       }

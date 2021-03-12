@@ -26,23 +26,36 @@
   &__box{
     // position: relative;
 
+
     &_quater{
       position: absolute;
       &--1{
         top:25%;
         left: 20%;
+        @include respond(tab-land){
+          top: 20%;
+        }
       }
       &--2{
         top:25%;
         right: 20%;
+        @include respond(tab-land){
+          top: 40%;
+        }
       }
       &--3{
         bottom:25%;
         left: 20%;
+        @include respond(tab-land){
+            top: 60%;
+        }
       }
       &--4{
         bottom:25%;
         right: 20%;
+        @include respond(tab-land){
+            top: 80%;
+        }
       }
       &-step{
         border-radius: 10px;
@@ -81,6 +94,15 @@
     }
 
     &_flex{
+      @include respond(tab-land){
+         transform: scale(.8);
+      }
+      @include respond(tab-port){
+         transform: scale(.6);
+      }
+      @include respond(phone){
+         transform: scale(.5);
+      }
       display: flex;justify-content: center;align-items: center;margin-bottom: 2rem;
       &-smallHead{
         text-align: center;
@@ -136,6 +158,17 @@
     background: $color-india-yellowLight;
     border-radius: 10rem;
     margin: 8rem 15rem;
+    @include respond(tab-land){
+       margin: 5rem;
+       height: 60rem;
+       &--duty{
+         height: 100rem;
+       }
+    }
+    @include respond(phone){
+       margin: 5rem 1rem;
+
+    }
     & img{
       position: absolute;
     }
@@ -143,6 +176,9 @@
       height: 15.5rem;
       top: -1.5rem;
       left: -1.5rem;
+      @include respond(tab-land){
+         height: 12rem;
+      }
     }
     &_bot{
       height: 15.5rem;
@@ -150,6 +186,9 @@
       bottom: -1.5rem;
       cursor: pointer;
       transition: all .2s;
+        @include respond(tab-land){
+           height: 12rem;
+        }
       &:hover{
         transform: scale(1.1);
       }
@@ -159,6 +198,9 @@
         bottom: -1.5rem;
         cursor: pointer;
         transition: all .2s;
+        @include respond(tab-land){
+           height: 12rem;
+        }
         &:hover{
           transform: scale(1.1);
         }
@@ -188,21 +230,33 @@
       height: 12rem;
       bottom: 15%;
       left: 0%;
+      @include respond(tab-land){
+         display: none;
+      }
       &-duty{
         height: 12rem;
         left: -6%;
         bottom: 40%;
+        @include respond(tab-land){
+           display: none;
+        }
       }
       &-res{
         height: 10rem;
         left: -2%;
         bottom: 45%;
+        @include respond(tab-land){
+           display: none;
+        }
       }
     }
     &_cash{
       height: 22rem;
       bottom: 20%;
       left: 12%;
+      @include respond(tab-land){
+         display: none;
+      }
       &--2{
         height: 18rem;
         bottom: 45%;
@@ -220,6 +274,10 @@
       left: 16rem;
       color:$color-india-font;
       text-align: center;
+      @include respond(tab-land){
+         left: 10rem;
+         top: .5rem;
+      }
       &_1{
         text-transform: uppercase;
         font-size: 1.5rem;
@@ -235,6 +293,9 @@
       right: 10rem;
       color: $color-white;
       font-size: 3.5rem;
+      @include respond(tab-land){
+        font-size: 2rem;
+      }
     }
     &_back{
       position:absolute;
@@ -243,6 +304,10 @@
       left: 9rem;
       color: $color-white;
       font-size: 3.5rem;
+      @include respond(tab-land){
+        font-size: 2rem;
+      }
+
     }
   }
   &__head{
@@ -251,27 +316,47 @@
     text-transform: uppercase;
     font-weight: 300;
     margin: 5rem 0;
+    @include respond(tab-land){
+       margin-top: 5rem;
+       font-size: 3.5rem;
+    }
+    @include respond(phone){
+       margin-top: 5rem;
+       font-size: 2rem;
+    }
   }
   &__video{
-    height: 70vh;
+    width: 70vW;
     margin: 5rem auto;
     display: flex;justify-content: center;align-items: center;
+
   }
   &__flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10rem 25rem;
+    @include respond(tab-land){
+     margin: 1rem;
+     flex-direction: column-reverse;
+     &--rev{
+       flex-direction: column;
+     }
+    }
     &--last{
        margin-bottom: 15rem;
     }
     & img{
       width: 55%;
+      @include respond(tab-land){
+        width: 85%;
+      }
     }
     &_text{
       text-transform: uppercase;
       margin-left: 10rem;
       max-width: 50rem;
+
       &--rev{
         margin-left: 0rem;
         margin-right: 10rem;
@@ -281,6 +366,7 @@
          font-size: 2.5rem;
          margin-bottom: 2rem;
          color: $color-india-blue;
+
       }
       &-2{
         font-size: 4rem;
@@ -299,6 +385,56 @@
            text-align: right;
          }
       }
+      @include respond(tab-land){
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin: 2rem 10rem;
+        max-width: 100%;
+        &-1{
+           flex-basis: 100%;
+           color: $color-india-font;
+           margin-left: 10rem;
+           text-align: left;
+           margin-bottom: 5rem;
+           margin-top: 5rem;
+           font-size: 4rem;
+        }
+        &-2{
+          flex-basis: 50%;
+          text-align: left;
+        }
+        &-3{
+          flex-basis: 50%;
+          text-align: left;
+        }
+
+      }
+      @include respond(phone){
+        margin: 2rem;
+        max-width: 100%;
+        &-1{
+           flex-basis: 100%;
+           color: $color-india-font;
+           margin-left: 10rem;
+           text-align: left;
+           margin-bottom: 5rem;
+           margin-top: 5rem;
+           font-size: 4rem;
+        }
+        &-2{
+          flex-basis: 50%;
+          text-align: left;
+          font-size: 2.5rem;
+        }
+        &-3{
+          flex-basis: 50%;
+          text-align: left;
+          font-size: 1.8rem;
+        }
+
+      }
     }
   }
 }
@@ -311,5 +447,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  @include respond(tab-land){
+    bottom: -6rem;
+  }
 
 }

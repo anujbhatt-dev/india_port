@@ -12,7 +12,7 @@
     align-items: center;
     & img{
       margin: 5rem;
-      @include respond(phone){
+      @include respond(tab-land){
         margin: 0;
       }
     }
@@ -31,7 +31,7 @@
       // width:82vw;
       margin: 5rem;
       width: 75vw;
-      @include respond(phone){
+      @include respond(tab-land){
         width: 100vw;
         height: 80vh;
         margin: 0;
@@ -43,14 +43,14 @@
       position: absolute;
       right: 0;
       width: 60vw;
-      @include respond(phone){
+      @include respond(tab-land){
         width: 90vw;
         right: -35%;
       }
     }
     &_img3{
       position: absolute;
-      @include respond(phone){
+      @include respond(tab-land){
         width: 90vw;
         left: -40%;
         bottom: 5rem;
@@ -63,14 +63,14 @@
       left: 15vw;
       color: $color-white;
       text-align: center;
-      @include respond(phone){
+      @include respond(tab-land){
         left: 20%;
         top: 15%
       }
       &-large{
          font-size: 14rem;
          // letter-spacing: 2px;
-         @include respond(phone){
+         @include respond(tab-land){
            font-size: 7.5rem;
          }
       }
@@ -79,7 +79,7 @@
          margin-bottom: 5rem;
          letter-spacing: 20px;
          margin-left: 3rem;
-         @include respond(phone){
+         @include respond(tab-land){
            font-size: 2.5rem;
            margin-bottom: 2rem;
            letter-spacing: 5px;

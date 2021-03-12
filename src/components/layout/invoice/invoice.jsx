@@ -104,7 +104,7 @@ class Invoice extends Component{
 
 
 
-            <div className="invoice__box">
+            <div className="invoice__box invoice__box--duty">
                 <img className="invoice__box_top" src={leaf1} alt=""/>
                 <img className="invoice__box_bot" src={leaf2} alt=""/>
                 <img className="invoice__box_bot-left" src={leaf3} alt=""/>
@@ -116,7 +116,7 @@ class Invoice extends Component{
                 <img data-aos="fade-left" className="invoice__box_arr-rev" src={halfArrowRev} alt=""/>
                 <div className="invoice__box_step">
                        <div className="invoice__box_step_1">cif in inr</div>
-                       <div className="invoice__box_step_2">Step 1</div>
+                       <div className="invoice__box_step_2">Step 2</div>
                 </div>
                 <div data-aos="fade-down" className="invoice__box_go">GO</div>
                 <div  data-aos="fade-down" className="invoice__box_back">BACK</div>
@@ -191,7 +191,7 @@ class Invoice extends Component{
                 <img data-aos="fade-left" className="invoice__box_arr-rev" src={halfArrowRev} alt=""/>
                 <div className="invoice__box_step">
                        <div className="invoice__box_step_1">cif in inr</div>
-                       <div className="invoice__box_step_2">Step 1</div>
+                       <div className="invoice__box_step_2">Step 3</div>
                 </div>
                 <div data-aos="fade-down" className="invoice__box_go">GO</div>
                 <div data-aos="fade-down" className="invoice__box_back">Back</div>
@@ -258,9 +258,9 @@ class Invoice extends Component{
                   </div>
             </div>
 
-            <div className="invoice__flex">
+            <div className="invoice__flex  invoice__flex--rev">
                  <div className="invoice__flex_text invoice__flex_text--rev">
-                      <div className="invoice__flex_text-1">Step 1</div>
+                      <div className="invoice__flex_text-1">Step 2</div>
                       <div className="invoice__flex_text-2 invoice__flex_text-2--rev">Easy use<br/>of cbm<br/>calculator</div>
                       <div className="invoice__flex_text-3 invoice__flex_text-3--rev">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
                  </div>
@@ -270,7 +270,7 @@ class Invoice extends Component{
             <div className="invoice__flex invoice__flex--last">
                  <img src={s1} alt=""/>
                  <div className="invoice__flex_text">
-                      <div className="invoice__flex_text-1">Step 1</div>
+                      <div className="invoice__flex_text-1">Step 3</div>
                       <div className="invoice__flex_text-2">Easy use<br/>of cbm<br/>calculator</div>
                       <div className="invoice__flex_text-3">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
                  </div>

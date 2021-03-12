@@ -76,7 +76,11 @@
 
       & img{
         height: 50rem;
-        align-self: flex-end;
+        align-self: center;
+        @include respond(phone){
+          align-self: flex-end;
+
+        }
       }
       &-name{
         margin:5rem;

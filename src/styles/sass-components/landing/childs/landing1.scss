@@ -2,9 +2,9 @@
   animation: reach .5s linear;
   margin: 0 25rem;
   color: $color-grey-light;
-  overflow: hidden;
-  @include respond(phone){
-    margin: 0 1rem;
+  @include respond(tab-land){
+    overflow: hidden;
+    margin: 0rem;
     // overflow:hidden;
   }
   &__1{
@@ -13,7 +13,7 @@
     margin-top: 15rem;
     // font-weight: bold;
     // margin-bottom: 2rem;
-    @include respond(phone){
+    @include respond(tab-land){
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
       margin-left: 5rem;
@@ -30,7 +30,7 @@
     margin-bottom: -2rem;
     margin-left: -1rem;
     margin-top: -1rem;
-    @include respond(phone){
+    @include respond(tab-land){
       justify-content: center;
       text-align: center;
       font-size: 6.5rem;
@@ -45,7 +45,7 @@
     margin-bottom: 1rem;
     letter-spacing: 1.5rem;
     word-spacing: 2.5rem;
-    @include respond(phone){
+    @include respond(tab-land){
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
       margin-left: 5rem;
@@ -57,7 +57,7 @@
     color: $color-grey-light;
     font-weight: bold;
     margin-bottom: 1rem;
-    @include respond(phone){
+    @include respond(tab-land){
       font-size: 1.5rem;
       justify-content: center;
       margin-bottom: 1rem;
@@ -70,7 +70,7 @@
        display: flex;
        justify-content:flex-start;
        align-items: center;
-       @include respond(phone){
+       @include respond(tab-land){
         justify-content: space-around;
         margin: 1rem;
         margin-top: 5rem;
@@ -87,6 +87,9 @@
          color: $color-india-fontLight;
          border-bottom: 1px solid  rgba($color-india-fontLight,.5);
          transition: all .3s;
+         @include respond(tab-land){
+          padding: 1rem 2rem;
+         }
          &--selected{
            background: $color-india-blue;
            color: $color-white;
@@ -99,14 +102,14 @@
              position: relative;
              top: -.4rem;
            }
-           @include respond(phone){
+           @include respond(tab-land){
             border-radius: 5px;
             border: 1px solid  rgba($color-india-fontLight,.5);
            }
          }
          &--1{
            border-top-left-radius: 18px;
-           @include respond(phone){
+           @include respond(tab-land){
             border-radius: 5px;
             border: 1px solid  rgba($color-india-fontLight,.5);
            }
@@ -114,7 +117,7 @@
          }
          &--3{
            border-top-right-radius: 18px;
-           @include respond(phone){
+           @include respond(tab-land){
             border-radius: 5px;
             border: 1px solid  rgba($color-india-fontLight,.5);
            }
@@ -136,16 +139,18 @@
        border-bottom-right-radius: 18px;
        border-bottom-left-radius: 18px;
        padding-bottom: 3rem;
-       @include respond(phone){
+       @include respond(tab-land){
         flex-direction: column;
-        border-radius: 5px;
+        border-radius: 15px;
+        width: 45rem;
+        margin: auto;
        }
       &-bWrap{
         display: flex;
         justify-content: flex-start;
         align-items:center;
         position: relative;
-        @include respond(phone){
+        @include respond(tab-land){
          flex-direction: column;
         }
         &-svg{
@@ -163,7 +168,7 @@
            border-radius: 50%;
            height: 5rem;
            width: 5rem;
-           @include respond(phone){
+           @include respond(tab-land){
             transform: translate(-50%,-50%) rotate(90deg);
            }
         }
@@ -175,7 +180,7 @@
          border: 2px solid  rgba($color-india-fontLight,1);
          border-radius: 5px;
          min-height: 10rem;
-         @include respond(phone){
+         @include respond(tab-land){
           width: 80%;
           margin: 1rem;
           padding-left: 1rem;
@@ -185,7 +190,7 @@
            justify-content: flex-start;
            align-items:center;
            padding-left: 1rem;
-           @include respond(phone){
+           @include respond(tab-land){
 
            }
          }
@@ -218,7 +223,7 @@
            &::placeholder{
              color: $color-white;
            }
-           @include respond(phone){
+           @include respond(tab-land){
               width: 20rem;
            }
          }
@@ -242,14 +247,14 @@
         font-size: 2rem;
         border: none;
         border-radius: 18px;
-        @include respond(phone){
+        @include respond(tab-land){
           position: static;
           transform: translateY(0%);
           margin: 1rem;
           font-size: 1.8rem;
           width: 20rem;
           margin-left: auto;
-          margin-right: 0;
+          margin-right: 2rem;
           border-radius: 5px;
         }
         &:focus{
@@ -265,6 +270,9 @@
           position: relative;
           right: 4.5rem;
           transition: all .3s;
+          @include respond(tab-land){
+             right: 4.8rem;
+          }
           @include respond(phone){
              right: 5.5rem;
           }
@@ -277,7 +285,7 @@
   &__6{
     position: relative;
     height: 55vh;
-    @include respond(phone){
+    @include respond(tab-land){
        width: 100%;
        height: 18vh;
     }
@@ -287,8 +295,9 @@
       height: 100%;
       top: 0;
       left: -5%;
-      @include respond(phone){
-         left: 0;
+      @include respond(tab-land){
+         left: 50%;
+         transform: translateX(-50%);
       }
     }
   }

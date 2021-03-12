@@ -32,8 +32,12 @@ class Landing5 extends Component{
       return (
          <div className="landing5">
             <div className={this.state.right?"landing5__box landing5__box--position1":"landing5__box landing5__box--position2"}>
+              <div className="landing5__box_imgWrap">
                <img src={this.props.mobile?pinkMob:pink} alt=""/>
+               </div>
+               <div className="landing5__box_imgWrap">
                <img src={this.props.mobile?blueMob:blue} alt=""/>
+               </div>
             </div>
             <img onClick={this.arrowHadler} className={this.state.right?"landing5__arr landing5__arr--right":"landing5__arr landing5__arr--left"} src={yellow} alt=""/>
             {this.props.mobile?[<div className="landing5__main">

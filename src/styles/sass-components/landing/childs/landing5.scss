@@ -28,18 +28,41 @@
     display: flex;
     align-items:center;
     flex-wrap: nowrap;
-    margin: 5rem 0;
+    margin: 5rem 10rem;
     margin-left: 10rem;
-    @include respond(phone){
+    @include respond(tab-land){
       margin: 2rem;
     }
     // overflow-x: scroll;
-    & img{
+    &_imgWrap{
       width: 80vw;
       margin-right: 5rem;
       padding: 5rem;
+      & img{
+        width: 80vw;
+      }
+      @include respond(tab-land){
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin: auto;
+        & img{
+          margin: auto;
+          width: 80vw;
+          height: 50vh;
+          object-fit: cover;
+          border-radius: 18px;
+        }
+      }
       @include respond(phone){
-        width: 96%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        & img{
+          width: 80vw;
+        }
       }
     }
   }
@@ -49,16 +72,16 @@
     height: 15rem;
     transition: all .5s;
     cursor: pointer;
-    @include respond(phone){
+    @include respond(tab-land){
       height: 8rem;
     }
     &--right{
       transform: translateY(-50%);
-      right: 10%;
+      right: 5%;
       animation: slide__right .5s linear;
     }
     &--left{
-      left: 10%;
+      left: 5%;
       transform: translateY(-50%) rotate(180deg);
       animation: slide__left .5s linear;
     }

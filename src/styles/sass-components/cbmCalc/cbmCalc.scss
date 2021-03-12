@@ -9,8 +9,19 @@
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
+    @include respond(tab-land){
+       margin-top: 5rem;
+       font-size: 3.5rem;
+    }
+    @include respond(phone){
+       margin-top: 8rem;
+       font-size: 2.5rem;
+    }
   }
   background-image: url(../../../assets/images/cbmBack.svg);
+  @include respond(tab-land){
+     background: $color-white;
+  }
   background-repeat: repeat-y;
   padding: 5rem 0;
   &__box{
@@ -24,11 +35,27 @@
       transform: translateX(-50%);
       left: 50%;
       bottom: 7rem;
+      bottom: 14rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      // @include respond(tab-land){
+      // }
+      @include respond(tab-land){
+        bottom: 9rem;
+      }
       &-text{
         font-size: 3rem;
         color: $color-india-font;
         font-weight: 500;
         margin-right: 8rem;
+        @include respond(tab-land){
+          font-size: 2rem;
+        }
+        @include respond(phone){
+          font-size: 1.5rem;
+        }
       }
       &-number{
         font-size: 2rem;
@@ -37,6 +64,14 @@
         color: $color-white;
         border-radius: 10px;
         padding: 1rem 8rem;
+        @include respond(tab-land){
+          font-size: 2rem;
+          padding: 1rem 3rem;
+        }
+        @include respond(phone){
+          font-size: 1.5rem;
+          padding: 1rem;
+        }
         &--background{
           background-color: $color-grey-light;
         }
@@ -49,7 +84,12 @@
     transform: translateX(-50%);
     top: 10rem;
     left: 50%;
-
+    @include respond(phone){
+       transform: scale(.1);
+       left: 0;
+       transform: translateX(0%);
+       display: none;
+    }
     }
     & thead{
       & td{
@@ -99,6 +139,12 @@
     padding: 2rem;
     & img[alt="plus"]{
        transform: translateY(-.5rem);
+    }
+  }
+  &__black{
+    color: $color-white;
+    @include respond(tab-land){
+       color: $color-black;
     }
   }
 }

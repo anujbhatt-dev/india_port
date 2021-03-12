@@ -116,17 +116,17 @@ class CbmCalc extends Component{
              <div className="invoice__flex">
                   <img src={s1} alt=""/>
                   <div className="invoice__flex_text">
-                       <div style={{color:"white"}} className="invoice__flex_text-1">Step 1</div>
-                       <div style={{color:"white"}} className="invoice__flex_text-2">Easy use<br/>of cbm<br/>calculator</div>
-                       <div style={{color:"white"}} className="invoice__flex_text-3">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
+                       <div className="cbmCalc__black invoice__flex_text-1">Step 1</div>
+                       <div className="cbmCalc__black invoice__flex_text-2">Easy use<br/>of cbm<br/>calculator</div>
+                       <div className="cbmCalc__black invoice__flex_text-3">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
                    </div>
              </div>
 
-             <div className="invoice__flex">
+             <div className="invoice__flex invoice__flex--rev">
                   <div className="invoice__flex_text invoice__flex_text--rev">
-                       <div style={{color:"white"}} className="invoice__flex_text-1">Step 1</div>
-                       <div style={{color:"white"}} className="invoice__flex_text-2 invoice__flex_text-2--rev">Easy use<br/>of cbm<br/>calculator</div>
-                       <div style={{color:"white"}} className="invoice__flex_text-3 invoice__flex_text-3--rev">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
+                       <div className="cbmCalc__black invoice__flex_text-1">Step 1</div>
+                       <div className="cbmCalc__black invoice__flex_text-2 invoice__flex_text-2--rev">Easy use<br/>of cbm<br/>calculator</div>
+                       <div className="cbmCalc__black invoice__flex_text-3 invoice__flex_text-3--rev">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
                   </div>
                   <img src={s1} alt=""/>
              </div>
@@ -134,9 +134,9 @@ class CbmCalc extends Component{
              <div className="invoice__flex invoice__flex--last">
                   <img src={s1} alt=""/>
                   <div className="invoice__flex_text">
-                       <div style={{color:"white"}} className="invoice__flex_text-1">Step 1</div>
-                       <div style={{color:"white"}} className="invoice__flex_text-2">Easy use<br/>of cbm<br/>calculator</div>
-                       <div style={{color:"white"}} className="invoice__flex_text-3">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
+                       <div className="cbmCalc__black invoice__flex_text-1">Step 1</div>
+                       <div className="cbmCalc__black invoice__flex_text-2">Easy use<br/>of cbm<br/>calculator</div>
+                       <div className="cbmCalc__black invoice__flex_text-3">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
                   </div>
              </div>
          </div>

@@ -5,7 +5,7 @@
   margin: 0 25rem;
   // width: 80vw;
   top: 0;
-  z-index: 1000;
+  z-index: 100000;
   &__brandLogo{
 
   }
@@ -57,5 +57,62 @@
   }
   &:hover > &__menu{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+
+.navMob{
+
+
+  &__toggler{
+    position: fixed;
+    font-size: 3rem;
+    top: 3rem;
+    left: 3rem;
+    z-index: 100001;
+  }
+
+  &__items{
+    background: $color-white;
+    background: $color-india-fontLight;
+    // background: tomato;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    height: 100vh;
+  }
+}
+.openNav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100000;
+  height: 100vh;
+  animation: openNav .5s linear;
+  width: 80vw;
+  display: flex;
+  flex-flow: column;
+  padding-right: 10rem;
+  padding-top: 10rem;
+  padding-left: 2rem;
+  overflow-y: auto;
+  box-shadow: 5rem 0 5rem -2rem  rgba($color-black,.5);
+  & a{
+    margin-bottom: 2rem;
+    display: flex;
+    font-size: 1.6rem;
+  }
+}
+.closeNav{
+  animation: closeNav .5s linear;
+  width: 0;
+  padding-right: 0rem;
+  padding-top: 0rem;
+  padding-left: 0rem;
+  & a{
+    font-size: 0;
+    margin-bottom: 0rem;
+    display: none;
   }
 }

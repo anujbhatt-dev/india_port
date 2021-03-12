@@ -6,7 +6,7 @@
     top: 50%;
     left: 25rem;
     color: $color-white;
-    @include respond(phone){
+    @include respond(tab-land){
       left: 2rem;
       top: 10%;
       transform: translateY(0%);
@@ -14,7 +14,7 @@
    &_large{
      font-size: 8.5rem;
      margin-bottom: 1rem;
-     @include respond(phone){
+     @include respond(tab-land){
        font-size: 4rem;
        width: 10rem;
      }
@@ -23,7 +23,7 @@
      font-size: 2.5rem;
      margin-bottom: 1rem;
      font-weight: 100;
-     @include respond(phone){
+     @include respond(tab-land){
        font-size: 1.8rem;
        margin-bottom: 10rem;
 
@@ -36,7 +36,7 @@
      color: $color-india-blue;
      border: none;
      border-radius: 18px;
-     @include respond(phone){
+     @include respond(tab-land){
        padding: 1.5rem 6rem;
        font-size: 1.8rem;
 
@@ -47,7 +47,7 @@
   & img{
     width: 100vw;
     margin-bottom: -1rem;
-    @include respond(phone){
+    @include respond(tab-land){
       width: 100vw;
       height: 80vh;
       margin: 0;
