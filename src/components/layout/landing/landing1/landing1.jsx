@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 import ship from "../../../../assets/images/ship.svg"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 class Landing1 extends Component{
 
@@ -11,6 +13,15 @@ class Landing1 extends Component{
        this.setState({
          medium:med
        })
+    }
+
+    componentDidMount=()=>{
+
+      Aos.init({
+        duration: 2000,
+        delay: 100
+      });
+
     }
 
     render(){

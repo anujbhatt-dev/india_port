@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import {NavLink} from "react-router-dom"
+import logo from "../../../assets/images/logo.png"
 
 
 class Navigation extends Component{
@@ -11,7 +12,7 @@ class Navigation extends Component{
            <div className="navigation">
 
                <div className="navigation__brandLogo">
-                    <img src="{logo}" alt=""/>
+                    <img src={logo} alt=""/>
                </div>
                <div className="navigation__items">
                    <NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/" className="navigation__items_item navigation__items_item">Home</NavLink>
