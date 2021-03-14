@@ -48,13 +48,9 @@ class Landing3 extends Component{
       $(function() {
 
          $(".landing3").mousewheel(function(event, delta) {
-
             this.scrollLeft -= (delta * 100);
-
             event.preventDefault();
-
          });
-
       });
     }
 

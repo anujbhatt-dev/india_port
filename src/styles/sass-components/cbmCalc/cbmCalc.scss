@@ -35,7 +35,7 @@
       transform: translateX(-50%);
       left: 50%;
       bottom: 7rem;
-      bottom: 14rem;
+      bottom: 10rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -46,7 +46,7 @@
         bottom: 9rem;
       }
       &-text{
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: $color-india-font;
         font-weight: 500;
         margin-right: 8rem;
@@ -63,7 +63,11 @@
         font-weight: 400;
         color: $color-white;
         border-radius: 10px;
-        padding: 1rem 8rem;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25rem;
         @include respond(tab-land){
           font-size: 2rem;
           padding: 1rem 3rem;
