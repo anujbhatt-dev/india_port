@@ -16,7 +16,7 @@ export default class Diary extends Component {
 
         return (
             <div className="diary">
-             <Updates updates={this.props.updates}/>
+             <Updates blogs={this.props.blogs} updates={this.props.updates}/>
              <News news={this.props.news}/>
              <Blogs blogs={this.props.blogs}/>
 
