@@ -4,18 +4,6 @@ import {NavLink} from "react-router-dom"
 
 class Landing7 extends Component{
 
-
-    state = {
-        blogs: [],
-    }
-
-    componentDidMount = () => {
-
-          this.setState({blogs:[...this.props.blogs,...this.props.blogs,...this.props.blogs,]});
-    }
-
-
-
     render(){
 
       return (
@@ -24,17 +12,40 @@ class Landing7 extends Component{
              <div className="landing7__heading">
                  BLOGS
              </div>
-             <div className="landing7__items">
+             <div className="marquee">
 
-               {this.state.blogs.map(blog=> 
-               
-               <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
-               <div className="landing7__items_card">
-                    <img src={blog.labels[0]} alt=""/>
-                    <div className="landing7__items_card-title">{blog.title}</div>
-                </div>
-                </NavLink>
-               )}
+                 <div className="landing7__items">
+
+                   {this.props.blogs.map(blog=>
+
+                   <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+                   <div className="landing7__items_card">
+                        <img src={blog.labels[0]} alt=""/>
+                        <div className="landing7__items_card-title"><div>{blog.title}</div><div className="landing7__items_card-title--date">{blog.published.split("T")[0]}</div></div>
+
+                    </div>
+                    </NavLink>
+                   )}
+                   {this.props.blogs.map(blog=>
+
+                   <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+                   <div className="landing7__items_card">
+                        <img src={blog.labels[0]} alt=""/>
+                        <div className="landing7__items_card-title"><div>{blog.title}</div><div className="landing7__items_card-title--date">{blog.published.split("T")[0]}</div></div>
+                    </div>
+                    </NavLink>
+                   )}
+                   {this.props.blogs.map(blog=>
+
+                   <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+                   <div className="landing7__items_card">
+                        <img src={blog.labels[0]} alt=""/>
+                        <div className="landing7__items_card-title"><div>{blog.title}</div><div className="landing7__items_card-title--date">{blog.published.split("T")[0]}</div></div>
+                    </div>
+                    </NavLink>
+                   )}
+
+                 </div>
 
              </div>
 

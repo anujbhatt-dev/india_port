@@ -36,7 +36,7 @@ export default class Updates extends Component {
        else
         this.setState({updates:this.props.updates});
 
-        
+
        if(this.props.blogs.length===0)
        axios.get(this.BLOGS_BLOGGER_POSTS_API)
        .then(res =>
@@ -53,7 +53,7 @@ export default class Updates extends Component {
         return (
             <div className="diary__1">
                 {this.state.blog?
-                <NavLink to={`/diary/blogs/${this.state.blog.blog.id}/posts/${this.state.blog.id}`}>
+                <Link to={`/diary/blogs/${this.state.blog.blog.id}/posts/${this.state.blog.id}`}>
                 <div className="diary__1_1">
                     <img src={this.state.blog.labels[0]} alt=""/>
                     <div  className="diary__1_1-text">
@@ -61,7 +61,7 @@ export default class Updates extends Component {
                         <div className="diary__1_1-text-date">12 nov 2222</div>
                     </div>
                 </div>
-                </NavLink>:
+                </Link>:
                 null}
                 <div className="diary__1_updates">
                         <div className="diary__1_updates-head">Updates</div>
