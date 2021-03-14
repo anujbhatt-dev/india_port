@@ -110,7 +110,7 @@ class Layout extends Component{
       axios.get(this.BLOGS_BLOGGER_POSTS_API)
       .then(res =>
           // console.log(res.data)
-          this.setState({ blogs: res.data.items })
+          this.setState({ blogs: [...res.data.items, ...res.data.items, ...res.data.items, ...res.data.items] })
       )
       .catch(err => alert("something went wrong-> Blogs.jsx"));
 

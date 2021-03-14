@@ -10,7 +10,7 @@ export default class News extends Component {
     GOOGLE_APP_KEY = `AIzaSyBfhPkgmqU6VTigT8WRzhaHbcjeKGD11HQ`;
     NEWS_BLOG_ID = `9075147176992920351`;
     NEWS_BLOGGER_POSTS_API = `https://www.googleapis.com/blogger/v3/blogs/${this.NEWS_BLOG_ID}/posts?key=${this.GOOGLE_APP_KEY}`
-
+    NEWS_BLOGGER_POSTS_API_EXTENDED = `https://www.blogger.com/feeds/${this.NEWS_BLOG_ID}/posts/default?alt=json`
     state = {
         news: [],
     }
@@ -44,13 +44,13 @@ export default class News extends Component {
                         this.state.news.map(ne =>
 
                             [
-                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={diary3} alt=""/><span>{ne.title}</span></Link>,
-                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={diary3} alt=""/><span>{ne.title}</span></Link>,
-                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={diary3} alt=""/><span>{ne.title}</span></Link>,
-                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={diary3} alt=""/><span>{ne.title}</span></Link>,
-                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={diary3} alt=""/><span>{ne.title}</span></Link>,
-                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={diary3} alt=""/><span>{ne.title}</span></Link>,
-                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={diary3} alt=""/><span>{ne.title}</span></Link>,
+                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={ne.labels[0]} alt=""/><span>{+"  "+ne.title}</span></Link>,
+                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={ne.labels[0]} alt=""/><span>{+"  "+ne.title}</span></Link>,
+                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={ne.labels[0]} alt=""/><span>{+"  "+ne.title}</span></Link>,
+                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={ne.labels[0]} alt=""/><span>{+"  "+ne.title}</span></Link>,
+                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={ne.labels[0]} alt=""/><span>{+"  "+ne.title}</span></Link>,
+                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={ne.labels[0]} alt=""/><span>{+"  "+ne.title}</span></Link>,
+                              <Link to={`/diary/blogs/${ne.blog.id}/posts/${ne.id}`}><img src={ne.labels[0]} alt=""/><span>{+"  "+ne.title}</span></Link>,
                             ]
 
                         )}
