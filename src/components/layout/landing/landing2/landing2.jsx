@@ -16,15 +16,17 @@ class Landing2 extends Component{
     }
 
     componentDidMount=()=>{
-        window.addEventListener("scroll",(e)=>{
-           console.log(window.pageYOffset);
-        })
+        // window.addEventListener("scroll",(e)=>{
+        //    console.log(window.pageYOffset);
+        // })
 
         this.numberInterval();
 
+       
+
     }
 
-    
+
     mobileNumberIntervalFunc=null;
 
     numberInterval=()=>{

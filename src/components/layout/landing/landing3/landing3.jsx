@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 import {Link} from "react-router-dom"
+import $ from "jquery";
+import mousewheel from "jquery-mousewheel"
 import cc from "../../../../assets/images/cc.svg"
 import freight from "../../../../assets/images/freight.svg"
 import insure from "../../../../assets/images/insure.svg"
@@ -41,6 +43,19 @@ class Landing3 extends Component{
       });
 
       this.mobileNumberInterval();
+
+
+      $(function() {
+
+         $(".landing3").mousewheel(function(event, delta) {
+
+            this.scrollLeft -= (delta * 100);
+
+            event.preventDefault();
+
+         });
+
+      });
     }
 
     render(){
@@ -48,33 +63,35 @@ class Landing3 extends Component{
       return (
          !this.props.mobile?
          <div className="landing3">
-             <Link className="landing3__link" to="/freight">
-                  <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
-                  <img className="landing3__link_img" src={freight} alt=""/>
-                  <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
-                  <div className="landing3__link_text">
-                      <div className='landing3__link_text-title'>Freight Forwarding</div>
-                      <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
-                  </div>
-             </Link>
-             <Link className="landing3__link" to="/customClearance">
-                 <img className="landing3__link_img" src={cc} alt=""/>
-                 <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
-                 <div className="landing3__link_text">
-                     <div className='landing3__link_text-title'>Customer<br/>Clearance</div>
-                     <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
-                 </div>
-             </Link>
-             <Link className="landing3__link" to="/insurance">
-                 <img data-aos="fade-right" className="landing3__link_img--plane" src={yellowPlane} alt=""/>
-                 <img className="landing3__link_img" src={insure} alt=""/>
-                 <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
-                 <div className="landing3__link_text">
-                     <div className='landing3__link_text-title'>Insurance<br/>for Product</div>
-                     <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
-                 </div>
+            <div className="landing3__wrapper">
+                 <Link className="landing3__link" to="/freight">
+                      <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
+                      <img className="landing3__link_img" src={freight} alt=""/>
+                      <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
+                      <div className="landing3__link_text">
+                          <div className='landing3__link_text-title'>Freight Forwarding</div>
+                          <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                      </div>
+                 </Link>
+                 <Link className="landing3__link" to="/customClearance">
+                     <img className="landing3__link_img" src={cc} alt=""/>
+                     <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
+                     <div className="landing3__link_text">
+                         <div className='landing3__link_text-title'>Customer<br/>Clearance</div>
+                         <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                     </div>
+                 </Link>
+                 <Link className="landing3__link" to="/insurance">
+                     <img data-aos="fade-right" className="landing3__link_img--plane" src={yellowPlane} alt=""/>
+                     <img className="landing3__link_img" src={insure} alt=""/>
+                     <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
+                     <div className="landing3__link_text">
+                         <div className='landing3__link_text-title'>Insurance<br/>for Product</div>
+                         <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                     </div>
 
-             </Link>
+                 </Link>
+             </div>
 
 
          </div>

@@ -1,5 +1,14 @@
 &3{
   overflow: hidden;
+  &__wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300vw;
+    overflow: hidden;
+  }
+  width: 100vw;
+  height: 100vh;
   &__link{
     height: 70vh;
     width: 70vw;

@@ -1,7 +1,12 @@
 &2{
   margin: 5rem 0;
-  margin-top: 5rem;
+  padding-top: 5rem;
+  margin-top: 0rem;
   height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #f7f7f7;
   &__flexWrapper{
     // background: $color-white;
     // height: 100vh;

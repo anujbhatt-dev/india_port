@@ -139,7 +139,7 @@
     &_r2{
       position: relative;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items:center;
        border-top-right-radius: 18px;
        border-bottom-right-radius: 18px;
@@ -151,11 +151,13 @@
         width: 45rem;
         margin: auto;
        }
+       flex-wrap: wrap;
       &-bWrap{
         display: flex;
         justify-content: flex-start;
         align-items:center;
         position: relative;
+        margin: 1rem;
         @include respond(tab-land){
          flex-direction: column;
         }
@@ -230,6 +232,7 @@
            color: $color-white;
            border: none;
            font-size: 2rem;
+           width: 20rem;
            &::placeholder{
              color: $color-white;
            }
