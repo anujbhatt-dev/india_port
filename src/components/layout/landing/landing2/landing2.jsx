@@ -19,12 +19,24 @@ class Landing2 extends Component{
            console.log(window.pageYOffset);
         })
 
+        this.numberInterval();
+
+    }
+
+    
+    numberIntervalFunc=null;
+
+    numberInterval=()=>{
+     this.numberIntervalFunc= setInterval(()=>{
+          this.setState(s=>{return {number:s.number===2?0:s.number+1}})
+      }, 1000)
     }
 
     numberHandler=(num)=>{
       this.setState({
         number:num
       })
+      clearInterval(this.numberIntervalFunc);
     }
 
     render(){

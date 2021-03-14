@@ -18,17 +18,29 @@ class Landing3 extends Component{
       number:0
     }
 
+    numberIntervalFunc=null;
+
+    numberInterval=()=>{
+     this.numberIntervalFunc= setInterval(()=>{
+          this.setState(s=>{return {number:s.number===2?0:s.number+1}})
+      }, 1000)
+    }
+
     numberHandler=(num)=>{
       this.setState({
         number:num
       })
+      clearInterval(this.numberIntervalFunc);
     }
+
 
     componentDidMount=()=>{
       Aos.init({
         duration: 1000,
         delay: 100
       });
+
+      this.numberInterval();
     }
 
     render(){
