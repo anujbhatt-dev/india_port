@@ -6,6 +6,8 @@ import Navigation from "./fixed/navigation"
 import NavigationMob from "./fixed/navigationMob"
 
 
+
+
 import Landing from "./landing/landing"
 import About from "./about/about"
 import Contact from "./contact/contact"
@@ -14,6 +16,7 @@ import Insurance from "./insurance/insurance"
 import CustomClearance from "./customClearance/customClearance"
 import Invoice from "./invoice/invoice"
 import CbmCalc from "./cbmCalc/cbmCalc"
+import Loader from "./loader/loader"
 
 import Exim from "./exim/exim"
 import Diary from "./diary/diary"
@@ -42,6 +45,7 @@ class Layout extends Component{
         news: [],
         blogs:[],
         promotion:false,
+        loading:true
     }
 
 
@@ -63,6 +67,12 @@ class Layout extends Component{
     deferredPrompt=null;
 
     componentDidMount=()=>{
+
+        setTimeout(()=>{
+          this.setState({
+            loading:false
+          })
+        },4000)
 
         //pwa ready event
        window.addEventListener('beforeinstallprompt', (e) => {
@@ -118,6 +128,10 @@ class Layout extends Component{
 
 
     render(){
+
+      if(this.state.loading){
+        return <Loader />
+      }
 
       return (
           <div className="layout">

@@ -7,6 +7,15 @@
    }
 }
 
+@keyframes rotate1 {
+   0%{
+     transform:  rotate(0) scale(.5);
+   }
+   100%{
+     transform:  rotate(-720deg)  scale(1);
+   }
+}
+
 @keyframes openNav {
    0%{
      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
