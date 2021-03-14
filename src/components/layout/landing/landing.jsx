@@ -23,7 +23,7 @@ class Landing extends Component{
                <Landing4 mobile={this.props.mobile}/>
                <Landing5 mobile={this.props.mobile}/>
                <Landing6 mobile={this.props.mobile}/>
-               <Landing7 mobile={this.props.mobile}/>
+               <Landing7 mobile={this.props.mobile} {...this.props}/>
                <Landing8 mobile={this.props.mobile}/>
           </div>
       )

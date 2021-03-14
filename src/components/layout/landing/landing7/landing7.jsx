@@ -4,6 +4,18 @@ import {NavLink} from "react-router-dom"
 
 class Landing7 extends Component{
 
+
+    state = {
+        blogs: [],
+    }
+
+    componentDidMount = () => {
+
+          this.setState({blogs:[...this.props.blogs,...this.props.blogs,...this.props.blogs,]});
+    }
+
+
+
     render(){
 
       return (
@@ -13,30 +25,16 @@ class Landing7 extends Component{
                  BLOGS
              </div>
              <div className="landing7__items">
-                <div className="landing7__items_card">
-                    <img src={b1} alt=""/>
-                    <div className="landing7__items_card-title">Lorem ipsum dolor sit.</div>
+
+               {this.state.blogs.map(blog=> 
+               
+               <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+               <div className="landing7__items_card">
+                    <img src={blog.labels[0]} alt=""/>
+                    <div className="landing7__items_card-title">{blog.title}</div>
                 </div>
-                <div className="landing7__items_card">
-                    <img src={b1} alt=""/>
-                    <div className="landing7__items_card-title">Lorem ipsum dolor sit.</div>
-                </div>
-                <div className="landing7__items_card">
-                    <img src={b1} alt=""/>
-                    <div className="landing7__items_card-title">Lorem ipsum dolor sit.</div>
-                </div>
-                <div className="landing7__items_card">
-                    <img src={b1} alt=""/>
-                    <div className="landing7__items_card-title">Lorem ipsum dolor sit.</div>
-                </div>
-                <div className="landing7__items_card">
-                    <img src={b1} alt=""/>
-                    <div className="landing7__items_card-title">Lorem ipsum dolor sit.</div>
-                </div>
-                <div className="landing7__items_card">
-                    <img src={b1} alt=""/>
-                    <div className="landing7__items_card-title">Lorem ipsum dolor sit.</div>
-                </div>
+                </NavLink>
+               )}
 
              </div>
 
