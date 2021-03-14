@@ -3,6 +3,8 @@ import cc from "../../../assets/images/cc.svg"
 import mob1 from "../../../assets/images/mob1.svg"
 import board from "../../../assets/images/board.svg"
 
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 class CustomClearance extends Component{
 
@@ -11,6 +13,11 @@ class CustomClearance extends Component{
           top:0,
           behavior:"auto"
         })
+
+        Aos.init({
+          duration: 2000,
+          delay: 100
+        });
     }
 
     render(){
@@ -41,7 +48,7 @@ class CustomClearance extends Component{
                         Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy
                      </div>
                  </div>
-                 <img src={mob1} alt=""/>
+                 <img data-aos="fade-right" src={mob1} alt=""/>
              </div>
 
              <div className="freight__flex freight__flex--rev">
@@ -53,7 +60,7 @@ class CustomClearance extends Component{
                         Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy
                      </div>
                  </div>
-                 <img src={board} alt=""/>
+                 <img  data-aos="fade-right" src={board} alt=""/>
              </div>
 
              <div className="freight__quote">

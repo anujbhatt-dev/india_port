@@ -18,6 +18,7 @@
     justify-content: center;
     transition: all .5s;
     border-radius: 5px;
+    text-decoration: none;
     @include respond(tab-land){
       bottom: 5rem;
       right: 5rem;
@@ -41,7 +42,7 @@
   }
   // height: 80vh;
   &__items{
-    animation: marquee 30s linear infinite;
+    animation: marquee2 20s linear infinite;
     animation-fill-mode: both;
     padding:  5rem;
     display: flex;
@@ -80,14 +81,23 @@
       }
       &-title{
         position: absolute;
-        bottom: 0;
+        bottom: .5rem;
         left: 0;
         height: 30%;
         width: 100%;
         background: $color-white;
+        color: $color-india-font;
         padding: 2rem;
         border-radius: 10px;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        &--date{
+          position: absolute;
+          bottom: 2rem;
+          left: 2rem;
+          font-size: 1rem;
+          color: $color-india-grey;
+          background: $color-white;
+        }
       }
     }
   }
