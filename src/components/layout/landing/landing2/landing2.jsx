@@ -11,7 +11,8 @@ import boat3 from "../../../../assets/images/boat3.svg"
 class Landing2 extends Component{
 
     state={
-      number:0
+      number:0,
+      mobileNumber:0,
     }
 
     componentDidMount=()=>{
@@ -24,19 +25,19 @@ class Landing2 extends Component{
     }
 
     
-    numberIntervalFunc=null;
+    mobileNumberIntervalFunc=null;
 
     numberInterval=()=>{
      this.numberIntervalFunc= setInterval(()=>{
-          this.setState(s=>{return {number:s.number===2?0:s.number+1}})
+          this.setState(s=>{return {mobileNumber:s.mobileNumber===2?0:s.mobileNumber+1}})
       }, 1000)
     }
 
-    numberHandler=(num)=>{
+    mobileNumberHandler=(mobileNumber)=>{
       this.setState({
-        number:num
+        mobileNumber:mobileNumber
       })
-      clearInterval(this.numberIntervalFunc);
+      clearInterval(this.mobileNumberIntervalFunc);
     }
 
     render(){
@@ -60,23 +61,23 @@ class Landing2 extends Component{
                <div className="landing2__mob_head">Tools</div>
               <div className="landing2__mob_dots">
 
-                  <svg onClick={()=>this.numberHandler(0)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.number===0?"#0239ff":"white"}/>
+                  <svg onClick={()=>this.mobileNumberHandler(0)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.mobileNumber===0?"#0239ff":"white"}/>
                   </svg>
 
-                  <svg onClick={()=>this.numberHandler(1)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.number===1?"#0239ff":"white"}/>
+                  <svg onClick={()=>this.mobileNumberHandler(1)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.mobileNumber===1?"#0239ff":"white"}/>
                   </svg>
 
-                  <svg onClick={()=>this.numberHandler(2)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.number===2?"#0239ff":"white"}/>
+                  <svg onClick={()=>this.mobileNumberHandler(2)} xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <circle id="Ellipse_259" data-name="Ellipse 259" cx="7.5" cy="7.5" r="7.5" stroke="#0239ff" fill={this.state.mobileNumber===2?"#0239ff":"white"}/>
                   </svg>
 
               </div>
               <div className="landing2__mob_main">
-                   <img  src={this.state.number===0?mob1:this.state.number===1?mob2:mob1} alt=""/>
+                   <img  src={this.state.mobileNumber===0?mob1:this.state.mobileNumber===1?mob2:mob1} alt=""/>
                    <div className="landing2__mob_main-name">
-                       {this.state.number===0?"mob1":this.state.number===1?"mob2":"mob1"} Calculator
+                       {this.state.mobileNumber===0?"mob1":this.state.mobileNumber===1?"mob2":"mob1"} Calculator
                    </div>
               </div>
          </div>
