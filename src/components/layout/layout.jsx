@@ -41,10 +41,41 @@ class Layout extends Component{
         mobile:false,
         news: [],
         blogs:[],
+        promotion:false,
+    }
+
+    
+    // install btn toogler
+    toggleInstallPromotion=()=>{
+        this.setState(s=>{return {promotion:!(s.promotion)}})
     }
 
 
+    //pwa installation with user consent
+    install=async ()=>{
+        // this.toggleInstallPromotion();
+        this.deferredPrompt.prompt();
+        const { outcome } = await this.deferredPrompt.userChoice;
+        // alert(`User response to the install prompt: ${outcome}`);
+        this.deferredPrompt = null;
+    }
+
+    deferredPrompt=null;
+
     componentDidMount=()=>{
+
+        //pwa ready event  
+       window.addEventListener('beforeinstallprompt', (e) => {
+         e.preventDefault();
+         this.deferredPrompt = e;
+         this.toggleInstallPromotion();
+       });
+
+       //pwa installed
+      window.addEventListener('appinstalled', () => {
+          this.toggleInstallPromotion();
+          this.deferredPrompt = null;
+        });
 
       // window.mobileCheck =()=>{
       //     let check = false;
@@ -90,6 +121,7 @@ class Layout extends Component{
 
       return (
           <div className="layout">
+              {this.state.promotion?<button onClick={this.install}>INSTALL</button>:null}
               {this.state.mobile?<NavigationMob/>:<Navigation/>}
               <GoToTop/>
               <Switch>
