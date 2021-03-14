@@ -148,7 +148,7 @@ class CbmCalc extends Component{
                 <div className="cbmCalc__box_total  cbmCalc__mob--total">
                 <span className="cbmCalc__box_total-text">Total</span>
                    {this.state.total?
-                    <span className="cbmCalc__box_total-number">{this.state.total}</span>:
+                    <span className="cbmCalc__box_total-number">{this.state.total+" INR"}</span>:
                     <span className="cbmCalc__box_total-number">-</span>}
                 </div>
     
@@ -170,12 +170,12 @@ class CbmCalc extends Component{
                          <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="hei" name="hei" type="text"/></td>
                         
                          <td className="cbmBack__table-input">
-                            <select onChange={(e)=>this.onChange(id,e)} name="uni"  id="">
+                            <select className="invoice__box_flex-input" onChange={(e)=>this.onChange(id,e)} name="uni"  id="">
                                <option value="m">m</option>
                                <option value="cm">cm</option>
                             </select>
                             </td>
-                         <td className=" cbmCalc__box_total-number">{this.state.valids[id]?this.state.data[id].ans:"-"}</td>   
+                         <td className=" cbmCalc__box_total-number">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"-"}</td>   
                         </tr>
                       )}
                    </tbody>
@@ -187,7 +187,7 @@ class CbmCalc extends Component{
                <div className="cbmCalc__box_total  cbmCalc__mob--total">
                <span className="cbmCalc__box_total-text">Total</span>
                {this.state.total?
-                <span className="cbmCalc__box_total-number">{this.state.total}</span>:
+                <span className="cbmCalc__box_total-number">{this.state.total+" INR"}</span>:
                 <span className="cbmCalc__box_total-number">-</span>}
                </div>
                <div className="cbmCalc__mob_flex">
@@ -206,13 +206,13 @@ class CbmCalc extends Component{
                     <input  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].wid?this.state.data[id].wid:null} placeholder="wid" name="wid" type="text"/>
                     <input  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="hei" name="hei" type="text"/>
                     <span className="cbmCalc__mob_flex-span2">
-                        <select onChange={(e)=>this.onChange(id,e)} name="uni"  id="">
+                        <select className="invoice__box_flex-input" onChange={(e)=>this.onChange(id,e)} name="uni"  id="">
                            <option value="m">m</option>
                            <option value="cm">cm</option>
                         </select>
                         
                         </span> 
-                     <span className=" cbmCalc__box_total-number">{this.state.valids[id]?this.state.data[id].ans:"-"}</span>   
+                     <span className=" cbmCalc__box_total-number">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"-"}</span>   
                     </div>
                   )}
                <div  className="cbmCalc__mob_flex">
