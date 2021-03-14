@@ -13,6 +13,13 @@ import Landing9 from "./landing9/landing9"
 
 class Landing extends Component{
 
+  componentDidMount=()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"auto"
+      })
+  }
+
     render(){
 
       return (

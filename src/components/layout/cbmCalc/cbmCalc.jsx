@@ -20,6 +20,12 @@ class CbmCalc extends Component{
 
 
   componentDidMount=()=>{
+
+    window.scrollTo({
+        top:0,
+        behavior:"auto"
+      })
+
     $(".navigation").css("background-color", "transparent");
     $(".navigation").css("position", "fixed");
     // $(".navigation").css("margin", "0 25rem");

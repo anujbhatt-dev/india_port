@@ -6,6 +6,13 @@ import board from "../../../assets/images/board.svg"
 
 class CustomClearance extends Component{
 
+    componentDidMount=()=>{
+      window.scrollTo({
+          top:0,
+          behavior:"auto"
+        })
+    }
+
     render(){
 
       return (

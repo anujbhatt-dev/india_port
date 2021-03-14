@@ -15,6 +15,14 @@ class Log extends Component {
     }
 
     componentDidMount=()=>{
+
+        window.scrollTo({
+            top:0,
+            behavior:"auto"
+          })
+
+
+
        let blogId=this.props.match.params.blogId;
        let postId=this.props.match.params.postId;
        let BLOGGER_POST_API=`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts/${postId}?key=${this.GOOGLE_APP_KEY}`;

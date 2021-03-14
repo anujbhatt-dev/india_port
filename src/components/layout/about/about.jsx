@@ -10,6 +10,11 @@ class About extends Component{
 
     componentDidMount=()=>{
 
+      window.scrollTo({
+        top:0,
+        behavior:"auto"
+      })
+
       $(".about").ripples({
       resolution: 400,
       perturbance: .04

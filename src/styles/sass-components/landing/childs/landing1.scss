@@ -71,6 +71,7 @@
   &__5{
     margin-bottom: 5rem;
     animation: reach .5s linear;
+    position: relative;
     &_r1{
        display: flex;
        justify-content:flex-start;
@@ -220,6 +221,9 @@
            color: $color-white;
            border: none;
            font-size: 2rem;
+           & option{
+             background: $color-india-font;
+           }
          }
          &-input{
            background: inherit;
@@ -239,9 +243,9 @@
     }
     &_btn{
       position: absolute;
-      bottom: 3rem;
-      right:31rem;
-      transform: translateY(-50%);
+      bottom: 0rem;
+      right:5rem;
+      transform: translateY(55%);
         cursor: pointer;
         color: $color-white;
         background: $color-india-blue;

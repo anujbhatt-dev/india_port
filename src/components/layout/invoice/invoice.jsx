@@ -24,6 +24,10 @@ import "aos/dist/aos.css"
 class Invoice extends Component{
 
   componentDidMount=()=>{
+      window.scrollTo({
+          top:0,
+          behavior:"auto"
+        })
     Aos.init({
       duration: 2000,
       delay: 100

@@ -44,7 +44,7 @@ class Layout extends Component{
         promotion:false,
     }
 
-    
+
     // install btn toogler
     toggleInstallPromotion=()=>{
         this.setState(s=>{return {promotion:!(s.promotion)}})
@@ -64,7 +64,7 @@ class Layout extends Component{
 
     componentDidMount=()=>{
 
-        //pwa ready event  
+        //pwa ready event
        window.addEventListener('beforeinstallprompt', (e) => {
          e.preventDefault();
          this.deferredPrompt = e;
@@ -110,7 +110,7 @@ class Layout extends Component{
       axios.get(this.BLOGS_BLOGGER_POSTS_API)
       .then(res =>
           // console.log(res.data)
-          this.setState({ blogs: res.data.items })
+          this.setState({ blogs: [...res.data.items, ...res.data.items, ...res.data.items, ...res.data.items] })
       )
       .catch(err => alert("something went wrong-> Blogs.jsx"));
 
@@ -121,7 +121,7 @@ class Layout extends Component{
 
       return (
           <div className="layout">
-              {this.state.promotion?<button onClick={this.install}>INSTALL</button>:null}
+              {this.state.promotion?<button className="install" onClick={this.install}> <i class="fa fa-download" aria-hidden="true"></i> INSTALL</button>:null}
               {this.state.mobile?<NavigationMob/>:<Navigation/>}
               <GoToTop/>
               <Switch>

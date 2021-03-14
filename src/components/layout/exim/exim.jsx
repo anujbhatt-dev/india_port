@@ -4,6 +4,13 @@ import fem from "../../../assets/images/fem.svg"
 
 class Exim extends Component{
 
+  componentDidMount=()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"auto"
+      })
+  }
+
     render(){
 
       return (

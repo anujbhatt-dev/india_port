@@ -39,11 +39,11 @@
     &_text{
       width: 45%;
       text-align: center;
-      color: $color-black;
+      color: $color-india-font;
       z-index: 5;
       &-title{
-         font-size: 5rem;
-         font-weight: 300;
+         font-size: 6rem;
+         // font-weight: 300;
          margin-bottom: 3rem;
       }
       &-content{

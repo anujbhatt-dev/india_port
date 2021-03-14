@@ -4,6 +4,14 @@ import News from './news/news'
 import Updates from './updates/updates'
 
 export default class Diary extends Component {
+
+  componentDidMount=()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"auto"
+      })
+  }
+
     render() {
 
         return (

@@ -42,5 +42,24 @@ body{
   padding: 0;
   width: 100vw;
   overflow-x: hidden;
-
+}
+.install{
+  z-index: 1000;
+  padding: 1rem 2rem ;
+  text-align:center;
+  background: $color-purple;
+  color: $color-white;
+  position: fixed;
+  bottom: 5rem;
+  left: 5rem;
+  border: none;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  animation: slide_d .3s linear;
+  & i{
+    margin-right: 1rem;
+    font-weight: lighter;
+  }
 }
