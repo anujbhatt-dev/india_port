@@ -22,7 +22,7 @@ class Landing2 extends Component{
 
         this.numberInterval();
 
-       
+
 
     }
 
@@ -46,7 +46,7 @@ class Landing2 extends Component{
 
       return (
          !this.props.mobile?<div className="landing2">
-            <div className="landing2__flexWrapper slide_up">
+            <div  id="landing2" className="landing2__flexWrapper slide_up">
                <div className="landing2__flex">
                    <div className={(this.state.number===0)?"landing2__flex_text slide_down":(this.state.number===1)?"landing2__flex_text slide_down1":"landing2__flex_text slide_down2"}>
                        <div className="landing2__flex_text-l">{this.state.number===0?"Duty":this.state.number===1?"Invoice":"BGM"}<br/>Calculator</div>

@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 .diary{
   padding: 2rem 35rem;
   overflow: hidden;
+  background: $color-white;
   &__1{
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     & a{
       text-decoration: none;
     }
@@ -41,6 +46,7 @@
       }
     }
     &_updates{
+      font-family: "Poppins",sans-serif;
       margin-left: 5rem;
       display: flex;
       flex-direction: column;
@@ -70,6 +76,7 @@
          }
       }
       &-head{
+        font-weight:bolder;
         text-align: center;
         padding-bottom: 1rem;
         font-size: 3rem;
@@ -97,6 +104,8 @@
     margin-top: 8rem;
   }
   &__2{
+    font-family: "Poppins",sans-serif;
+    font-weight:1000;
     position: relative;
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -106,6 +115,7 @@
       width: 300vh;
     }
     &_links{
+      font-weight: 600;
       padding-left:11rem;
       width: 250vh;
       animation: marquee 20s linear infinite;
@@ -225,6 +235,19 @@ width: auto;
 
   }
   &__blogPost{
+    &_link{
+      margin: 15rem 0;
+      text-decoration: none;
+      cursor: pointer;
+      color: coral;
+      font-size: 2.5rem;
+      transition: all 0.3s;
+
+      &:hover{
+        transform: translateY(-3px);
+        color: $color-india-font;
+      }
+    }
     &--loading{
       height: 100vh;
       width: 100vw;

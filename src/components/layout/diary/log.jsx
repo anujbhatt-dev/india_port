@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {Link} from "react-router-dom"
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 
@@ -46,7 +47,7 @@ class Log extends Component {
         return (
             <div className="diary__blogPost">
                 <td dangerouslySetInnerHTML={{__html: this.state.content.content}} />
-
+                <Link className="diary__blogPost_link" to="/diary">&larr; Back to Diary</Link>
 
             </div>
         )

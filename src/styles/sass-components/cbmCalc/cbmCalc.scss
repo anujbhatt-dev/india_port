@@ -50,6 +50,12 @@
         color: $color-india-font;
         font-weight: 500;
         margin-right: 8rem;
+        text-align: center;
+        @include respond(tab-land){
+          &--mod{
+            margin-right: 2rem;
+          }
+        }
         @include respond(tab-land){
           font-size: 2rem;
         }
@@ -68,6 +74,11 @@
         justify-content: center;
         align-items: center;
         width: 25rem;
+        @include respond(tab-land){
+          &--mod{
+            width: 15rem;
+          }
+        }
         @include respond(tab-land){
           font-size: 2rem;
           padding: 1rem 3rem;
@@ -158,6 +169,7 @@
       text-align: center;
       margin: 5rem;
       color: $color-india-font;
+      text-transform: uppercase;
     }
     background: $color-india-yellowLight;
     min-height: 25rem;
@@ -173,26 +185,30 @@
       margin: 1rem;
       & input,& span{
         flex-grow: 1;
-        margin: 0 1rem ;
+        margin-right: .5rem ;
         text-align: center;
-        padding: 1rem 2rem;
       }
       & input{
         width: 5rem;
-
+      }
+      @include respond(phone){
+        & select{
+          width: 5rem;
+        }
       }
       &-span1{
         font-size: 2.5rem;
         font-weight: bold;
         color: $color-india-font;
-        width: 5rem;
+        width: 4rem;
         @include respond(phone){
            font-size: 1.2rem;
         }
       }
       &-span2{
-        width: 5rem;
-        font-size: 2.5rem;
+        padding: 1rem;
+        width: 4rem;
+        font-size: 1.5rem;
         font-weight: bold;
         color: $color-india-font;
         @include respond(phone){

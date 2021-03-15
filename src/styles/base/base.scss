@@ -19,6 +19,8 @@ html{
   font-family: sans-serif;
   letter-spacing: .5px;
   font-family: 'Roboto', sans-serif;
+  background: #f7f7f7;
+
   // color:$color-gig-font;
 
   // overflow-y: scroll;
@@ -58,6 +60,7 @@ body{
   align-items: center;
   font-size: 1.8rem;
   animation: slide_d .3s linear;
+  cursor: pointer;
   & i{
     margin-right: 1rem;
     font-weight: lighter;

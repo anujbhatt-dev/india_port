@@ -1,7 +1,7 @@
 &1{
-
   margin: 0 25rem;
   color: $color-grey-light;
+
   @include respond(tab-land){
     overflow: hidden;
     margin: 0rem;
@@ -11,8 +11,8 @@
     animation: reach .5s linear;
     font-size: 2.7rem;
     color: $color-india-blue;
-    padding-top: 15rem;
-    // font-weight: bold;
+    padding-top: 10rem;
+    font-weight: bold;
     // margin-bottom: 2rem;
     @include respond(tab-land){
       font-size: 1.5rem;
@@ -27,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     // font-weight: bolder;
-    // font-weight: bold;
+    font-weight: 300;
     color: $color-india-font;
     margin-bottom: -2rem;
     margin-left: -1rem;
@@ -58,8 +58,8 @@
   &__4{
     font-size: 2.2rem;
     color: $color-grey-light;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    // font-weight: bold;
+    margin-bottom: 2rem;
     animation: reach .5s linear;
     @include respond(tab-land){
       font-size: 1.5rem;
@@ -91,7 +91,7 @@
          justify-content: center;
          align-items: center;
          color: $color-india-fontLight;
-         border-bottom: 1px solid  rgba($color-india-fontLight,.5);
+         // border-bottom: 1px solid  rgba($color-india-fontLight,.5);
          transition: all .3s;
          @include respond(tab-land){
           padding: 1rem 2rem;
@@ -102,8 +102,8 @@
          }
 
          &--2{
-           border-left: 1px solid  rgba($color-india-fontLight,.5);
-           border-right: 1px solid  rgba($color-india-fontLight,.5);
+           // border-left: 1px solid  rgba($color-india-fontLight,.5);
+           // border-right: 1px solid  rgba($color-india-fontLight,.5);
            & svg{
              position: relative;
              top: -.4rem;
@@ -220,11 +220,12 @@
          }
          & select{
            background: inherit;
-           color: $color-white;
            border: none;
            font-size: 2rem;
+           color: $color-white;
            & option{
-             background: $color-india-font;
+             color: $color-black;
+             // background: $color-india-font;
            }
          }
          &-input{
@@ -232,6 +233,7 @@
            color: $color-white;
            border: none;
            font-size: 2rem;
+           font-weight:bold;
            width: 20rem;
            &::placeholder{
              color: $color-white;
@@ -281,7 +283,7 @@
         }
         & svg{
           position: relative;
-          right: 4.5rem;
+          // right: 4.5rem;
           transition: all .3s;
           @include respond(tab-land){
              right: 4.8rem;
@@ -290,19 +292,29 @@
              right: 5.5rem;
           }
         }
-        &:hover >  svg{
-           right: 0;
-        }
+        // &:hover >  svg{
+        //    right: 0;
+        // }
     }
   }
   &__6{
     position: relative;
+    width: 80vw;
     height: 55vh;
     @include respond(tab-land){
+       width: 100%;
+       height: 38vh;
+    }
+    @include respond(tab-port){
+       width: 100%;
+       height: 28vh;
+    }
+    @include respond(phone){
        width: 100%;
        height: 18vh;
     }
     & img{
+
       position: absolute;
       // width: 120%;
       height: 100%;

@@ -141,11 +141,11 @@ class CbmCalc extends Component{
                 <div className="invoice__box">
                 <img className="invoice__box_bot" onClick={this.calculateTotal} src={leaf2} alt=""/>
                 <img data-aos="fade-up" className="invoice__box_big cbmCalc__box_big" src={box} alt=""/>
+                <img  data-aos="fade-right" className="invoice__box_arr" src={halfArrow} alt=""/>
                 <img className="invoice__box_i1" src={i} alt=""/>
-                <img className="invoice__box_arr" src={halfArrow} alt=""/>
                 <div className="cbmCalc__head">CBM Calculator</div>
                 <div className="invoice__box_go" onClick={this.calculateTotal}>GO</div>
-                
+
                 <div className="cbmCalc__box_total  cbmCalc__mob--total">
                 <span className="cbmCalc__box_total-text">Total</span>
                    {this.state.total?
@@ -185,11 +185,13 @@ class CbmCalc extends Component{
             [ <h1 className="cbmCalc__mob_head">cbm calculator</h1>,
             <div className="cbmCalc__mob">
                <img className="invoice__box_bot cbmCalc__mob--bot" onClick={this.calculateTotal}  src={leaf2} alt=""/>
+               <img  className="invoice__box_arr  invoice__box_arr--mod" src={halfArrow} alt=""/>
+               <div className="invoice__box_go invoice__box_go--mod" onClick={this.calculateTotal}>GO</div>
                <div className="cbmCalc__box_total  cbmCalc__mob--total">
-               <span className="cbmCalc__box_total-text">Total</span>
+               <span className="cbmCalc__box_total-text cbmCalc__box_total-text--mod">Total</span>
                {this.state.total?
-                <span className="cbmCalc__box_total-number">{this.state.total+" INR"}</span>:
-                <span className="cbmCalc__box_total-number">-</span>}
+                <span className="cbmCalc__box_total-number cbmCalc__box_total-number--mod">{this.state.total+" INR"}</span>:
+                <span className="cbmCalc__box_total-number cbmCalc__box_total-number--mod">-</span>}
                </div>
                <div className="cbmCalc__mob_flex">
                  {/* <span  className="cbmCalc__mob_flex-span0 cbmCalc__mob_flex-span1"></span> */}
@@ -203,17 +205,16 @@ class CbmCalc extends Component{
                {[1,2,3,4,5].map(id=>
                   <div className="cbmCalc__mob_flex">
                       {/* <span  className="cbmCalc__mob_flex-span0 cbmCalc__mob_flex-span1">{id}</span> */}
-                    <input  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].len?this.state.data[id].len:null} placeholder="len" name="len" type="text"/>
-                    <input  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].wid?this.state.data[id].wid:null} placeholder="wid" name="wid" type="text"/>
-                    <input  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="hei" name="hei" type="text"/>
+                    <input className="cbmCalc__mob_flex-span2"  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].len?this.state.data[id].len:null} placeholder="len" name="len" type="text"/>
+                    <input className="cbmCalc__mob_flex-span2"  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].wid?this.state.data[id].wid:null} placeholder="wid" name="wid" type="text"/>
+                    <input className="cbmCalc__mob_flex-span2"  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="hei" name="hei" type="text"/>
                     <span className="cbmCalc__mob_flex-span2">
                         <select className="invoice__box_flex-input" onChange={(e)=>this.onChange(id,e)} name="uni"  id="">
                            <option value="m">m</option>
                            <option value="cm">cm</option>
                         </select>
-
-                        </span>
-                     <span className=" cbmCalc__box_total-number">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"-"}</span>
+                     </span>
+                     <span className="cbmCalc__mob_flex-span2">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"-"}</span>
                     </div>
                   )}
                <div  className="cbmCalc__mob_flex">

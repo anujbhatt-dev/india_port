@@ -9,7 +9,7 @@ class Landing4 extends Component{
     render(){
 
       return (
-         <div className="landing4">
+         <div  id="landing4" className="landing4">
              <div className="landing4__text">
                 <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                 <div className="landing4__text_secondary">transparency</div>

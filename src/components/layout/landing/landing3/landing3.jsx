@@ -37,6 +37,34 @@ class Landing3 extends Component{
 
 
     componentDidMount=()=>{
+      let flag=0;
+
+      $(".landing3__link1").mousemove((e)=>{
+        let x = e.pageX - $('.landing3__link1').offset().left;
+        let y = e.pageY - $('.landing3__link1').offset().top;
+         $(".cursor").css("top",y)
+         $(".cursor").css("left",x)
+      })
+
+      $(".landing3__link2").mousemove((e)=>{
+        let x = e.pageX - $('.landing3__link2').offset().left;
+        let y = e.pageY - $('.landing3__link2').offset().top;
+         $(".cursor").css("top",y)
+         $(".cursor").css("left",x)
+      })
+
+      $(".landing3__link3").mousemove((e)=>{
+        let x = e.pageX - $('.landing3__link3').offset().left;
+        let y = e.pageY - $('.landing3__link3').offset().top;
+         $(".cursor").css("top",y)
+         $(".cursor").css("left",x)
+      })
+
+      $(".landing3__link").mouseleave((e)=>{
+         $(".cursor").css("top","-20rem")
+         $(".cursor").css("left","-20rem")
+      })
+
       Aos.init({
         duration: 1000,
         delay: 100
@@ -44,10 +72,28 @@ class Landing3 extends Component{
 
       this.mobileNumberInterval();
 
+      window.addEventListener("scroll",()=>{
+        console.log(window.pageYOffset);
+
+      })
+
 
       $(function() {
 
          $(".landing3").mousewheel(function(event, delta) {
+
+            if(delta<0 && this.scrollLeft>=2500){
+                window.scrollTo({
+                   top: 2700,
+                   behavior: 'smooth'
+                  });
+            }
+            if(delta>0 && this.scrollLeft===0){
+              window.scrollTo({
+                 top: 1110,
+                 behavior: 'smooth'
+                });
+            }
             this.scrollLeft -= (delta * 100);
             event.preventDefault();
          });
@@ -58,26 +104,18 @@ class Landing3 extends Component{
 
       return (
          !this.props.mobile?
-         <div className="landing3">
+         <div id="landing3" className="landing3">
             <div className="landing3__wrapper">
-                 <Link className="landing3__link" to="/freight">
-                      <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
-                      <img className="landing3__link_img" src={freight} alt=""/>
-                      <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
-                      <div className="landing3__link_text">
-                          <div className='landing3__link_text-title'>Freight Forwarding</div>
-                          <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
-                      </div>
-                 </Link>
-                 <Link className="landing3__link" to="/customClearance">
+                 <Link className="landing3__link landing3__link2" to="/customClearance">
                      <img className="landing3__link_img" src={cc} alt=""/>
                      <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
                      <div className="landing3__link_text">
                          <div className='landing3__link_text-title'>Customer<br/>Clearance</div>
                          <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
                      </div>
+                     <div className="cursor cursor__2">Explore</div>
                  </Link>
-                 <Link className="landing3__link" to="/insurance">
+                 <Link className="landing3__link landing3__link3" to="/insurance">
                      <img data-aos="fade-right" className="landing3__link_img--plane" src={yellowPlane} alt=""/>
                      <img className="landing3__link_img" src={insure} alt=""/>
                      <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
@@ -85,7 +123,17 @@ class Landing3 extends Component{
                          <div className='landing3__link_text-title'>Insurance<br/>for Product</div>
                          <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
                      </div>
-
+                     <div className="cursor cursor__3">Explore</div>
+                 </Link>
+                 <Link className="landing3__link landing3__link1" to="/freight">
+                      <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
+                      <img className="landing3__link_img" src={freight} alt=""/>
+                      <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
+                      <div className="landing3__link_text">
+                          <div className='landing3__link_text-title'>Freight Forwarding</div>
+                          <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                      </div>
+                      <div className="cursor cursor__1">Explore</div>
                  </Link>
              </div>
 

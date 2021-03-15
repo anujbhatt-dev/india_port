@@ -348,7 +348,7 @@ step3Toggler=(flag)=>{
                        <div className="invoice__box_step_2">Step 1</div>
                 </div>
                 <div className="cbmCalc__box_total">
-                   <span className="cbmCalc__box_total-text">CIF IN INR</span> <span className="cbmCalc__box_total-number">{this.state.step1.total}</span>
+                   <span className="cbmCalc__box_total-text cbmCalc__box_total-text--mod">CIF IN INR</span> <span className="cbmCalc__box_total-number cbmCalc__box_total-number--mod">{this.state.step1.total}</span>
                 </div>
                 <div data-aos="fade-down" className="invoice__box_go" onClick={this.step1Calculator}>GO</div>
                 <div className="cbmCalc__head invoice__head" id="invoice__head">Invoice CALCULATOR</div>
@@ -497,8 +497,8 @@ step3Toggler=(flag)=>{
 
                 </div>
 
-                <div style={{bottom:"5rem"}} className="cbmCalc__box_total">
-                   <span className="cbmCalc__box_total-text">{this.state.step1.calculated?<p style={{fontSize:"2rem"}}>DUTIES TOTAL IN INR</p>:<p style={{fontSize:"2rem",color:"coral"}}>Make sure step 1 is complete <sup>*</sup></p>}</span>{this.state.step1.calculated?<span className="cbmCalc__box_total-number">{this.state.step2.total}</span>:null}
+                <div style={this.props.mobile?{bottom:"15rem"}:null} className="cbmCalc__box_total">
+                   <span  style={{marginRight:"0rem",textAlign:"center"}} className="cbmCalc__box_total-text">{this.state.step1.calculated?<p style={{fontSize:"2rem"}}>DUTIES TOTAL IN INR</p>:<p style={{fontSize:"2rem",color:"coral"}}>Make sure step 1 is complete <sup>*</sup></p>}</span>{this.state.step1.calculated?<span className="cbmCalc__box_total-number">{this.state.step2.total}</span>:null}
                 </div>
 
             </div>
@@ -580,7 +580,7 @@ step3Toggler=(flag)=>{
                           </div>,
                           <input className="invoice__box_flex-input invoice__box_flex-input--ex" disabled placeholder="-" value={this.state.step1&&this.state.step2&&this.state.step3?this.state.step1.total+this.state.step2.total+this.state.step3.total:null} type="number"/>]
                           :<div className="tots__div">
-                            <div className="invoice__box_flex-head" style={{width:"30rem",marginRight:"3rem"}}><div style={{fontSize:"2rem",color:"coral"}}>Make sure step 2 is complete <sub>*</sub></div></div>
+                            <div  style={{marginRight:"0rem",textAlign:"center",width:"30rem"}} className="invoice__box_flex-head"><div style={{fontSize:"2rem",color:"coral"}}>Make sure step 2 is complete <sub>*</sub></div></div>
                           </div>}
 
 

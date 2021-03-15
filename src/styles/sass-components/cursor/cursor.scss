@@ -1,0 +1,31 @@
+.cursor{
+  position: absolute;
+  color: transparent;
+  border: 1px solid $color-india-font;
+  // transform: translate(-50%,-50%);
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  // transition: all .1s;
+  transition: all .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: lighter;
+  color: $color-white;
+
+  top: -20rem;
+  left: -20rem;
+  z-index: 20000000;
+  opacity: .8;
+  &__1{
+     background: #f99a4d;
+  }
+  &__2{
+     background:#bb7be3;
+  }
+  &__3{
+     background: #fb6fbb;
+  }
+}
