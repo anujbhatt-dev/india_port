@@ -139,9 +139,9 @@ class Invoice extends Component{
     let inr=this.state.step1.total+this.state.step2.total;
     let total=this.state.step3.choosed===-1?this.state.step3.antidump*this.state.step1.exchangeRate:inr*this.state.step3.antiDumpP;
     let step3={...this.state.step3, total:total, updated:true, calculate:false};
+    console.log(this.state.step3);
     this.setState({step3:step3});
    }
-
   }
 
   // STEP1
@@ -264,11 +264,11 @@ step2Calculator=()=>{
 step3ChangeHandler=(e)=>{
   let step3={...this.state.step3};
   step3[e.target.name]=+e.target.value;
-
-  if(e.target.name==="antiDumpP")
-    step3["antidump"]=0;
-  else
-   step3["antiDumpP"]=0;
+alert(e.target.name+" "+e.target.value);
+  // if(e.target.name==="antiDumpP")
+  //   step3["antidump"]=0;
+  // else
+  //  step3["antiDumpP"]=0;
 
   step3.calculated=false;
   step3.total="-";
@@ -300,7 +300,7 @@ step3BackHandler=()=>{
 
 step3Calculator=()=>{
 
-  if(!this.state.step1.calculated)
+  if(!this.state.step2.calculated)
     return;
 
   let step3={...this.state.step3};
@@ -314,6 +314,8 @@ step3Toggler=(flag)=>{
     return;
 
   let step3={...this.state.step3}
+  if(this.state.step3.total!=="-")
+  step3.calculate=true;
   step3.choosed=step3.choosed*-1;
   this.setState({step3:step3});
 }
@@ -554,7 +556,7 @@ step3Toggler=(flag)=>{
                           </g>
                         </svg>
                         <div className="invoice__box_flex-head">Anti Dumping %</div>
-                        <input  style={this.state.step3.choosed===-1?{textDecoration:"line-through"}:{textDecoration:"none"}} className="invoice__box_flex-input invoice__box_flex-input--ex" disabled={this.state.step3.choosed===-1} placeholder="0" value={this.state.step3.antidumpP} onChange={this.step3ChangeHandler} name="antidumpP"  type="number"/>
+                        <input  style={this.state.step3.choosed===-1?{textDecoration:"line-through"}:{textDecoration:"none"}} className="invoice__box_flex-input invoice__box_flex-input--ex" disabled={this.state.step3.choosed===-1} placeholder="0" value={this.state.step3.antidumpP} onChange={this.step3ChangeHandler} name="antiDumpP"  type="number"/>
                     </div>
 
                     <div className="invoice__box_flex">
@@ -562,7 +564,7 @@ step3Toggler=(flag)=>{
                            <img className="imp" src={imp} alt=""/>
                            <div className="invoice__box_flex-head">Total Duties</div>
                         </div>
-                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step1.total} disabled type="number"/>
+                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step2.total} disabled type="number"/>
                         <div className="invoice__box_flex-head">Anti Dumping INR</div>
                         <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step3.total} disabled type="number"/>
                         <div className="impWrap">
