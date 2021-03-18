@@ -76,84 +76,84 @@ class Landing3 extends Component{
 
 
       // animation starts
-      window.addEventListener("scroll",()=>{
-        console.log(window.pageYOffset);
-
-      })
-      let landing2 = $('.landing2').offset().top
-      let landing4 = $('.landing4').offset().top
-      let state = this;
-      $(function() {
-
-         $(".landing3").mousewheel(function(event, delta) {
-           let width = document.querySelector('.landing3__wrapper').offsetWidth;
-           var viewWidth= document.querySelector('.landing3').offsetWidth;
-            console.log(width,$(".landing3").scrollLeft);
-            if(delta<0 && this.scrollLeft>=(width-viewWidth)){
-                // window.scrollTo({
-                //    top: landing4,
-                //    behavior: 'smooth'
-                //   });
-                console.log("scroll e fire")
-                state.setState({
-                 show:true
-                })
-                setTimeout(()=>{
-                  state.setState({
-                   show:false
-                  })
-                },1000)
-                let lastScrollTop = 0;
-                let scale = 1;
-                let flag2 = 0;
-                  $(window).scroll(function(event){
-                     let st = $(this).scrollTop();
-                     if ((st > lastScrollTop) && (flag2 === 0)){
-                       // downscroll code
-                       flag2 = 1;
-
-
-
-                         document.querySelector(".landing4").scrollIntoView();
-                         $(".landing3__link_globe").css("position","fixed")
-                         $(".landing3__link_globe").css("z-index","30000000")
-                         $(".landing3__link_globe").css("top","50%")
-                         $(".landing3__link_globe").css("left","50%")
-                         $(".landing3__link_globe").css("animation-name",`scale`);
-                         setTimeout(()=>{
-                           $(".landing3__link_globe").css("position",`absolute`);
-                           $(".landing3__link_globe").css("top","45.50%")
-                           $(".landing3__link_globe").css("left","31%")
-                           // setTimeout(()=>{
-                           // },0)
-                         },1100)
-                         // this.scrollLeft = 0;
-                         // scale += 0.1;
-
-                     } else {
-                          // upscroll code
-                     }
-                     lastScrollTop = st;
-                  });
-            }
-            if(delta>0 && this.scrollLeft===0){
-              // window.scrollTo({
-              //    top: landing2,
-              //    behavior: 'smooth'
-              //   });
-               state.setState({
-                show:true
-               })
-               setTimeout(()=>{
-                 state.setState({
-                  show:false
-                 })
-               },1000)
-            }
-            this.scrollLeft -= (delta * 100);
-            event.preventDefault();
-         });
-      });
+      // window.addEventListener("scroll",()=>{
+      //   console.log(window.pageYOffset);
+      //
+      // })
+      // let landing2 = $('.landing2').offset().top
+      // let landing4 = $('.landing4').offset().top
+      // let state = this;
+      // $(function() {
+      //
+      //    $(".landing3").mousewheel(function(event, delta) {
+      //      let width = document.querySelector('.landing3__wrapper').offsetWidth;
+      //      var viewWidth= document.querySelector('.landing3').offsetWidth;
+      //       console.log(width,$(".landing3").scrollLeft);
+      //       if(delta<0 && this.scrollLeft>=(width-viewWidth)){
+      //           // window.scrollTo({
+      //           //    top: landing4,
+      //           //    behavior: 'smooth'
+      //           //   });
+      //           console.log("scroll e fire")
+      //           state.setState({
+      //            show:true
+      //           })
+      //           setTimeout(()=>{
+      //             state.setState({
+      //              show:false
+      //             })
+      //           },1000)
+      //           let lastScrollTop = 0;
+      //           let scale = 1;
+      //           let flag2 = 0;
+      //             $(window).scroll(function(event){
+      //                let st = $(this).scrollTop();
+      //                if ((st > lastScrollTop) && (flag2 === 0)){
+      //                  // downscroll code
+      //                  flag2 = 1;
+      //
+      //
+      //
+      //                    document.querySelector(".landing4").scrollIntoView();
+      //                    $(".landing3__link_globe").css("position","fixed")
+      //                    $(".landing3__link_globe").css("z-index","30000000")
+      //                    $(".landing3__link_globe").css("top","50%")
+      //                    $(".landing3__link_globe").css("left","50%")
+      //                    $(".landing3__link_globe").css("animation-name",`scale`);
+      //                    setTimeout(()=>{
+      //                      $(".landing3__link_globe").css("position",`absolute`);
+      //                      $(".landing3__link_globe").css("top","45.50%")
+      //                      $(".landing3__link_globe").css("left","31%")
+      //                      // setTimeout(()=>{
+      //                      // },0)
+      //                    },1100)
+      //                    // this.scrollLeft = 0;
+      //                    // scale += 0.1;
+      //
+      //                } else {
+      //                     // upscroll code
+      //                }
+      //                lastScrollTop = st;
+      //             });
+      //       }
+      //       if(delta>0 && this.scrollLeft===0){
+      //         // window.scrollTo({
+      //         //    top: landing2,
+      //         //    behavior: 'smooth'
+      //         //   });
+      //          state.setState({
+      //           show:true
+      //          })
+      //          setTimeout(()=>{
+      //            state.setState({
+      //             show:false
+      //            })
+      //          },1000)
+      //       }
+      //       this.scrollLeft -= (delta * 100);
+      //       event.preventDefault();
+      //    });
+      // });
       // animation ends
     }
 
