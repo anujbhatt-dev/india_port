@@ -23,15 +23,15 @@ class Landing1 extends Component{
         delay: 100
       });
 
-      window.addEventListener("scroll",(e)=>{
-        // console.log(e.deltaY);
-        if((window.pageYOffset>=(this.props.landing2-200)) && (window.pageYOffset<=this.props.landing2)){
-          window.scrollTo({
-            top:this.props.landing2
-          })
-        }
-
-      })
+      // window.addEventListener("scroll",(e)=>{
+      //   // console.log(e.deltaY);
+      //   if((window.pageYOffset>=(this.props.landing2-200)) && (window.pageYOffset<=this.props.landing2)){
+      //     window.scrollTo({
+      //       top:this.props.landing2
+      //     })
+      //   }
+      //
+      // })
 
     }
 
