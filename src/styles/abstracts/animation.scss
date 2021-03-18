@@ -1,3 +1,14 @@
+@keyframes scale {
+   0%{
+     transform: translate(-50%,-50%) scale(1);
+     opacity: 1;
+   }
+   100%{
+     transform: translate(-50%,-50%) scale(6);
+     opacity: 1;
+   }
+}
+
 @keyframes rotate {
    0%{
      transform:  translate(-50%,-50%) rotate(0);

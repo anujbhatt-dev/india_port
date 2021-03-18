@@ -9,6 +9,7 @@ import truck from "../../../../assets/images/smallTruck.svg"
 import plane from "../../../../assets/images/plane.svg"
 import cargo from "../../../../assets/images/cargo.svg"
 import box2 from "../../../../assets/images/box2.svg"
+import globe from "../../../../assets/images/globe.svg"
 import yellowPlane from "../../../../assets/images/yellowPlane.svg"
 
 import Aos from "aos"
@@ -17,7 +18,9 @@ import "aos/dist/aos.css"
 class Landing3 extends Component{
 
     state={
-      mobileNumber:0
+      mobileNumber:0,
+      show:false,
+      flag:0
     }
 
     mobileNumberIntervalFunc=null;
@@ -37,7 +40,6 @@ class Landing3 extends Component{
 
 
     componentDidMount=()=>{
-      let flag=0;
 
       $(".landing3__link1").mousemove((e)=>{
         let x = e.pageX - $('.landing3__link1').offset().left;
@@ -72,39 +74,97 @@ class Landing3 extends Component{
 
       this.mobileNumberInterval();
 
+
+      // animation starts
       window.addEventListener("scroll",()=>{
         console.log(window.pageYOffset);
 
       })
-
-
+      let landing2 = $('.landing2').offset().top
+      let landing4 = $('.landing4').offset().top
+      let state = this;
       $(function() {
 
          $(".landing3").mousewheel(function(event, delta) {
+           let width = document.querySelector('.landing3__wrapper').offsetWidth;
+           var viewWidth= document.querySelector('.landing3').offsetWidth;
+            console.log(width,$(".landing3").scrollLeft);
+            if(delta<0 && this.scrollLeft>=(width-viewWidth)){
+                // window.scrollTo({
+                //    top: landing4,
+                //    behavior: 'smooth'
+                //   });
+                console.log("scroll e fire")
+                state.setState({
+                 show:true
+                })
+                setTimeout(()=>{
+                  state.setState({
+                   show:false
+                  })
+                },1000)
+                let lastScrollTop = 0;
+                let scale = 1;
+                let flag2 = 0;
+                  $(window).scroll(function(event){
+                     let st = $(this).scrollTop();
+                     if ((st > lastScrollTop) && (flag2 === 0)){
+                       // downscroll code
+                       flag2 = 1;
 
-            if(delta<0 && this.scrollLeft>=2500){
-                window.scrollTo({
-                   top: 2700,
-                   behavior: 'smooth'
+
+
+                         document.querySelector(".landing4").scrollIntoView();
+                         $(".landing3__link_globe").css("position","fixed")
+                         $(".landing3__link_globe").css("z-index","30000000")
+                         $(".landing3__link_globe").css("top","50%")
+                         $(".landing3__link_globe").css("left","50%")
+                         $(".landing3__link_globe").css("animation-name",`scale`);
+                         setTimeout(()=>{
+                           $(".landing3__link_globe").css("position",`absolute`);
+                           $(".landing3__link_globe").css("top","45.50%")
+                           $(".landing3__link_globe").css("left","31%")
+                           // setTimeout(()=>{
+                           // },0)
+                         },1100)
+                         // this.scrollLeft = 0;
+                         // scale += 0.1;
+
+                     } else {
+                          // upscroll code
+                     }
+                     lastScrollTop = st;
                   });
             }
             if(delta>0 && this.scrollLeft===0){
-              window.scrollTo({
-                 top: 1110,
-                 behavior: 'smooth'
-                });
+              // window.scrollTo({
+              //    top: landing2,
+              //    behavior: 'smooth'
+              //   });
+               state.setState({
+                show:true
+               })
+               setTimeout(()=>{
+                 state.setState({
+                  show:false
+                 })
+               },1000)
             }
             this.scrollLeft -= (delta * 100);
             event.preventDefault();
          });
       });
+      // animation ends
     }
+
 
     render(){
 
       return (
          !this.props.mobile?
+         <div style={{position:"relative"}}>
          <div id="landing3" className="landing3">
+
             <div className="landing3__wrapper">
                  <Link className="landing3__link landing3__link2" to="/customClearance">
                      <img className="landing3__link_img" src={cc} alt=""/>
@@ -127,6 +187,7 @@ class Landing3 extends Component{
                  </Link>
                  <Link className="landing3__link landing3__link1" to="/freight">
                       <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
+                      <img className="landing3__link_globe" src={globe} alt=""/>
                       <img className="landing3__link_img" src={freight} alt=""/>
                       <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
                       <div className="landing3__link_text">
@@ -137,7 +198,8 @@ class Landing3 extends Component{
                  </Link>
              </div>
 
-
+         </div>
+                <div className={this.state.show?"landing3__scrollHelper":"landing3__scrollHelper--showNot"}>.</div>
          </div>
          :
          <div className="landing3__mob">

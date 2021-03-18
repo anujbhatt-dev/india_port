@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import ship from "../../../../assets/images/ship.svg"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import $ from 'jquery'
 
 class Landing1 extends Component{
 
@@ -21,6 +22,20 @@ class Landing1 extends Component{
         duration: 2000,
         delay: 100
       });
+
+      window.addEventListener("scroll",(e)=>{
+        // console.log(e.deltaY);
+        if((window.pageYOffset>=(this.props.landing2-200)) && (window.pageYOffset<=this.props.landing2)){
+          window.scrollTo({
+            top:this.props.landing2
+          })
+        }
+
+      })
+
+    }
+
+    temperory=()=>{
 
     }
 

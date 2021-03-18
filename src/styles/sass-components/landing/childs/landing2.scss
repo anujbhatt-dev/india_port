@@ -7,6 +7,27 @@
   left: 0;
   z-index: 1000;
   background: #f7f7f7;
+  position: relative;
+  &__dots{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 40%;
+    left: 5rem;
+    cursor: pointer;
+    &_div{
+      color: transparent;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      border: 1px solid $color-india-blue;
+      background: $color-white;
+      margin: 1rem;
+      &--mod{
+        background: $color-india-blue;
+      }
+    }
+
+  }
   &__flexWrapper{
     // background: $color-white;
     // height: 100vh;
@@ -94,4 +115,6 @@
       }
     }
   }
+
+  position: relative;
 }

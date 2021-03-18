@@ -1,6 +1,7 @@
 .landing{
   height: 100vh;
   background: #F7F7F7;
+  position: relative;
   //childs
   @import './childs/landing1';
   @import './childs/landing2';

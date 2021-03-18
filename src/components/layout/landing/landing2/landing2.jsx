@@ -13,12 +13,40 @@ class Landing2 extends Component{
     state={
       number:0,
       mobileNumber:0,
+      flag:0
     }
 
     componentDidMount=()=>{
-        // window.addEventListener("scroll",(e)=>{
-        //    console.log(window.pageYOffset);
-        // })
+        window.addEventListener("scroll",(e)=>{
+           console.log(window.pageYOffset);
+           if((window.pageYOffset>=(this.props.landing2-100)) && (window.pageYOffset<=this.props.landing2 &&(this.state.flag===0)) && !this.props.mobile){
+             $(".landing2").css("position","fixed")
+             $("body").css("overflow-y","hidden")
+             setTimeout(()=>{
+                this.setState({
+                  number:1
+                })
+                setTimeout(()=>{
+                   this.setState({
+                     number:2
+                   })
+                   setTimeout(()=>{
+                      this.setState({
+                        number:0,flag:1
+                      })
+                      $(".landing2").css("position","relative")
+                      $("body").css("overflow-y","scroll")
+                   },2000)
+                },2000)
+             },2000)
+           }
+        })
+
+
+
+
+
+
 
         this.numberInterval();
 
@@ -42,11 +70,34 @@ class Landing2 extends Component{
       clearInterval(this.mobileNumberIntervalFunc);
     }
 
+    numberHandler=(number)=>{
+      this.setState({
+        number:number
+      })
+    }
+
     render(){
 
       return (
          !this.props.mobile?<div className="landing2">
+         <div className="landing2__dots">
+
+
+             <div onClick={()=>this.numberHandler(0)} className={this.state.number===0?"landing2__dots_div landing2__dots_div--mod":"landing2__dots_div"}>
+                  .
+             </div>
+
+             <div onClick={()=>this.numberHandler(1)} className={this.state.number===1?"landing2__dots_div landing2__dots_div--mod":"landing2__dots_div"}>
+                  .
+             </div>
+
+             <div onClick={()=>this.numberHandler(2)} className={this.state.number===2?"landing2__dots_div landing2__dots_div--mod":"landing2__dots_div"}>
+                  .
+             </div>
+
+         </div>
             <div  id="landing2" className="landing2__flexWrapper slide_up">
+
                <div className="landing2__flex">
                    <div className={(this.state.number===0)?"landing2__flex_text slide_down":(this.state.number===1)?"landing2__flex_text slide_down1":"landing2__flex_text slide_down2"}>
                        <div className="landing2__flex_text-l">{this.state.number===0?"Duty":this.state.number===1?"Invoice":"BGM"}<br/>Calculator</div>
