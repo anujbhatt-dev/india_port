@@ -45,7 +45,7 @@ class Layout extends Component{
         news: [],
         blogs:[],
         promotion:false,
-        loading:false
+        loading:false,
     }
 
 
