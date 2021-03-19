@@ -29,6 +29,7 @@ class Navigation extends Component{
                              <NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/freight" className="navigation__items_item navigation__items_item">Freight</NavLink>
                              <NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/insurance" className="navigation__items_item navigation__items_item">Insurance</NavLink>
                              <NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/customClearance" className="navigation__items_item navigation__items_item">Custom</NavLink>
+                             <NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/try" className="navigation__items_item navigation__items_item">Try</NavLink>
                          </div>
                    </div>
                </div>
