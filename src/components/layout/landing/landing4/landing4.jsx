@@ -41,12 +41,12 @@ class Landing4 extends Component{
       }, "=-20")
        .to('.c1', 20, {
 
-        y: "-1000%",
+        y: "-100%",
         ease: Power3.linear
       }, "=-20")
        .from('.c2', 20, {
 
-        y: "1000%",
+        y: "200%",
         ease: Power3.linear
        }, "=-10")
 
@@ -68,12 +68,12 @@ class Landing4 extends Component{
       }, "=-20")
        .to('.c2', 20, {
 
-        y: "-1000%",
+        y: "-200%",
         ease: Power3.linear
       }, "=-20")
        .from('.c3', 20, {
 
-        y: "1000%",
+        y: "100%",
         ease: Power3.linear
        }, "=-10")
 
@@ -96,7 +96,7 @@ class Landing4 extends Component{
       }, "=-20")
        .to('.c3', 20, {
 
-        y: "-1000%",
+        y: "-300%",
         ease: Power3.linear
       }, "=-20")
 

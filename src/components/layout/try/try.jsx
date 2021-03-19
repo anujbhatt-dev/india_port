@@ -34,7 +34,7 @@ class Try extends Component{
          offset: '0'
      })
      .setTween(TweenMax.
-      to('.landing2__motion_mode', .2, {css:{scaleX:10, scaleY:10, opacity:0.7}}))
+      to('.landing2__motion_mode', .2, {css:{scaleX:30, scaleY:30, opacity:0.7}}))
      .setPin('#landing2')
      .addTo(controller);
 
