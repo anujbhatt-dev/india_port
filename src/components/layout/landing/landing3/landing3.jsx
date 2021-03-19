@@ -89,24 +89,24 @@ class Landing3 extends Component{
        let timeline = new TimelineMax();
 
       timeline
-      .to('.landing3__wrapper', 120, {
+      .to('.landing3__wrapper', 500, {
         left: "-200%",
         ease: Power3.linear
        })
-       .to('.landing2__motion_mode--rev', 120, {
+       .to('.landing2__motion_mode--rev', 500, {
          x: -50,
          ease: Power3.linear
-       },"-=120")
-       .to('.landing2__motion_bar--rev', 120, {
+       },"-=500")
+       .to('.landing2__motion_bar--rev', 500, {
          x: -50,
          ease: Power3.linear
-       },"-=120")
+       },"-=500")
        .to(".globe", 150,
         {css:{scaleX:10, scaleY:10, opacity:1, zIndex:10000},
         ease: Power3.linear})
-       
+
 //        .eventCallback("onComplete",()=>{
-        
+
 //         alert("done")
 
 //  })

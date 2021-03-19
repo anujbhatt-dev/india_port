@@ -25,7 +25,7 @@
 .cursor{
   position: absolute;
   color: transparent;
-  border: 1px solid $color-india-font;
+  // border: 1px solid $color-india-font;
   // transform: translate(-50%,-50%);
   height: 15rem;
   width: 15rem;
@@ -42,7 +42,7 @@
   top: -20rem;
   left: -20rem;
   z-index: 20000000;
-  opacity: .8;
+  // opacity: .8;
   animation: morph 5s linear infinite;
   &__1{
      background: #f99a4d;
