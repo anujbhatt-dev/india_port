@@ -1,124 +1,115 @@
-&2{
-  margin: 5rem 0;
-  padding-top: 5rem;
-  margin-top: 0rem;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: #f7f7f7;
+.landing2{
+  padding: 10rem 35rem;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 150vh;
   position: relative;
-  &__dots{
-    position: absolute;
-    transform: translateY(-50%);
-    top: 40%;
-    left: 5rem;
-    cursor: pointer;
-    &_div{
-      color: transparent;
-      height: 2rem;
-      width: 2rem;
-      border-radius: 50%;
-      border: 1px solid $color-india-blue;
-      background: $color-white;
-      margin: 1rem;
-      &--mod{
-        background: $color-india-blue;
-      }
-    }
-
-  }
-  &__flexWrapper{
-    // background: $color-white;
-    // height: 100vh;
-    width: 100vw;
-    z-index: 100000;
+  // &__truck{
+  //   position: absolute;
+  //   transform: translate(-50%,-50%) rotate(180deg);
+  //   z-index: 1000;
+  //   top: 200px;
+  //   left: 200px;
+  // }
+  &__firstWrapper{
+    position: relative;
+    flex-basis: 50%;
+    height: 100%;
     overflow: hidden;
-    // position: fixed;
-    transition: .5s;
-    top: 0;
-    left: 0;
-  }
-  & .img{
-    width: 100vw;
-  }
-  &__flex{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    margin: 0rem 25rem;
-    margin-bottom: 5rem;
-    position: relative;
-    &_text{
-      color: $color-india-font;
-      text-align: center;
-      max-width: 40rem;
+    height: 70rem;
+    &_first{
       position: relative;
-      top: 0px;
-      left: 0px;
-      &-l{
-         font-size: 6rem;
-         margin-bottom: 2rem;
-         text-transform: capitalize;
-      }
-      &-s{
-         font-size: 2rem;
-      }
-    }
-    & img{
-        // width:  25rem;
-        height: 55rem;
-        overflow: hidden;
-    }
-  }
+       &-text{
+         background: #f7f7f7;
+         padding: 5rem;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         height: 70rem;
+         color: #16354E;
+         font-weight: bold;
+         text-transform: uppercase;
+         text-align: center;
+         font-family: "Poppins";
 
-  &__mob{
-    // height: 100vh;
-    position: relative;
-    &_head{
-      font-size:5rem;
-      color: $color-grey-light;
-      margin:5rem;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-left: 2rem;
-    }
-    &_dots{
-      position: absolute;
-      top: 40%;
-      left: 3rem;
-      transform: translateY(-100%);
-       display:flex;
-       justify-content: center;
-       align-items:center;
-       flex-direction: column;
-       & svg{
-         margin-bottom: 1rem;
-         transition: all .3s;
+         &--1{
+           z-index: 7;
+           top: 0;
+         }
+         &--2{
+           z-index: 9;
+         }
+         &--3{
+           z-index: 8;
+         }
+         &-head{
+           font-size: 4rem;
+           margin-bottom: 2rem;
+         }
+         &-content{
+           font-size: 1.5rem;
+         }
+
        }
     }
-    &_main{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction:column;
-
-      & img{
-        height: 50rem;
-        align-self: center;
-        @include respond(phone){
-          align-self: flex-end;
-
+  }
+  &__secondWrapper{
+    flex-basis: 50%;
+    height: 100%;
+    height: 70rem;
+    overflow: hidden;
+    &_second{
+      position: relative;
+        &--1{
+          z-index: 9;
         }
-      }
-      &-name{
-        margin:5rem;
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
+        &--2{
+          z-index: 8;
+        }
+        &--3{
+          z-index: 7;
+        }
+        & img{
+          position: absolute;
+          top:0;
+          left: 0;
+          background: #f7f7f7;
+          height:70rem;
+          width: 40rem;
+        }
     }
   }
-
-  position: relative;
+  &__motion{
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    width: 100vw;
+    z-index: 100000;
+    &_line{
+      position: absolute;
+      bottom: 0rem;
+      left: 0px;
+      width: 100vw;
+    }
+    &_bar{
+      transform: translateY(50%);
+      position: absolute;
+      bottom: 0rem;
+      left: 200px;
+      width: 20rem;
+    }
+    &_mode{
+      // transform: translateY(50%);
+      position: absolute;
+      bottom: 1rem;
+      left: 200px;
+      width: 22rem;
+    }
+  }
 }
