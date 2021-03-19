@@ -137,7 +137,7 @@ class Landing4 extends Component{
 
       return (
          <div  id="landing4" className="landing4">
-           <img src={hole} alt=""/>
+           <img className="landing4__hole" src={hole} alt=""/>
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
