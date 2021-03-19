@@ -87,10 +87,13 @@
   }
   &__motion{
     position: absolute;
-    bottom: 3rem;
+    top: 98vh;
     left: 0;
     width: 100vw;
     z-index: 100000;
+    &--rev{
+      bottom: 5rem;
+    }
     &_line{
       position: absolute;
       bottom: 0rem;
@@ -103,6 +106,12 @@
       bottom: 0rem;
       left: 200px;
       width: 20rem;
+
+
+      &--rev{
+        width: 15rem;
+        right: 200px;
+      }
     }
     &_mode{
       // transform: translateY(50%);
@@ -110,6 +119,11 @@
       bottom: 1rem;
       left: 200px;
       width: 22rem;
+      &--rev{
+        bottom: -1rem;
+        width: 15rem;
+        right: 200px;
+      }
     }
   }
 }

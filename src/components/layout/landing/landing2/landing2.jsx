@@ -7,8 +7,6 @@ import bar from "../../../../assets/images/bar.svg"
 import smallShip from "../../../../assets/images/smallShip.svg"
 import gsap from "gsap"
 import ScrollMagic from 'scrollmagic';
-// import {TimelineMax, Power3 , TweenMax} from "gsap";
-// import {TimelineMax} from "gsap/gsap-core"
 import {TimelineMax} from "gsap/gsap-core"
 import {Power3} from "gsap/gsap-core"
 import {TweenMax} from "gsap/gsap-core"

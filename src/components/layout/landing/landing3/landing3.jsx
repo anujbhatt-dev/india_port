@@ -11,9 +11,22 @@ import cargo from "../../../../assets/images/cargo.svg"
 import box2 from "../../../../assets/images/box2.svg"
 import globe from "../../../../assets/images/globe.svg"
 import yellowPlane from "../../../../assets/images/yellowPlane.svg"
-
+import graPlane from "../../../../assets/images/graPlane.svg"
+import bar from "../../../../assets/images/bar.svg"
+import line from "../../../../assets/images/line.svg"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import gsap from "gsap"
+import ScrollMagic from 'scrollmagic';
+import {TimelineMax} from "gsap/gsap-core"
+import {Power3} from "gsap/gsap-core"
+import {TweenMax} from "gsap/gsap-core"
+import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
+
+
+
 
 class Landing3 extends Component{
 
@@ -44,22 +57,22 @@ class Landing3 extends Component{
       $(".landing3__link1").mousemove((e)=>{
         let x = e.pageX - $('.landing3__link1').offset().left;
         let y = e.pageY - $('.landing3__link1').offset().top;
-         $(".cursor").css("top",y)
-         $(".cursor").css("left",x)
+         $(".cursor__1").css("top",y)
+         $(".cursor__1").css("left",x)
       })
 
       $(".landing3__link2").mousemove((e)=>{
         let x = e.pageX - $('.landing3__link2').offset().left;
         let y = e.pageY - $('.landing3__link2').offset().top;
-         $(".cursor").css("top",y)
-         $(".cursor").css("left",x)
+         $(".cursor__2").css("top",y)
+         $(".cursor__2").css("left",x)
       })
 
       $(".landing3__link3").mousemove((e)=>{
         let x = e.pageX - $('.landing3__link3').offset().left;
         let y = e.pageY - $('.landing3__link3').offset().top;
-         $(".cursor").css("top",y)
-         $(".cursor").css("left",x)
+         $(".cursor__3").css("top",y)
+         $(".cursor__3").css("left",x)
       })
 
       $(".landing3__link").mouseleave((e)=>{
@@ -73,88 +86,36 @@ class Landing3 extends Component{
       });
 
       this.mobileNumberInterval();
+      let controller = new ScrollMagic.Controller();
+       let timeline = new TimelineMax();
+
+      timeline
+      .to('.landing3__wrapper', 120, {
+        left: "-200%",
+        ease: Power3.linear
+       })
+       .to('.landing2__motion_mode--rev', 120, {
+         x: -50,
+         ease: Power3.linear
+       },"-=120")
+       .to('.landing2__motion_bar--rev', 120, {
+         x: -50,
+         ease: Power3.linear
+       },"-=120")
 
 
-      // animation starts
-      // window.addEventListener("scroll",()=>{
-      //   console.log(window.pageYOffset);
-      //
-      // })
-      // let landing2 = $('.landing2').offset().top
-      // let landing4 = $('.landing4').offset().top
-      // let state = this;
-      // $(function() {
-      //
-      //    $(".landing3").mousewheel(function(event, delta) {
-      //      let width = document.querySelector('.landing3__wrapper').offsetWidth;
-      //      var viewWidth= document.querySelector('.landing3').offsetWidth;
-      //       console.log(width,$(".landing3").scrollLeft);
-      //       if(delta<0 && this.scrollLeft>=(width-viewWidth)){
-      //           // window.scrollTo({
-      //           //    top: landing4,
-      //           //    behavior: 'smooth'
-      //           //   });
-      //           console.log("scroll e fire")
-      //           state.setState({
-      //            show:true
-      //           })
-      //           setTimeout(()=>{
-      //             state.setState({
-      //              show:false
-      //             })
-      //           },1000)
-      //           let lastScrollTop = 0;
-      //           let scale = 1;
-      //           let flag2 = 0;
-      //             $(window).scroll(function(event){
-      //                let st = $(this).scrollTop();
-      //                if ((st > lastScrollTop) && (flag2 === 0)){
-      //                  // downscroll code
-      //                  flag2 = 1;
-      //
-      //
-      //
-      //                    document.querySelector(".landing4").scrollIntoView();
-      //                    $(".landing3__link_globe").css("position","fixed")
-      //                    $(".landing3__link_globe").css("z-index","30000000")
-      //                    $(".landing3__link_globe").css("top","50%")
-      //                    $(".landing3__link_globe").css("left","50%")
-      //                    $(".landing3__link_globe").css("animation-name",`scale`);
-      //                    setTimeout(()=>{
-      //                      $(".landing3__link_globe").css("position",`absolute`);
-      //                      $(".landing3__link_globe").css("top","45.50%")
-      //                      $(".landing3__link_globe").css("left","31%")
-      //                      // setTimeout(()=>{
-      //                      // },0)
-      //                    },1100)
-      //                    // this.scrollLeft = 0;
-      //                    // scale += 0.1;
-      //
-      //                } else {
-      //                     // upscroll code
-      //                }
-      //                lastScrollTop = st;
-      //             });
-      //       }
-      //       if(delta>0 && this.scrollLeft===0){
-      //         // window.scrollTo({
-      //         //    top: landing2,
-      //         //    behavior: 'smooth'
-      //         //   });
-      //          state.setState({
-      //           show:true
-      //          })
-      //          setTimeout(()=>{
-      //            state.setState({
-      //             show:false
-      //            })
-      //          },1000)
-      //       }
-      //       this.scrollLeft -= (delta * 100);
-      //       event.preventDefault();
-      //    });
-      // });
-      // animation ends
+
+       let scene = new ScrollMagic.Scene({
+         triggerElement: '.landing3',
+         duration: '100%',
+         triggerHook: 0,
+         offset: '0'
+     })
+     .setTween(timeline)
+     .setPin('.landing3')
+     .addTo(controller);
+
+
     }
 
 
@@ -197,9 +158,13 @@ class Landing3 extends Component{
                       <div className="cursor cursor__1">Explore</div>
                  </Link>
              </div>
+             <div className="landing2__motion landing2__motion--rev">
+                 <img  className="landing2__motion_bar landing2__motion_bar--rev" src={bar} alt=""/>
+                 <img  className="landing2__motion_line landing2__motion_line--rev" src={line} alt=""/>
+                 <img  className="landing2__motion_mode landing2__motion_mode--rev" src={graPlane} alt=""/>
+             </div>
+            </div>
 
-         </div>
-                <div className={this.state.show?"landing3__scrollHelper":"landing3__scrollHelper--showNot"}>.</div>
          </div>
          :
          <div className="landing3__mob">
