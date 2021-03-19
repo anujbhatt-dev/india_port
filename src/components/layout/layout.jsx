@@ -16,6 +16,7 @@ import Insurance from "./insurance/insurance"
 import CustomClearance from "./customClearance/customClearance"
 import Invoice from "./invoice/invoice"
 import CbmCalc from "./cbmCalc/cbmCalc"
+import Try from "./try/try"
 import Loader from "./loader/loader"
 
 import Exim from "./exim/exim"
@@ -162,6 +163,9 @@ class Layout extends Component{
                    </Route>
                    <Route path='/cbmCalc' exact>
                        <CbmCalc mobile={this.state.mobile}/>
+                   </Route>
+                   <Route path='/try' exact>
+                       <Try {...this.state}/>
                    </Route>
                    <Route path='/exim' exact>
                        <Exim mobile={this.state.mobile}/>
