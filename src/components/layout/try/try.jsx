@@ -30,23 +30,33 @@ class Try extends Component{
       .to('.landing2__firstWrapper_first-text--3', 20, {
         y: "100%",
         x: 0,
-        ease: Power3.linear
+        ease: Power3.easeInOut
        })
        .to('.landing2__secondWrapper_second--1', 20, {
          y: "-100%",
          x:0,
-         ease: Power3.linear
-       },"-=20")
-       .to('.landing2__firstWrapper_first-text--2', 20, {
-         y: "100%",
-         x:0,
          ease: Power3.easeInOut
-        })
+       },"-=20")
+       .from('.landing2__secondWrapper_second--2', 10, {
+          y: "150%",
+          x:0,
+          ease: Power3.easeInOut
+         })
+         .to('.landing2__firstWrapper_first-text--2', 20, {
+          y: "100%",
+          x:0,
+          ease: Power3.easeInOut
+         })
         .to('.landing2__secondWrapper_second--2', 20, {
           y: "-100%",
           x:0,
-          ease: Power3.linear
+          ease: Power3.easeInOut
         },"-=20")
+        .from('.landing2__secondWrapper_second--3', 20, {
+          y: "150%",
+          x:0,
+          ease: Power3.easeInOut
+         })
         .to('.landing2__motion_bar', 50, {
           x: 900,
           ease: Power3.linear

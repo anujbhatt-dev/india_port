@@ -34,20 +34,30 @@ class Landing2 extends Component{
          x:0,
          ease: Power3.linear
        },"-=20")
-       .to('.landing2__firstWrapper_first-text--2', 20, {
-         y: "100%",
-         x:0,
-         ease: Power3.easeInOut
-        })
+       .from('.landing2__secondWrapper_second--2', 20, {
+        y: "200%",
+        x:0,
+        ease: Power3.linear
+      },"-=20")
         .to('.landing2__secondWrapper_second--2', 20, {
           y: "-100%",
           x:0,
           ease: Power3.linear
+        })
+        .from('.landing2__secondWrapper_second--3', 20, {
+          y: "200%",
+          x:0,
+          ease: Power3.linear
         },"-=20")
+         .to('.landing2__firstWrapper_first-text--2', 20, {
+         y: "100%",
+         x:0,
+         ease: Power3.easeInOut
+        }, "-=20")
         .to('.landing2__motion_bar', 50, {
           x: 900,
           ease: Power3.linear
-        },"-=50")
+        },"-=40")
         .to('.landing2__motion_mode', 50, {
           x: 900,
           ease: Power3.linear
