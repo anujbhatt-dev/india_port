@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 100vh;
+  // height: 150vh;
   position: relative;
   // &__truck{
   //   position: absolute;
@@ -35,10 +35,13 @@
     overflow: hidden;
     height: 70rem;
     &_first{
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      position: relative;
        &-text{
+         background: #f7f7f7;
+         padding: 5rem;
+         position: absolute;
+         bottom: 0;
+         left: 0;
          display: flex;
          justify-content: center;
          align-items: center;
@@ -49,6 +52,17 @@
          text-transform: uppercase;
          text-align: center;
          font-family: "Poppins";
+
+         &--1{
+           z-index: 7;
+           top: 0;
+         }
+         &--2{
+           z-index: 9;
+         }
+         &--3{
+           z-index: 8;
+         }
          &-head{
            font-size: 4rem;
            margin-bottom: 2rem;
@@ -61,19 +75,56 @@
     }
   }
   &__secondWrapper{
-    position: relative;
     flex-basis: 50%;
     height: 100%;
-    overflow: hidden;
     height: 70rem;
+    overflow: hidden;
     &_second{
-      position: absolute;
-      top: 0;
-      left: 0;
+      position: relative;
+        &--1{
+          z-index: 9;
+        }
+        &--2{
+          z-index: 8;
+        }
+        &--3{
+          z-index: 7;
+        }
         & img{
+          position: absolute;
+          top:0;
+          left: 0;
+          background: #f7f7f7;
           height:70rem;
           width: 40rem;
         }
+    }
+  }
+  &__motion{
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    width: 100vw;
+    z-index: 100000;
+    &_line{
+      position: absolute;
+      bottom: 0rem;
+      left: 0px;
+      width: 100vw;
+    }
+    &_bar{
+      transform: translateY(50%);
+      position: absolute;
+      bottom: 0rem;
+      left: 200px;
+      width: 20rem;
+    }
+    &_mode{
+      // transform: translateY(50%);
+      position: absolute;
+      bottom: 1rem;
+      left: 200px;
+      width: 22rem;
     }
   }
 }
