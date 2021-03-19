@@ -78,6 +78,8 @@ class Landing4 extends Component{
        }, "=-10")
 
 
+
+
        //scroll 3
        .to('.landing4__smallShip', 20, {
         y: "400%",
@@ -99,6 +101,10 @@ class Landing4 extends Component{
         y: "-300%",
         ease: Power3.linear
       }, "=-20")
+      .to('.landing4__text_primary', 20, {
+       opacity: 0,
+       ease: Power3.linear
+     })
 
 
 

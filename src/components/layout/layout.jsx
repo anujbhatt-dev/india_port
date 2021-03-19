@@ -4,7 +4,7 @@ import {Switch , Route} from "react-router-dom"
 import GoToTop from "./fixed/gototop"
 import Navigation from "./fixed/navigation"
 import NavigationMob from "./fixed/navigationMob"
-
+import download from "../../assets/images/download.svg"
 
 
 
@@ -136,7 +136,7 @@ class Layout extends Component{
 
       return (
           <div className="layout">
-              {this.state.promotion?<button className="install" onClick={this.install}> <i class="fa fa-download" aria-hidden="true"></i> INSTALL</button>:null}
+              {this.state.promotion?<div className="install" onClick={this.install}> <img src={download} alt=""/> <span>Install</span></div>:null}
               {this.state.mobile?<NavigationMob/>:<Navigation/>}
               <GoToTop/>
               <Switch>
