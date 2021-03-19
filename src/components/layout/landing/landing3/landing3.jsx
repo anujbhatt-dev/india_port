@@ -106,8 +106,7 @@ class Landing3 extends Component{
        //   y: "50%",
        //   x: "50%",
        //   ease: Power3.linear
-       /
-       / })
+       // })
 
 
 

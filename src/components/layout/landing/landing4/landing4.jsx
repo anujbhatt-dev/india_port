@@ -33,19 +33,19 @@ class Landing4 extends Component{
         y: "-100%",
         x: "-100%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .to('.landing4__smallTruck', 20, {
-        
+
         x: "100%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .to('.c1', 20, {
-        
+
         y: "-1000%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .from('.c2', 20, {
-        
+
         y: "1000%",
         ease: Power3.linear
        }, "=-10")
@@ -60,19 +60,19 @@ class Landing4 extends Component{
         y:"-70",
         x: "-300%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .to('.landing4__smallTruck', 20, {
         y: "-100%",
         x: "200%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .to('.c2', 20, {
-        
+
         y: "-1000%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .from('.c3', 20, {
-        
+
         y: "1000%",
         ease: Power3.linear
        }, "=-10")
@@ -88,19 +88,19 @@ class Landing4 extends Component{
         y:"120",
         x: "-400%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .to('.landing4__smallTruck', 20, {
         y: "-330%",
         x: "200%",
         ease: Power3.linear
-       }, "=-20")
+      }, "=-20")
        .to('.c3', 20, {
-        
+
         y: "-1000%",
         ease: Power3.linear
-       }, "=-20")
-       
-      
+      }, "=-20")
+
+
 
 
        let scene = new ScrollMagic.Scene({
@@ -124,9 +124,11 @@ class Landing4 extends Component{
          <div  id="landing4" className="landing4">
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
-               <div className="landing4__text_secondary c1">transparency1</div>
-               <div className="landing4__text_secondary c2">transparency2</div>
-               <div className="landing4__text_secondary c3">transparency3</div>
+               <div style={{overflow:"hidden"}}>
+                 <div className="landing4__text_secondary c1">transparency1</div>
+                 <div className="landing4__text_secondary c2">transparency2</div>
+                 <div className="landing4__text_secondary c3">transparency3</div>
+               </div>
              </div>
                 <img className="landing4__circle" src={circle} alt=""/>
                 <img className="landing4__smallShip" src={smallShip} alt=""/>

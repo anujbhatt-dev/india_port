@@ -17,6 +17,7 @@
       color: $color-black;
       font-size: 6rem;
       font-weight: 100;
+      margin-bottom: 2rem;
       @include respond(tab-land){
         font-size: 2.7rem;
       }
