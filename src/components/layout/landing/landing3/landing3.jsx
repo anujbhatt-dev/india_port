@@ -89,27 +89,23 @@ class Landing3 extends Component{
        let timeline = new TimelineMax();
 
       timeline
-      .to('.landing3__wrapper', 120, {
+      .to('.landing3__wrapper', 1000, {
         left: "-200%",
         ease: Power3.linear
        })
-       .to('.landing2__motion_mode--rev', 120, {
+       .to('.landing2__motion_mode--rev', 1000, {
          x: -50,
          ease: Power3.linear
-       },"-=120")
-       .to('.landing2__motion_bar--rev', 120, {
+       },"-=1000")
+       .to('.landing2__motion_bar--rev', 1000, {
          x: -50,
          ease: Power3.linear
-       },"-=120")
-       .to(".globe", 150,
-        {css:{scaleX:10, scaleY:10, opacity:1, zIndex:10000},
+       },"-=1000")
+       .to(".globe", 600,
+        {css:{scaleX:10, scaleY:10, zIndex:100},
         ease: Power3.linear})
        
-//        .eventCallback("onComplete",()=>{
-        
-//         alert("done")
 
-//  })
        let scene = new ScrollMagic.Scene({
          triggerElement: '.landing3',
          duration: '100%',
@@ -130,7 +126,7 @@ class Landing3 extends Component{
          !this.props.mobile?
          <div style={{position:"relative"}}>
          <div id="landing3" className="landing3">
-         <img className="landing3__link_globe globe" style={{opacity:0}} src={globe} alt=""/>
+         <img className="landing3__link_globe globe"  src={globe} alt=""/>
 
             <div className="landing3__wrapper">
                  <Link className="landing3__link landing3__link2" to="/customClearance">

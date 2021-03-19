@@ -4,7 +4,7 @@ import circle from "../../../../assets/images/bigCircle.svg"
 import smallTruck from "../../../../assets/images/smallTruck.svg"
 import smallShip from "../../../../assets/images/smallShip.svg"
 import yellowPlane from "../../../../assets/images/yellowPlane.svg"
-import globe from "../../../../assets/images/globe.svg"
+import hole from "../../../../assets/images/hole.svg"
 
   import gsap from "gsap"
 import ScrollMagic from 'scrollmagic';
@@ -137,8 +137,7 @@ class Landing4 extends Component{
 
       return (
          <div  id="landing4" className="landing4">
-     <img className="landing3__link_globe" style={{opacity:1,scaleX:120, scaleY:120, zIndex:1000}} src={globe} alt=""/>
-
+           <img src={hole} alt=""/>
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
