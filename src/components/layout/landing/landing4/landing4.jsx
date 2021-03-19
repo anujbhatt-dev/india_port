@@ -126,8 +126,8 @@ class Landing4 extends Component{
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
                  <div className="landing4__text_secondary c1">transparency1</div>
-                 <div className="landing4__text_secondary c2">transparency2</div>
-                 <div className="landing4__text_secondary c3">transparency3</div>
+                 <div  style={{color:"pink"}} className="landing4__text_secondary c2">Insurance</div>
+                 <div  style={{color:"coral"}} className="landing4__text_secondary c3">Freight</div>
                </div>
              </div>
                 <img className="landing4__circle" src={circle} alt=""/>

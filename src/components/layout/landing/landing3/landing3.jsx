@@ -102,11 +102,6 @@ class Landing3 extends Component{
          x: -50,
          ease: Power3.linear
        },"-=120")
-       // .to('.landing3__link_globe', 120, {
-       //   y: "50%",
-       //   x: "50%",
-       //   ease: Power3.linear
-       // })
 
 
 
