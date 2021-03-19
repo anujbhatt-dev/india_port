@@ -27,7 +27,6 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 
 
-
 class Landing3 extends Component{
 
     state={
@@ -102,9 +101,15 @@ class Landing3 extends Component{
          x: -50,
          ease: Power3.linear
        },"-=120")
+       .to(".globe", 150,
+        {css:{scaleX:10, scaleY:10, opacity:1, zIndex:10000},
+        ease: Power3.linear})
+       
+//        .eventCallback("onComplete",()=>{
+        
+//         alert("done")
 
-
-
+//  })
        let scene = new ScrollMagic.Scene({
          triggerElement: '.landing3',
          duration: '100%',
@@ -116,17 +121,6 @@ class Landing3 extends Component{
      .addTo(controller);
 
 
-     let scene2 = new ScrollMagic.Scene({
-      triggerElement: '#landing3',
-      duration: '100%',
-      triggerHook: 0,
-      offset: '0'
-  })
-  .setTween(TweenMax.
-   to('.landing3__link_globe', .2, {css:{scaleX:10, scaleY:10, opacity:0.7, zIndex:10000}}))
-  .setPin('#landing4')
-  .addTo(controller);
-
     }
 
 
@@ -136,7 +130,7 @@ class Landing3 extends Component{
          !this.props.mobile?
          <div style={{position:"relative"}}>
          <div id="landing3" className="landing3">
-         <img className="landing3__link_globe" src={globe} alt=""/>
+         <img className="landing3__link_globe globe" style={{opacity:0}} src={globe} alt=""/>
 
             <div className="landing3__wrapper">
                  <Link className="landing3__link landing3__link2" to="/customClearance">

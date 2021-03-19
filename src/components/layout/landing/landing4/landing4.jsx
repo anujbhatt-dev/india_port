@@ -4,6 +4,7 @@ import circle from "../../../../assets/images/bigCircle.svg"
 import smallTruck from "../../../../assets/images/smallTruck.svg"
 import smallShip from "../../../../assets/images/smallShip.svg"
 import yellowPlane from "../../../../assets/images/yellowPlane.svg"
+import globe from "../../../../assets/images/globe.svg"
 
   import gsap from "gsap"
 import ScrollMagic from 'scrollmagic';
@@ -105,7 +106,7 @@ class Landing4 extends Component{
        opacity: 0,
        ease: Power3.linear
      })
-
+    //  .to(".globe", .2, {css:{scaleX:2, scaleY:2, opacity:0.7},ease: Power3.linear})
 
 
 
@@ -116,8 +117,14 @@ class Landing4 extends Component{
          offset: '0'
      })
      .setTween(timeline)
+    //  .setTween(TweenMax.
      .setPin('#landing4')
      .addTo(controller);
+
+
+ 
+  
+
 
 
  
@@ -130,6 +137,8 @@ class Landing4 extends Component{
 
       return (
          <div  id="landing4" className="landing4">
+     <img className="landing3__link_globe" style={{opacity:1,scaleX:120, scaleY:120, zIndex:1000}} src={globe} alt=""/>
+
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
