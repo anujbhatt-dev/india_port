@@ -24,15 +24,15 @@ class Landing4 extends Component{
        let timeline = new TimelineMax();
 
       timeline
-      .to(".landing4__hole", 10000,
-      {css:{scaleX:40, scaleY:40},
+      .to(".landing4__hole", 5000,
+      {css:{scaleX:50, scaleY:50},
       ease: Power3.linear})
       //scroll 1
       .to('.landing4__smallShip', 2000, {
         y: "300%",
         x: "-50%",
         ease: Power3.linear
-       })
+       }, "=-2000")
        .to('.landing4__yellowPlane', 2000, {
         y: "-100%",
         x: "-100%",
@@ -85,7 +85,7 @@ class Landing4 extends Component{
        //scroll 3
        .to('.landing4__smallShip', 2000, {
         y: "450%",
-        x: "105%",
+        x: "100%",
         ease: Power3.linear
        })
        .to('.landing4__yellowPlane', 2000, {
@@ -106,12 +106,12 @@ class Landing4 extends Component{
       .to('.landing4__text_primary', 2000, {
        opacity: 0,
        ease: Power3.linear
-     })
+     }, "=-2000")
     //  .eventCallback("onComplete", ()=>{
       //   let timeline2 = new TimelineMax();
 
         // timeline2
-        .to(".landing4__hole", 4000,
+        .to(".landing4__hole", 2000,
         {css:{scaleX:5.5, scaleY:5.5},
         ease: Power3.linear},
          )
@@ -154,9 +154,9 @@ class Landing4 extends Component{
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
-                 <div className="landing4__text_secondary c1">transparency1</div>
-                 <div  style={{color:"pink"}} className="landing4__text_secondary c2">Insurance</div>
-                 <div  style={{color:"coral"}} className="landing4__text_secondary c3">Freight</div>
+                 <div  style={{color:"#0076FF"}} className="landing4__text_secondary c1">transparency1</div>
+                 <div  style={{color:"#C000FA"}} className="landing4__text_secondary c2">Insurance</div>
+                 <div  style={{color:"#0027FF"}} className="landing4__text_secondary c3">Freight</div>
                </div>
              </div>
                 <img className="landing4__circle" src={circle} alt=""/>
