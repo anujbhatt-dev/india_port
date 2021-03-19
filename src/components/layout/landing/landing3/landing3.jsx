@@ -116,6 +116,17 @@ class Landing3 extends Component{
      .addTo(controller);
 
 
+     let scene2 = new ScrollMagic.Scene({
+      triggerElement: '#landing3',
+      duration: '100%',
+      triggerHook: 0,
+      offset: '0'
+  })
+  .setTween(TweenMax.
+   to('.landing3__link_globe', .2, {css:{scaleX:10, scaleY:10, opacity:0.7, zIndex:10000}}))
+  .setPin('#landing4')
+  .addTo(controller);
+
     }
 
 
@@ -125,6 +136,7 @@ class Landing3 extends Component{
          !this.props.mobile?
          <div style={{position:"relative"}}>
          <div id="landing3" className="landing3">
+         <img className="landing3__link_globe" src={globe} alt=""/>
 
             <div className="landing3__wrapper">
                  <Link className="landing3__link landing3__link2" to="/customClearance">
@@ -148,7 +160,6 @@ class Landing3 extends Component{
                  </Link>
                  <Link className="landing3__link landing3__link1" to="/freight">
                       <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
-                      <img className="landing3__link_globe" src={globe} alt=""/>
                       <img className="landing3__link_img" src={freight} alt=""/>
                       <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
                       <div className="landing3__link_text">

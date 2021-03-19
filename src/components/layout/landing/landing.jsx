@@ -9,6 +9,8 @@ import Landing6 from "./landing6/landing6"
 import Landing7 from "./landing7/landing7"
 import Landing8 from "./landing8/landing8"
 import Landing9 from "./landing9/landing9"
+import Landing3_1 from "./landing3-1/landing3-1"
+import Landing3_2 from "./landing3-1/landing3-2"
 
 
 
@@ -46,6 +48,8 @@ class Landing extends Component{
                <Landing1 {...this.state} mobile={this.props.mobile}/>
                <Landing2 {...this.state} mobile={this.props.mobile}/>
                <Landing3 {...this.state} mobile={this.props.mobile}/>
+               {/* <Landing3_1 />
+               <Landing3_2 /> */}
                <Landing4 {...this.state} mobile={this.props.mobile}/>
                <Landing5 {...this.state} mobile={this.props.mobile}/>
                <Landing6 {...this.state} mobile={this.props.mobile}/>
