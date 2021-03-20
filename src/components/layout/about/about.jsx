@@ -85,7 +85,7 @@ class About extends Component{
               </div>
 
              <div className="about__3">
-                     <div className="landing2__mob_head" id="about__3_head">TEAM</div>
+                     <div className="landing2__mob_head head" id="about__3_head">TEAM</div>
                      <div className="about__3_row-box">
                         <h2 className="about__3_row-box--head">Vedant Kothari</h2>
                         <ul>

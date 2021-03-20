@@ -66,7 +66,6 @@
       justify-content: center;
       align-items: center;
       position: relative;
-
       &-blur{
          position: absolute;
          top: 50%;left:50%;
@@ -116,12 +115,18 @@
         margin: 0rem;
       }
     }
+    @include respond(tab-land){
+      margin-left: 3rem;
+    }
     &_row{
 
       display: flex;
       justify-content: center;
       justify-content: space-between;
       flex-wrap: wrap;
+      @include respond(tab-land){
+        flex-direction: column;
+      }
       &-box{
         flex-basis: 25%;
         margin-top: 5rem;
