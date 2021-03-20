@@ -24,88 +24,101 @@ class Landing4 extends Component{
        let timeline = new TimelineMax();
 
       timeline
+      .to(".landing4__hole", 5000,
+      {css:{scaleX:50, scaleY:50},
+      ease: Power3.linear})
       //scroll 1
-      .to('.landing4__smallShip', 20, {
+      .to('.landing4__smallShip', 2000, {
         y: "300%",
         x: "-50%",
         ease: Power3.linear
-       })
-       .to('.landing4__yellowPlane', 20, {
+       }, "=-2000")
+       .to('.landing4__yellowPlane', 2000, {
         y: "-100%",
         x: "-100%",
         ease: Power3.linear
-      }, "=-20")
-       .to('.landing4__smallTruck', 20, {
+      }, "=-2000")
+       .to('.landing4__smallTruck', 2000, {
 
         x: "100%",
         ease: Power3.linear
-      }, "=-20")
-       .to('.c1', 20, {
+      }, "=-2000")
+       .to('.c1', 2000, {
 
         y: "-100%",
         ease: Power3.linear
-      }, "=-20")
-       .from('.c2', 20, {
+      }, "=-2000")
+       .from('.c2', 2000, {
 
         y: "200%",
         ease: Power3.linear
-       }, "=-10")
+       }, "=-1000")
 
 
        //scroll 2
-       .to('.landing4__smallShip', 20, {
+       .to('.landing4__smallShip', 2000, {
         y: "700%",
         ease: Power3.linear
        })
-       .to('.landing4__yellowPlane', 20, {
+       .to('.landing4__yellowPlane', 2000, {
         y:"-70",
         x: "-300%",
         ease: Power3.linear
-      }, "=-20")
-       .to('.landing4__smallTruck', 20, {
+      }, "=-2000")
+       .to('.landing4__smallTruck', 2000, {
         y: "-100%",
         x: "200%",
         ease: Power3.linear
-      }, "=-20")
-       .to('.c2', 20, {
+      }, "=-2000")
+       .to('.c2', 2000, {
 
         y: "-200%",
         ease: Power3.linear
-      }, "=-20")
-       .from('.c3', 20, {
+      }, "=-2000")
+       .from('.c3', 2000, {
 
         y: "100%",
         ease: Power3.linear
-       }, "=-10")
-
-
-
-
+       }, "=-1000")
+      //  
+       
        //scroll 3
-       .to('.landing4__smallShip', 20, {
-        y: "400%",
+       .to('.landing4__smallShip', 2000, {
+        y: "450%",
         x: "100%",
         ease: Power3.linear
        })
-       .to('.landing4__yellowPlane', 20, {
-        y:"120",
+       .to('.landing4__yellowPlane', 2000, {
+        y:"180",
         x: "-400%",
         ease: Power3.linear
-      }, "=-20")
-       .to('.landing4__smallTruck', 20, {
-        y: "-330%",
+      }, "=-2000")
+       .to('.landing4__smallTruck', 2000, {
+        y: "-300%",
         x: "200%",
         ease: Power3.linear
-      }, "=-20")
-       .to('.c3', 20, {
+      }, "=-2000")
+       .to('.c3', 2000, {
 
         y: "-300%",
         ease: Power3.linear
-      }, "=-20")
-      .to('.landing4__text_primary', 20, {
+      }, "=-2000")
+      .to('.landing4__text_primary', 2000, {
        opacity: 0,
        ease: Power3.linear
-     })
+     }, "=-2000")
+    //  .eventCallback("onComplete", ()=>{
+      //   let timeline2 = new TimelineMax();
+
+        // timeline2
+        .to(".landing4__hole", 2000,
+        {css:{scaleX:5.5, scaleY:5.5},
+        ease: Power3.linear},
+         )
+  
+
+      //  })
+     
     //  .to(".globe", .2, {css:{scaleX:2, scaleY:2, opacity:0.7},ease: Power3.linear})
 
 
@@ -141,9 +154,9 @@ class Landing4 extends Component{
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
-                 <div className="landing4__text_secondary c1">transparency1</div>
-                 <div  style={{color:"pink"}} className="landing4__text_secondary c2">Insurance</div>
-                 <div  style={{color:"coral"}} className="landing4__text_secondary c3">Freight</div>
+                 <div  style={{color:"#0076FF"}} className="landing4__text_secondary c1">transparency1</div>
+                 <div  style={{color:"#C000FA"}} className="landing4__text_secondary c2">Insurance</div>
+                 <div  style={{color:"#0027FF"}} className="landing4__text_secondary c3">Freight</div>
                </div>
              </div>
                 <img className="landing4__circle" src={circle} alt=""/>
