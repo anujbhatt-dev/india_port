@@ -18,13 +18,17 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 class Landing2 extends Component{
 
     state={
-      number:0
+      updated:false
     }
-
-    componentDidMount=()=>{
+  
+      componentDidUpdate=()=>{
+  
+        if(this.state.updated)
+          return;
+        
+          this.setState({updated:true});
 
       if(!this.props.mobile){
-      alert("hell 2",this.props.mobile)
       let controller = new ScrollMagic.Controller();
        let timeline = new TimelineMax();
 

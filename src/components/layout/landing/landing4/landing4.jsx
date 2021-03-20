@@ -17,10 +17,18 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 class Landing4 extends Component{
 
-    componentDidMount=()=>{
+  state={
+    updated:false
+  }
+
+    componentDidUpdate=()=>{
+
+      if(this.state.updated)
+        return;
+      
+        this.setState({updated:true});
 
       if(!this.props.mobile){
-        alert("hell 3",this.props.mobile)
         let controller = new ScrollMagic.Controller();
          let timeline = new TimelineMax();
 
@@ -135,18 +143,47 @@ class Landing4 extends Component{
        .setPin('#landing4')
        .addTo(controller);
 
+      }else{
+
+
+        let controller = new ScrollMagic.Controller();
+        let timeline = new TimelineMax();
+
+       timeline
+       .to('.c1', 2000, {
+
+        y: "-100%",
+        ease: Power3.linear
+      }, "=-2000")
+       .from('.c2', 2000, {
+
+        y: "200%",
+        ease: Power3.linear
+       }, "=-1000")
+       .to('.c2', 2000, {
+
+        y: "-200%",
+        ease: Power3.linear
+      }, "=-2000")
+       .from('.c3', 2000, {
+
+        y: "200%",
+        ease: Power3.linear
+       }, "=-1000")
+
+
+ let scene = new ScrollMagic.Scene({
+           triggerElement: '#landing4',
+           duration: '100%',
+           triggerHook: 0,
+           offset: '0'
+       })
+       .setTween(timeline)
+      //  .setTween(TweenMax.
+       .setPin('#landing4')
+       .addTo(controller);
+
       }
-
-
-
-
-
-
-
-
-
-
-
 
     }
     render(){
