@@ -18,7 +18,30 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 class Landing2 extends Component{
 
     state={
-      updated:false
+      number:0,
+      show:false,
+      flag:0,
+      updated:false,
+    }
+
+    numberIntervalFunc=null;
+
+    componentDidMount=()=>{
+      this.numberInterval();
+
+    }
+
+    numberInterval=()=>{
+     this.numberIntervalFunc= setInterval(()=>{
+          this.setState(s=>{return {number:s.number===2?0:s.number+1}})
+      }, 2000)
+    }
+
+    numberHandler=(num)=>{
+      this.setState({
+        number:num
+      })
+      clearInterval(this.numberIntervalFunc);
     }
   
       componentDidUpdate=()=>{
@@ -103,9 +126,9 @@ this.props.mobile
                              <h2 className={this.state.number===0?"dissolve":this.state.number===1?"dissolve1":"dissolve2"}>{this.state.number===0?"Duty":this.state.number===1?"Invoice":"BGM"} Calculator</h2>
                         </div>
                         <div className="landing2__mob_toggler">
-                             <div onClick={()=>this.setState({number:0})} className={this.state.number===0?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
-                             <div onClick={()=>this.setState({number:1})} className={this.state.number===1?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
-                             <div onClick={()=>this.setState({number:2})} className={this.state.number===2?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
+                             <div onClick={()=>this.numberHandler(0)} className={this.state.number===0?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
+                             <div onClick={()=>this.numberHandler(1)} className={this.state.number===1?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
+                             <div onClick={()=>this.numberHandler(2)} className={this.state.number===2?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
                         </div>
                    </div>
   :                <div id="landing2" className="landing2">
