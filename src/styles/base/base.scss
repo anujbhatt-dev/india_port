@@ -71,7 +71,9 @@ body{
   flex-direction:column;
   height: 15rem;
   width: 4rem;
-
+  @include respond(tab-land){
+    bottom: 15rem;
+  }
   & span{
     transition: all .3s;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
@@ -118,4 +120,11 @@ body{
      font-weight: lighter;
 
   }
+}
+.head{
+  font-size: 4rem;
+  font-weight: 1000;
+  color: #D8D8D8;
+  margin: 5rem;
+  margin-left: 10rem;
 }

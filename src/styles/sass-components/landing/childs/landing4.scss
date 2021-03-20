@@ -6,7 +6,7 @@
   position: relative;
   // background: rgba($color-grey-light,.2);
   @include respond(tab-land){
-    height: 60vh;
+    // height: 60vh;
     width: 45rem;
     margin: auto;
   }
@@ -41,7 +41,7 @@
     height: 90vh;
     transform: translate(-50%,-50%);
     @include respond(tab-land){
-      height: 90%;
+      height: 50%;
     }
   }
   &__smallShip{
@@ -51,6 +51,8 @@
     transform: translate(-50%,-50%);
     @include respond(tab-land){
       left: 30%;
+      top: 33%;
+      width: 10rem;
     }
   }
   &__yellowPlane{
@@ -59,19 +61,27 @@
     right: 25%;
     transform: translate(-50%,-50%);
     @include respond(tab-land){
-      right: -2%;
+      right: -8%;
+      top: 38%;
+      width: 10rem;
     }
   }
   &__smallTruck{
-    bottom: 10%;
     width: 18rem;
+    bottom: 10%;
     left: 45%;
     transform: translate(-50%,-50%) rotate(180deg);
+    @include respond(tab-land){
+      // right: -2%;
+      left: 42%;
+      bottom: 27%;
+      width: 10rem;
+    }
   }
   overflow: hidden;
   &__hole{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1);
     width: 150vw;
     height: 150vw;
     // display: none;

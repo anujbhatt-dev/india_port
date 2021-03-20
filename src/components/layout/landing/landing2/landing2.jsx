@@ -17,9 +17,14 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 class Landing2 extends Component{
 
+    state={
+      number:0
+    }
+
     componentDidMount=()=>{
 
-
+      if(!this.props.mobile){
+      alert("hell 2",this.props.mobile)
       let controller = new ScrollMagic.Controller();
        let timeline = new TimelineMax();
 
@@ -73,6 +78,7 @@ class Landing2 extends Component{
      .setTween(timeline)
      .setPin('#landing2')
      .addTo(controller);
+   }
 
 
 
@@ -83,7 +89,22 @@ class Landing2 extends Component{
     render(){
 
       return (
-                <div id="landing2" className="landing2">
+this.props.mobile
+  ?                <div className="landing2__mob">
+                        <h1 className="head">
+                            TOOLS
+                        </h1>
+                        <div className="landing2__mob_flex">
+                             <img className={this.state.number===0?"slide_down":this.state.number===1?"slide_down1":"slide_down2"} src={this.state.number===0?mob1:this.state.number===1?mob2:mob1} alt=""/>
+                             <h2 className={this.state.number===0?"dissolve":this.state.number===1?"dissolve1":"dissolve2"}>{this.state.number===0?"Duty":this.state.number===1?"Invoice":"BGM"} Calculator</h2>
+                        </div>
+                        <div className="landing2__mob_toggler">
+                             <div onClick={()=>this.setState({number:0})} className={this.state.number===0?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
+                             <div onClick={()=>this.setState({number:1})} className={this.state.number===1?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
+                             <div onClick={()=>this.setState({number:2})} className={this.state.number===2?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
+                        </div>
+                   </div>
+  :                <div id="landing2" className="landing2">
                     <div className="landing2__firstWrapper">
                         <div className="landing2__firstWrapper_first">
                              <div className="landing2__firstWrapper_first-text landing2__firstWrapper_first-text--1">

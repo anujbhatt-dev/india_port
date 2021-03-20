@@ -85,6 +85,8 @@ class Landing3 extends Component{
       });
 
       this.mobileNumberInterval();
+      if(!this.props.mobile){
+        alert(this.props.mobile)
       let controller = new ScrollMagic.Controller();
        let timeline = new TimelineMax();
 
@@ -115,61 +117,58 @@ class Landing3 extends Component{
      .setTween(timeline)
      .setPin('.landing3')
      .addTo(controller);
+   }
 
-
-    }
+}
 
 
     render(){
 
       return (
          !this.props.mobile?
-         <div style={{position:"relative"}}>
-         <div id="landing3" className="landing3">
-         <img className="landing3__link_globe globe"  src={globe} alt=""/>
 
-            <div className="landing3__wrapper">
-                 <Link className="landing3__link landing3__link2" to="/customClearance">
-                     <img className="landing3__link_img" src={cc} alt=""/>
-                     <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
-                     <div className="landing3__link_text">
-                         <div className='landing3__link_text-title'>Customer<br/>Clearance</div>
-                         <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+             <div id="landing3" className="landing3">
+                    <img className="landing3__link_globe globe"  src={globe} alt=""/>
+                    <div className="landing3__wrapper">
+                         <Link className="landing3__link landing3__link2" to="/customClearance">
+                             <img className="landing3__link_img" src={cc} alt=""/>
+                             <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
+                             <div className="landing3__link_text">
+                                 <div className='landing3__link_text-title'>Customer<br/>Clearance</div>
+                                 <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                             </div>
+                             <div className="cursor cursor__2">Explore</div>
+                         </Link>
+                         <Link className="landing3__link landing3__link3" to="/insurance">
+                             <img data-aos="fade-right" className="landing3__link_img--plane" src={yellowPlane} alt=""/>
+                             <img className="landing3__link_img" src={insure} alt=""/>
+                             <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
+                             <div className="landing3__link_text">
+                                 <div className='landing3__link_text-title'>Insurance<br/>for Product</div>
+                                 <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                             </div>
+                             <div className="cursor cursor__3">Explore</div>
+                         </Link>
+                         <Link className="landing3__link landing3__link1" to="/freight">
+                              <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
+                              <img className="landing3__link_img" src={freight} alt=""/>
+                              <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
+                              <div className="landing3__link_text">
+                                  <div className='landing3__link_text-title'>Freight Forwarding</div>
+                                  <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                              </div>
+                              <div className="cursor cursor__1">Explore</div>
+                         </Link>
                      </div>
-                     <div className="cursor cursor__2">Explore</div>
-                 </Link>
-                 <Link className="landing3__link landing3__link3" to="/insurance">
-                     <img data-aos="fade-right" className="landing3__link_img--plane" src={yellowPlane} alt=""/>
-                     <img className="landing3__link_img" src={insure} alt=""/>
-                     <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
-                     <div className="landing3__link_text">
-                         <div className='landing3__link_text-title'>Insurance<br/>for Product</div>
-                         <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                     <div className="landing2__motion landing2__motion--rev">
+                         <img  className="landing2__motion_bar landing2__motion_bar--rev" src={bar} alt=""/>
+                         <img  className="landing2__motion_line landing2__motion_line--rev" src={line} alt=""/>
+                         <img  className="landing2__motion_mode landing2__motion_mode--rev" src={graPlane} alt=""/>
                      </div>
-                     <div className="cursor cursor__3">Explore</div>
-                 </Link>
-                 <Link className="landing3__link landing3__link1" to="/freight">
-                      <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
-                      <img className="landing3__link_img" src={freight} alt=""/>
-                      <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
-                      <div className="landing3__link_text">
-                          <div className='landing3__link_text-title'>Freight Forwarding</div>
-                          <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
-                      </div>
-                      <div className="cursor cursor__1">Explore</div>
-                 </Link>
              </div>
-             <div className="landing2__motion landing2__motion--rev">
-                 <img  className="landing2__motion_bar landing2__motion_bar--rev" src={bar} alt=""/>
-                 <img  className="landing2__motion_line landing2__motion_line--rev" src={line} alt=""/>
-                 <img  className="landing2__motion_mode landing2__motion_mode--rev" src={graPlane} alt=""/>
-             </div>
-            </div>
-
-         </div>
          :
          <div className="landing3__mob">
-             <div className="landing2__mob_head">Services</div>
+             <div className="head">Services</div>
              <div className="landing3__mob_dots">
                  <svg onClick={()=>this.mobileNumberHandler(0)}  xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27">
                   <g id="Group_6152" data-name="Group 6152" transform="translate(-24 -1616)">

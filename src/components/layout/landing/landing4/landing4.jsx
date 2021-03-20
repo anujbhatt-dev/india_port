@@ -19,128 +19,131 @@ class Landing4 extends Component{
 
     componentDidMount=()=>{
 
+      if(!this.props.mobile){
+        alert("hell 3",this.props.mobile)
+        let controller = new ScrollMagic.Controller();
+         let timeline = new TimelineMax();
 
-      let controller = new ScrollMagic.Controller();
-       let timeline = new TimelineMax();
+        timeline
+        .to(".landing4__hole", 5000,
+        {css:{scaleX:50, scaleY:50},
+        ease: Power3.linear})
+        //scroll 1
+        .to('.landing4__smallShip', 2000, {
+          y: "300%",
+          x: "-50%",
+          ease: Power3.linear
+         }, "=-2000")
+         .to('.landing4__yellowPlane', 2000, {
+          y: "-100%",
+          x: "-100%",
+          ease: Power3.linear
+        }, "=-2000")
+         .to('.landing4__smallTruck', 2000, {
 
-      timeline
-      .to(".landing4__hole", 5000,
-      {css:{scaleX:50, scaleY:50},
-      ease: Power3.linear})
-      //scroll 1
-      .to('.landing4__smallShip', 2000, {
-        y: "300%",
-        x: "-50%",
-        ease: Power3.linear
+          x: "100%",
+          ease: Power3.linear
+        }, "=-2000")
+         .to('.c1', 2000, {
+
+          y: "-100%",
+          ease: Power3.linear
+        }, "=-2000")
+         .from('.c2', 2000, {
+
+          y: "200%",
+          ease: Power3.linear
+         }, "=-1000")
+
+
+         //scroll 2
+         .to('.landing4__smallShip', 2000, {
+          y: "700%",
+          ease: Power3.linear
+         })
+         .to('.landing4__yellowPlane', 2000, {
+          y:"-70",
+          x: "-300%",
+          ease: Power3.linear
+        }, "=-2000")
+         .to('.landing4__smallTruck', 2000, {
+          y: "-100%",
+          x: "200%",
+          ease: Power3.linear
+        }, "=-2000")
+         .to('.c2', 2000, {
+
+          y: "-200%",
+          ease: Power3.linear
+        }, "=-2000")
+         .from('.c3', 2000, {
+
+          y: "100%",
+          ease: Power3.linear
+         }, "=-1000")
+        //
+
+         //scroll 3
+         .to('.landing4__smallShip', 2000, {
+          y: "450%",
+          x: "100%",
+          ease: Power3.linear
+         })
+         .to('.landing4__yellowPlane', 2000, {
+          y:"150%",
+          x: "-400%",
+          ease: Power3.linear
+        }, "=-2000")
+         .to('.landing4__smallTruck', 2000, {
+          y: "-300%",
+          x: "200%",
+          ease: Power3.linear
+        }, "=-2000")
+         .to('.c3', 2000, {
+
+          y: "-300%",
+          ease: Power3.linear
+        }, "=-2000")
+        .to('.landing4__text_primary', 2000, {
+         opacity: 0,
+         ease: Power3.linear
        }, "=-2000")
-       .to('.landing4__yellowPlane', 2000, {
-        y: "-100%",
-        x: "-100%",
-        ease: Power3.linear
-      }, "=-2000")
-       .to('.landing4__smallTruck', 2000, {
+      //  .eventCallback("onComplete", ()=>{
+        //   let timeline2 = new TimelineMax();
 
-        x: "100%",
-        ease: Power3.linear
-      }, "=-2000")
-       .to('.c1', 2000, {
-
-        y: "-100%",
-        ease: Power3.linear
-      }, "=-2000")
-       .from('.c2', 2000, {
-
-        y: "200%",
-        ease: Power3.linear
-       }, "=-1000")
+          // timeline2
+          .to(".landing4__hole", 2000,
+          {css:{scaleX:6, scaleY:6},
+          ease: Power3.linear},
+           )
 
 
-       //scroll 2
-       .to('.landing4__smallShip', 2000, {
-        y: "700%",
-        ease: Power3.linear
+        //  })
+
+      //  .to(".globe", .2, {css:{scaleX:2, scaleY:2, opacity:0.7},ease: Power3.linear})
+
+
+
+         let scene = new ScrollMagic.Scene({
+           triggerElement: '#landing4',
+           duration: '100%',
+           triggerHook: 0,
+           offset: '0'
        })
-       .to('.landing4__yellowPlane', 2000, {
-        y:"-70",
-        x: "-300%",
-        ease: Power3.linear
-      }, "=-2000")
-       .to('.landing4__smallTruck', 2000, {
-        y: "-100%",
-        x: "200%",
-        ease: Power3.linear
-      }, "=-2000")
-       .to('.c2', 2000, {
+       .setTween(timeline)
+      //  .setTween(TweenMax.
+       .setPin('#landing4')
+       .addTo(controller);
 
-        y: "-200%",
-        ease: Power3.linear
-      }, "=-2000")
-       .from('.c3', 2000, {
-
-        y: "100%",
-        ease: Power3.linear
-       }, "=-1000")
-      //  
-       
-       //scroll 3
-       .to('.landing4__smallShip', 2000, {
-        y: "450%",
-        x: "100%",
-        ease: Power3.linear
-       })
-       .to('.landing4__yellowPlane', 2000, {
-        y:"180",
-        x: "-400%",
-        ease: Power3.linear
-      }, "=-2000")
-       .to('.landing4__smallTruck', 2000, {
-        y: "-300%",
-        x: "200%",
-        ease: Power3.linear
-      }, "=-2000")
-       .to('.c3', 2000, {
-
-        y: "-300%",
-        ease: Power3.linear
-      }, "=-2000")
-      .to('.landing4__text_primary', 2000, {
-       opacity: 0,
-       ease: Power3.linear
-     }, "=-2000")
-    //  .eventCallback("onComplete", ()=>{
-      //   let timeline2 = new TimelineMax();
-
-        // timeline2
-        .to(".landing4__hole", 2000,
-        {css:{scaleX:5.5, scaleY:5.5},
-        ease: Power3.linear},
-         )
-  
-
-      //  })
-     
-    //  .to(".globe", .2, {css:{scaleX:2, scaleY:2, opacity:0.7},ease: Power3.linear})
+      }
 
 
 
-       let scene = new ScrollMagic.Scene({
-         triggerElement: '#landing4',
-         duration: '100%',
-         triggerHook: 0,
-         offset: '0'
-     })
-     .setTween(timeline)
-    //  .setTween(TweenMax.
-     .setPin('#landing4')
-     .addTo(controller);
-
-
- 
-  
 
 
 
- 
+
+
 
 
 
@@ -150,7 +153,7 @@ class Landing4 extends Component{
 
       return (
          <div  id="landing4" className="landing4">
-           <img className="landing4__hole" src={hole} alt=""/>
+             {this.props.mobile?null:<img className="landing4__hole" src={hole} alt=""/>}
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
