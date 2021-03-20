@@ -102,7 +102,7 @@ class Landing3 extends Component{
          ease: Power3.linear
        },"-=1000")
        .to(".globe", 600,
-        {css:{scaleX:10, scaleY:10, zIndex:100},
+        {css:{scaleX:60, scaleY:60, zIndex:100},
         ease: Power3.linear})
        
 
