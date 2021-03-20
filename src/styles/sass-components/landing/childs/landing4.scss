@@ -71,11 +71,11 @@
   overflow: hidden;
   &__hole{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)  rotate(135deg);
     width: 150vw;
     height: 150vw;
     top: 50%;
     left: 50%;
-    z-index: 4000000;
+    z-index: 400;
   }
 }
