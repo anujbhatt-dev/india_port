@@ -32,7 +32,8 @@ class Landing3 extends Component{
     state={
       mobileNumber:0,
       show:false,
-      flag:0
+      flag:0,
+      updated:false,
     }
 
     mobileNumberIntervalFunc=null;
@@ -85,8 +86,19 @@ class Landing3 extends Component{
       });
 
       this.mobileNumberInterval();
+
+    }
+
+
+    componentDidUpdate=()=>{
+
+      if(this.state.updated)
+      return;
+    
+      this.setState({updated:true});
+
+
       if(!this.props.mobile){
-        alert(this.props.mobile)
       let controller = new ScrollMagic.Controller();
        let timeline = new TimelineMax();
 
