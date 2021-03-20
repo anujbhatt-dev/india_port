@@ -71,9 +71,10 @@
   overflow: hidden;
   &__hole{
     position: absolute;
-    transform: translate(-50%,-50%)  rotate(135deg);
+    transform: translate(-50%,-50%);
     width: 150vw;
     height: 150vw;
+    // display: none;
     top: 50%;
     left: 50%;
     z-index: 400;
