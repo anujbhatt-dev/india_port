@@ -18,20 +18,20 @@ class Landing extends Component{
 
   }
   componentDidMount=()=>{
-    let newState={
-    landing1:$('.landing1').offset().top,
-    landing2:$('.landing2').offset().top,
-    landing3:$('.landing3').offset().top,
-    landing4:$('.landing4').offset().top,
-    landing5:$('.landing5').offset().top,
-    landing6:$('.landing6').offset().top,
-    landing7:$('.landing7').offset().top,
-    landing8:$('.landing8').offset().top
-  }
-   console.log(newState);
-   this.setState({
-     ...newState
-   })
+  //   let newState={
+  //   landing1:$('.landing1').offset().top,
+  //   landing2:$('.landing2').offset().top,
+  //   landing3:$('.landing3').offset().top,
+  //   landing4:$('.landing4').offset().top,
+  //   landing5:$('.landing5').offset().top,
+  //   landing6:$('.landing6').offset().top,
+  //   landing7:$('.landing7').offset().top,
+  //   landing8:$('.landing8').offset().top
+  // }
+  //  console.log(newState);
+  //  this.setState({
+  //    ...newState
+  //  })
 
     window.scrollTo({
         top:0,

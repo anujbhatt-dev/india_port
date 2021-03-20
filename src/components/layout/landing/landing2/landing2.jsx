@@ -18,7 +18,30 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 class Landing2 extends Component{
 
     state={
-      updated:false
+      number:0,
+      show:false,
+      flag:0,
+      updated:false,
+    }
+
+    numberIntervalFunc=null;
+
+    componentDidMount=()=>{
+      this.numberInterval();
+
+    }
+
+    numberInterval=()=>{
+     this.numberIntervalFunc= setInterval(()=>{
+          this.setState(s=>{return {number:s.number===2?0:s.number+1}})
+      }, 2000)
+    }
+
+    numberHandler=(num)=>{
+      this.setState({
+        number:num
+      })
+      clearInterval(this.numberIntervalFunc);
     }
   
       componentDidUpdate=()=>{
