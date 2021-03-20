@@ -8,6 +8,7 @@
     width: 300vw;
     overflow: hidden;
     position: absolute;
+    background: $color-white;
     top: 0;
     left: 0;
   }
@@ -32,10 +33,9 @@
     &_globe{
        position: absolute;
        transform: translate(-50%,-50%);
-       top: 45.5%;
-       left: 31%;
-       height: 50%;
-       z-index: 10000000;
+       top: 43%;
+       left: 40%;
+       height: 30%;
        // opacity: 0;
        // transition: all .1s;
        // animation-duration: 1s;
