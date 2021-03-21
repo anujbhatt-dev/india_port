@@ -43,17 +43,17 @@ class Landing2 extends Component{
       })
       clearInterval(this.numberIntervalFunc);
     }
-  
+
       componentDidUpdate=()=>{
-  
+
         if(this.state.updated)
           return;
-        
+
           this.setState({updated:true});
 
       if(!this.props.mobile){
       let controller = new ScrollMagic.Controller();
-       let timeline = new TimelineMax();
+       let timeline = gsap.timeline()
 
       timeline
       .to('.landing2__firstWrapper_first-text--3', 20, {

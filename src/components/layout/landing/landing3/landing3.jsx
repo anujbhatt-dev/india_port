@@ -94,13 +94,13 @@ class Landing3 extends Component{
 
       if(this.state.updated)
       return;
-    
+
       this.setState({updated:true});
 
 
       if(!this.props.mobile){
       let controller = new ScrollMagic.Controller();
-       let timeline = new TimelineMax();
+       let timeline = gsap.timeline()
 
       timeline
       .to('.landing3__wrapper', 1000, {

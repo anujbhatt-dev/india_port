@@ -10,13 +10,13 @@ import download from "../../assets/images/download.svg"
 
 import Landing from "./landing/landing"
 import About from "./about/about"
-import Contact from "./contact/contact"
+// import Contact from "./contact/contact"
 import Freight from "./freight/freight"
 import Insurance from "./insurance/insurance"
 import CustomClearance from "./customClearance/customClearance"
 import Invoice from "./invoice/invoice"
 import CbmCalc from "./cbmCalc/cbmCalc"
-import Try from "./try/try"
+// import Try from "./try/try"
 import Loader from "./loader/loader"
 
 import Exim from "./exim/exim"
@@ -46,7 +46,7 @@ class Layout extends Component{
         news: [],
         blogs:[],
         promotion:false,
-        loading:false
+        loading:true
     }
 
 
@@ -97,10 +97,10 @@ class Layout extends Component{
       //       })
       //     }
       //   };
-
+      let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       let width= Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
       console.log(width);
-      if(width<=1025){
+      if(isMobile || (width<=1025)){
         this.setState({
           mobile:true
         })
@@ -146,9 +146,6 @@ class Layout extends Component{
                    <Route path='/about' exact>
                        <About mobile={this.state.mobile}/>
                    </Route>
-                   <Route path='/contact' exact>
-                       <Contact mobile={this.state.mobile}/>
-                   </Route>
                    <Route path='/freight' exact>
                        <Freight mobile={this.state.mobile}/>
                    </Route>
@@ -163,9 +160,6 @@ class Layout extends Component{
                    </Route>
                    <Route path='/cbmCalc' exact>
                        <CbmCalc mobile={this.state.mobile}/>
-                   </Route>
-                   <Route path='/try' exact>
-                       <Try {...this.state}/>
                    </Route>
                    <Route path='/exim' exact>
                        <Exim mobile={this.state.mobile}/>

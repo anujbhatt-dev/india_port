@@ -16,7 +16,7 @@ class Exim extends Component{
       return (
           <div className="exim">
                <img className="exim__img" src={this.props.mobile?fem:frontExim} alt=""/>
-               <a href="">Visit EXIM</a>
+               <a rel="noreferrer" target="_blank" href="http://eximeducation.com/">Visit EXIM</a>
           </div>
       )
     }

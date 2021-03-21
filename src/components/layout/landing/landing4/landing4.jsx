@@ -25,12 +25,12 @@ class Landing4 extends Component{
 
       if(this.state.updated)
         return;
-      
+
         this.setState({updated:true});
 
       if(!this.props.mobile){
         let controller = new ScrollMagic.Controller();
-         let timeline = new TimelineMax();
+         let timeline = gsap.timeline()
 
         timeline
         .to(".landing4__hole", 5000,
@@ -147,7 +147,7 @@ class Landing4 extends Component{
 
 
         let controller = new ScrollMagic.Controller();
-        let timeline = new TimelineMax();
+        let timeline = gsap.timeline()
 
        timeline
        .to('.c1', 2000, {

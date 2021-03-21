@@ -35,6 +35,10 @@ class Landing1 extends Component{
 
     }
 
+    componentDidUpdate=()=>{
+      console.log("update");
+    }
+
     temperory=()=>{
 
     }
