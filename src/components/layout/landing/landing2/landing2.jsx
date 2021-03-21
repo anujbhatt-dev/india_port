@@ -21,15 +21,9 @@ class Landing2 extends Component{
       number:0,
       show:false,
       flag:0,
-      updated:false,
     }
 
     numberIntervalFunc=null;
-
-    componentDidMount=()=>{
-      this.numberInterval();
-
-    }
 
     numberInterval=()=>{
      this.numberIntervalFunc= setInterval(()=>{
@@ -44,14 +38,12 @@ class Landing2 extends Component{
       clearInterval(this.numberIntervalFunc);
     }
 
-      componentDidUpdate=()=>{
+    componentDidMount=()=>{
 
-        if(this.state.updated)
-          return;
 
-          this.setState({updated:true});
+        this.numberInterval();
 
-      if(!this.props.mobile){
+      if(!this.props.isMobile()){
       let controller = new ScrollMagic.Controller();
        let timeline = gsap.timeline()
 
@@ -116,8 +108,8 @@ class Landing2 extends Component{
     render(){
 
       return (
-this.props.mobile
-  ?                <div className="landing2__mob">
+   this.props.isMobile()
+   ?                <div className="landing2__mob">
                         <h1 className="head">
                             TOOLS
                         </h1>

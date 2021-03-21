@@ -42,7 +42,7 @@ class Layout extends Component{
 
     state = {
         updates: [],
-        mobile:false,
+        mobile:null,
         news: [],
         blogs:[],
         promotion:false,
@@ -97,14 +97,11 @@ class Layout extends Component{
       //       })
       //     }
       //   };
-      let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      let width= Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-      console.log(width);
-      if(isMobile || (width<=1025)){
+     
         this.setState({
-          mobile:true
+          mobile:this.isMobile()
         })
-      }
+      
 
       //getting updates
       axios.get(this.UDATES_BLOGGER_POSTS_API)
@@ -128,6 +125,13 @@ class Layout extends Component{
     }
 
 
+    isMobile(){
+        let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        let width= Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        console.log(width);
+        return (isMobile || (width<=1025))?true:false;
+    }
+
     render(){
 
       if(this.state.loading){
@@ -141,7 +145,7 @@ class Layout extends Component{
               <GoToTop/>
               <Switch>
                    <Route path='/' exact>
-                       <Landing mobile={this.state.mobile} {...this.state}/>
+                       <Landing  {...this.state} isMobile={this.isMobile} mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/about' exact>
                        <About mobile={this.state.mobile}/>

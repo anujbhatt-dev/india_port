@@ -17,18 +17,12 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 class Landing4 extends Component{
 
-  state={
-    updated:false
-  }
 
-    componentDidUpdate=()=>{
 
-      if(this.state.updated)
-        return;
 
-        this.setState({updated:true});
+    componentDidMount=()=>{
 
-      if(!this.props.mobile){
+      if(!this.props.isMobile()){
         let controller = new ScrollMagic.Controller();
          let timeline = gsap.timeline()
 
@@ -190,7 +184,7 @@ class Landing4 extends Component{
 
       return (
          <div  id="landing4" className="landing4">
-             {this.props.mobile?null:<img className="landing4__hole" src={hole} alt=""/>}
+             {this.props.isMobile()?null:<img className="landing4__hole" src={hole} alt=""/>}
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>

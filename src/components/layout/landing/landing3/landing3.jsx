@@ -33,7 +33,6 @@ class Landing3 extends Component{
       mobileNumber:0,
       show:false,
       flag:0,
-      updated:false,
     }
 
     mobileNumberIntervalFunc=null;
@@ -87,18 +86,9 @@ class Landing3 extends Component{
 
       this.mobileNumberInterval();
 
-    }
 
 
-    componentDidUpdate=()=>{
-
-      if(this.state.updated)
-      return;
-
-      this.setState({updated:true});
-
-
-      if(!this.props.mobile){
+      if(!this.props.isMobile()){
       let controller = new ScrollMagic.Controller();
        let timeline = gsap.timeline()
 
@@ -137,7 +127,7 @@ class Landing3 extends Component{
     render(){
 
       return (
-         !this.props.mobile?
+         !this.props.isMobile()?
 
              <div id="landing3" className="landing3">
                     <img className="landing3__link_globe globe"  src={globe} alt=""/>

@@ -14,9 +14,6 @@ import Landing9 from "./landing9/landing9"
 
 class Landing extends Component{
 
-  state={
-
-  }
   componentDidMount=()=>{
 
     window.scrollTo({
@@ -25,20 +22,22 @@ class Landing extends Component{
       })
   }
 
+  componentDidUpdate=()=>{
+    alert("updated ladnug")
+  }
+
     render(){
 
       return (
           <div className="landing">
-               <Landing1 {...this.state} mobile={this.props.mobile}/>
-               <Landing2 {...this.state} mobile={this.props.mobile}/>
-               <Landing3 {...this.state} mobile={this.props.mobile}/>
-               {/* <Landing3_1 />
-               <Landing3_2 /> */}
-               <Landing4 {...this.state} mobile={this.props.mobile}/>
-               <Landing5 {...this.state} mobile={this.props.mobile}/>
-               <Landing6 {...this.state} mobile={this.props.mobile}/>
-               <Landing7 {...this.state} mobile={this.props.mobile} {...this.props}/>
-               <Landing8 {...this.state} mobile={this.props.mobile}/>
+               <Landing1   {...this.props.mobile}/>
+               <Landing2  isMobile={this.props.isMobile}/>
+               <Landing3  isMobile={this.props.isMobile}/>
+               <Landing4 isMobile={this.props.isMobile}/>
+               <Landing5  {...this.props.mobile}/>
+               <Landing6  {...this.props.mobile}/>
+               <Landing7  {...this.props}/>
+               <Landing8  {...this.props.mobile}/>
           </div>
       )
     }
