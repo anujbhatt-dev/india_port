@@ -134,12 +134,13 @@ class Layout extends Component{
 
     render(){
 
-      if(this.state.loading){
-        return <Loader />
-      }
+    //   if(this.state.loading){
+    //     return <Loader />
+    //   }
 
       return (
           <div className="layout">
+              {this.state.loading?<Loader/>:null}
               {this.state.promotion?<div className="install" onClick={this.install}> <img src={download} alt=""/> <span>Install</span></div>:null}
               {this.state.mobile?<NavigationMob/>:<Navigation/>}
               <GoToTop/>

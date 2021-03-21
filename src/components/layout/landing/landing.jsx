@@ -22,10 +22,6 @@ class Landing extends Component{
       })
   }
 
-  componentDidUpdate=()=>{
-    alert("updated ladnug")
-  }
-
     render(){
 
       return (
