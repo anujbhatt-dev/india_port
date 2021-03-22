@@ -112,17 +112,17 @@ body{
     height: 20rem;
     width: 20rem;
     // animation: rotate1 10s linear;
-    box-shadow: 0 0 2rem rgba($color-black,.5);
-    border-radius: 18px;
+    // box-shadow: 0 0 2rem rgba($color-black,.5);
+    // border-radius: 18px;
   }
   &__title{
      position: absolute;
      transform: translateX(-50%);
      left: 50%;
      bottom: 10rem;
-     font-size: 5rem;
+     font-size: 3rem;
      font-weight: lighter;
-     // color: $color-white;
+     color: $color-white;
   }
 }
 .head{
