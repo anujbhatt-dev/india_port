@@ -26,12 +26,12 @@ class Landing extends Component{
 
       return (
           <div className="landing">
-               <Landing1   {...this.props.mobile}/>
+               <Landing1   mobile={this.props.mobile}/>
                <Landing2  isMobile={this.props.isMobile}/>
                <Landing3  isMobile={this.props.isMobile}/>
                <Landing4 isMobile={this.props.isMobile}/>
-               <Landing5  {...this.props.mobile}/>
-               <Landing6  {...this.props.mobile}/>
+               <Landing5  mobile={this.props.mobile}/>
+               <Landing6  mobile={this.props.mobile}/>
                <Landing7  {...this.props}/>
                <Landing8  {...this.props.mobile}/>
           </div>
