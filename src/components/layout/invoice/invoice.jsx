@@ -329,7 +329,6 @@ step3Toggler=(flag)=>{
 
       return (
          <div className="invoice">
-            <img className="invoice__swing" src={swing} alt=""/>
 
 
 
@@ -374,7 +373,7 @@ step3Toggler=(flag)=>{
                       <input onChange={this.step1ChangeHandler}  name="invoiceValue"  value={this.state.step1.invoiceValue} className="invoice__box_flex-input" type="number"/>
                   </div>
 
-                  <div className="invoice__box_flex">
+                  <div className="invoice__box_flex invoice__box_flex--mod ">
                       <svg onClick={()=>this.step1Toggler("freightD")} xmlns="http://www.w3.org/2000/svg" width="58" height="55" viewBox="0 0 58 55">
 
                         <g  id="Group_3232" data-name="Group 3232" transform="translate(-608 -497)">
@@ -397,7 +396,7 @@ step3Toggler=(flag)=>{
                        <div class="invoice__box_flex-smallHead">{this.state.step1.currency}</div>
                   </div>
 
-                  <div className="invoice__box_flex">
+                  <div className="invoice__box_flex invoice__box_flex--mod">
                   <svg onClick={()=>this.step1Toggler("insD")} xmlns="http://www.w3.org/2000/svg" width="58" height="55" viewBox="0 0 58 55">
 
                     <g  id="Group_3232" data-name="Group 3232" transform="translate(-608 -497)">

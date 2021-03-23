@@ -14,16 +14,6 @@
     text-transform: capitalize;
     top: 0rem;
   }
-
-  &__swing{
-    position:fixed;
-    top: 0;
-    left: 17rem;
-    height: 5rem;
-    z-index: 1000;
-    animation: swing 3s linear infinite;
-    transform-origin: 1rem 0rem;
-  }
   &__box{
     // position: relative;
 
@@ -108,7 +98,10 @@
       @include respond(phone){
          transform: scale(.5);
       }
-      display: flex;justify-content: center;align-items: center;margin-bottom: 2rem;
+      display: flex;justify-content: flex-start;align-items: center;margin-bottom: 2rem;
+      &--mod{
+        margin-left: 10rem;
+      }
       &-smallHead{
         text-align: center;
         color: $color-india-font;
