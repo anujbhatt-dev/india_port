@@ -44,7 +44,7 @@ class About extends Component{
          <div className="about">
 
               <div className="about__1">
-                  <img src={about} alt=""/>
+                  <img src="https://i.ibb.co/6BMGZqb/7b2ef91d-5015-4ff8-a28c-05fbd44eaa32.jpg" alt=""/>
                   <div className="about__1_wrap">
                     <div className="about__1_blue">digital</div>
                     <div className="about__1_whiteBig"><div>India</div><div>Port</div></div>
