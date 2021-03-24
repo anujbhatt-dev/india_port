@@ -19,6 +19,28 @@ class Landing4 extends Component{
 
 
 
+   level=1;
+
+
+   getScrollDirection=()=>{
+    // let scrollPos = 0;
+    // window.addEventListener('wheel', function(){
+      // alert("under")
+
+    
+    // document.getElementById('s2');
+      // if ((document.getElementById('s2').getBoundingClientRect()).left < scrollPos)
+      //  {
+        // scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
+
+          // return -1;
+        // }
+      // else{
+        // scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
+
+        return 1;
+      }
+    
 
     componentDidMount=()=>{
 
@@ -27,97 +49,168 @@ class Landing4 extends Component{
          let timeline = gsap.timeline()
 
         timeline
-        .to(".landing4__hole", 5000,
-        {css:{scaleX:50, scaleY:50},
-        ease: Power3.linear})
+        .to(".ship", 100,
+        {
+          x:100,
+        })
+        .eventCallback("onStart", ()=>{
+
+          
+           let stopScroll=(e)=> {
+              
+            e.preventDefault();
+          }
+  
+          window.addEventListener("wheel",stopScroll , {passive: false });
+  
+  
+          let onscrollFunc=()=>{
+
+           if(this.level===1){
+
+            if(this.getScrollDirection()===1){
+                 this.level=-1;
+
+                 let timeline1=gsap.timeline();
+                 timeline1
+                 .to(".landing4__hole", 5000,
+                {css:{scaleX:50, scaleY:50},
+                ease: Power3.linear})
+                .eventCallback("onComplete", ()=>{
+                  this.level=2;
+                })
+
+            }else{
+
+            }
+              
+           }else if(this.level===2){
+            if(this.getScrollDirection()===1){
+
+            }else{
+              
+            }
+             
+          } else if(this.level===3){
+            if(this.getScrollDirection()===1){
+
+            }else{
+              
+            }
+             
+          }else if(this.level===4){
+            if(this.getScrollDirection()===1){
+
+            }else{
+              
+            }
+             
+          }else if(this.level===5){
+            if(this.getScrollDirection()===1){
+
+            }else{
+              
+            }
+             
+          }     
+
+            
+            
+
+
+          }
+       window.addEventListener("wheel",onscrollFunc);
+
+        })
+        
         //scroll 1
-        .to('.landing4__smallShip', 2000, {
-          y: "300%",
-          x: "-50%",
-          ease: Power3.linear
-         }, "=-2000")
-         .to('.landing4__yellowPlane', 2000, {
-          y: "-100%",
-          x: "-100%",
-          ease: Power3.linear
-        }, "=-2000")
-         .to('.landing4__smallTruck', 2000, {
+      //   .to('.landing4__smallShip', 2000, {
+      //     y: "300%",
+      //     x: "-50%",
+      //     ease: Power3.linear
+      //    }, "=-2000")
+      //    .to('.landing4__yellowPlane', 2000, {
+      //     y: "-100%",
+      //     x: "-100%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .to('.landing4__smallTruck', 2000, {
 
-          x: "100%",
-          ease: Power3.linear
-        }, "=-2000")
-         .to('.c1', 2000, {
+      //     x: "100%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .to('.c1', 2000, {
 
-          y: "-100%",
-          ease: Power3.linear
-        }, "=-2000")
-         .from('.c2', 2000, {
+      //     y: "-100%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .from('.c2', 2000, {
 
-          y: "200%",
-          ease: Power3.linear
-         }, "=-1000")
+      //     y: "200%",
+      //     ease: Power3.linear
+      //    }, "=-1000")
 
 
-         //scroll 2
-         .to('.landing4__smallShip', 2000, {
-          y: "700%",
-          ease: Power3.linear
-         })
-         .to('.landing4__yellowPlane', 2000, {
-          y:"-70",
-          x: "-300%",
-          ease: Power3.linear
-        }, "=-2000")
-         .to('.landing4__smallTruck', 2000, {
-          y: "-100%",
-          x: "200%",
-          ease: Power3.linear
-        }, "=-2000")
-         .to('.c2', 2000, {
+      //    //scroll 2
+      //    .to('.landing4__smallShip', 2000, {
+      //     y: "700%",
+      //     ease: Power3.linear
+      //    })
+      //    .to('.landing4__yellowPlane', 2000, {
+      //     y:"-70",
+      //     x: "-300%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .to('.landing4__smallTruck', 2000, {
+      //     y: "-100%",
+      //     x: "200%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .to('.c2', 2000, {
 
-          y: "-200%",
-          ease: Power3.linear
-        }, "=-2000")
-         .from('.c3', 2000, {
+      //     y: "-200%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .from('.c3', 2000, {
 
-          y: "100%",
-          ease: Power3.linear
-         }, "=-1000")
-        //
+      //     y: "100%",
+      //     ease: Power3.linear
+      //    }, "=-1000")
+      //   //
 
-         //scroll 3
-         .to('.landing4__smallShip', 2000, {
-          y: "450%",
-          x: "100%",
-          ease: Power3.linear
-         })
-         .to('.landing4__yellowPlane', 2000, {
-          y:"150%",
-          x: "-400%",
-          ease: Power3.linear
-        }, "=-2000")
-         .to('.landing4__smallTruck', 2000, {
-          y: "-300%",
-          x: "200%",
-          ease: Power3.linear
-        }, "=-2000")
-         .to('.c3', 2000, {
+      //    //scroll 3
+      //    .to('.landing4__smallShip', 2000, {
+      //     y: "450%",
+      //     x: "100%",
+      //     ease: Power3.linear
+      //    })
+      //    .to('.landing4__yellowPlane', 2000, {
+      //     y:"150%",
+      //     x: "-400%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .to('.landing4__smallTruck', 2000, {
+      //     y: "-300%",
+      //     x: "200%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //    .to('.c3', 2000, {
 
-          y: "-300%",
-          ease: Power3.linear
-        }, "=-2000")
-        .to('.landing4__text_primary', 2000, {
-         opacity: 0,
-         ease: Power3.linear
-       }, "=-2000")
-      //  .eventCallback("onComplete", ()=>{
-        //   let timeline2 = new TimelineMax();
+      //     y: "-300%",
+      //     ease: Power3.linear
+      //   }, "=-2000")
+      //   .to('.landing4__text_primary', 2000, {
+      //    opacity: 0,
+      //    ease: Power3.linear
+      //  }, "=-2000")
+      // //  .eventCallback("onComplete", ()=>{
+      //   //   let timeline2 = new TimelineMax();
 
-          // timeline2
-          .to(".landing4__hole", 2000,
-          {css:{scaleX:6, scaleY:6},
-          ease: Power3.linear},
-           )
+      //     // timeline2
+      //     .to(".landing4__hole", 2000,
+      //     {css:{scaleX:6, scaleY:6},
+      //     ease: Power3.linear},
+      //      )
 
 
         //  })
@@ -195,6 +288,7 @@ class Landing4 extends Component{
              </div>
                 <img className="landing4__circle" src={circle} alt=""/>
                 <img className="landing4__smallShip" src={smallShip} alt=""/>
+                <img className="landing4__smallShip ship"  src={smallShip} alt=""/>
                 <img className="landing4__smallTruck" src={smallTruck} alt=""/>
                 <img className="landing4__yellowPlane" src={yellowPlane} alt=""/>
          </div>
