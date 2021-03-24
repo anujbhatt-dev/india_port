@@ -1,0 +1,108 @@
+.contact{
+  &__1{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    border: 1px solid rgba($color-grey,.2);
+    box-shadow: 0 0 2rem rgba($color-grey,.4);
+    border-radius: 18px;
+    padding: 4rem 6rem;
+    margin: 5rem 15rem;
+    &_form{
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 8rem;
+      & input[type="text"],input[type="email"],select{
+         border: 1px solid rgba($color-india-grey,.6);
+         // text-align: center;
+         font-size: 2.2rem;
+         padding: 2rem;
+         margin:1.5rem 0;
+         border-radius: 18px;
+         &::placeholder{
+           color: $color-india-grey;
+         }
+         &:focus,&:active{
+           outline: none;
+           border: 1px solid $color-india-grey;
+         }
+      }
+      & select{
+        color: $color-india-grey;
+      }
+      & input[type="submit"]{
+          display:flex;
+          justify-content: center;
+          border-radius: 5px;
+          font-size: 2.5rem;
+          width:40rem;
+          padding: 2rem;
+          text-transform: lowercase;
+          background-image: linear-gradient(to right,#1069DC,#1CA2F9);
+      }
+    }
+   &_text{
+     flex-grow: 1;
+     display:flex;
+     align-items: center;
+     flex-direction: column;
+
+     &-big{
+       font-size: 4.7rem;
+       color: $color-india-grey;
+       font-weight: bold;
+       margin: 1rem;
+       & span{
+         color: $color-india-font;
+       }
+     }
+     &-small{
+       text-align: center;
+       font-size: 2.2rem;
+       color: $color-india-font;
+       // font-weight: bold;
+       line-height: 1.5;
+       margin: 1rem;
+       & span{
+         color: $color-india-grey;
+       }
+     }
+     &-call{
+       border: 1px solid rgba($color-grey,.2);
+       box-shadow: 0 0 2rem rgba($color-grey,.4);
+       border-radius: 18px;
+       padding: 1rem 2rem;
+       color: #4bcc33;
+       font-size: 2.6rem;
+       font-weight: bold;
+       display:flex;
+       justify-content: center;
+       margin-top: 3rem;
+       line-height: 2;
+       &--img1{
+         animation: shake .3s ease-out infinite;
+       }
+       & > *{
+         margin: 1rem;
+       }
+     }
+   }
+  }
+}
+@include respond(tab-land){
+  .contact{
+    text-align: center;
+    &__1{
+        margin: 1rem;
+      flex-direction: column;
+      &_form{
+        margin: 1rem;
+      }
+      &-text{
+
+      }
+    }
+  }
+}
