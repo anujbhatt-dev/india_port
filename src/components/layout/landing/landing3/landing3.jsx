@@ -212,7 +212,7 @@ class Landing3 extends Component{
         let timeline1 = gsap.timeline()
         timeline1
         .to(".globe", 2,
-     {css:{scaleX:1, scaleY:1,},
+     {css:{scaleX:1, scaleY:1, zIndex:-1},
      ease: Power3.linear})
      .to(".landing3__wrapper", 2, 
      {

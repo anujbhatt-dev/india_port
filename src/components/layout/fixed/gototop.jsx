@@ -9,7 +9,7 @@ class GoTOTop extends Component{
 
  componentDidMount=()=>{
     window.addEventListener('scroll',()=>{
-     if(window.pageYOffset>=1000){
+     if(window.pageYOffset>=7000){
        this.setState({
          display:"flex"
        })
