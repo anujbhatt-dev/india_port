@@ -65,16 +65,16 @@ class Landing4 extends Component{
   
   
           let onscrollFunc=()=>{
-
+  
            if(this.level===1){
-
+           
             if(this.getScrollDirection()===1){
                  this.level=-1;
-
+                   
                  let timeline1=gsap.timeline();
                  timeline1
-                 .to(".landing4__hole", 5000,
-                {css:{scaleX:50, scaleY:50},
+                 .to(".landing4__hole", 2,
+                {css:{scaleX:100, scaleY:100},
                 ease: Power3.linear})
                 .eventCallback("onComplete", ()=>{
                   this.level=2;
@@ -86,6 +86,40 @@ class Landing4 extends Component{
               
            }else if(this.level===2){
             if(this.getScrollDirection()===1){
+
+              this.level=-1;
+              let timeline1=gsap.timeline();
+              timeline1
+              //  scroll 1
+        .to('.landing4__smallShip', 10, {
+          y: "300%",
+          x: "-50%",
+          ease: Power3.linear
+         }, "=-10")
+         .to('.landing4__yellowPlane', 10, {
+          y: "-100%",
+          x: "-100%",
+          ease: Power3.linear
+        }, "=-10")
+         .to('.landing4__smallTruck', 10, {
+
+          x: "100%",
+          ease: Power3.linear
+        }, "=-10")
+         .to('.c1', 10, {
+
+          y: "-200%",
+          ease: Power3.linear
+        }, "=-10")
+         .from('.c2', 10, {
+
+          y: "200%",
+          ease: Power3.linear
+         }, "=-1000")
+         .eventCallback("onComplete", ()=>{
+          this.level=3;
+        })
+
 
             }else{
               
