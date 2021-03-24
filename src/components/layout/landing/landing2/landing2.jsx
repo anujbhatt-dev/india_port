@@ -47,7 +47,9 @@ class Landing2 extends Component{
         // alert("under")
 
       
-      document.getElementById('s2');
+     if(document.getElementById('s2')===null)
+        return;
+
         if ((document.getElementById('s2').getBoundingClientRect()).left < scrollPos)
          {
           scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
@@ -76,7 +78,7 @@ class Landing2 extends Component{
      //  this.level=2;
 
        let onscrollFunc=()=>{
-
+        
         // alert(this.level +" "+this.getScrollDirection());
         if(this.level===1){
             this.level=-1;
@@ -210,8 +212,8 @@ class Landing2 extends Component{
         let timeline = gsap.timeline(); 
  
        timeline
-       .to('.s2', 100, {
-           x: 100,
+       .to('.s2', 1, {
+           x: "0.1%",
            ease: Power0.linear
          })
          .eventCallback("onStart",()=>this.animationFunc())
@@ -282,11 +284,14 @@ class Landing2 extends Component{
       .addTo(controller);
    }
 
-
-
-
-
     }
+
+//     componentWillUnmount=()=>{
+//       let el = document.body,
+//     elClone = el.cloneNode(true);
+
+// el.parentNode.replaceChild(elClone, el);
+// }
 
     render(){
 

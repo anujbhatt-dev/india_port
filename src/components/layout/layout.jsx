@@ -73,7 +73,7 @@ class Layout extends Component{
           this.setState({
             loading:false
           })
-        },4000)
+        },2000)
 
         //pwa ready event
        window.addEventListener('beforeinstallprompt', (e) => {

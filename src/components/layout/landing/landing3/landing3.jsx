@@ -191,14 +191,10 @@ class Landing3 extends Component{
        let timeline = gsap.timeline()
 
       timeline
-       .to('.landing2__motion_mode--rev', 5, {
-         x: -50,
+       .to('.pl2', 1, {
+         x: "1%",
          ease: Power3.linear
-       },"-=1000")
-       .to('.landing2__motion_bar--rev', 5, {
-         x: -50,
-         ease: Power3.linear
-       },"-=1000")
+       })
        .eventCallback("onStart",this.animationFun)
       .eventCallback("onReverseComplete",()=>{
         // document.getElementById('landing3').scrollIntoView();
@@ -284,6 +280,7 @@ class Landing3 extends Component{
                          <img  className="landing2__motion_bar landing2__motion_bar--rev" src={bar} alt=""/>
                          <img  className="landing2__motion_line landing2__motion_line--rev" src={line} alt=""/>
                          <img  className="landing2__motion_mode landing2__motion_mode--rev" src={graPlane} alt=""/>
+                         <img  className="landing2__motion_mode landing2__motion_mode--rev pl1" style={{opacity:0}} src={graPlane} alt=""/>
                      </div>
              </div>
          :
