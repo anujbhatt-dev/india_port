@@ -8,7 +8,7 @@ import smallShip from "../../../../assets/images/smallShip.svg"
 import gsap from "gsap"
 import ScrollMagic from 'scrollmagic';
 import {TimelineMax} from "gsap/gsap-core"
-import {Power3} from "gsap/gsap-core"
+import {Power3, Power0} from "gsap/gsap-core"
 import {TweenMax} from "gsap/gsap-core"
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
@@ -21,6 +21,7 @@ class Landing2 extends Component{
       number:0,
       show:false,
       flag:0,
+      done:false,
     }
 
     numberIntervalFunc=null;
@@ -38,65 +39,237 @@ class Landing2 extends Component{
       clearInterval(this.numberIntervalFunc);
     }
 
-    componentDidMount=()=>{
 
 
-        this.numberInterval();
+    getScrollDirection=()=>{
+      let scrollPos = 0;
+      // window.addEventListener('wheel', function(){
+        // alert("under")
 
-      if(!this.props.isMobile()){
-      let controller = new ScrollMagic.Controller();
-       let timeline = gsap.timeline()
+      
+      document.getElementById('s2');
+        if ((document.getElementById('s2').getBoundingClientRect()).left < scrollPos)
+         {
+          scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
 
-      timeline
-      .to('.landing2__firstWrapper_first-text--3', 20, {
+            return -1;
+          }
+        else{
+          scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
+
+          return 1;
+        }
+      
+     
+    }
+
+
+    animationFunc=()=>{
+ 
+           
+      let stopScroll=(e)=> {
+        
+        e.preventDefault();
+      }
+
+      window.addEventListener("wheel",stopScroll , {passive: false });
+     //  this.level=2;
+
+       let onscrollFunc=()=>{
+
+        // alert(this.level +" "+this.getScrollDirection());
+        if(this.level===1){
+            this.level=-1;
+            if(this.getScrollDirection()===1){
+              
+              let timeline1 = gsap.timeline()
+      timeline1
+      .fromTo('.text-2', 2.5,
+      {
+         y:"-100%"
+      },
+      {
         y: "100%",
         x: 0,
         ease: Power3.linear
        })
-       .to('.landing2__secondWrapper_second--1', 20, {
-         y: "-100%",
+       .fromTo('.text-1', 2.5,
+       {
+        y:"100%"
+       },
+       {
+        y: "200%",
+        x: 0,
+        ease: Power3.linear
+       }, "=-2.5")
+       .to('.landing2__secondWrapper_second--1', 2.5, {
+         y: "-200%",
          x:0,
          ease: Power3.linear
-       },"-=20")
-       .from('.landing2__secondWrapper_second--2', 20, {
-        y: "200%",
-        x:0,
+       },"-=2.5")
+       .fromTo('.landing2__secondWrapper_second--2', 2.5, {
+        y: "100%",
         ease: Power3.linear
-      },"-=20")
-        .to('.landing2__secondWrapper_second--2', 20, {
-          y: "-100%",
-          x:0,
-          ease: Power3.linear
-        })
-        .from('.landing2__secondWrapper_second--3', 20, {
-          y: "200%",
-          x:0,
-          ease: Power3.linear
-        },"-=20")
-         .to('.landing2__firstWrapper_first-text--2', 20, {
-         y: "100%",
-         x:0,
-         ease: Power3.easeInOut
-        }, "-=20")
-        .to('.landing2__motion_bar', 50, {
-          x: 900,
-          ease: Power3.linear
-        },"-=40")
-        .to('.landing2__motion_mode', 50, {
-          x: 900,
-          ease: Power3.linear
-        },"-=50")
+      },
+      {
+        y:"0%"
+      }
+      ,"-=2.5")
+      .eventCallback("onComplete", ()=>{
+        this.level=2;
+        // alert("done")
+      })
+                 
+            }else{
+              this.level=0;
+              window.removeEventListener("wheel", onscrollFunc);
+               window.removeEventListener("wheel", stopScroll);
+               window.addEventListener("wheel",(e)=>{
+                  e.preventDefault();
+               }, true);
+            }
 
 
-       let scene = new ScrollMagic.Scene({
-         triggerElement: '#landing2',
-         duration: '100%',
-         triggerHook: 0,
-         offset: '0'
-     })
-     .setTween(timeline)
-     .setPin('#landing2')
-     .addTo(controller);
+        }else if(this.level===2){
+
+           if(this.getScrollDirection()===1){
+                 
+                 let timeline1 = gsap.timeline();
+                 this.level=-1;
+                 timeline1
+                 .to('.landing2__secondWrapper_second--2', 2.5, {
+                   y: "-100%",
+                   x:0,
+                   ease: Power3.linear
+                 })
+                 .fromTo('.landing2__secondWrapper_second--3', 2.5, {
+                   y: "200%",
+                   opacity:1,
+                   // x:0,
+                   // css:{opacity:1},
+                   ease: Power3.linear
+                 },{
+                   y:"0%",
+                   opacity:1,
+                   ease: Power3.linear
+                 }
+                 ,"-=2.5")
+                  .to('.text-3', 2.5, {
+                  y: "100%",
+                  x:0,
+                  ease: Power3.easeInOut
+                 }, "-=2.5")
+                 .to('.text-2', 2.5, {
+                 y: "300%",
+                 x:0,
+                 ease: Power3.easeInOut
+                }, "-=2.5")
+                 .eventCallback("onComplete", ()=>{
+                  this.level=3;
+                 })
+            }else{
+              
+            }
+              
+            
+        }else if(this.level===3){
+           if(this.getScrollDirection()===1){
+               window.removeEventListener("wheel", onscrollFunc);
+               window.removeEventListener("wheel", stopScroll);
+               window.addEventListener("wheel",(e)=>{
+                  e.preventDefault();
+               }, true);
+            }else{
+                          // alert("3 up")
+
+            }
+
+         }
+
+
+        // window.removeEventListener("wheel", onscrollFunc);
+      
+        // alert("scroll")
+    
+   }
+
+      window.addEventListener("wheel",onscrollFunc)
+ 
+    }
+    level=1;
+
+    componentDidMount=()=>{
+
+  
+        this.numberInterval();
+
+      if(!this.props.isMobile()){
+        let controller = new ScrollMagic.Controller();
+        let timeline = gsap.timeline(); 
+ 
+       timeline
+       .to('.s2', 100, {
+           x: 100,
+           ease: Power0.linear
+         })
+         .eventCallback("onStart",()=>this.animationFunc())
+         .eventCallback("onRepeat",()=>{alert("onrepeat")})
+         .eventCallback("onInterrupt",()=>alert("ontinter"))
+         .eventCallback("onReverseComplete", ()=>{
+          let timeline1 = gsap.timeline();
+          // this.level=-1;
+          timeline1
+          .to('.landing2__secondWrapper_second--3', 2.5, {
+            y: "-100%",
+            x:0,
+            ease: Power3.linear
+          })
+          .fromTo('.landing2__secondWrapper_second--1', 2.5, {
+            y: "200%",
+            opacity:1,
+            // x:0,
+            // css:{opacity:1},
+            ease: Power3.linear
+          },{
+            y:"0%",
+            opacity:1,
+            ease: Power3.linear
+          }
+          ,"-=2.5")
+           .fromTo('.text-1', 2.5,
+           
+           {
+             y:"-100%"
+             },
+
+           {
+           y: "100%",
+           x:0,
+           ease: Power3.easeInOut
+          }, "-=2.5")
+          .to('.text-3', 2.5, {
+            y: "200%",
+            x:0,
+            ease: Power3.easeInOut
+           }, "-=2.5")
+          .eventCallback("onComplete", ()=>{
+           this.level=1;
+          })
+
+
+         })
+        //  .eventCallback("onUpdate", ()=>{alert("update")})
+ 
+ 
+        let scene = new ScrollMagic.Scene({
+          triggerElement: '#landing2',
+          duration: '100%',
+          triggerHook: 0,
+          offset: '0'
+      })
+      .setTween(timeline)
+      .setPin('#landing2')
+      .addTo(controller);
    }
 
 
@@ -126,15 +299,15 @@ class Landing2 extends Component{
   :                <div id="landing2" className="landing2">
                     <div className="landing2__firstWrapper">
                         <div className="landing2__firstWrapper_first">
-                             <div className="landing2__firstWrapper_first-text landing2__firstWrapper_first-text--1">
+                             <div className="landing2__firstWrapper_first-text text-1">
                                  <div className="landing2__firstWrapper_first-text-head">Duty Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
-                             <div className="landing2__firstWrapper_first-text  landing2__firstWrapper_first-text--2 ">
+                             <div className="landing2__firstWrapper_first-text  text-2 ">
                                  <div className="landing2__firstWrapper_first-text-head">Invoice Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
-                             <div className="landing2__firstWrapper_first-text  landing2__firstWrapper_first-text--3  ">
+                             <div className="landing2__firstWrapper_first-text  text-3  ">
                                  <div className="landing2__firstWrapper_first-text-head">BGM Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
@@ -144,11 +317,12 @@ class Landing2 extends Component{
                         <div className="landing2__secondWrapper_second">
                           <img className="landing2__secondWrapper_second--1" src={mob1} alt=""/>
                           <img className="landing2__secondWrapper_second--2" src={mob2} alt=""/>
-                          <img className="landing2__secondWrapper_second--3" src={mob1} alt=""/>
+                          <img className="landing2__secondWrapper_second--3" style={{opacity:0}} src={mob1} alt=""/>
                         </div>
                     </div>
                     <div className="landing2__motion">
-                        <img  className="landing2__motion_mode" src={smallShip} alt=""/>
+                        <img  className="landing2__motion_mode s1" src={smallShip} alt=""/>
+                        <img id="s2" className="landing2__motion_mode s2" style={{opacity:0}}  src={smallShip} alt=""/>
                         <img  className="landing2__motion_bar" src={bar} alt=""/>
                         <img  className="landing2__motion_line" src={line} alt=""/>
                     </div>

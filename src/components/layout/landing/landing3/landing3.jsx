@@ -89,25 +89,73 @@ class Landing3 extends Component{
 
 
       if(!this.props.isMobile()){
+
+        
       let controller = new ScrollMagic.Controller();
        let timeline = gsap.timeline()
 
       timeline
-      .to('.landing3__wrapper', 1000, {
-        left: "-200%",
-        ease: Power3.linear
+       .to('.landing2__motion_mode--rev', 5, {
+         x: -50,
+         ease: Power3.linear
+       },"-=1000")
+       .to('.landing2__motion_bar--rev', 5, {
+         x: -50,
+         ease: Power3.linear
+       },"-=1000")
+       .eventCallback("onStart", ()=>{
+        
+        let stopScroll=(e)=> {
+            
+          e.preventDefault();
+        }
+
+        window.addEventListener("wheel",stopScroll , {passive: false });
+
+        let timeline1 = gsap.timeline()
+        timeline1
+        .to('.landing3__wrapper',0.8, {
+          x: "-33.33%",
+          ease: Power3.linear
+         }) 
+         .eventCallback("onComplete",()=>{
+
+         
+          let onscrollFunc=()=>{
+            window.removeEventListener("wheel", onscrollFunc);
+            
+          let timeline1 = gsap.timeline()
+          timeline1
+          .to('.landing3__wrapper',0.8, {
+            x: "-66.66%",
+            ease: Power3.linear
+           })
+           .eventCallback("onComplete",()=>{
+            let onscrollFunc=()=>{
+              window.removeEventListener("wheel", onscrollFunc);
+            let timeline1 = gsap.timeline()
+                 timeline1.to(".globe", 10,
+              {css:{scaleX:60, scaleY:60, zIndex:100},
+              ease: Power3.linear})
+              .eventCallback("onComplete", ()=>{
+                window.removeEventListener("wheel", stopScroll);
+                window.addEventListener("wheel",(e)=>{
+                   e.preventDefault();
+                }, true);
+                this.setState({done:true});
+              })
+            }
+            window.addEventListener("wheel",onscrollFunc)
+            })
+
+
+          }
+            window.addEventListener("wheel",onscrollFunc)
+      })
+
        })
-       .to('.landing2__motion_mode--rev', 1000, {
-         x: -50,
-         ease: Power3.linear
-       },"-=1000")
-       .to('.landing2__motion_bar--rev', 1000, {
-         x: -50,
-         ease: Power3.linear
-       },"-=1000")
-       .to(".globe", 600,
-        {css:{scaleX:60, scaleY:60, zIndex:100},
-        ease: Power3.linear})
+       
+      
 
 
        let scene = new ScrollMagic.Scene({
