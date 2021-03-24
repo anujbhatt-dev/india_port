@@ -89,16 +89,14 @@ class Landing2 extends Component{
          y:"-100%"
       },
       {
-        y: "100%",
+        y: "0%",
         x: 0,
         ease: Power3.linear
        })
-       .fromTo('.text-1', 1.5,
+       .to('.text-1', 1.5,
+       
        {
-        y:"100%"
-       },
-       {
-        y: "200%",
+        y: "100%",
         x: 0,
         ease: Power3.linear
        }, "=-1.5")
@@ -159,12 +157,12 @@ class Landing2 extends Component{
                     y:"-100%"
                   },
                    {
-                  y: "100%",
+                  y: "0%",
                   x:0,
                   ease: Power3.easeInOut
                  }, "-=1.5")
                  .to('.text-2', 1.5, {
-                 y: "300%",
+                 y: "100%",
                  x:0,
                  ease: Power3.easeInOut
                 }, "-=1.5")
@@ -251,12 +249,12 @@ class Landing2 extends Component{
              },
 
            {
-           y: "100%",
+           y: "0%",
            x:0,
            ease: Power3.easeInOut
           }, "-=1.5")
           .to('.text-3', 1.5, {
-            y: "200%",
+            y: "100%",
             x:0,
             ease: Power3.easeInOut
            }, "-=1.5")
@@ -311,25 +309,28 @@ class Landing2 extends Component{
   :                <div id="landing2" className="landing2">
                     <div className="landing2__firstWrapper">
                         <div className="landing2__firstWrapper_first">
-                             <div className="landing2__firstWrapper_first-text text-1">
-                                 <div className="landing2__firstWrapper_first-text-head">Duty Calculator</div>
+                        <div className="landing2__firstWrapper_first-text  text-3  ">
+                                 <div className="landing2__firstWrapper_first-text-head">BGM Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
+                           
                              <div className="landing2__firstWrapper_first-text  text-2 ">
                                  <div className="landing2__firstWrapper_first-text-head">Invoice Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
-                             <div className="landing2__firstWrapper_first-text  text-3  ">
-                                 <div className="landing2__firstWrapper_first-text-head">BGM Calculator</div>
+                             
+                             <div className="landing2__firstWrapper_first-text text-1">
+                                 <div className="landing2__firstWrapper_first-text-head">Duty Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
                         </div>
                     </div>
                     <div className="landing2__secondWrapper">
                         <div className="landing2__secondWrapper_second">
-                          <img className="landing2__secondWrapper_second--1" src={mob1} alt=""/>
                           <img className="landing2__secondWrapper_second--2" src={mob2} alt=""/>
                           <img className="landing2__secondWrapper_second--3" style={{opacity:0}} src={mob1} alt=""/>
+                          <img className="landing2__secondWrapper_second--1" src={mob1} alt=""/>
+
                         </div>
                     </div>
                     <div className="landing2__motion">

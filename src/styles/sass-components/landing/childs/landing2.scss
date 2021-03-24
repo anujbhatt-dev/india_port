@@ -41,16 +41,16 @@
          text-align: center;
          font-family: "Poppins";
 
-         &--1{
-           z-index: 7;
-           // top: 0;
-         }
-         &--2{
-           z-index: 9;
-         }
-         &--3{
-           z-index: 8;
-         }
+        //  &--1{
+        //    z-index: 7;
+        //    // top: 0;
+        //  }
+        //  &--2{
+        //    z-index: 9;
+        //  }
+        //  &--3{
+        //    z-index: 8;
+        //  }
          &-head{
            font-size: 4rem;
            margin-bottom: 2rem;
@@ -69,15 +69,15 @@
     overflow: hidden;
     &_second{
       position: relative;
-        &--1{
-          z-index: 9;
-        }
-        &--2{
-          z-index: 8;
-        }
-        &--3{
-          z-index: 7;
-        }
+        // &--1{
+        //   z-index: 9;
+        // }
+        // &--2{
+        //   z-index: 8;
+        // }
+        // &--3{
+        //   z-index: 7;
+        // }
         & img{
           position: absolute;
           top:0;
