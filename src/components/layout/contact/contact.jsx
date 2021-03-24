@@ -69,24 +69,13 @@ import logs from "../../../assets/images/logs.svg";
 
       return (
            <div data-aos="zoom-out" className="contact">
-              <h1 className="head">Reach us</h1>
+              <h1 className="head head--center">Reach us</h1>
 
               <div className="contact__1">
                   <form className="contact__1_form" onSubmit={this.onSubmitHandler}>
                       <input required name="name" value={this.state.name} onChange={this.onChangeHandler} placeholder="name" type="text"/>
                       <input required name="phone" value={this.state.phone} onChange={this.onChangeHandler} placeholder="phone" type="text"/>
                       <input required name="email" value={this.state.email} onChange={this.onChangeHandler} placeholder="email" type="text"/>
-
-
-                    <select required value={this.state.preference} onChange={(e)=>this.onChangeHandler(e)} name="preference" id="">
-                       <option disabled value="select"  selected>select your plan</option>
-                       <option value="Class Training">Class Training</option>
-                       <option value="Online Training">Online Training</option>
-                       <option value="Enterprises & School Training">Enterprises & School Training</option>
-
-                    </select>
-
-
                       {this.state.submitted===1?
                       <input className="btn__buy" value="SUBMIT" type="submit"/>
                       :this.state.submitted===2?

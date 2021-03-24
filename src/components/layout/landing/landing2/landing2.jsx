@@ -46,7 +46,7 @@ class Landing2 extends Component{
       // window.addEventListener('wheel', function(){
         // alert("under")
 
-
+      
       document.getElementById('s2');
         if ((document.getElementById('s2').getBoundingClientRect()).left < scrollPos)
          {
@@ -59,16 +59,16 @@ class Landing2 extends Component{
 
           return 1;
         }
-
-
+      
+     
     }
 
 
     animationFunc=()=>{
-
-
+ 
+           
       let stopScroll=(e)=> {
-
+        
         e.preventDefault();
       }
 
@@ -81,7 +81,7 @@ class Landing2 extends Component{
         if(this.level===1){
             this.level=-1;
             if(this.getScrollDirection()===1){
-
+              
               let timeline1 = gsap.timeline()
       timeline1
       .fromTo('.text-2', 1.5,
@@ -117,7 +117,7 @@ class Landing2 extends Component{
         this.level=2;
         // alert("done")
       })
-
+                 
             }else{
               this.level=0;
               window.removeEventListener("wheel", onscrollFunc);
@@ -131,7 +131,7 @@ class Landing2 extends Component{
         }else if(this.level===2){
 
            if(this.getScrollDirection()===1){
-
+                 
                  let timeline1 = gsap.timeline();
                  this.level=-1;
                  timeline1
@@ -170,10 +170,10 @@ class Landing2 extends Component{
                   this.level=3;
                  })
             }else{
-
+              
             }
-
-
+              
+            
         }else if(this.level===3){
            if(this.getScrollDirection()===1){
                window.removeEventListener("wheel", onscrollFunc);
@@ -190,25 +190,25 @@ class Landing2 extends Component{
 
 
         // window.removeEventListener("wheel", onscrollFunc);
-
+      
         // alert("scroll")
-
+    
    }
 
       window.addEventListener("wheel",onscrollFunc)
-
+ 
     }
     level=1;
 
     componentDidMount=()=>{
 
-
+  
         this.numberInterval();
 
       if(!this.props.isMobile()){
         let controller = new ScrollMagic.Controller();
-        let timeline = gsap.timeline();
-
+        let timeline = gsap.timeline(); 
+ 
        timeline
        .to('.s2', 100, {
            x: 100,
@@ -217,10 +217,10 @@ class Landing2 extends Component{
          .eventCallback("onStart",()=>this.animationFunc())
          .eventCallback("onReverseComplete", ()=>{
           let stopScroll=(e)=> {
-
+        
             e.preventDefault();
           }
-
+    
           window.addEventListener("wheel",stopScroll , {passive: false });
           let timeline1 = gsap.timeline();
           // this.level=-1;
@@ -243,7 +243,7 @@ class Landing2 extends Component{
           }
           ,"-=1.5")
            .fromTo('.text-1', 1.5,
-
+           
            {
              y:"-100%"
              },
@@ -269,8 +269,8 @@ class Landing2 extends Component{
 
          })
         //  .eventCallback("onUpdate", ()=>{alert("update")})
-
-
+ 
+ 
         let scene = new ScrollMagic.Scene({
           triggerElement: '#landing2',
           duration: '100%',
