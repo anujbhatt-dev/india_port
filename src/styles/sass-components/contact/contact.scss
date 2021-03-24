@@ -40,7 +40,9 @@
           width:40rem;
           padding: 2rem;
           text-transform: lowercase;
-          background-image: linear-gradient(to right,#1069DC,#1CA2F9);
+          background-image: linear-gradient(to right,$color-india-yellow,$color-india-yellow);
+          border: none;
+          color: $color-white;
       }
     }
    &_text{
