@@ -84,7 +84,7 @@ class Landing2 extends Component{
               
               let timeline1 = gsap.timeline()
       timeline1
-      .fromTo('.text-2', 2.5,
+      .fromTo('.text-2', 1.5,
       {
          y:"-100%"
       },
@@ -93,7 +93,7 @@ class Landing2 extends Component{
         x: 0,
         ease: Power3.linear
        })
-       .fromTo('.text-1', 2.5,
+       .fromTo('.text-1', 1.5,
        {
         y:"100%"
        },
@@ -101,20 +101,20 @@ class Landing2 extends Component{
         y: "200%",
         x: 0,
         ease: Power3.linear
-       }, "=-2.5")
-       .to('.landing2__secondWrapper_second--1', 2.5, {
+       }, "=-1.5")
+       .to('.landing2__secondWrapper_second--1', 1.5, {
          y: "-200%",
          x:0,
          ease: Power3.linear
-       },"-=2.5")
-       .fromTo('.landing2__secondWrapper_second--2', 2.5, {
+       },"-=1.5")
+       .fromTo('.landing2__secondWrapper_second--2', 1.5, {
         y: "100%",
         ease: Power3.linear
       },
       {
         y:"0%"
       }
-      ,"-=2.5")
+      ,"-=1.5")
       .eventCallback("onComplete", ()=>{
         this.level=2;
         // alert("done")
@@ -137,12 +137,12 @@ class Landing2 extends Component{
                  let timeline1 = gsap.timeline();
                  this.level=-1;
                  timeline1
-                 .to('.landing2__secondWrapper_second--2', 2.5, {
+                 .to('.landing2__secondWrapper_second--2', 1.5, {
                    y: "-100%",
                    x:0,
                    ease: Power3.linear
                  })
-                 .fromTo('.landing2__secondWrapper_second--3', 2.5, {
+                 .fromTo('.landing2__secondWrapper_second--3', 1.5, {
                    y: "200%",
                    opacity:1,
                    // x:0,
@@ -153,17 +153,21 @@ class Landing2 extends Component{
                    opacity:1,
                    ease: Power3.linear
                  }
-                 ,"-=2.5")
-                  .to('.text-3', 2.5, {
+                 ,"-=1.5")
+                  .fromTo('.text-3', 1.5,
+                  {
+                    y:"-100%"
+                  },
+                   {
                   y: "100%",
                   x:0,
                   ease: Power3.easeInOut
-                 }, "-=2.5")
-                 .to('.text-2', 2.5, {
+                 }, "-=1.5")
+                 .to('.text-2', 1.5, {
                  y: "300%",
                  x:0,
                  ease: Power3.easeInOut
-                }, "-=2.5")
+                }, "-=1.5")
                  .eventCallback("onComplete", ()=>{
                   this.level=3;
                  })
@@ -213,18 +217,22 @@ class Landing2 extends Component{
            ease: Power0.linear
          })
          .eventCallback("onStart",()=>this.animationFunc())
-         .eventCallback("onRepeat",()=>{alert("onrepeat")})
-         .eventCallback("onInterrupt",()=>alert("ontinter"))
          .eventCallback("onReverseComplete", ()=>{
+          let stopScroll=(e)=> {
+        
+            e.preventDefault();
+          }
+    
+          window.addEventListener("wheel",stopScroll , {passive: false });
           let timeline1 = gsap.timeline();
           // this.level=-1;
           timeline1
-          .to('.landing2__secondWrapper_second--3', 2.5, {
+          .to('.landing2__secondWrapper_second--3', 1.5, {
             y: "-100%",
             x:0,
             ease: Power3.linear
           })
-          .fromTo('.landing2__secondWrapper_second--1', 2.5, {
+          .fromTo('.landing2__secondWrapper_second--1', 1.5, {
             y: "200%",
             opacity:1,
             // x:0,
@@ -235,8 +243,8 @@ class Landing2 extends Component{
             opacity:1,
             ease: Power3.linear
           }
-          ,"-=2.5")
-           .fromTo('.text-1', 2.5,
+          ,"-=1.5")
+           .fromTo('.text-1', 1.5,
            
            {
              y:"-100%"
@@ -246,14 +254,18 @@ class Landing2 extends Component{
            y: "100%",
            x:0,
            ease: Power3.easeInOut
-          }, "-=2.5")
-          .to('.text-3', 2.5, {
+          }, "-=1.5")
+          .to('.text-3', 1.5, {
             y: "200%",
             x:0,
             ease: Power3.easeInOut
-           }, "-=2.5")
+           }, "-=1.5")
           .eventCallback("onComplete", ()=>{
            this.level=1;
+           window.removeEventListener("wheel", stopScroll);
+           window.addEventListener("wheel",(e)=>{
+              e.preventDefault();
+           }, true);
           })
 
 

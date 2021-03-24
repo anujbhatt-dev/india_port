@@ -51,6 +51,102 @@ class Landing3 extends Component{
     }
 
 
+    level=1;
+
+    getScrollDirection=()=>{
+      // let scrollPos = 0;
+      // window.addEventListener('wheel', function(){
+        // alert("under")
+
+      
+      // document.getElementById('s2');
+        // if ((document.getElementById('s2').getBoundingClientRect()).left < scrollPos)
+        //  {
+          // scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
+
+            // return -1;
+          // }
+        // else{
+          // scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
+
+          return 1;
+        }
+      
+     
+
+        animationFun= ()=>{
+          
+          let stopScroll=(e)=> {
+              
+            e.preventDefault();
+          }
+  
+          window.addEventListener("wheel",stopScroll , {passive: false });
+  
+  
+          let onscrollFunc=()=>{
+            // alert(this.level)
+            if(this.level===1){
+  
+                if(this.getScrollDirection()===1){
+                  this.level=-1;
+          let timeline1 = gsap.timeline()
+           timeline1
+           .to('.landing3__wrapper',0.8, {
+             x: "-33.33%",
+             ease: Power3.linear
+            }) 
+            .eventCallback("onComplete",()=>{
+              this.level=2;
+               })
+             }
+             else{
+                 }
+  
+              }else if(this.level===2){
+                if(this.getScrollDirection()===1){
+          this.level=-1;
+          let timeline1 = gsap.timeline()
+           timeline1
+           .to('.landing3__wrapper',0.8, {
+             x: "-66.66%",
+             ease: Power3.linear
+            }) 
+            .eventCallback("onComplete",()=>{
+              this.level=3;
+               })
+                }else{
+                 }
+  
+              }else if(this.level===3){
+                if(this.getScrollDirection()===1){
+                  this.level=-1
+                   let timeline1 = gsap.timeline()
+                   timeline1.to(".globe", 2,
+                {css:{scaleX:50, scaleY:50, zIndex:100},
+                ease: Power3.linear})
+                .eventCallback("onComplete", ()=>{
+                  this.level=4;
+                })
+  
+                }else{
+                 }
+  
+              }else if(this.level===4){
+                if(this.getScrollDirection()===1){
+                  window.removeEventListener("wheel", onscrollFunc);
+                   window.removeEventListener("wheel", stopScroll);
+                  window.addEventListener("wheel",(e)=>{
+                     e.preventDefault();
+                  }, true);
+                }else{
+                  }
+              }
+           }
+        window.addEventListener("wheel",onscrollFunc);
+      }
+    
+
     componentDidMount=()=>{
 
       $(".landing3__link1").mousemove((e)=>{
@@ -103,59 +199,33 @@ class Landing3 extends Component{
          x: -50,
          ease: Power3.linear
        },"-=1000")
-       .eventCallback("onStart", ()=>{
+       .eventCallback("onStart",this.animationFun)
+      .eventCallback("onReverseComplete",()=>{
+        // document.getElementById('landing3').scrollIntoView();
+
+        // let stopScroll=(e)=> {
         
-        let stopScroll=(e)=> {
-            
-          e.preventDefault();
-        }
-
-        window.addEventListener("wheel",stopScroll , {passive: false });
-
+        //   e.preventDefault();
+        // }
+  
+        // window.addEventListener("wheel",stopScroll , {passive: false });
         let timeline1 = gsap.timeline()
         timeline1
-        .to('.landing3__wrapper',0.8, {
-          x: "-33.33%",
-          ease: Power3.linear
-         }) 
-         .eventCallback("onComplete",()=>{
-
-         
-          let onscrollFunc=()=>{
-            window.removeEventListener("wheel", onscrollFunc);
-            
-          let timeline1 = gsap.timeline()
-          timeline1
-          .to('.landing3__wrapper',0.8, {
-            x: "-66.66%",
-            ease: Power3.linear
-           })
-           .eventCallback("onComplete",()=>{
-            let onscrollFunc=()=>{
-              window.removeEventListener("wheel", onscrollFunc);
-            let timeline1 = gsap.timeline()
-                 timeline1.to(".globe", 10,
-              {css:{scaleX:60, scaleY:60, zIndex:100},
-              ease: Power3.linear})
-              .eventCallback("onComplete", ()=>{
-                window.removeEventListener("wheel", stopScroll);
-                window.addEventListener("wheel",(e)=>{
-                   e.preventDefault();
-                }, true);
-                this.setState({done:true});
-              })
-            }
-            window.addEventListener("wheel",onscrollFunc)
-            })
-
-
-          }
-            window.addEventListener("wheel",onscrollFunc)
+        .to(".globe", 2,
+     {css:{scaleX:1, scaleY:1,},
+     ease: Power3.linear})
+     .to(".landing3__wrapper", 2, 
+     {
+       x:"0%"
+    })
+    .eventCallback("onComplete", ()=>{
+      this.level=1
+      // window.removeEventListener("wheel", stopScroll);
+      // window.addEventListener("wheel",(e)=>{
+      //    e.preventDefault();
+      // }, true);
+    })
       })
-
-       })
-       
-      
 
 
        let scene = new ScrollMagic.Scene({
