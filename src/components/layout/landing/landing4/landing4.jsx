@@ -65,6 +65,8 @@ class Landing4 extends Component{
   
   
           let onscrollFunc=()=>{
+
+            alert(this.level)
   
            if(this.level===1){
            
@@ -115,9 +117,10 @@ class Landing4 extends Component{
 
           y: "200%",
           ease: Power3.linear
-         }, "=-1000")
+         }, "=-10")
          .eventCallback("onComplete", ()=>{
           this.level=3;
+          alert("2 done")
         })
 
 
