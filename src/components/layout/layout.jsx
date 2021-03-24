@@ -10,7 +10,7 @@ import download from "../../assets/images/download.svg"
 
 import Landing from "./landing/landing"
 import About from "./about/about"
-// import Contact from "./contact/contact"
+import Contact from "./contact/contact"
 import Freight from "./freight/freight"
 import Insurance from "./insurance/insurance"
 import CustomClearance from "./customClearance/customClearance"
@@ -97,11 +97,11 @@ class Layout extends Component{
       //       })
       //     }
       //   };
-     
+
         this.setState({
           mobile:this.isMobile()
         })
-      
+
 
       //getting updates
       axios.get(this.UDATES_BLOGGER_POSTS_API)
@@ -150,6 +150,9 @@ class Layout extends Component{
                    </Route>
                    <Route path='/about' exact>
                        <About mobile={this.state.mobile}/>
+                   </Route>
+                   <Route path='/contact' exact>
+                       <Contact mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/freight' exact>
                        <Freight mobile={this.state.mobile}/>
