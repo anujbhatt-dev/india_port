@@ -216,12 +216,12 @@ class Landing2 extends Component{
          })
          .eventCallback("onStart",()=>this.animationFunc())
          .eventCallback("onReverseComplete", ()=>{
-          let stopScroll=(e)=> {
+          // let stopScroll=(e)=> {
         
-            e.preventDefault();
-          }
+          //   e.preventDefault();
+          // }
     
-          window.addEventListener("wheel",stopScroll , {passive: false });
+          // window.addEventListener("wheel",stopScroll , {passive: false });
           let timeline1 = gsap.timeline();
           // this.level=-1;
           timeline1
@@ -260,10 +260,10 @@ class Landing2 extends Component{
            }, "-=1.5")
           .eventCallback("onComplete", ()=>{
            this.level=1;
-           window.removeEventListener("wheel", stopScroll);
-           window.addEventListener("wheel",(e)=>{
-              e.preventDefault();
-           }, true);
+          //  window.removeEventListener("wheel", stopScroll);
+          //  window.addEventListener("wheel",(e)=>{
+          //     e.preventDefault();
+          //  }, true);
           })
 
 
