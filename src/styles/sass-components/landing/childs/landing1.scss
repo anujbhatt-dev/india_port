@@ -26,7 +26,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // font-weight: bolder;
+    font-weight: bolder;
     font-weight: 300;
     color: $color-india-font;
     margin-bottom: -2rem;
@@ -41,10 +41,10 @@
   }
   &__3{
     animation: reach .5s linear;
-    font-size: 5.6rem;
+    font-size: 10.6rem;
     // color: $color-grey;
     color: $color-india-font;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 1rem;
     letter-spacing: 1.5rem;
     word-spacing: 2.5rem;

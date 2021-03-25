@@ -102,15 +102,12 @@
       bottom: 0rem;
       left: 200px;
       width: 20rem;
-
-
       &--rev{
         width: 15rem;
         right: 200px;
       }
     }
     &_mode{
-      // transform: translateY(50%);
       position: absolute;
       bottom: 1rem;
       left: 200px;
@@ -119,6 +116,7 @@
         bottom: -1rem;
         width: 15rem;
         right: 200px;
+        transform: rotate(180deg) rotateY(180deg) translateY(1.5rem);
       }
     }
   }

@@ -8,9 +8,9 @@
      top: 5rem;
      height: 70vh;
      width: 25rem;
-     background: $color-white;
+     background: #f7f7f7;
      border-left: 1rem solid $color-black;
-     z-index: 20;
+     // z-index: 20;
    }
    &__over2{
      position: absolute;
@@ -19,9 +19,9 @@
      top: 5rem;
      height: 70vh;
      width: 25rem;
-     background: $color-white;
+     background: #f7f7f7;
      border-right: 1rem solid $color-black;
-     z-index: 20;
+     // z-index: 20;
    }
    &__over3{
      position: absolute;
@@ -30,9 +30,9 @@
      top: calc(5rem + 70vh);
      height: 5rem;
      width: 69.7vw;
-     background: $color-white;
+     background: #f7f7f7;
      border-top: 1rem solid $color-black;
-     z-index: 20;
+     // z-index: 20;
      margin-left:24.1rem;
    }
    &__over4{
@@ -44,7 +44,7 @@
      top: 0;
      height: 5rem;
      width: 69.7vw;
-     background: $color-white;
+     background: #f7f7f7;
      z-index: 20;
    }
   &__wrapper{
@@ -54,7 +54,7 @@
     width: 300vw;
     overflow: hidden;
     position: absolute;
-    background: $color-white;
+    background: #f7f7f7;
     top: 0;
     left: 0;
   }
