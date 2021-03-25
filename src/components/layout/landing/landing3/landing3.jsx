@@ -94,7 +94,7 @@ class Landing3 extends Component{
 
                   gsap.timeline()
                   .fromTo('.pl2', 20, {
-                   x: "1000%",
+                   x: "800%",
                    opacity:1,
                    ease: Power0.linear
                  },{
@@ -102,7 +102,7 @@ class Landing3 extends Component{
                    opacity:1,
                  })
                  .fromTo('.pl3', 20, {
-                   x: "1000%",
+                   x: "800%",
                    opacity:1,
                    ease: Power0.linear
                  },{
