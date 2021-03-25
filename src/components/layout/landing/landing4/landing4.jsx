@@ -63,7 +63,7 @@ class Landing4 extends Component{
               let timeline1=gsap.timeline();
               timeline1
               .to(".landing4__hole", 0.7,
-             {css:{scaleX:70, scaleY:70},
+             {css:{scaleX:75, scaleY:75},
              ease: Power3.linear})
              .eventCallback("onComplete", ()=>{
                this.level=2;
@@ -228,6 +228,10 @@ class Landing4 extends Component{
            
           let timeline1=gsap.timeline();
           timeline1
+          .to(".landing4__hole", 0.1,
+          {css:{scaleX:1, scaleY:1},
+          ease: Power3.linear},
+           )
           .to('.landing4__smallShip', 0.1, {
             y:"0%",
             x:"0%",
@@ -260,6 +264,7 @@ class Landing4 extends Component{
           opacity:0,
          ease: Power3.linear
          }, )
+        
          .eventCallback("onComplete", ()=>{this.level=1; })
 
 

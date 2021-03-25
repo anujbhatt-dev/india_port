@@ -19,7 +19,7 @@ import "aos/dist/aos.css"
 import gsap from "gsap"
 import ScrollMagic from 'scrollmagic';
 import {TimelineMax} from "gsap/gsap-core"
-import {Power3} from "gsap/gsap-core"
+import {Power3,Power0} from "gsap/gsap-core"
 import {TweenMax} from "gsap/gsap-core"
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
@@ -90,6 +90,28 @@ class Landing3 extends Component{
   
                 if(this.getScrollDirection()===1){
                   this.level=-1;
+
+
+                  gsap.timeline()
+                  .fromTo('.pl2', 20, {
+                   x: "1000%",
+                   opacity:1,
+                   ease: Power0.linear
+                 },{
+                   x:"-100%",
+                   opacity:1,
+                 })
+                 .fromTo('.pl3', 20, {
+                   x: "1000%",
+                   opacity:1,
+                   ease: Power0.linear
+                 },{
+                   x:"-100%",
+                   opacity:1,
+                 },"-=20")
+           
+
+
           let timeline1 = gsap.timeline()
            timeline1
            .to('.landing3__wrapper',0.8, {
@@ -190,11 +212,18 @@ class Landing3 extends Component{
       let controller = new ScrollMagic.Controller();
        let timeline = gsap.timeline()
 
+      
+
+
       timeline
-       .to('.pl2', 1, {
+       .fromTo('.pl1', 1, {
          x: "1%",
          ease: Power3.linear
+       },{
+         x:"-1%"
        })
+      
+
        .eventCallback("onStart",this.animationFun)
       .eventCallback("onReverseComplete",()=>{
         // document.getElementById('landing3').scrollIntoView();
@@ -214,6 +243,14 @@ class Landing3 extends Component{
      {
        x:"0%"
     })
+    .to('.pl2', 2, {
+      x: "1500%",
+      ease: Power0.linear
+    },"-=2")
+    .to('.pl3', 2, {
+      x: "1500%",
+      ease: Power0.linear
+    },"-=2")
     .eventCallback("onComplete", ()=>{
       this.level=1
       // window.removeEventListener("wheel", stopScroll);
@@ -246,7 +283,7 @@ class Landing3 extends Component{
              <div id="landing3" className="landing3">
                     <img className="landing3__link_globe globe"  src={globe} alt=""/>
                     <div className="landing3__wrapper">
-                         <Link className="landing3__link landing3__link2" to="/customClearance">
+                         <a className="landing3__link landing3__link2" href="/customClearance">
                              <img className="landing3__link_img" src={cc} alt=""/>
                              <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
                              <div className="landing3__link_text">
@@ -254,8 +291,8 @@ class Landing3 extends Component{
                                  <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
                              </div>
                              <div className="cursor cursor__2">Explore</div>
-                         </Link>
-                         <Link className="landing3__link landing3__link3" to="/insurance">
+                         </a>
+                         <a className="landing3__link landing3__link3" href="/insurance">
                              <img data-aos="fade-right" className="landing3__link_img--plane" src={yellowPlane} alt=""/>
                              <img className="landing3__link_img" src={insure} alt=""/>
                              <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
@@ -264,8 +301,8 @@ class Landing3 extends Component{
                                  <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
                              </div>
                              <div className="cursor cursor__3">Explore</div>
-                         </Link>
-                         <Link className="landing3__link landing3__link1" to="/freight">
+                         </a>
+                         <a className="landing3__link landing3__link1" href="/freight">
                               <img data-aos="fade-right" className="landing3__link_img--plane" src={plane} alt=""/>
                               <img className="landing3__link_img" src={freight} alt=""/>
                               <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
@@ -274,13 +311,13 @@ class Landing3 extends Component{
                                   <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
                               </div>
                               <div className="cursor cursor__1">Explore</div>
-                         </Link>
+                         </a>
                      </div>
                      <div className="landing2__motion landing2__motion--rev">
-                         <img  className="landing2__motion_bar landing2__motion_bar--rev" src={bar} alt=""/>
+                         <img  className="landing2__motion_bar landing2__motion_bar--rev pl2" style={{opacity:0}} src={bar} alt=""/>
                          <img  className="landing2__motion_line landing2__motion_line--rev" src={line} alt=""/>
-                         <img  className="landing2__motion_mode landing2__motion_mode--rev" src={graPlane} alt=""/>
-                         <img  className="landing2__motion_mode landing2__motion_mode--rev pl1" style={{opacity:0}} src={graPlane} alt=""/>
+                         <img  className="landing2__motion_mode landing2__motion_mode--rev pl1" style={{opacity:0}} src={truck} alt=""/>
+                         <img  className="landing2__motion_mode landing2__motion_mode--rev pl3" style={{opacity:0}}  src={truck} alt=""/>
                      </div>
              </div>
          :

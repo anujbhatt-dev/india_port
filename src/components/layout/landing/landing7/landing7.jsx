@@ -1,6 +1,5 @@
 import React, {Component} from "react"
 import b1 from "../../../../assets/images/b1.svg"
-import {NavLink} from "react-router-dom"
 
 class Landing7 extends Component{
 
@@ -18,43 +17,43 @@ class Landing7 extends Component{
 
                    {this.props.blogs.map(blog=>
 
-                   <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+                   <a href={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
                    <div className="landing7__items_card">
                         <img src={blog.labels[0]} alt=""/>
                         <div className="landing7__items_card-title"><div>{blog.title}</div><div className="landing7__items_card-title--date">{blog.published.split("T")[0]}</div></div>
 
                     </div>
-                    </NavLink>
+                    </a>
                    )}
                    {this.props.blogs.map(blog=>
 
-                   <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+                   <a href={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
                    <div className="landing7__items_card">
                         <img src={blog.labels[0]} alt=""/>
                         <div className="landing7__items_card-title"><div>{blog.title}</div><div className="landing7__items_card-title--date">{blog.published.split("T")[0]}</div></div>
                     </div>
-                    </NavLink>
+                    </a>
                    )}
                    {this.props.blogs.map(blog=>
 
-                   <NavLink to={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+                   <a href={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
                    <div className="landing7__items_card">
                         <img src={blog.labels[0]} alt=""/>
                         <div className="landing7__items_card-title"><div>{blog.title}</div><div className="landing7__items_card-title--date">{blog.published.split("T")[0]}</div></div>
                     </div>
-                    </NavLink>
+                    </a>
                    )}
 
                  </div>
 
              </div>
 
-             <NavLink to="/diary" className="landing7__btn">
+             <a href="/diary" className="landing7__btn">
                  <span>more</span>
                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="38" viewBox="0 0 18 38">
                     <path id="Polygon_7" data-name="Polygon 7" d="M16.937,1.955a3,3,0,0,1,4.126,0L32.534,12.822A3,3,0,0,1,30.471,18H7.529a3,3,0,0,1-2.063-5.178Z" transform="translate(18) rotate(90)" fill="#0239ff"/>
                  </svg>
-             </NavLink>
+             </a>
          </div>
       )
     }

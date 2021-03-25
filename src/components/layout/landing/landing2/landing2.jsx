@@ -67,24 +67,8 @@ class Landing2 extends Component{
 
 
     animationFunc=()=>{
- 
-           
-      let stopScroll=(e)=> {
-        
-        e.preventDefault();
-      }
-
-      window.addEventListener("wheel",stopScroll , {passive: false });
-     //  this.level=2;
-
-       let onscrollFunc=()=>{
-        
-        // alert(this.level +" "+this.getScrollDirection());
-        if(this.level===1){
-            this.level=-1;
-            if(this.getScrollDirection()===1){
-              
-              let timeline1 = gsap.timeline()
+  
+      let timeline1 = gsap.timeline()
       timeline1
       .fromTo('.text-2', 1.5,
       {
@@ -115,28 +99,7 @@ class Landing2 extends Component{
         y:"0%"
       }
       ,"-=1.5")
-      .eventCallback("onComplete", ()=>{
-        this.level=2;
-        // alert("done")
-      })
-                 
-            }else{
-              this.level=0;
-              window.removeEventListener("wheel", onscrollFunc);
-               window.removeEventListener("wheel", stopScroll);
-               window.addEventListener("wheel",(e)=>{
-                  e.preventDefault();
-               }, true);
-            }
-
-
-        }else if(this.level===2){
-
-           if(this.getScrollDirection()===1){
-                 
-                 let timeline1 = gsap.timeline();
-                 this.level=-1;
-                 timeline1
+      
                  .to('.landing2__secondWrapper_second--2', 1.5, {
                    y: "-100%",
                    x:0,
@@ -168,39 +131,8 @@ class Landing2 extends Component{
                  x:0,
                  ease: Power3.easeInOut
                 }, "-=1.5")
-                 .eventCallback("onComplete", ()=>{
-                  this.level=3;
-                 })
-            }else{
-              
-            }
-              
-            
-        }else if(this.level===3){
-           if(this.getScrollDirection()===1){
-               window.removeEventListener("wheel", onscrollFunc);
-               window.removeEventListener("wheel", stopScroll);
-               window.addEventListener("wheel",(e)=>{
-                  e.preventDefault();
-               }, true);
-            }else{
-                          // alert("3 up")
-
-            }
-
-         }
-
-
-        // window.removeEventListener("wheel", onscrollFunc);
-      
-        // alert("scroll")
-    
-   }
-
-      window.addEventListener("wheel",onscrollFunc)
- 
-    }
-    level=1;
+                
+              }
 
     componentDidMount=()=>{
 
@@ -212,10 +144,14 @@ class Landing2 extends Component{
         let timeline = gsap.timeline(); 
  
        timeline
-       .to('.s2', 1, {
-           x: "0.1%",
+       .to('.s1', 50, {
+           x: "300%",
            ease: Power0.linear
          })
+         .to('.l1', 50, {
+          x: "330%",
+          ease: Power0.linear
+        }, "=-50")
          .eventCallback("onStart",()=>this.animationFunc())
          .eventCallback("onReverseComplete", ()=>{
           // let stopScroll=(e)=> {
@@ -341,7 +277,7 @@ class Landing2 extends Component{
                     <div className="landing2__motion">
                         <img  className="landing2__motion_mode s1" src={smallShip} alt=""/>
                         <img id="s2" className="landing2__motion_mode s2" style={{opacity:0}}  src={smallShip} alt=""/>
-                        <img  className="landing2__motion_bar" src={bar} alt=""/>
+                        <img  className="landing2__motion_bar l1" src={bar} alt=""/>
                         <img  className="landing2__motion_line" src={line} alt=""/>
                     </div>
                 </div>

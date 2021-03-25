@@ -47,8 +47,8 @@ class Landing1 extends Component{
 
       return (
          <div className="landing1">
-             <div className="landing1__1">Freight Forwarding</div>
-             <div className="landing1__2">
+             <div className="landing1__1"></div>
+             {/* <div className="landing1__2">
                 <span>F</span>
                 <span>R</span>
                 <span>E</span>
@@ -56,8 +56,8 @@ class Landing1 extends Component{
                 <span>G</span>
                 <span>H</span>
                 <span>T</span>
-             </div>
-             <div className="landing1__3">INDIA PORT</div>
+             </div> */}
+             <div className="landing1__3" >INDIA PORT</div>
              <div className="landing1__4">Search your best quotes</div>
              <div className="landing1__5">
                 <div className="landing1__5_r1">

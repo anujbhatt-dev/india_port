@@ -25,6 +25,7 @@ import Log from "./diary/log"
 import BlogsBootstrap from "./diary/blogs-bootstrap"
 import Updates from "./diary/updates/updates"
 import axios from "axios"
+import Try from "./try/try"
 
 class Layout extends Component{
 
@@ -177,6 +178,9 @@ class Layout extends Component{
                    </Route>
                    <Route path='/diary/blogs/:blogId/posts/:postId' exact>
                        <Log mobile={this.state.mobile}/>
+                   </Route>
+                   <Route path='/try' exact>
+                       <Try/>
                    </Route>
 
               </Switch>
