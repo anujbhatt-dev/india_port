@@ -150,7 +150,7 @@ class Layout extends Component{
                        <Landing  {...this.state} isMobile={this.isMobile} mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/about' exact>
-                       <About mobile={this.state.mobile}/>
+                       <About  isMobile={this.isMobile}  mobile={this.state.mobile}/>
                    </Route>
                    <Route path='/contact' exact>
                        <Contact mobile={this.state.mobile}/>
