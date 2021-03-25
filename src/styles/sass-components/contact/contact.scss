@@ -33,6 +33,7 @@
         color: $color-india-grey;
       }
       & input[type="submit"]{
+          cursor: pointer;
           display:flex;
           justify-content: center;
           border-radius: 5px;

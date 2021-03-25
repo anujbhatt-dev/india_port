@@ -1,6 +1,52 @@
 &3{
   overflow: hidden;
    position: relative;
+   &__over{
+     position: absolute;
+     color: transparent;
+     right: 0;
+     top: 5rem;
+     height: 70vh;
+     width: 25rem;
+     background: $color-white;
+     border-left: 1rem solid $color-black;
+     z-index: 20;
+   }
+   &__over2{
+     position: absolute;
+     color: transparent;
+     left: 0;
+     top: 5rem;
+     height: 70vh;
+     width: 25rem;
+     background: $color-white;
+     border-right: 1rem solid $color-black;
+     z-index: 20;
+   }
+   &__over3{
+     position: absolute;
+     color: transparent;
+     left: 0;
+     top: calc(5rem + 70vh);
+     height: 5rem;
+     width: 69.7vw;
+     background: $color-white;
+     border-top: 1rem solid $color-black;
+     z-index: 20;
+     margin-left:24.1rem;
+   }
+   &__over4{
+     margin-left:24.1rem;
+     border-bottom: 1rem solid $color-black;
+     position: absolute;
+     color: transparent;
+     left: 0;
+     top: 0;
+     height: 5rem;
+     width: 69.7vw;
+     background: $color-white;
+     z-index: 20;
+   }
   &__wrapper{
     display: flex;
     justify-content: flex-start;
@@ -25,7 +71,9 @@
     align-items: center;
     padding: 10rem;
     background: $color-white;
-    border: 1rem solid $color-black;
+    // border: 1rem solid $color-black;
+    // border-top: 1rem solid $color-black;
+    // border-bottom: 1rem solid $color-black;
     border-radius: 10px;
     text-decoration: none;
     position: relative;
@@ -85,7 +133,7 @@
     // & .scrollmagic-pin-spacer{
     //   display: none;
     // }
-    
+
     &_dots{
       display: flex;
       // justify-content: center;

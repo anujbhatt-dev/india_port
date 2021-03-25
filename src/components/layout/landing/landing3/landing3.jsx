@@ -58,7 +58,7 @@ class Landing3 extends Component{
       // window.addEventListener('wheel', function(){
         // alert("under")
 
-      
+
       // document.getElementById('s2');
         // if ((document.getElementById('s2').getBoundingClientRect()).left < scrollPos)
         //  {
@@ -71,23 +71,23 @@ class Landing3 extends Component{
 
           return 1;
         }
-      
-     
+
+
 
         animationFun= ()=>{
-          
+
           let stopScroll=(e)=> {
-              
+
             e.preventDefault();
           }
-  
+
           window.addEventListener("wheel",stopScroll , {passive: false });
-  
-  
+
+
           let onscrollFunc=()=>{
             // alert(this.level)
             if(this.level===1){
-  
+
                 if(this.getScrollDirection()===1){
                   this.level=-1;
 
@@ -109,7 +109,7 @@ class Landing3 extends Component{
                    x:"-100%",
                    opacity:1,
                  },"-=20")
-           
+
 
 
           let timeline1 = gsap.timeline()
@@ -117,14 +117,14 @@ class Landing3 extends Component{
            .to('.landing3__wrapper',0.8, {
              x: "-33.33%",
              ease: Power3.linear
-            }) 
+            })
             .eventCallback("onComplete",()=>{
               this.level=2;
                })
              }
              else{
                  }
-  
+
               }else if(this.level===2){
                 if(this.getScrollDirection()===1){
           this.level=-1;
@@ -133,13 +133,13 @@ class Landing3 extends Component{
            .to('.landing3__wrapper',0.8, {
              x: "-66.66%",
              ease: Power3.linear
-            }) 
+            })
             .eventCallback("onComplete",()=>{
               this.level=3;
                })
                 }else{
                  }
-  
+
               }else if(this.level===3){
                 if(this.getScrollDirection()===1){
                   this.level=-1
@@ -150,10 +150,10 @@ class Landing3 extends Component{
                 .eventCallback("onComplete", ()=>{
                   this.level=4;
                 })
-  
+
                 }else{
                  }
-  
+
               }else if(this.level===4){
                 if(this.getScrollDirection()===1){
                   window.removeEventListener("wheel", onscrollFunc);
@@ -167,7 +167,7 @@ class Landing3 extends Component{
            }
         window.addEventListener("wheel",onscrollFunc);
       }
-    
+
 
     componentDidMount=()=>{
 
@@ -208,11 +208,11 @@ class Landing3 extends Component{
 
       if(!this.props.isMobile()){
 
-        
+
       let controller = new ScrollMagic.Controller();
        let timeline = gsap.timeline()
 
-      
+
 
 
       timeline
@@ -222,24 +222,24 @@ class Landing3 extends Component{
        },{
          x:"-1%"
        })
-      
+
 
        .eventCallback("onStart",this.animationFun)
       .eventCallback("onReverseComplete",()=>{
         // document.getElementById('landing3').scrollIntoView();
 
         // let stopScroll=(e)=> {
-        
+
         //   e.preventDefault();
         // }
-  
+
         // window.addEventListener("wheel",stopScroll , {passive: false });
         let timeline1 = gsap.timeline()
         timeline1
         .to(".globe", 2,
      {css:{scaleX:1, scaleY:1, zIndex:-1},
      ease: Power3.linear})
-     .to(".landing3__wrapper", 2, 
+     .to(".landing3__wrapper", 2,
      {
        x:"0%"
     })
@@ -319,6 +319,10 @@ class Landing3 extends Component{
                          <img  className="landing2__motion_mode landing2__motion_mode--rev pl1" style={{opacity:0}} src={truck} alt=""/>
                          <img  className="landing2__motion_mode landing2__motion_mode--rev pl3" style={{opacity:0}}  src={truck} alt=""/>
                      </div>
+                     <div className="landing3__over">.</div>
+                     <div className="landing3__over2">.</div>
+                     <div className="landing3__over3">.</div>
+                     <div className="landing3__over4">.</div>
              </div>
          :
          <div className="landing3__mob">

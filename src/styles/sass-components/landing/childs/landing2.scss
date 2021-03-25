@@ -9,13 +9,6 @@
   @include respond(tab-land){
     flex-direction: column;
   }
-  // &__truck{
-  //   position: absolute;
-  //   transform: translate(-50%,-50%) rotate(180deg);
-  //   z-index: 1000;
-  //   top: 200px;
-  //   left: 200px;
-  // }
   &__firstWrapper{
     position: relative;
     flex-basis: 50%;
