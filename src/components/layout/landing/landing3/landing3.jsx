@@ -326,7 +326,7 @@ class Landing3 extends Component{
              </div>
          :
          <div className="landing3__mob">
-             <div className="head">Services</div>
+             <div className="head" style={{paddingTop:"5rem"}}>Services</div>
              <div className="landing3__mob_dots">
                  <svg onClick={()=>this.mobileNumberHandler(0)}  xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27">
                   <g id="Group_6152" data-name="Group 6152" transform="translate(-24 -1616)">

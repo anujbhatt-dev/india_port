@@ -47,7 +47,7 @@ class Landing1 extends Component{
 
       return (
          <div className="landing1">
-             <div className="landing1__1"></div>
+             <div className="landing1__1">Easy Freight Forwarding</div>
              {/* <div className="landing1__2">
                 <span>F</span>
                 <span>R</span>
@@ -57,6 +57,7 @@ class Landing1 extends Component{
                 <span>H</span>
                 <span>T</span>
              </div> */}
+
              <div className="landing1__3" >INDIA PORT</div>
              <div className="landing1__4">Search your best quotes</div>
              <div className="landing1__5">
@@ -96,8 +97,8 @@ class Landing1 extends Component{
                        </div>
                        <svg className="landing1__5_r2-bWrap-svg" xmlns="http://www.w3.org/2000/svg" width="33.8" height="20.254" viewBox="0 0 33.8 20.254">
                           <g id="Group_6146" data-name="Group 6146" transform="translate(2.087 1.061)">
-                            <path id="Path_19941" data-name="Path 19941" d="M686,755.735h28.092l-5.7-5.7" transform="translate(-686 -750.035)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
-                            <path id="Path_19942" data-name="Path 19942" d="M716.371,768.5H688.279l5.7,5.7" transform="translate(-686.745 -756.067)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
+                            <path id="Path_19941" data-name="Path 19941" d="M686,755.735h28.092l-5.7-5.7" transform="translate(-686 -750.035)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+                            <path id="Path_19942" data-name="Path 19942" d="M716.371,768.5H688.279l5.7,5.7" transform="translate(-686.745 -756.067)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
                           </g>
                         </svg>
 
