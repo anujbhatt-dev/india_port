@@ -380,31 +380,33 @@ class Landing4 extends Component{
 
       }else{
 
-
         let controller = new ScrollMagic.Controller();
         let timeline = gsap.timeline()
 
        timeline
-       .to('.c1', 2, {
+       .to('.c1', 50, {
 
-        y: "-100%",
+        y: "-300%",
         ease: Power3.linear
-      }, "=-2")
-       .from('.c2', 2, {
+      },)
+       .fromTo('.c2', 50, {
 
         y: "200%",
         ease: Power3.linear
-       }, "=-1000")
-       .to('.c2', 2, {
+       }, {
 
         y: "-200%",
+        opacity:1,
         ease: Power3.linear
-      }, "=-2")
-       .from('.c3', 2, {
+      }, "=-50")
+       .fromTo('.c3', 50, {
 
-        y: "200%",
+        y: "400%",
         ease: Power3.linear
-       }, "=-1000")
+       },{
+         y:"-100%",
+         opacity:1,
+       }, "=-50")
 
 
  let scene = new ScrollMagic.Scene({
