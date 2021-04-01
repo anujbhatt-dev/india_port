@@ -144,14 +144,14 @@ class Landing2 extends Component{
         let timeline = gsap.timeline(); 
  
        timeline
-       .to('.s1', 50, {
-           x: "300%",
+       .to('.s1', 350, {
+           x: "500%",
            ease: Power0.linear
          })
-         .to('.l1', 50, {
-          x: "330%",
+         .to('.l1', 350, {
+          x: "540%",
           ease: Power0.linear
-        }, "=-50")
+        }, "=-350")
          .eventCallback("onStart",()=>this.animationFunc())
          .eventCallback("onReverseComplete", ()=>{
           // let stopScroll=(e)=> {

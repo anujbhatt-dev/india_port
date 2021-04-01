@@ -25,6 +25,7 @@ class CbmCalc extends Component{
       data:{},
       updated:true,
       total:null,
+      mobileFields:[1],
 
   }
 
@@ -132,6 +133,18 @@ class CbmCalc extends Component{
     $(".navigation").css("position", "static");
     // $(".navigation").css("margin", "0 10vw");
   }
+  addField=()=>{
+
+   this.setState((s)=>{
+      return {mobileFields:[...s.mobileFields, s.mobileFields.length+1],}
+   })
+
+  }
+
+
+  invalidate=(i)=>{
+    this.validToogle(i, false);
+  }
 
     render(){
 
@@ -165,7 +178,7 @@ class CbmCalc extends Component{
                    <tbody>
                       {[1,2,3,4,5].map(id=>
                       <tr>
-                         <td className="cbmBack__table-sr"><p className="cbmCalc__p">{this.state.valids[id]?id:<i className="fa fa-times" aria-hidden="true"></i>}</p></td>
+                         <td className="cbmBack__table-sr" onClick={this.state.valids[id]?()=>{this.invalidate(id)}:null} ><p className="cbmCalc__p">{this.state.valids[id]?id:<i className="fa fa-times" aria-hidden="true"></i>}</p></td>
                          <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].len?this.state.data[id].len:null} placeholder="len" name="len" type="text"/></td>
                          <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].wid?this.state.data[id].wid:null} placeholder="wid" name="wid" type="text"/></td>
                          <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="hei" name="hei" type="text"/></td>
@@ -187,6 +200,7 @@ class CbmCalc extends Component{
                <img className="invoice__box_bot cbmCalc__mob--bot" onClick={this.calculateTotal}  src={leaf2} alt=""/>
                <img  className="invoice__box_arr  invoice__box_arr--mod" src={halfArrow} alt=""/>
                <div className="invoice__box_go invoice__box_go--mod" onClick={this.calculateTotal}>GO</div>
+               <button onClick={this.addField}>ADD</button>
                <div className="cbmCalc__box_total  cbmCalc__mob--total">
                <span className="cbmCalc__box_total-text cbmCalc__box_total-text--mod">Total</span>
                {this.state.total?
@@ -202,7 +216,7 @@ class CbmCalc extends Component{
                  <span placeholder="len" className="cbmCalc__mob_flex-span2" type="text">CBM</span>
                </div>
 
-               {[1,2,3,4,5].map(id=>
+               {[...this.state.mobileFields].map(id=>
                   <div className="cbmCalc__mob_flex">
                       {/* <span  className="cbmCalc__mob_flex-span0 cbmCalc__mob_flex-span1">{id}</span> */}
                     <input className="cbmCalc__mob_flex-span2"  onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].len?this.state.data[id].len:null} placeholder="len" name="len" type="text"/>
