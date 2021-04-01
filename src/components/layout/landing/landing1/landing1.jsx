@@ -58,7 +58,21 @@ class Landing1 extends Component{
                 <span>T</span>
              </div> */}
 
-             <div className="landing1__3" >INDIA PORT</div>
+             <div className="landing1__3" >
+             {!this.props.mobile?
+              <svg xmlns="http://www.w3.org/2000/svg" width="622" height="120" viewBox="0 0 522 120">
+                <text id="india_port" data-name="india port" transform="translate(261 97)" fill="#16354e" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.006em"><tspan x="-260.345" y="0">INDIA PORT</tspan></text>
+              </svg>
+              :
+              <svg xmlns="http://www.w3.org/2000/svg" width="206" height="161" viewBox="0 0 206 161">
+                <text id="india_port" data-name="india
+              port" transform="translate(0 77)" fill="#16354e" font-size="71" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.006em"><tspan x="0" y="0">INDIA</tspan><tspan font-size="76"><tspan x="0" y="65">PORT</tspan></tspan></text>
+              </svg>
+
+
+            }
+
+             </div>
              <div className="landing1__4">Search your best quotes</div>
              <div className="landing1__5">
                 <div className="landing1__5_r1">

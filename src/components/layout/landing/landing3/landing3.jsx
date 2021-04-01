@@ -360,20 +360,20 @@ class Landing3 extends Component{
                   </svg>
              </div>
              <div className="landing3__mob_main">
-                  <img src={this.state.mobileNumber===0?cc:this.state.mobileNumber===1?freight:insure} alt=""/>
+                  <img className={this.state.mobileNumber===0?"move1":this.state.mobileNumber===1?'move2':"move3"} src={this.state.mobileNumber===0?cc:this.state.mobileNumber===1?freight:insure} alt=""/>
                   <div className="landing3__mob_main-name">
                     {
                       this.state.mobileNumber===0?
-                      <div>Custom<br/>
+                      <div className="moverev1">Custom<br/>
                       Clearance
                       </div>
                       :
                       this.state.mobileNumber===1?
-                        <div>Freight<br/>
+                        <div  className="moverev2">Freight<br/>
                         Forwarding
                         </div>
                         :
-                        <div>Insurance<br/>
+                        <div  className="moverev3">Insurance<br/>
                         for Product
                         </div>
 

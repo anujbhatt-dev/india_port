@@ -559,18 +559,24 @@ step3Toggler=(flag)=>{
                     </div>
 
                     <div className="invoice__box_flex">
-                        <div className="impWrap">
-                           <img className="imp" src={imp} alt=""/>
-                           <div className="invoice__box_flex-head">Total Duties</div>
-                        </div>
-                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step2.total} disabled type="number"/>
-                        <div className="invoice__box_flex-head">Anti Dumping INR</div>
-                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step3.total} disabled type="number"/>
-                        <div className="impWrap">
+                       <div className="lmflexer">
+                         <div className="impWrap">
+                         <img className="imp" src={imp} alt=""/>
+                         <div className="invoice__box_flex-head">Total Duties</div>
+                         </div>
+                         <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step2.total} disabled type="number"/>
+                       </div>
+                       <div  className="lmflexer">
+                         <div className="invoice__box_flex-head">Anti Dumping INR</div>
+                         <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step3.total} disabled type="number"/>
+                       </div>
+                       <div  className="lmflexer">
+                           <div className="impWrap">
                            <img className="imp" src={imp} alt=""/>
                            <div className="invoice__box_flex-head"><div>CIF Total</div><div className="invoice__box_flex-head-2">(in selected currencies)</div></div>
-                        </div>
-                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step1.total} disabled type="number"/>
+                           </div>
+                           <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step1.total} disabled type="number"/>
+                       </div>
 
 
                     </div>

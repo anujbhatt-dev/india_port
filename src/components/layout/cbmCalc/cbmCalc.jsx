@@ -200,7 +200,6 @@ class CbmCalc extends Component{
                <img className="invoice__box_bot cbmCalc__mob--bot" onClick={this.calculateTotal}  src={leaf2} alt=""/>
                <img  className="invoice__box_arr  invoice__box_arr--mod" src={halfArrow} alt=""/>
                <div className="invoice__box_go invoice__box_go--mod" onClick={this.calculateTotal}>GO</div>
-               <button onClick={this.addField}>ADD</button>
                <div className="cbmCalc__box_total  cbmCalc__mob--total">
                <span className="cbmCalc__box_total-text cbmCalc__box_total-text--mod">Total</span>
                {this.state.total?
@@ -235,6 +234,8 @@ class CbmCalc extends Component{
 
                </div>
           </div>,
+          <button className="addd" onClick={this.addField}> + ADD</button>
+          ,
          ]
            }
 

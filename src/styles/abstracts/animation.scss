@@ -104,11 +104,87 @@
 
 @keyframes slide__right {
     0%{
-      right:90%;
+      right: 90%;
     }
     100%{
-      right:10%;
+      right: 10%;
     }
+}
+
+@keyframes moverev1 {
+    0%{
+      transform: translateX(150%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+}
+.moverev1{
+  animation: moverev1 .3s linear;
+}
+
+@keyframes moverev2 {
+    0%{
+      transform: translateX(150%);
+    }
+    100%{
+      transform:translateX(0%);
+    }
+}
+.moverev2{
+  animation: moverev2 .3s linear;
+}
+
+
+
+@keyframes moverev3 {
+  0%{
+    transform: translateX(150%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+.moverev3{
+  animation: moverev3 .3s linear;
+}
+
+@keyframes move1 {
+    0%{
+      transform: translateX(-150%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+}
+.move1{
+  animation: move1 .3s linear;
+}
+
+@keyframes move2 {
+    0%{
+      transform: translateX(-150%);
+    }
+    100%{
+      transform:translateX(0%);
+    }
+}
+.move2{
+  animation: move2 .3s linear;
+}
+
+
+
+@keyframes move3 {
+  0%{
+    transform: translateX(-150%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+.move3{
+  animation: move3 .3s linear;
 }
 
 @keyframes slide__left {
