@@ -20,6 +20,10 @@
 
     &_quater{
       position: absolute;
+      & input{
+        padding: .5rem ;
+        border-radius: 5px;
+      }
       &--1{
         top:25%;
         left: 17%;
@@ -103,14 +107,14 @@
          transform: scale(.5);
       }
       display: flex;justify-content: flex-start;align-items: center;margin-bottom: 2rem;
-      margin-bottom: -5rem;
       @include respond(tab-land){
+        margin-bottom: -5rem;
          justify-content: space-around;
       }
       &--mod{
         margin-left: 10rem;
-        margin-bottom: -2rem;
         @include respond(tab-land){
+          margin-bottom: -2rem;
           margin-left: 3rem;
           justify-content: space-between;
           // justify-content:center;
@@ -537,6 +541,9 @@
     & input{
       width: 20rem;
       margin-top: 2rem;
+      padding: 1.5rem;
+      font-size: 3rem;
+      font-weight: bolder;
     }
   }
 }
