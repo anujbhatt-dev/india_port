@@ -16,6 +16,9 @@
     position: relative;
     margin: -1.4rem 0vw;
     // margin-top: -5.6rem;
+    @include respond(tab-land){
+      margin: 5rem 1rem;
+    }
     cursor:crosshair;
     & img{
       margin: 0rem 0vw;

@@ -235,6 +235,14 @@ width: auto;
 
   }
   &__blogPost{
+    @include respond(tab-land){
+      // width: calc(100vw - 4rem);
+      // // overflow: hidden;
+      // padding-top: 5rem;
+      // & p{
+      //   width:25rem; //calc(100vw - 4rem);
+      // }
+    }
     &_link{
       margin: 15rem 0;
       text-decoration: none;

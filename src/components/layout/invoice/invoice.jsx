@@ -355,22 +355,28 @@ step3Toggler=(flag)=>{
                 <div className="cbmCalc__head invoice__head" id="invoice__head">Invoice CALCULATOR</div>
                 <div className="invoice__box_flexWrap">
                   <div className="invoice__box_flex">
-                      <div className="invoice__box_flex-head">Currency</div>
-                      <div>
-                         <img className="imp" src={imp} alt=""/>
-                         <select onChange={(e)=>this.exchangeRateHandler(e)} className="invoice__box_flex-input" type="number">
+                      <div className="lmflexer">
+                        <div className="invoice__box_flex-head">Currency</div>
+                        <div>
+                           <img className="imp" src={imp} alt=""/>
+                           <select onChange={(e)=>this.exchangeRateHandler(e)} className="invoice__box_flex-input" type="number">
 
-                           {this.state.step1.currencyOptions.map(curr=>
-                            <option selected={curr==="INR"} value={curr}>{curr}</option>
-                            )}
+                             {this.state.step1.currencyOptions.map(curr=>
+                              <option selected={curr==="INR"} value={curr}>{curr}</option>
+                              )}
 
 
-                           </select>
+                             </select>
+                        </div>
                       </div>
-                      <div className="invoice__box_flex-head">Exchange Rate</div>
-                      <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step1.exchangeRate} disabled type="number"/>
-                      <div  className="invoice__box_flex-head"><div>Invoice Value</div><div className="invoice__box_flex-head-2">(in selected currencies)</div></div>
-                      <input onChange={this.step1ChangeHandler}  name="invoiceValue"  value={this.state.step1.invoiceValue} className="invoice__box_flex-input" type="number"/>
+                      <div className="lmflexer">
+                        <div className="invoice__box_flex-head">Exchange Rate</div>
+                        <input className="invoice__box_flex-input invoice__box_flex-input--ex" placeholder={this.state.step1.exchangeRate} disabled type="number"/>
+                      </div>
+                      <div className="lmflexer">
+                        <div  className="invoice__box_flex-head"><div>Invoice Value</div><div className="invoice__box_flex-head-2">(in selected currencies)</div></div>
+                        <input onChange={this.step1ChangeHandler}  name="invoiceValue"  value={this.state.step1.invoiceValue} className="invoice__box_flex-input" type="number"/>
+                      </div>
                   </div>
 
                   <div className="invoice__box_flex invoice__box_flex--mod ">
@@ -540,9 +546,10 @@ step3Toggler=(flag)=>{
                        :null}
                           </g>
                         </svg>
-
-                        <div className="invoice__box_flex-head">Anti Dumping {this.state.step1.currency}</div>
-                        <input style={this.state.step3.choosed===1?{textDecoration:"line-through"}:{textDecoration:"none"}} className="invoice__box_flex-input" disabled={this.state.step3.choosed===1} placeholder={0} value={this.state.step3.antidump} name="antidump" onChange={this.step3ChangeHandler} type="number"/>
+                        <div className="lmflexer">
+                          <div className="invoice__box_flex-head">Anti Dumping {this.state.step1.currency}</div>
+                          <input style={this.state.step3.choosed===1?{textDecoration:"line-through"}:{textDecoration:"none"}} className="invoice__box_flex-input" disabled={this.state.step3.choosed===1} placeholder={0} value={this.state.step3.antidump} name="antidump" onChange={this.step3ChangeHandler} type="number"/>
+                        </div>
                         <svg onClick={()=>this.step3Toggler(this.state.step3.choosed===1)} xmlns="http://www.w3.org/2000/svg" width="58" height="55" viewBox="0 0 58 55">
                           <g id="Group_3232" data-name="Group 3232" transform="translate(-608 -497)">
                             <g id="Rectangle_314" data-name="Rectangle 314" transform="translate(608 497)" fill="none" stroke="#0239ff" stroke-width="2">
@@ -554,11 +561,13 @@ step3Toggler=(flag)=>{
                        :null}
                           </g>
                         </svg>
-                        <div className="invoice__box_flex-head">Anti Dumping %</div>
-                        <input  style={this.state.step3.choosed===-1?{textDecoration:"line-through"}:{textDecoration:"none"}} className="invoice__box_flex-input invoice__box_flex-input--ex" disabled={this.state.step3.choosed===-1} placeholder="0" value={this.state.step3.antidumpP} onChange={this.step3ChangeHandler} name="antiDumpP"  type="number"/>
+                        <div className="lmflexer">
+                          <div className="invoice__box_flex-head">Anti Dumping %</div>
+                          <input  style={this.state.step3.choosed===-1?{textDecoration:"line-through"}:{textDecoration:"none"}} className="invoice__box_flex-input invoice__box_flex-input--ex" disabled={this.state.step3.choosed===-1} placeholder="0" value={this.state.step3.antidumpP} onChange={this.step3ChangeHandler} name="antiDumpP"  type="number"/>
+                        </div>
                     </div>
 
-                    <div className="invoice__box_flex">
+                    <div className="invoice__box_flex invoice__box_flex--gap">
                        <div className="lmflexer">
                          <div className="impWrap">
                          <img className="imp" src={imp} alt=""/>
