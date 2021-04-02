@@ -18,9 +18,9 @@
        font-size: 2.5rem;
     }
   }
-  background-image: url(../../../assets/images/cbmBack.svg);
+  // background-image: url(../../../assets/images/cbmBack.svg);
+  background: $color-white;
   @include respond(tab-land){
-     background: $color-white;
   }
   background-repeat: repeat-y;
   padding: 5rem 0;
