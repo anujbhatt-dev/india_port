@@ -356,9 +356,9 @@ step3Toggler=(flag)=>{
                 <div className="invoice__box_flexWrap">
                   <div className="invoice__box_flex">
                       <div className="lmflexer">
-                        <div className="invoice__box_flex-head">Currency</div>
+                        <div className="invoice__box_flex-head" style={{position:"relative"}}><img className="imp" src={imp} alt=""/>Currency</div>
                         <div>
-                           <img className="imp" src={imp} alt=""/>
+
                            <select onChange={(e)=>this.exchangeRateHandler(e)} className="invoice__box_flex-input" type="number">
 
                              {this.state.step1.currencyOptions.map(curr=>
