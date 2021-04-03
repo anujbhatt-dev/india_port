@@ -392,12 +392,14 @@ step3Toggler=(flag)=>{
                         </g>
                       </svg>
 
-
-                       <div class="invoice__box_flex-smallHead">Freight (20%)</div>
-
-                       <input disabled className="invoice__box_flex-input" placeholder={this.state.step1.freightD?(this.state.step1.invoiceValue*this.state.step1.exchangeRate*20)/100:null} type="number"/>
-                       <div class="invoice__box_flex-smallHead"> <div>Freight</div> <div className="invoice__box_flex-head-2">(If Known)</div></div>
-                       <input  style={!this.state.step1.freightD?{textDecoration:"none"}:{textDecoration:"line-through"}} onChange={this.step1ChangeHandler} name="freight" className="invoice__box_flex-input" disabled={this.state.step1.freightD} type="number"/>
+                       <div className="lmflexer">
+                         <div class="invoice__box_flex-smallHead">Freight (20%)</div>
+                         <input disabled className="invoice__box_flex-input" placeholder={this.state.step1.freightD?(this.state.step1.invoiceValue*this.state.step1.exchangeRate*20)/100:null} type="number"/>
+                       </div>
+                       <div className="lmflexer">
+                         <div class="invoice__box_flex-smallHead"> <div>Freight</div> <div className="invoice__box_flex-head-2">(If Known)</div></div>
+                         <input  style={!this.state.step1.freightD?{textDecoration:"none"}:{textDecoration:"line-through"}} onChange={this.step1ChangeHandler} name="freight" className="invoice__box_flex-input" disabled={this.state.step1.freightD} type="number"/>
+                       </div>
                        <div class="invoice__box_flex-smallHead">{this.state.step1.currency}</div>
                   </div>
 
@@ -414,12 +416,14 @@ step3Toggler=(flag)=>{
                     :null}
                     </g>
                   </svg>
-
-                      <div class="invoice__box_flex-smallHead">Insurance (1.15%)</div>
-
-                      <input disabled className="invoice__box_flex-input" placeholder={this.state.step1.insD?(this.state.step1.invoiceValue*this.state.step1.exchangeRate*1.15)/100:null} type="number"/>
-                      <div class="invoice__box_flex-smallHead"> <div>Insurance</div> <div className="invoice__box_flex-head-2">(If Known)</div></div>
-                      <input style={!this.state.step1.insD?{textDecoration:"none"}:{textDecoration:"line-through"}} onChange={this.step1ChangeHandler} name="ins" disabled className="invoice__box_flex-input"  disabled={this.state.step1.insD} type="number"/>
+                      <div className="lmflexer">
+                        <div class="invoice__box_flex-smallHead">Insurance (1.15%)</div>
+                        <input disabled className="invoice__box_flex-input" placeholder={this.state.step1.insD?(this.state.step1.invoiceValue*this.state.step1.exchangeRate*1.15)/100:null} type="number"/>
+                      </div>
+                      <div className="lmflexer">
+                        <div class="invoice__box_flex-smallHead"> <div>Insurance</div> <div className="invoice__box_flex-head-2">(If Known)</div></div>
+                        <input style={!this.state.step1.insD?{textDecoration:"none"}:{textDecoration:"line-through"}} onChange={this.step1ChangeHandler} name="ins" disabled className="invoice__box_flex-input"  disabled={this.state.step1.insD} type="number"/>
+                      </div>
                        <div class="invoice__box_flex-smallHead">{this.state.step1.currency}</div>
                   </div>
                 </div>
