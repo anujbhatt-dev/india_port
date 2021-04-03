@@ -163,7 +163,7 @@ class CbmCalc extends Component{
                 <span className="cbmCalc__box_total-text">Total</span>
                    {this.state.total?
                     <span className="cbmCalc__box_total-number">{this.state.total+" INR"}</span>:
-                    <span className="cbmCalc__box_total-number"><h3>&ndash;</h3></span>}
+                    <span className="cbmCalc__box_total-number">0</span>}
                 </div>
 
                 <table cellspacing="15" className="cbmCalc__table">
@@ -189,7 +189,7 @@ class CbmCalc extends Component{
                                <option value="cm">cm</option>
                             </select>
                             </td>
-                         <td className=" cbmCalc__box_total-number">{this.state.valids[id]?(this.state.data[id].ans+" INR"):<h3>&ndash;</h3>}</td>
+                         <td className=" cbmCalc__box_total-number">{this.state.valids[id]?(this.state.data[id].ans+" INR"):0}</td>
                         </tr>
                       )}
                    </tbody>
@@ -227,7 +227,7 @@ class CbmCalc extends Component{
                            <option value="cm">cm</option>
                         </select>
                      </span>
-                     <span className="cbmCalc__mob_flex-span2">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"-"}</span>
+                     <span className="cbmCalc__mob_flex-span2">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"0"}</span>
                     </div>
                   )}
                <div  className="cbmCalc__mob_flex">
