@@ -163,7 +163,7 @@ class CbmCalc extends Component{
                 <span className="cbmCalc__box_total-text">Total</span>
                    {this.state.total?
                     <span className="cbmCalc__box_total-number">{this.state.total+" INR"}</span>:
-                    <span className="cbmCalc__box_total-number"><h3>&ndash;</h3></span>}
+                    <span className="cbmCalc__box_total-number">0</span>}
                 </div>
 
                 <table cellspacing="15" className="cbmCalc__table">
@@ -178,7 +178,7 @@ class CbmCalc extends Component{
                    <tbody>
                       {[1,2,3,4,5].map(id=>
                       <tr>
-                         <td className="cbmBack__table-sr" style={{position:"relative"}} onClick={this.state.valids[id]?()=>{this.invalidate(id)}:null} ><p className="cbmCalc__p">{this.state.valids[id]?<p>{id}<i  style={{position:"absolute",top:"-0.5rem",right:"-0.5rem",fontSize:"2rem",color:"black"} } className="fa fa-times" aria-hidden="true"></i></p>:<i className="fa fa-plus" aria-hidden="true"></i>}</p></td>
+                         <td className="cbmBack__table-sr" style={{position:"relative"}}  ><p className="cbmCalc__p">{this.state.valids[id]?<p>{id}<i onClick={this.state.valids[id]?()=>{this.invalidate(id)}:null}  style={{position:"absolute",top:"-0.5rem",right:"-0.5rem",color:"black",fontSize:"2rem"}} className="fa fa-times" aria-hidden="true"></i></p>:<i className="fa fa-plus" aria-hidden="true"></i>}</p></td>
                          <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].len?this.state.data[id].len:null} placeholder="len" name="len" type="number"/></td>
                          <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].wid?this.state.data[id].wid:null} placeholder="wid" name="wid" type="number"/></td>
                          <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="hei" name="hei" type="number"/></td>
@@ -189,7 +189,7 @@ class CbmCalc extends Component{
                                <option value="cm">cm</option>
                             </select>
                             </td>
-                         <td className=" cbmCalc__box_total-number">{this.state.valids[id]?(this.state.data[id].ans+" INR"):<h3>&ndash;</h3>}</td>
+                         <td className=" cbmCalc__box_total-number">{this.state.valids[id]?(this.state.data[id].ans+" INR"):0}</td>
                         </tr>
                       )}
                    </tbody>
@@ -227,7 +227,7 @@ class CbmCalc extends Component{
                            <option value="cm">cm</option>
                         </select>
                      </span>
-                     <span className="cbmCalc__mob_flex-span2">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"-"}</span>
+                     <span className="cbmCalc__mob_flex-span2">{this.state.valids[id]?(this.state.data[id].ans+" INR"):"0"}</span>
                     </div>
                   )}
                <div  className="cbmCalc__mob_flex">

@@ -37,7 +37,7 @@ class Invoice extends Component{
       freight:0,
       insD:false,
       ins:0,
-      total:"-",
+      total:"0",
       calculated:false,
       calculate:false
     },
@@ -50,7 +50,7 @@ class Invoice extends Component{
       swsVal:0,
       cvdVal:0,
       gstVal:0,
-      total:"-",
+      total:"0",
       calculated:false,
       updated:true,
       calculate:false
@@ -59,7 +59,7 @@ class Invoice extends Component{
     step3:{
       antiDumpP:0,
       antidump:0,
-      total:"-",
+      total:"0",
       calculated:false,
       calculate:false,
       update:false,
@@ -87,7 +87,7 @@ class Invoice extends Component{
       }
     //  console.log(Object.keys(res.data.results))
       )
-    .catch(err=>alert("cant get currencies"));
+    .catch(err=>alert("please check your network"));
 
   }
 
@@ -104,7 +104,7 @@ class Invoice extends Component{
       let gstVal=(cvdVal+swsVal+basicDutyVal+cif)*this.state.step2.gst/100;
 
       let step2={...this.state.step2, basicDutyVal:basicDutyVal, swsVal:swsVal, cvdVal:cvdVal, gstVal:gstVal, updated:true};
-      let step3={...this.state.step3, updated:false, calculated:false, total:"-"}
+      let step3={...this.state.step3, updated:false, calculated:false, total:"0"}
 
       this.setState({step2:step2, step3:step3});
    }
@@ -118,7 +118,7 @@ class Invoice extends Component{
     step1.total=total;
     step1.calculate=false;
     let step2={...this.state.step2, updated:false}
-    let step3={...this.state.step3, updated:false, calculated:false, total:"-"}
+    let step3={...this.state.step3, updated:false, calculated:false, total:"0"}
     this.setState({step1:step1, step2:step2, step3:step3});
    }
 
@@ -129,7 +129,7 @@ class Invoice extends Component{
   step2.total=total;
   step2.calculated=true;
   step2.calculate=false;
-  let step3={...this.state.step3, updated:false, calculated:false, total:"-"}
+  let step3={...this.state.step3, updated:false, calculated:false, total:"0"}
 
   this.setState({step2:step2, step3:step3});
    }
@@ -157,10 +157,10 @@ class Invoice extends Component{
       // console.log(res.data)
       step1.exchangeRate=res.data[`${val}_INR`]["val"];
       step1.calculated=false;
-      step1.total="-";
+      step1.total="0";
       step1.currency=val
-      let step2={...this.state.step2, updated:false, calculated:false, total:"-"}
-      let step3={...this.state.step3, updated:false, calculated:false, total:"-"}
+      let step2={...this.state.step2, updated:false, calculated:false, total:"0"}
+      let step3={...this.state.step3, updated:false, calculated:false, total:"0"}
         this.setState({step1:step1, step2:step2, step3:step3});
     })
 
@@ -173,9 +173,9 @@ class Invoice extends Component{
 
     step1[name]=!step1[name];
     step1.calculated=false;
-      step1.total="-";
-      let step2={...this.state.step2, updated:false, calculated:false, total:"-"}
-      let step3={...this.state.step3, updated:false, calculated:false, total:"-"}
+      step1.total="0";
+      let step2={...this.state.step2, updated:false, calculated:false, total:"0"}
+      let step3={...this.state.step3, updated:false, calculated:false, total:"0"}
       this.setState({step1:step1, step2:step2, step3:step3});
   }
 
@@ -183,9 +183,9 @@ class Invoice extends Component{
     let step1={...this.state.step1};
     step1[e.target.name]=+e.target.value;
     step1.calculated=false;
-      step1.total="-";
-      let step2={...this.state.step2, updated:false, calculated:false, total:"-"}
-      let step3={...this.state.step3, updated:false, calculated:false, total:"-"}
+      step1.total="0";
+      let step2={...this.state.step2, updated:false, calculated:false, total:"0"}
+      let step3={...this.state.step3, updated:false, calculated:false, total:"0"}
       this.setState({step1:step1, step2:step2, step3:step3});
   }
 
@@ -210,7 +210,7 @@ step2BackHandler=()=>{
     swsVal:0,
     cvdVal:0,
     gstVal:0,
-    total:"-",
+    total:"0",
     calculated:false,
     updated:true,
 
@@ -219,13 +219,13 @@ step2BackHandler=()=>{
   let step1={
   ...this.state.step1,
   calculated:false,
-  total:"-"
+  total:"0"
   }
 
   let step3={
     antiDumpP:0,
       antidump:0,
-      total:"-",
+      total:"0",
       calculated:false,
       calculate:false,
       update:false,
@@ -241,9 +241,9 @@ step2ChangeHandler=(e)=>{
   let step2={...this.state.step2};
   step2[e.target.name]=+e.target.value;
   step2.calculated=false;
-  step2.total="-";
+  step2.total="0";
   step2.updated=false;
-  let step3={...this.state.step3, updated:false, calculated:false, total:"-"}
+  let step3={...this.state.step3, updated:false, calculated:false, total:"0"}
   this.setState({step2:step2, step3:step3});
 }
 
@@ -264,14 +264,13 @@ step2Calculator=()=>{
 step3ChangeHandler=(e)=>{
   let step3={...this.state.step3};
   step3[e.target.name]=+e.target.value;
-alert(e.target.name+" "+e.target.value);
   // if(e.target.name==="antiDumpP")
   //   step3["antidump"]=0;
   // else
   //  step3["antiDumpP"]=0;
 
   step3.calculated=false;
-  step3.total="-";
+  step3.total="0";
   this.setState({step3:step3});
 }
 
@@ -281,13 +280,13 @@ step3BackHandler=()=>{
   let step2={
     ...this.state.step2,
     calculated:false,
-    total:"-"
+    total:"0"
     }
 
     let step3={
       antiDumpP:0,
       antidump:0,
-      total:"-",
+      total:"0",
       calculated:false,
       calculate:false,
       update:false,
@@ -314,7 +313,7 @@ step3Toggler=(flag)=>{
     return;
 
   let step3={...this.state.step3}
-  if(this.state.step3.total!=="-")
+  if(this.state.step3.total!=="0")
   step3.calculate=true;
   step3.choosed=step3.choosed*-1;
   this.setState({step3:step3});
@@ -338,7 +337,7 @@ step3Toggler=(flag)=>{
 
             <div className="invoice__box">
                 <img className="invoice__box_top" src={leaf1} alt=""/>
-                <img className="invoice__box_bot" src={leaf2} alt=""/>
+                <img className="invoice__box_bot" onClick={this.step1Calculator} src={leaf2} alt=""/>
                 <img data-aos="fade-right" className="invoice__box_big" src={invoice} alt=""/>
                 <img className="invoice__box_i1" src={i} alt=""/>
                 <img className="invoice__box_i2" src={i} alt=""/>
@@ -432,8 +431,8 @@ step3Toggler=(flag)=>{
                     Step2 */}
 
             <div className="invoice__box invoice__box--duty">
-                <img className="invoice__box_top" src={leaf1} alt=""/>
-                <img className="invoice__box_bot" src={leaf2} alt=""/>
+                <img className="invoice__box_top" onClick={this.step2BackHandler}  src={leaf1} alt=""/>
+                <img className="invoice__box_bot" onClick={this.step2Calculator} src={leaf2} alt=""/>
                 <img className="invoice__box_bot-left" src={leaf3} alt=""/>
                 <img data-aos="fade-right" className="invoice__box_big-duty" src={invoice} alt=""/>
                 <img className="invoice__box_i1" src={i} alt=""/>
@@ -445,7 +444,7 @@ step3Toggler=(flag)=>{
                        <div className="invoice__box_step_1">cif in inr</div>
                        <div className="invoice__box_step_2">Step 2</div>
                 </div>
-                <div data-aos="fade-down" onClick={this.step2Calculator} className="invoice__box_go">GO</div>
+                <div data-aos="fade-down"  onClick={this.step2Calculator} className="invoice__box_go">GO</div>
                 <div  data-aos="fade-down" onClick={this.step2BackHandler} className="invoice__box_back">BACK</div>
                 <div className="cbmCalc__head invoice__head" id="invoice__head">Duty CALCULATOR</div>
                 <div className="invoice__box_quater invoice__box_quater--1">
@@ -515,8 +514,8 @@ step3Toggler=(flag)=>{
                     Step3 */}
 
             <div className="invoice__box">
-                <img className="invoice__box_top" src={leaf1} alt=""/>
-                <img className="invoice__box_bot" src={leaf2} alt=""/>
+                <img className="invoice__box_top" onClick={this.step3BackHandler}  src={leaf1} alt=""/>
+                <img className="invoice__box_bot" onClick={this.step3Calculator} src={leaf2} alt=""/>
                 <img className="invoice__box_bot-left" src={leaf3} alt=""/>
                 <img data-aos="fade-right" className="invoice__box_big-res" src={result} alt=""/>
                 <img className="invoice__box_i1" src={i} alt=""/>
@@ -594,7 +593,7 @@ step3Toggler=(flag)=>{
                           ?[<div className="tots__div">
                             <div className="invoice__box_flex-head" style={{marginRight:"3rem"}}><div style={{fontSize:"3rem"}}>Total</div><div className="invoice__box_flex-head-2">(Including Dities)</div></div>
                           </div>,
-                          <input className="invoice__box_flex-input invoice__box_flex-input--ex" disabled placeholder="-" value={this.state.step1&&this.state.step2&&this.state.step3?this.state.step1.total+this.state.step2.total+this.state.step3.total:null} type="number"/>]
+                          <input className="invoice__box_flex-input invoice__box_flex-input--ex" disabled placeholder="0" value={this.state.step1&&this.state.step2&&this.state.step3?this.state.step1.total+this.state.step2.total+this.state.step3.total:null} type="number"/>]
                           :<div className="tots__div">
                             <div  style={{marginRight:"0rem",textAlign:"center",width:"30rem"}} className="invoice__box_flex-head"><div style={{fontSize:"2rem",color:"coral"}}>Make sure step 2 is complete <sub>*</sub></div></div>
                           </div>}
