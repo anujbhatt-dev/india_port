@@ -40,7 +40,7 @@ class Landing3 extends Component{
     mobileNumberInterval=()=>{
      this.mobileNumberIntervalFunc= setInterval(()=>{
           this.setState(s=>{return {mobileNumber:s.mobileNumber===2?0:s.mobileNumber+1}})
-      }, 1000)
+      }, 2000)
     }
 
     mobileNumberHandler=(num)=>{
