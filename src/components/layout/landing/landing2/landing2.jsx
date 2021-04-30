@@ -46,7 +46,7 @@ class Landing2 extends Component{
       // window.addEventListener('wheel', function(){
         // alert("under")
 
-
+      
      if(document.getElementById('s2')===null)
         return;
 
@@ -61,13 +61,13 @@ class Landing2 extends Component{
 
           return 1;
         }
-
-
+      
+     
     }
 
 
     animationFunc=()=>{
-
+  
       let timeline1 = gsap.timeline()
       timeline1
       .fromTo('.text-2', 1.5,
@@ -80,7 +80,7 @@ class Landing2 extends Component{
         ease: Power3.linear
        })
        .to('.text-1', 1.5,
-
+       
        {
         y: "100%",
         x: 0,
@@ -99,7 +99,7 @@ class Landing2 extends Component{
         y:"0%"
       }
       ,"-=1.5")
-
+      
                  .to('.landing2__secondWrapper_second--2', 1.5, {
                    y: "-100%",
                    x:0,
@@ -131,18 +131,18 @@ class Landing2 extends Component{
                  x:0,
                  ease: Power3.easeInOut
                 }, "-=1.5")
-
+                
               }
 
     componentDidMount=()=>{
 
-
+  
         this.numberInterval();
 
       if(!this.props.isMobile()){
         let controller = new ScrollMagic.Controller();
-        let timeline = gsap.timeline();
-
+        let timeline = gsap.timeline(); 
+ 
        timeline
        .to('.s1', 350, {
            x: "500%",
@@ -155,10 +155,10 @@ class Landing2 extends Component{
          .eventCallback("onStart",()=>this.animationFunc())
          .eventCallback("onReverseComplete", ()=>{
           // let stopScroll=(e)=> {
-
+        
           //   e.preventDefault();
           // }
-
+    
           // window.addEventListener("wheel",stopScroll , {passive: false });
           let timeline1 = gsap.timeline();
           // this.level=-1;
@@ -181,7 +181,7 @@ class Landing2 extends Component{
           }
           ,"-=1.5")
            .fromTo('.text-1', 1.5,
-
+           
            {
              y:"-100%"
              },
@@ -207,8 +207,8 @@ class Landing2 extends Component{
 
          })
         //  .eventCallback("onUpdate", ()=>{alert("update")})
-
-
+ 
+ 
         let scene = new ScrollMagic.Scene({
           triggerElement: '#landing2',
           duration: '100%',
@@ -254,12 +254,12 @@ class Landing2 extends Component{
                                  <div className="landing2__firstWrapper_first-text-head">BGM Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
-
+                           
                              <div className="landing2__firstWrapper_first-text  text-2 ">
                                  <div className="landing2__firstWrapper_first-text-head">Invoice Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
                              </div>
-
+                             
                              <div className="landing2__firstWrapper_first-text text-1">
                                  <div className="landing2__firstWrapper_first-text-head">Duty Calculator</div>
                                  <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
