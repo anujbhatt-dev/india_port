@@ -10,7 +10,7 @@
      width: 25rem;
      background: #f7f7f7;
      border-left: 1rem solid $color-black;
-     // z-index: 20;
+     z-index: 20;
    }
    &__over2{
      position: absolute;
@@ -21,7 +21,7 @@
      width: 25rem;
      background: #f7f7f7;
      border-right: 1rem solid $color-black;
-     // z-index: 20;
+     z-index: 20;
    }
    &__over3{
      position: absolute;
