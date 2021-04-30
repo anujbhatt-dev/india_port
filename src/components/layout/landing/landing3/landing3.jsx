@@ -28,251 +28,100 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 
 class Landing3 extends Component{
+  state={
+    mobileNumber:0,
+    show:false,
+    flag:0,
+  }
 
-    state={
-      mobileNumber:0,
-      show:false,
-      flag:0,
-    }
+  mobileNumberIntervalFunc=null;
 
-    mobileNumberIntervalFunc=null;
+  mobileNumberInterval=()=>{
+   this.mobileNumberIntervalFunc= setInterval(()=>{
+        this.setState(s=>{return {mobileNumber:s.mobileNumber===2?0:s.mobileNumber+1}})
+    }, 1000)
+  }
 
-    mobileNumberInterval=()=>{
-     this.mobileNumberIntervalFunc= setInterval(()=>{
-          this.setState(s=>{return {mobileNumber:s.mobileNumber===2?0:s.mobileNumber+1}})
-      }, 2000)
-    }
-
-    mobileNumberHandler=(num)=>{
-      this.setState({
-        mobileNumber:num
-      })
-      clearInterval(this.mobileNumberIntervalFunc);
-    }
-
-
-    level=1;
-
-    getScrollDirection=()=>{
-      // let scrollPos = 0;
-      // window.addEventListener('wheel', function(){
-        // alert("under")
-
-
-      // document.getElementById('s2');
-        // if ((document.getElementById('s2').getBoundingClientRect()).left < scrollPos)
-        //  {
-          // scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
-
-            // return -1;
-          // }
-        // else{
-          // scrollPos = (document.getElementById('s2').getBoundingClientRect()).left;
-
-          return 1;
-        }
-
-
-
-        animationFun= ()=>{
-
-          let stopScroll=(e)=> {
-
-            e.preventDefault();
-          }
-
-          window.addEventListener("wheel",stopScroll , {passive: false });
-
-
-          let onscrollFunc=()=>{
-            // alert(this.level)
-            if(this.level===1){
-
-                if(this.getScrollDirection()===1){
-                  this.level=-1;
-
-
-                  gsap.timeline()
-                  .fromTo('.pl2', 20, {
-                   x: "800%",
-                   opacity:1,
-                   ease: Power0.linear
-                 },{
-                   x:"-100%",
-                   opacity:1,
-                 })
-                 .fromTo('.pl3', 20, {
-                   x: "800%",
-                   opacity:1,
-                   ease: Power0.linear
-                 },{
-                   x:"-100%",
-                   opacity:1,
-                 },"-=20")
-
-
-
-          let timeline1 = gsap.timeline()
-           timeline1
-           .to('.landing3__wrapper',0.8, {
-             x: "-33.33%",
-             ease: Power3.linear
-            })
-            .eventCallback("onComplete",()=>{
-              this.level=2;
-               })
-             }
-             else{
-                 }
-
-              }else if(this.level===2){
-                if(this.getScrollDirection()===1){
-          this.level=-1;
-          let timeline1 = gsap.timeline()
-           timeline1
-           .to('.landing3__wrapper',0.8, {
-             x: "-66.66%",
-             ease: Power3.linear
-            })
-            .eventCallback("onComplete",()=>{
-              this.level=3;
-               })
-                }else{
-                 }
-
-              }else if(this.level===3){
-                if(this.getScrollDirection()===1){
-                  this.level=-1
-                   let timeline1 = gsap.timeline()
-                   timeline1.to(".globe", 2,
-                {css:{scaleX:50, scaleY:50, zIndex:100},
-                ease: Power3.linear})
-                .eventCallback("onComplete", ()=>{
-                  this.level=4;
-                })
-
-                }else{
-                 }
-
-              }else if(this.level===4){
-                if(this.getScrollDirection()===1){
-                  window.removeEventListener("wheel", onscrollFunc);
-                   window.removeEventListener("wheel", stopScroll);
-                  window.addEventListener("wheel",(e)=>{
-                     e.preventDefault();
-                  }, true);
-                }else{
-                  }
-              }
-           }
-        window.addEventListener("wheel",onscrollFunc);
-      }
-
-
-    componentDidMount=()=>{
-
-      $(".landing3__link1").mousemove((e)=>{
-        let x = e.pageX - $('.landing3__link1').offset().left;
-        let y = e.pageY - $('.landing3__link1').offset().top;
-         $(".cursor__1").css("top",y)
-         $(".cursor__1").css("left",x)
-      })
-
-      $(".landing3__link2").mousemove((e)=>{
-        let x = e.pageX - $('.landing3__link2').offset().left;
-        let y = e.pageY - $('.landing3__link2').offset().top;
-         $(".cursor__2").css("top",y)
-         $(".cursor__2").css("left",x)
-      })
-
-      $(".landing3__link3").mousemove((e)=>{
-        let x = e.pageX - $('.landing3__link3').offset().left;
-        let y = e.pageY - $('.landing3__link3').offset().top;
-         $(".cursor__3").css("top",y)
-         $(".cursor__3").css("left",x)
-      })
-
-      $(".landing3__link").mouseleave((e)=>{
-         $(".cursor").css("top","-20rem")
-         $(".cursor").css("left","-20rem")
-      })
-
-      Aos.init({
-        duration: 1000,
-        delay: 100
-      });
-
-      this.mobileNumberInterval();
-
-
-
-      if(!this.props.isMobile()){
-
-
-      let controller = new ScrollMagic.Controller();
-       let timeline = gsap.timeline()
-
-
-
-
-      timeline
-       .fromTo('.pl1', 1, {
-         x: "1%",
-         ease: Power3.linear
-       },{
-         x:"-1%"
-       })
-
-
-       .eventCallback("onStart",this.animationFun)
-      .eventCallback("onReverseComplete",()=>{
-        // document.getElementById('landing3').scrollIntoView();
-
-        // let stopScroll=(e)=> {
-
-        //   e.preventDefault();
-        // }
-
-        // window.addEventListener("wheel",stopScroll , {passive: false });
-        let timeline1 = gsap.timeline()
-        timeline1
-        .to(".globe", 2,
-     {css:{scaleX:1, scaleY:1, zIndex:-1},
-     ease: Power3.linear})
-     .to(".landing3__wrapper", 2,
-     {
-       x:"0%"
+  mobileNumberHandler=(num)=>{
+    this.setState({
+      mobileNumber:num
     })
-    .to('.pl2', 2, {
-      x: "1500%",
-      ease: Power0.linear
-    },"-=2")
-    .to('.pl3', 2, {
-      x: "1500%",
-      ease: Power0.linear
-    },"-=2")
-    .eventCallback("onComplete", ()=>{
-      this.level=1
-      // window.removeEventListener("wheel", stopScroll);
-      // window.addEventListener("wheel",(e)=>{
-      //    e.preventDefault();
-      // }, true);
+    clearInterval(this.mobileNumberIntervalFunc);
+  }
+
+
+  componentDidMount=()=>{
+
+    $(".landing3__link1").mousemove((e)=>{
+      let x = e.pageX - $('.landing3__link1').offset().left;
+      let y = e.pageY - $('.landing3__link1').offset().top;
+       $(".cursor__1").css("top",y)
+       $(".cursor__1").css("left",x)
     })
-      })
+
+    $(".landing3__link2").mousemove((e)=>{
+      let x = e.pageX - $('.landing3__link2').offset().left;
+      let y = e.pageY - $('.landing3__link2').offset().top;
+       $(".cursor__2").css("top",y)
+       $(".cursor__2").css("left",x)
+    })
+
+    $(".landing3__link3").mousemove((e)=>{
+      let x = e.pageX - $('.landing3__link3').offset().left;
+      let y = e.pageY - $('.landing3__link3').offset().top;
+       $(".cursor__3").css("top",y)
+       $(".cursor__3").css("left",x)
+    })
+
+    $(".landing3__link").mouseleave((e)=>{
+       $(".cursor").css("top","-20rem")
+       $(".cursor").css("left","-20rem")
+    })
+
+    Aos.init({
+      duration: 1000,
+      delay: 100
+    });
+
+    this.mobileNumberInterval();
 
 
-       let scene = new ScrollMagic.Scene({
-         triggerElement: '.landing3',
-         duration: '100%',
-         triggerHook: 0,
-         offset: '0'
+
+    if(!this.props.isMobile()){
+    let controller = new ScrollMagic.Controller();
+     let timeline = gsap.timeline()
+
+    timeline
+    .to('.landing3__wrapper', 1000, {
+      left: "-200%",
+      ease: Power3.linear
      })
-     .setTween(timeline)
-     .setPin('.landing3')
-     .addTo(controller);
-   }
+     .to('.landing2__motion_mode--rev', 1000, {
+       x: -50,
+       ease: Power3.linear
+     },"-=1000")
+     .to('.landing2__motion_bar--rev', 1000, {
+       x: -50,
+       ease: Power3.linear
+     },"-=1000")
+     .to(".globe", 600,
+      {css:{scaleX:60, scaleY:60, zIndex:100},
+      ease: Power3.linear})
+
+
+     let scene = new ScrollMagic.Scene({
+       triggerElement: '.landing3',
+       duration: '100%',
+       triggerHook: 0,
+       offset: '0'
+   })
+   .setTween(timeline)
+   .setPin('.landing3')
+   .addTo(controller);
+ }
 
 }
+
 
 
     render(){
