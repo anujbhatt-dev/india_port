@@ -108,13 +108,13 @@
       }
       display: flex;justify-content: flex-start;align-items: center;margin-bottom: 2rem;
       @include respond(tab-land){
-        margin-bottom: -5rem;
+        margin-bottom: -9rem;
          justify-content: space-around;
       }
       &--mod{
         margin-left: 10rem;
         @include respond(tab-land){
-          margin-bottom: -2rem;
+          margin-bottom: -9rem;
           margin-left: 3rem;
           justify-content: space-between;
           // justify-content:center;
@@ -188,7 +188,7 @@
     margin: 8rem 15rem;
     @include respond(tab-land){
        margin: 5rem;
-       height: 65rem;
+       height: 70rem;
        &--duty{
          height: 100rem;
        }
@@ -538,7 +538,7 @@
       width: 20rem;
       font-size: 3.5rem;
     }
-    & input{
+    & input, select{
       width: 20rem;
       margin-top: 2rem;
       padding: 1.5rem;
