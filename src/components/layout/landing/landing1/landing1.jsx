@@ -47,7 +47,7 @@ class Landing1 extends Component{
 
       return (
          <div className="landing1">
-             <div className="landing1__1">Easy Freight Forwarding</div>
+             <div className="landing1__1">Digital Freight Forwarder</div>
              {/* <div className="landing1__2">
                 <span>F</span>
                 <span>R</span>
@@ -73,7 +73,7 @@ class Landing1 extends Component{
             }
 
              </div>
-             <div className="landing1__4">Search your best quotes</div>
+             <div className="landing1__4">Bridging every piece of the global logistic puzzle</div>
              <div className="landing1__5">
                 <div className="landing1__5_r1">
                     <div onClick={()=>this.mediumHandler("sea")} className={this.state.medium==="sea"?"landing1__5_r1-item landing1__5_r1-item--1  landing1__5_r1-item--selected":"landing1__5_r1-item landing1__5_r1-item--1"}>
