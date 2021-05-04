@@ -10,6 +10,7 @@
      width: 25rem;
      background: #f7f7f7;
      border-left: 1rem solid $color-black;
+
      z-index: 20;
    }
    &__over2{
@@ -70,7 +71,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10rem;
-    background: $color-white;
+    // background: $color-white;
     // border: 1rem solid $color-black;
     // border-top: 1rem solid $color-black;
     // border-bottom: 1rem solid $color-black;
