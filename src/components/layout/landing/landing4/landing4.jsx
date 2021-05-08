@@ -55,6 +55,7 @@ class Landing4 extends Component{
 
        let onscrollFunc=()=>{
 
+        
         if(this.level===1){
         
          if(this.getScrollDirection()===1){
@@ -63,7 +64,7 @@ class Landing4 extends Component{
               let timeline1=gsap.timeline();
               timeline1
               .to(".landing4__hole", 0.7,
-             {css:{scaleX:75, scaleY:75},
+             {css:{scaleX:this.props.isMobile()?200:100, scaleY:this.props.isMobile()?200:100},
              ease: Power3.linear})
              .eventCallback("onComplete", ()=>{
                this.level=2;
@@ -82,6 +83,7 @@ class Landing4 extends Component{
      .to('.landing4__smallShip', 2, {
        y: "300%",
        x: "-50%",
+       zIndex:"1000",
        ease: Power3.linear
       })
       .to('.landing4__yellowPlane', 2, {
@@ -145,17 +147,17 @@ class Landing4 extends Component{
 
       //scroll 3
       .to('.landing4__smallShip', 2, {
-       y: "450%",
-       x: "100%",
+       y: this.props.isMobile()?"400%":"450%",
+       x: this.props.isMobile()?"90%":"100%",
        ease: Power3.linear
       })
       .to('.landing4__yellowPlane', 2, {
-       y:"150%",
-       x: "-400%",
+       y:this.props.isMobile()?"100%":"150%",
+       x: this.props.isMobile()?"-300%":"-400%",
        ease: Power3.linear
      }, "=-2")
       .to('.landing4__smallTruck', 2, {
-       y: "-300%",
+       y: this.props.isMobile()?"-130":"-300%",
        x: "200%",
        ease: Power3.linear
      }, "=-2")
@@ -184,7 +186,7 @@ class Landing4 extends Component{
            
            timeline1
            .to(".landing4__hole", 0.7,
-       {css:{scaleX:6, scaleY:6},
+       {css:{scaleX:this.props.isMobile()?10:3, scaleY:this.props.isMobile()?10:3},
        ease: Power3.linear},
         ).eventCallback("onComplete",()=>{
           this.level=4;
@@ -214,7 +216,7 @@ class Landing4 extends Component{
 
     componentDidMount=()=>{
 
-      if(!this.props.isMobile()){
+      if(true){
         let controller = new ScrollMagic.Controller();
          let timeline = gsap.timeline()
 
@@ -235,6 +237,7 @@ class Landing4 extends Component{
           .to('.landing4__smallShip', 0.1, {
             y:"0%",
             x:"0%",
+            zIndex:"0",
           ease: Power3.linear
          }, )
          .to('.landing4__yellowPlane', 0.1, {
@@ -264,6 +267,10 @@ class Landing4 extends Component{
           opacity:0,
          ease: Power3.linear
          }, )
+         .to('.landing4__text_primary', 0.1, {
+          opacity: 1,
+          ease: Power3.linear
+        }, "=-2") 
         
          .eventCallback("onComplete", ()=>{this.level=1; })
 
@@ -380,45 +387,117 @@ class Landing4 extends Component{
 
       }else{
 
+
+        //same as desktop
+
         let controller = new ScrollMagic.Controller();
         let timeline = gsap.timeline()
 
        timeline
-       .to('.c1', 50, {
-
-        y: "-300%",
-        ease: Power3.linear
-      },)
-       .fromTo('.c2', 50, {
-
-        y: "200%",
-        ease: Power3.linear
-       }, {
-
-        y: "-200%",
-        opacity:1,
-        ease: Power3.linear
-      }, "=-50")
-       .fromTo('.c3', 50, {
-
-        y: "400%",
-        ease: Power3.linear
-       },{
-         y:"-100%",
-         opacity:1,
-       }, "=-50")
-
-
- let scene = new ScrollMagic.Scene({
-           triggerElement: '#landing4',
-           duration: '100%',
-           triggerHook: 0,
-           offset: '0'
+       .to(".ship", 2,
+       {
+         x:10,
        })
-       .setTween(timeline)
-      //  .setTween(TweenMax.
-       .setPin('#landing4')
-       .addTo(controller);
+       .eventCallback("onStart",this.animationFunc)
+       .eventCallback("onReverseComplete", ()=>{
+          
+         let timeline1=gsap.timeline();
+         timeline1
+         .to(".landing4__hole", 0.1,
+         {css:{scaleX:1, scaleY:1},
+         ease: Power3.linear},
+          )
+         .to('.landing4__smallShip', 0.1, {
+           y:"0%",
+           x:"0%",
+         ease: Power3.linear
+        }, )
+        .to('.landing4__yellowPlane', 0.1, {
+         y:"0%",
+         x:"0%",
+         ease: Power3.linear
+       }, )
+        .to('.landing4__smallTruck', 0.1, {
+         y:"0%",
+         x:"0%",
+        ease: Power3.linear
+       }, )
+        .to('.c1', 0.1, {
+         y:"0%",
+         x:"0%",
+        ease: Power3.linear
+       }, )
+        .to('.c2', 0.1, {
+         y:"0%",
+         x:"0%",
+         opacity:0,
+        ease: Power3.linear
+        },)
+        .to('.c3', 0.1, {
+         y:"0%",
+         x:"0%",
+         opacity:0,
+        ease: Power3.linear
+        }, )
+       
+        .eventCallback("onComplete", ()=>{this.level=1; })
+
+
+
+       })
+
+
+        let scene = new ScrollMagic.Scene({
+          triggerElement: '#landing4',
+          duration: '100%',
+          triggerHook: 0,
+          offset: '0'
+      })
+      .setTween(timeline)
+     //  .setTween(TweenMax.
+      .setPin('#landing4')
+      .addTo(controller);
+
+        //different
+//         let controller = new ScrollMagic.Controller();
+//         let timeline = gsap.timeline()
+
+//        timeline
+//        .to('.c1', 50, {
+
+//         y: "-300%",
+//         ease: Power3.linear
+//       },)
+//        .fromTo('.c2', 50, {
+
+//         y: "200%",
+//         ease: Power3.linear
+//        }, {
+
+//         y: "-200%",
+//         opacity:1,
+//         ease: Power3.linear
+//       }, "=-50")
+//        .fromTo('.c3', 50, {
+
+//         y: "400%",
+//         ease: Power3.linear
+//        },{
+//          y:"-100%",
+//          opacity:1,
+//        }, "=-50")
+
+
+//  let scene = new ScrollMagic.Scene({
+//            triggerElement: '#landing4',
+//            duration: '100%',
+//            triggerHook: 0,
+//            offset: '0'
+//        })
+//        .setTween(timeline)
+//       //  .setTween(TweenMax.
+//        .setPin('#landing4')
+//        .addTo(controller);
 
       }
 
@@ -427,7 +506,10 @@ class Landing4 extends Component{
 
       return (
          <div  id="landing4" className="landing4">
-             {this.props.isMobile()?null:<img className="landing4__hole" src={hole} alt=""/>}
+             {/* {this.props.isMobile()?null: */}
+             
+             <img className="landing4__hole" src={hole} alt=""/>
+             {/* } */}
              <div className="landing4__text">
                <div className="landing4__text_primary">indiaport is a goal is to improve</div>
                <div style={{overflow:"hidden"}}>
@@ -437,7 +519,7 @@ class Landing4 extends Component{
                </div>
              </div>
                 <img className="landing4__circle" src={circle} alt=""/>
-                <img className="landing4__smallShip" src={smallShip} alt=""/>
+                <img className="landing4__smallShip"  src={smallShip} alt=""/>
                 <img className="landing4__smallShip ship" style={{opacity:0}}  src={smallShip} alt=""/>
                 <img className="landing4__smallTruck" src={smallTruck} alt=""/>
                 <img className="landing4__yellowPlane" src={yellowPlane} alt=""/>
