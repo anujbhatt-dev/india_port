@@ -129,7 +129,7 @@ class Layout extends Component{
     isMobile(){
         let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         let width= Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-        console.log(width);
+        // console.log(width);
         return (isMobile || (width<=1025))?true:false;
     }
 
