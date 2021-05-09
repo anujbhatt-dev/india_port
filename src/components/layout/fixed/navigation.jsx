@@ -12,7 +12,7 @@ class Navigation extends Component{
                <div className="navigation__brandLogo">
                     <NavLink to="/"><img src={logo} alt=""/></NavLink>
                </div>
-               <div className="navigation__items">
+               <div style={{display:"none"}} className="navigation__items">
                    <NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/" className="navigation__items_item navigation__items_item">Home</NavLink>
                    {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/diary">Diary</a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/diary" className="navigation__items_item navigation__items_item">Diary</NavLink>}
                    {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/CbmCalc">CBM</a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/CbmCalc" className="navigation__items_item navigation__items_item">CBM</NavLink>}

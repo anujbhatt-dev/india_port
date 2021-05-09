@@ -179,9 +179,9 @@ class CbmCalc extends Component{
                       {[1,2,3,4,5].map(id=>
                       <tr>
                          <td className="cbmBack__table-sr" style={{position:"relative"}}  ><p className="cbmCalc__p">{this.state.valids[id]?<p>{id}<i onClick={this.state.valids[id]?()=>{this.invalidate(id)}:null}  style={{position:"absolute",top:"-0.5rem",right:"-0.5rem",color:"black",fontSize:"2rem",cursor:"pointer"}} className="fa fa-times" aria-hidden="true"></i></p>:<i className="fa fa-plus" aria-hidden="true"></i>}</p></td>
-                         <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].len?this.state.data[id].len:null} placeholder="len" name="len" type="number"/></td>
-                         <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].wid?this.state.data[id].wid:null} placeholder="wid" name="wid" type="number"/></td>
-                         <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="hei" name="hei" type="number"/></td>
+                         <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].len?this.state.data[id].len:null} placeholder="-" name="len" type="number"/></td>
+                         <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].wid?this.state.data[id].wid:null} placeholder="-" name="wid" type="number"/></td>
+                         <td  className="cbmBack__table-input"><input onChange={(e)=>this.onChange(id,e)}  value={this.state.data[id]&&this.state.data[id].hei?this.state.data[id].hei:null} placeholder="-" name="hei" type="number"/></td>
 
                          <td className="cbmBack__table-input">
                             <select className="invoice__box_flex-input" onChange={(e)=>this.onChange(id,e)} name="uni"  id="">

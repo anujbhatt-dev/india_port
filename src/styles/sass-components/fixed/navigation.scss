@@ -1,16 +1,17 @@
 .navigation{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items:center;
-  padding: 0 15rem;
+  padding: 1rem 5rem;
   width: 100vw;
   top: 0;
-  z-index: 100000;
-  background: #F7F7F7;
+  // z-index: 100000;
+  // background: #F7F7F7;
   position: relative;
   &__brandLogo{
-    position: absolute;
-    left: 3rem;
+    // position: absolute;
+    // left: 3rem;
+
     & img{
       height: 4rem;
     }
@@ -74,8 +75,9 @@
     position: fixed;
     font-size: 3rem;
     top: 3rem;
-    left: 3rem;
+    right: 3rem;
     z-index: 100001;
+    cursor: pointer;
   }
 
   &__items{
@@ -91,16 +93,16 @@
 }
 .openNav{
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   z-index: 100000;
   height: 100vh;
   animation: openNav .5s linear;
-  width: 80vw;
+  width: 30rem;
   display: flex;
   flex-flow: column;
   padding-right: 10rem;
-  padding-top: 10rem;
+  // padding-top: 10rem;
   padding-left: 2rem;
   overflow-y: auto;
   box-shadow: 5rem 0 5rem -2rem  rgba($color-black,.5);

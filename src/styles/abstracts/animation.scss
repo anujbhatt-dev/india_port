@@ -48,21 +48,21 @@
 @keyframes closeNav {
   0%{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    width: 80vw;
+    width: 30rem;
   }
   // 25%{
   //   clip-path: polygon(0 0, 16% 0, 39% 100%, 0 100%);
   // }
   50%{
     clip-path: polygon(0 0, 16% 0, 72% 100%, 0 100%);
-    width: 80vw;
+    width: 30rem;
   }
   // 75%{
   //   clip-path: polygon(0 0, 54% 0, 89% 100%, 0 100%);
   // }
   100%{
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    width: 80vw;
+    width: 30rem;
   }
 }
 

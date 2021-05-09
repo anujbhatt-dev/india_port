@@ -143,7 +143,8 @@ class Layout extends Component{
           <div className="layout">
               {this.state.loading?<Loader/>:null}
               {this.state.promotion?<div className="install" onClick={this.install}> <img src={download} alt=""/> <span>Install</span></div>:null}
-              {this.state.mobile?<NavigationMob/>:<Navigation/>}
+              <NavigationMob/>
+              <Navigation/>
               <GoToTop/>
               <Switch>
                    <Route path='/' exact>

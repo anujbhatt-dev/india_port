@@ -28,7 +28,6 @@ import {NavLink} from "react-router-dom"
                     <NavLink onClick={this.toggleHandler} activeStyle={{color:"white",background:"#FFBF29"}} exact to="/diary" className="navigation__items_item navigation__items_item">Diary</NavLink>
                     <NavLink onClick={this.toggleHandler} activeStyle={{color:"white",background:"#FFBF29"}} exact to="/CbmCalc" className="navigation__items_item navigation__items_item">CBM</NavLink>
                     <NavLink onClick={this.toggleHandler} activeStyle={{color:"white",background:"#FFBF29"}} exact to="/invoice" className="navigation__items_item navigation__items_item">Invoice</NavLink>
-                    <NavLink onClick={this.toggleHandler} activeStyle={{color:"white",background:"#FFBF29"}} exact to="/services" className="navigation__items_item navigation__items_item">Services</NavLink>
                     <NavLink onClick={this.toggleHandler} activeStyle={{color:"white",background:"#FFBF29"}} exact to="/about" className="navigation__items_item navigation__items_item">About</NavLink>
                     <NavLink onClick={this.toggleHandler} activeStyle={{color:"white",background:"#FFBF29"}} exact to="/contact" className="navigation__items_item navigation__items_item">Contact</NavLink>
                     <NavLink onClick={this.toggleHandler} activeStyle={{color:"white",background:"#FFBF29"}} exact to="/exim" className="navigation__items_item navigation__items_item">Exim</NavLink>
