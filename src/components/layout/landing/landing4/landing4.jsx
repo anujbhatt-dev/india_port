@@ -200,6 +200,7 @@ class Landing4 extends Component{
        }else if(this.level===4){
          if(this.getScrollDirection()===1){
            window.removeEventListener("wheel", onscrollFunc);
+           window.removeEventListener("scroll",onscrollFunc);
            window.removeEventListener("wheel", stopScroll);
           window.addEventListener("wheel",(e)=>{
              e.preventDefault();
@@ -211,6 +212,7 @@ class Landing4 extends Component{
        }
        }
     window.addEventListener("wheel",onscrollFunc);
+    if(this.props.isMobile())window.addEventListener("scroll",onscrollFunc);
 
      }
 
@@ -227,7 +229,10 @@ class Landing4 extends Component{
         })
         .eventCallback("onStart",this.animationFunc)
         .eventCallback("onReverseComplete", ()=>{
-           
+          
+          if(this.props.isMobile())
+           return ;
+
           let timeline1=gsap.timeline();
           timeline1
           .to(".landing4__hole", 0.1,
