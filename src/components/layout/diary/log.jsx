@@ -23,14 +23,15 @@ class Log extends Component {
           })
 
 
+          let id=this.props.match.params.id+"";
 
-       let blogId=this.props.match.params.blogId;
-       let postId=this.props.match.params.postId;
+       let blogId=id.substring(0,id.indexOf('_'));
+       let postId=id.substring(id.indexOf('_')+1);
        let BLOGGER_POST_API=`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts/${postId}?key=${this.GOOGLE_APP_KEY}`;
 
        axios.get(BLOGGER_POST_API)
        .then(res=>this.setState({content:res.data}))
-       .catch(err=>alert("somethin went wrong -> Log.jsx"))
+       .catch(err=>alert("somethin went wrong reload the page."))
 
 
     }

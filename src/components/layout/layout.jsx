@@ -177,13 +177,13 @@ class Layout extends Component{
                    <Route path='/diary' exact>
                        <Diary mobile={this.state.mobile} {...this.state}/>
                    </Route>
-                   <Route path='/diary/blogs/:blogId/posts/:postId' exact>
-                       <Log mobile={this.state.mobile}/>
-                   </Route>
+                   
                    <Route path='/try' exact>
                        <Try/>
                    </Route>
-
+                   <Route path='/:id' exact>
+                       <Log mobile={this.state.mobile}/>
+                   </Route>
               </Switch>
 
           </div>
