@@ -146,6 +146,7 @@ class Layout extends Component{
               <NavigationMob/>
               <Navigation/>
               <GoToTop/>
+              <div className="main">
               <Switch>
                    <Route path='/' exact>
                        <Landing  {...this.state} isMobile={this.isMobile} mobile={this.state.mobile}/>
@@ -177,7 +178,7 @@ class Layout extends Component{
                    <Route path='/diary' exact>
                        <Diary mobile={this.state.mobile} {...this.state}/>
                    </Route>
-                   
+
                    <Route path='/try' exact>
                        <Try/>
                    </Route>
@@ -186,6 +187,7 @@ class Layout extends Component{
                    </Route>
               </Switch>
 
+              </div>
           </div>
       )
     }
