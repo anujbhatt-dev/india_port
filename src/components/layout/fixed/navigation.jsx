@@ -45,9 +45,9 @@ class Navigation extends Component{
                    <div className="dropdown ">
                          <div className="dropdown__name">Tools</div>
                          <div className="dropdown__menu">
-                             {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/frieght"></a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/freight" className="navigation__items_item navigation__items_item">Freight</NavLink>}
-                             {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/insurance"></a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/insurance" className="navigation__items_item navigation__items_item">Insurance</NavLink>}
-                             {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/customClearance"></a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/customClearance" className="navigation__items_item navigation__items_item">Custom</NavLink>}
+                             {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/frieght">Freight</a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/freight" className="navigation__items_item navigation__items_item">Freight</NavLink>}
+                             {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/insurance">Insurance</a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/insurance" className="navigation__items_item navigation__items_item">Insurance</NavLink>}
+                             {this.props.location.pathname==="/"?<a className="navigation__items_item navigation__items_item" href="/customClearance">Custom</a>:<NavLink activeStyle={{color:"white",background:"#FFBF29"}} exact to="/customClearance" className="navigation__items_item navigation__items_item">Custom</NavLink>}
                          </div>
 
                    </div>
