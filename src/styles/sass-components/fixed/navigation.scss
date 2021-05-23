@@ -122,15 +122,20 @@
   width: 30rem;
   display: flex;
   flex-flow: column;
-  padding-right: 10rem;
-  padding-top: 10rem;
+  justify-content: space-between;
+  padding-right: 2rem;
+  padding-top: 2rem;
   padding-left: 2rem;
   overflow-y: auto;
   box-shadow: 5rem 0 5rem -2rem  rgba($color-black,.5);
   & a{
     margin-bottom: 2rem;
     display: flex;
-    font-size: 1.6rem;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: $color-india-dark-grey;
+    border-bottom:  1px solid $color-india-grey;
+    border-radius: 0;
   }
 }
 .closeNav{
