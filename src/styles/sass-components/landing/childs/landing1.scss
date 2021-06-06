@@ -94,7 +94,7 @@
     width: calc(100% + 10rem);
     // margin-left: -10rem;
     @include respond(tab-port){
-
+        width: calc(100%);
     }
     &_r1{
        display: flex;
