@@ -164,6 +164,7 @@ class Landing4 extends Component {
                 y: this.props.isMobile() ? "100%" : "150%",
                 x: this.props.isMobile() ? "-300%" : "-400%",
                 ease: Power3.linear,
+                opacity:this.props.isMobile()?0:1
               },
               "=-2",
             )
@@ -174,6 +175,7 @@ class Landing4 extends Component {
                 y: this.props.isMobile() ? "-130" : "-300%",
                 x: "200%",
                 ease: Power3.linear,
+                opacity:this.props.isMobile()?0:1
               },
               "=-2",
             )
@@ -211,6 +213,12 @@ class Landing4 extends Component {
               },
               ease: Power3.linear,
             })
+            .to(".landing4__smallTruck", 0.7, {
+              opacity:0,
+            }, "=-0.7")
+            .to(".landing4__yellowPlane", 0.7, {
+              opacity:0
+            }, "=-0.7")
             .eventCallback("onComplete", () => {
               this.level = 4;
             });
@@ -236,25 +244,31 @@ class Landing4 extends Component {
   animationAfterCoveredOnce = (flag) => {
     let timeline1 = gsap.timeline();
 
-    timeline1.to(".landing4__hole", 0.7, {
+    timeline1
+    .to(".landing4__smallShip", 0.7,{
+      css:{
+        scale:flag===1?this.props.isMobile()?'4':'5':'1'
+      }
+    }).to(".landing4__hole", 0.7, {
       css: {
         scaleX: this.props.isMobile()
-          ? flag == 1
+          ? flag === 1
             ? 200
             : 10
-          : flag == 1
+          : flag === 1
           ? 100
           : 3,
         scaleY: this.props.isMobile()
-          ? flag == 1
+          ? flag === 1
             ? 200
             : 10
-          : flag == 1
+          : flag === 1
           ? 100
           : 3,
       },
       ease: Power3.linear,
-    });
+    }, "=-0.7")
+   ;
   };
 
   componentDidMount = () => {
