@@ -48,10 +48,12 @@
         justify-content: center;
         align-items:center;
         margin: auto;
+        margin: 1rem 0;
+        padding: 0rem .5rem;
         & img{
           margin: auto;
-          width: 80vw;
-          height: 50vh;
+          width: 100vw;
+          height: 20vh;
           object-fit: cover;
           border-radius: 18px;
         }

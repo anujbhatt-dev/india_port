@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
 .navigation{
   display: flex;
   justify-content: space-between;
@@ -28,6 +30,8 @@
     // left: 3rem;
     background: $color-india-yellow;
     @include respond(tab-port){
+       display: flex;
+       justify-content: center;
        margin-bottom: 2rem;
 
     }
@@ -40,14 +44,24 @@
     display: flex;
     justify-content: space-between;
     align-items:center;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     transition: all .5s;
+    text-align: center;
     &_item{
-       margin: 1rem 1rem;
-       padding:1rem 2rem;
+      font-weight: bold;
+      width:12rem;
+      font-family: "Montserrat" ,serif;
+       margin: 1rem 2rem;
+       padding:1rem 1rem;
        text-decoration: none;
        color: black;
+       color: $color-india-grey;
        border-radius: 0px;
+       @include respond(tab-land){
+         width: 100%;
+         margin: 1rem 0rem;
+         padding:1rem 0rem;
+       }
     }
   }
 }
@@ -56,8 +70,13 @@
   position: relative;
   margin: 1rem 1rem;
   padding:1rem 2rem;
-  width: 10rem;
+  width: 12rem;
   text-align:center;
+  &__name{
+    color:$color-india-grey;
+    font-weight:bold;
+    font-family: "Montserrat",serif;
+  }
   &__menu{
     background: $color-white;
     transition: all .5s;
@@ -77,6 +96,10 @@
       border: 1px solid rgba($color-grey-light,.5);
       border-radius: 0;
       color: $color-black;
+      color:$color-india-grey;
+      font-weight:bold;
+      font-family: "Montserrat",serif;
+      font-size: 1.5rem;
       &:hover{
         background:  rgba($color-grey-light,.1);
         transition: all .3s;
@@ -110,6 +133,8 @@
     background: $color-white;
     // background: tomato;
     position: fixed;
+    font-family: "Montserrat",serif;
+    font-weight: bold;
     left: 0;
     top: 0;
     z-index: 100000;
@@ -126,7 +151,8 @@
   width: 30rem;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-around;
+
   padding-right: 2rem;
   // padding-top: 8rem;
   // padding-bottom: 8rem;
@@ -139,8 +165,8 @@
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
-    color: $color-india-dark-grey;
-    border-bottom:  1px solid $color-india-grey;
+    color: $color-india-grey;
+    border-bottom:  1px dashed $color-india-grey;
     border-radius: 0;
   }
 }

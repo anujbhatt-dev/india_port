@@ -37,10 +37,10 @@ class Landing5 extends Component {
           }
         >
           <div className="landing5__box_imgWrap">
-            <img src={this.props.mobile ? pinkMob : pink} alt="" />
+            <img src={this.props.mobile ? pink : pink} alt="" />
           </div>
           <div className="landing5__box_imgWrap">
-            <img src={this.props.mobile ? blueMob : blue} alt="" />
+            <img src={this.props.mobile ? blue : blue} alt="" />
           </div>
         </div>
         <img
@@ -55,7 +55,7 @@ class Landing5 extends Component {
         />
         {this.props.mobile
           ? [
-              <div className="landing5__main">
+              <div style={{display:"none"}}  className="landing5__main">
                 <h1>EXIM</h1>
                 <h2>FREIGHT Booking</h2>
               </div>,

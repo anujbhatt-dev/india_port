@@ -39,7 +39,7 @@
      }
   }
   &__flex{
-    margin: 10rem 35rem;
+    margin: 10rem 25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,6 +223,7 @@
     margin: 5rem auto;
     max-width: 70rem;
     @include respond(phone){
+      margin: 1rem;
       font-size: 2rem;
       padding: 1rem;
       width: calc(100vw - 2rem);
