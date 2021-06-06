@@ -5,14 +5,12 @@ class Landing7 extends Component {
   render() {
     return (
       <div className="landing7">
-        <div className="landing7__heading">
-          DIARY
-          <br />
-          <h6>Daily dose of Export-Import A Click Away</h6>
-          <br />
-          Join Indiaport to get daily updates of the latest, important changes
-          and development in the export-import world in clear English. Just
-          under 5 minutes read.
+        <div className="landing7__content">
+              <div className="landing7__content_title landing6__heading">DIARY</div>
+              <div className="landing7__content_sub">Daily dose of Export-Import A Click Away</div>
+              <div className="landing7__content_sub2">Join Indiaport to get daily updates of the latest, important changes
+              and development in the export-import world in clear English. Just
+              under 5 minutes read.</div>
         </div>
 
         <div className="marquee">

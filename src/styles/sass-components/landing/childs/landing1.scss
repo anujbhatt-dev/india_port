@@ -91,6 +91,8 @@
     margin-bottom: 5rem;
     animation: reach .5s linear;
     position: relative;
+    width: calc(100% + 10rem);
+    // margin-left: -10rem;
     @include respond(tab-port){
 
     }
@@ -224,7 +226,7 @@
            display: flex;
            justify-content: flex-start;
            align-items:center;
-           padding-left: 1rem;
+           padding-left: .5rem;
            @include respond(tab-land){
 
            }
@@ -238,7 +240,7 @@
            color: $color-india-fontLight;
            border: none;
            font-size: 2rem;
-           width: 18rem;
+           width: 22rem;
          }
          & svg{
            height: 3rem;
@@ -272,7 +274,7 @@
        background: $color-india-font;
        background: $color-white;
        box-shadow: 0 0 3rem rgba($color-black,.5);
-       padding: 3rem 5rem;
+       padding: 1rem 1rem;
        z-index: 0;
     }
     &_btn{
@@ -330,6 +332,7 @@
     position: relative;
     width: 80vw;
     height: 55vh;
+    margin-bottom: 5rem;
     @include respond(tab-land){
        width: 100%;
        height: 38vh;

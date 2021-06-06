@@ -91,6 +91,10 @@ class About extends Component {
               <div>India</div>
               <div>Port</div>
             </div>
+            <div className="about__1_smallGrey">
+            IndiaPort is a Digital Freight Forwarding company closely working with shipping lines and custom brokers to provide you with trouble-free trading.
+            We at IndiaPort are committed to making it easier for the traders to book transport, manage the shipment and solve problems in an organized and quick way.
+            </div>
             <div className="about__1_whiteSmall">
               <strong>IndiaPort</strong> Services
             </div>
@@ -101,31 +105,31 @@ class About extends Component {
           <div className="about__2_box">
             <div className="about__2_box-blur about__2_box-blur--mod">.</div>
             <div className="about__2_box-count">1</div>
-            <div className="about__2_box-ser">custom housing agent</div>
+            <div className="about__2_box-ser">Custom Clearance</div>
           </div>
 
           <div className="about__2_box">
             <div className="about__2_box-blur about__2_box-blur--mod">.</div>
             <div className="about__2_box-count">2</div>
-            <div className="about__2_box-ser">custom housing agent</div>
+            <div className="about__2_box-ser">Digital Freight forwarding</div>
           </div>
 
           <div className="about__2_box">
             <div className="about__2_box-blur about__2_box-blur--mod">.</div>
             <div className="about__2_box-count">3</div>
-            <div className="about__2_box-ser">custom housing agent</div>
+            <div className="about__2_box-ser">Insurancet</div>
           </div>
 
           <div className="about__2_box">
             <div className="about__2_box-blur about__2_box-blur--mod">.</div>
             <div className="about__2_box-count">4</div>
-            <div className="about__2_box-ser">custom housing agent</div>
+            <div className="about__2_box-ser">Export- Import Training</div>
           </div>
 
           <div className="about__2_box">
             <div className="about__2_box-blur about__2_box-blur--mod">.</div>
             <div className="about__2_box-count">5</div>
-            <div className="about__2_box-ser">custom housing agent</div>
+            <div className="about__2_box-ser">Legal Services</div>
           </div>
         </div>
 

@@ -249,7 +249,7 @@ class CbmCalc extends Component{
                   <img src={s1} alt=""/>
                   <div className="invoice__flex_text">
                        <div className="cbmCalc__black invoice__flex_text-1">Step 1</div>
-                       <div className="cbmCalc__black invoice__flex_text-2"> Note the measure of <br/> your product in terms of; <br/> length, width and height.</div>
+                       <div className="cbmCalc__black invoice__flex_text-2"> Note the measure of your product in terms of length, width and height.</div>
                    </div>
              </div>
 

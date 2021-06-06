@@ -26,7 +26,7 @@
   &__brandLogo{
     // position: absolute;
     // left: 3rem;
-
+    background: $color-india-yellow;
     & img{
       height: 4rem;
     }
@@ -43,7 +43,7 @@
        padding:1rem 2rem;
        text-decoration: none;
        color: black;
-       border-radius: 14px;
+       border-radius: 0px;
     }
   }
 }

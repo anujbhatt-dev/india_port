@@ -158,8 +158,8 @@
   }
   &__black{
     color: $color-white;
+    color: $color-india-font;
     @include respond(tab-land){
-       color: $color-black;
     }
   }
   &__mob{

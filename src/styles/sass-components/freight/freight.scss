@@ -45,7 +45,9 @@
     align-items: center;
     position: relative;
     height: 50vh;
-
+    &--mod{
+      justify-content: center;
+    }
 
     @include respond(phone){
           text-align: center;
@@ -218,7 +220,8 @@
     color: $color-india-font;
     font-size: 3rem;
     font-weight: 400;
-    margin: 5rem 0;
+    margin: 5rem auto;
+    max-width: 70rem;
     @include respond(phone){
       font-size: 2rem;
       padding: 1rem;

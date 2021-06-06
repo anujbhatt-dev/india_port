@@ -1,8 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 &7{
   // background: rgba($color-grey-dark-2,.2);
   position: relative;
   // height: 80vh;
   overflow: hidden;
+  &__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &_title{
+      padding-top: 5rem;
+    //    font-size: 3rem;
+    //    font-weight: bold;
+    //    text-align: center;
+    }
+    &_sub{
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    &_sub2{
+      font-size: 1.5rem;
+      font-weight: lighter;
+      text-align: center;
+      max-width: 70rem;
+      margin-bottom: 5rem;
+      font-style: italic;
+      font-family: 'Cedarville Cursive', cursive;
+    }
+  }
   &__btn{
     cursor: pointer;
     padding: .2rem 2rem;
