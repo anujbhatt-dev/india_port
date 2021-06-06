@@ -100,7 +100,7 @@ class Landing1 extends Component{
 
             <div className="landing1__5_r2-bWrap">
                 <div className="landing1__5_r2-b1 landing1__5_r2-b1--flex">
-                     <input className="landing1__5_r2-b1-date" type="date"/>
+                     <input className="landing1__5_r2-b1-date" placeholder="date" type="date"/>
                      <svg xmlns="http://www.w3.org/2000/svg" width="1" height="51" viewBox="0 0 1 51">
                       <line id="Line_70" data-name="Line 70" y2="51" transform="translate(0.5)" fill="none" stroke="#fff" stroke-width="1"/>
                      </svg>

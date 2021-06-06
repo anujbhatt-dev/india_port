@@ -8,6 +8,7 @@
 }
 
 .invoice{
+  overflow: hidden;
   animation: reach 1s linear;
   // width: 100vw;
   & #invoice__head{
