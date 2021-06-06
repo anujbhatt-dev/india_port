@@ -115,7 +115,7 @@ class Landing2 extends Component{
                         </h1>
                         <div className="landing2__mob_flex">
                              <img className={this.state.number===0?"slide_down":this.state.number===1?"slide_down1":"slide_down2"} src={this.state.number===0?mob1:this.state.number===1?mob2:mob1} alt=""/>
-                             <h2 className={this.state.number===0?"dissolve":this.state.number===1?"dissolve1":"dissolve2"}>{this.state.number===0?"Duty":this.state.number===1?"Invoice":"BGM"} Calculator</h2>
+                             <h2 className={this.state.number===0?"dissolve":this.state.number===1?"dissolve1":"dissolve2"}>{this.state.number===0?"Duty Calculator":this.state.number===1?"CBM Calculator":"Container Tracking"}</h2>
                         </div>
                         <div className="landing2__mob_toggler">
                              <div onClick={()=>this.numberHandler(0)} className={this.state.number===0?"landing2__mob_toggler-dot landing2__mob_toggler-dot--selected":"landing2__mob_toggler-dot"}>.</div>
@@ -128,15 +128,15 @@ class Landing2 extends Component{
                         <div className="landing2__firstWrapper_first">
                              <div className="landing2__firstWrapper_first-text landing2__firstWrapper_first-text--1">
                                  <div className="landing2__firstWrapper_first-text-head">Duty Calculator</div>
-                                 <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
+                                 <div className="landing2__firstWrapper_first-text-content">Export-Import duty calculation made easy! Add a few basic details and know duty rates accordingly.</div>
                              </div>
                              <div className="landing2__firstWrapper_first-text  landing2__firstWrapper_first-text--2 ">
-                                 <div className="landing2__firstWrapper_first-text-head">Invoice Calculator</div>
-                                 <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
+                                 <div className="landing2__firstWrapper_first-text-head">CBM Calculator</div>
+                                 <div className="landing2__firstWrapper_first-text-content">CBM or cubic meter helps to calculate freight volume to smooth international freight</div>
                              </div>
                              <div className="landing2__firstWrapper_first-text  landing2__firstWrapper_first-text--3  ">
-                                 <div className="landing2__firstWrapper_first-text-head">BGM Calculator</div>
-                                 <div className="landing2__firstWrapper_first-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magnam.</div>
+                                 <div className="landing2__firstWrapper_first-text-head">Container Tracking</div>
+                                 <div className="landing2__firstWrapper_first-text-content">Our service Shipment Management keeps you updated, making tracking of shipments easy.</div>
                              </div>
                         </div>
                     </div>

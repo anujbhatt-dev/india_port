@@ -249,16 +249,14 @@ class CbmCalc extends Component{
                   <img src={s1} alt=""/>
                   <div className="invoice__flex_text">
                        <div className="cbmCalc__black invoice__flex_text-1">Step 1</div>
-                       <div className="cbmCalc__black invoice__flex_text-2">Easy use<br/>of cbm<br/>calculator</div>
-                       <div className="cbmCalc__black invoice__flex_text-3">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
+                       <div className="cbmCalc__black invoice__flex_text-2"> Note the measure of <br/> your product in terms of; <br/> length, width and height.</div>
                    </div>
              </div>
 
              <div className="invoice__flex invoice__flex--rev">
                   <div className="invoice__flex_text invoice__flex_text--rev">
                        <div className="cbmCalc__black invoice__flex_text-1">Step 2</div>
-                       <div className="cbmCalc__black invoice__flex_text-2 invoice__flex_text-2--rev">Easy use<br/>of cbm<br/>calculator</div>
-                       <div className="cbmCalc__black invoice__flex_text-3 invoice__flex_text-3--rev">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
+                       <div className="cbmCalc__black invoice__flex_text-2 invoice__flex_text-2--rev">Fill up the measured <br/> details. IndiaPort’s CBM calculator can be <br/> used for measuring multiple products too. <br/> Don’t forget to check the units</div>
                   </div>
                   <img src={s1} alt=""/>
              </div>
@@ -267,8 +265,7 @@ class CbmCalc extends Component{
                   <img src={s1} alt=""/>
                   <div className="invoice__flex_text">
                        <div className="cbmCalc__black invoice__flex_text-1">Step 3</div>
-                       <div className="cbmCalc__black invoice__flex_text-2">Easy use<br/>of cbm<br/>calculator</div>
-                       <div className="cbmCalc__black invoice__flex_text-3">Lorem ipsum dolor sit amet,<br/>consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor<br/>invidunt ut labore et dolore magna aliquyam erat</div>
+                       <div className="cbmCalc__black invoice__flex_text-2">Get the total CBM <br/> estimated and make your <br/> freight calculation easy.</div>
                   </div>
              </div>
          </div>

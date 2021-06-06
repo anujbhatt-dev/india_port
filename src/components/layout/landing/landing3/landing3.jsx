@@ -136,8 +136,8 @@ class Landing3 extends Component{
                              <img className="landing3__link_img" src={cc} alt=""/>
                              <img className="landing3__link_img--abs landing3__link_img--truck" src={truck} alt=""/>
                              <div className="landing3__link_text">
-                                 <div className='landing3__link_text-title'>Customer<br/>Clearance</div>
-                                 <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                                 <div className='landing3__link_text-title'>Customs <br/>Clearance</div>
+                                 <div className="landing2__flex_text-content">We make your documents hassle-free and manage all your shipment activities from transport and booking to selecting a custom house agent, IndiaPort gets all documents in one form to lessen your load with its Multiple Custom Document services.</div>
                              </div>
                              <div className="cursor cursor__2">Explore</div>
                          </a>
@@ -146,8 +146,8 @@ class Landing3 extends Component{
                              <img className="landing3__link_img" src={insure} alt=""/>
                              <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={box2} alt=""/>
                              <div className="landing3__link_text">
-                                 <div className='landing3__link_text-title'>Insurance<br/>for Product</div>
-                                 <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                                 <div className='landing3__link_text-title'>Insurance<br/>for product</div>
+                                 <div className="landing2__flex_text-content">With IndiaPort, you can trade with confidence, without worrying about physical damage of product to the handling of goods at various stages</div>
                              </div>
                              <div className="cursor cursor__3">Explore</div>
                          </a>
@@ -156,8 +156,8 @@ class Landing3 extends Component{
                               <img className="landing3__link_img" src={freight} alt=""/>
                               <img data-aos="fade-down" data-aos-easing="ease-in" className="landing3__link_img--abs" src={cargo} alt=""/>
                               <div className="landing3__link_text">
-                                  <div className='landing3__link_text-title'>Freight Forwarding</div>
-                                  <div className="landing2__flex_text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptatum.</div>
+                                  <div className='landing3__link_text-title'>Digital Freight <br/> Forwarder</div>
+                                  <div className="landing2__flex_text-content">IndiaPort is a technology company closely working with shipping lines and custom brokers to provide you with trouble-free trading. Making sure your hours of work is done in a minute and you save time and avoid unnecessary fees 🙅🏻‍♀️</div>
                               </div>
                               <div className="cursor cursor__1">Explore</div>
                          </a>
@@ -213,17 +213,17 @@ class Landing3 extends Component{
                   <div className="landing3__mob_main-name">
                     {
                       this.state.mobileNumber===0?
-                      <div className="moverev1">Custom<br/>
+                      <div className="moverev1">Customs <br/>
                       Clearance
                       </div>
                       :
                       this.state.mobileNumber===1?
-                        <div  className="moverev2">Freight<br/>
-                        Forwarding
+                        <div  className="moverev2">Insurance for<br/>
+                        product 
                         </div>
                         :
-                        <div  className="moverev3">Insurance<br/>
-                        for Product
+                        <div  className="moverev3">Digital Freight<br/>
+                        Forwarder
                         </div>
 
                     }
