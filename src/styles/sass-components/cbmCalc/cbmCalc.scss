@@ -160,6 +160,8 @@
     color: $color-white;
     color: $color-india-font;
     @include respond(tab-land){
+      // width: 80rem;
+      flex-basis: 100%;
     }
   }
   &__mob{
