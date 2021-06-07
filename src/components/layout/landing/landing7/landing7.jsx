@@ -16,7 +16,7 @@ class Landing7 extends Component {
         <div className="marquee">
           <div className="landing7__items">
             {this.props.blogs.map((blog) => (
-              <a href={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
+              <a href={`/${blog.blog.id}_${blog.id}`}>
                 <div className="landing7__items_card">
                   <img src={blog.labels[0]} alt="" />
                   <div className="landing7__items_card-title">
@@ -28,32 +28,7 @@ class Landing7 extends Component {
                 </div>
               </a>
             ))}
-            {this.props.blogs.map((blog) => (
-              <a href={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
-                <div className="landing7__items_card">
-                  <img src={blog.labels[0]} alt="" />
-                  <div className="landing7__items_card-title">
-                    <div>{blog.title}</div>
-                    <div className="landing7__items_card-title--date">
-                      {blog.published.split("T")[0]}
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-            {this.props.blogs.map((blog) => (
-              <a href={`/diary/blogs/${blog.blog.id}/posts/${blog.id}`}>
-                <div className="landing7__items_card">
-                  <img src={blog.labels[0]} alt="" />
-                  <div className="landing7__items_card-title">
-                    <div>{blog.title}</div>
-                    <div className="landing7__items_card-title--date">
-                      {blog.published.split("T")[0]}
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
+            
           </div>
         </div>
 

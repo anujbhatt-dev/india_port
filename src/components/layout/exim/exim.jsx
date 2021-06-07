@@ -17,7 +17,7 @@ class Exim extends Component{
       return (
           <div className="exim">
                 <iframe src="https://www.eximeducation.com/" title="W3Schools Free Online Web Tutorials"></iframe>
-               <a rel="noreferrer" target="_blank" href="http://eximeducation.com/">Visit EXIM</a>
+               <a rel="noreferrer" target="_blank" href="https://eximeducation.com/">Visit EXIM</a>
           </div>
       )
     }

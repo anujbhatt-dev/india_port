@@ -31,7 +31,10 @@ class Log extends Component {
 
        axios.get(BLOGGER_POST_API)
        .then(res=>this.setState({content:res.data}))
-       .catch(err=>alert("somethin went wrong reload the page."))
+       .catch(err=>{
+           alert("please check your network");
+           window.location="https://indiaport.com"
+        })
 
 
     }

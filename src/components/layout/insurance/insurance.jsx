@@ -4,7 +4,7 @@ import yellowPlane from "../../../assets/images/yellowPlane.svg";
 import mob1 from "../../../assets/images/mob1.svg";
 import man from "../../../assets/images/man.png";
 import umbrella from "../../../assets/images/umbrella.svg";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -85,13 +85,31 @@ class Insurance extends Component {
 
         <div className="freight__quote">
           Listed below are the types of insurance IndiaPort provides-
-          <ol>
+          <ul>
             <li>
               Open Cover- Provides insurance to all the shipments sent/ received
               within the scope of coverage. An open cover is not a policy
               therefore it is based on unstamped agreement.
             </li>
-          </ol>
+            <li>
+              Open Policy- The policy usually indicates the types of goods to be
+              insured. Provides automatic and continuous insurance protection to
+              all shipments sent/ received during the policy period. Once the
+              policy is issued, it remains in force until cancelled by either
+              party.
+            </li>
+            <li>
+              Specific Voyage Policy- It is suitable for a single transit or
+              voyage. It covers specified risks under marine cargo sent or
+              received during the policy period.
+            </li>
+            <li>
+              Annual Policy- this type of cargo insurance policy provides
+              coverage to goods from stated depots or processing units that are
+              hired or owned by the policyholder. An annual policy cannot be
+              transferred or assigned
+            </li>
+          </ul>
         </div>
         <div className="freight__flex freight__flex--mod">
           <Link to="/contact">
