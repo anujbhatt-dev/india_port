@@ -8,9 +8,9 @@
   width: 100vw;
   top: 0;
   z-index: 100000;
-  // background: #F7F7F7;
+  background: #F7F7F7;
   position: relative;
-  background: $color-white;
+  // background: $color-white;
   &__arrow{
     position: absolute;
     top:140%;
@@ -56,7 +56,7 @@
        padding:1rem 1rem;
        text-decoration: none;
        color: black;
-       color: $color-india-grey;
+       // color: $color-india-grey;
        border-radius: 0px;
        @include respond(tab-land){
          width: 100%;
@@ -74,7 +74,7 @@
   width: 12rem;
   text-align:center;
   &__name{
-    color:$color-india-grey;
+    color:$color-black;
     font-weight:bold;
     font-family: "Montserrat",serif;
   }
@@ -97,7 +97,7 @@
       border: 1px solid rgba($color-grey-light,.5);
       border-radius: 0;
       color: $color-black;
-      color:$color-india-grey;
+      // color:$color-india-grey;
       font-weight:bold;
       font-family: "Montserrat",serif;
       font-size: 1.5rem;
@@ -166,7 +166,7 @@
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
-    color: $color-india-grey;
+    color: $color-black;
     border-bottom:  1px dashed $color-india-grey;
     border-radius: 0;
   }
