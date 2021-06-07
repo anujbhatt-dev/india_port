@@ -6,6 +6,7 @@
   & iframe{
     margin-top: -15rem;
     height: calc(100vh + 15rem);
+    z-index: 0;
   }
   &__img{
     margin: 10rem 10vw 0 20vw;
@@ -19,14 +20,21 @@
   & a{
     display: inline-block;
     border: 1px solid $color-india-blue;
-    background: transparent;
+    background: white;
     color: $color-india-blue;
     text-decoration:none;
     padding: 2rem 6rem;
+    @include respond(tab-land){
+      padding: 4rem 6rem;
+    }
     font-size: 2rem;
-    margin: 2rem auto;
-    border-radius: 18px;
+    margin: 0rem auto;
+    // border-radius: 18px;
     transition: all .2s;
+    position:fixed;
+    bottom: 00rem;
+    width: 100%;
+    text-align: center;
     &:hover{
       background: $color-india-blue;
 
