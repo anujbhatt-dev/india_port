@@ -18,11 +18,11 @@ class Navigation extends Component{
     }
 
     componentDidMount=()=>{
-      $(".main").click(()=>{
-        this.setState({
-          on:false
-        })
-      })
+      // $(".main").click(()=>{
+      //   this.setState({
+      //     on:false
+      //   })
+      // })
     }
 
     render(){
