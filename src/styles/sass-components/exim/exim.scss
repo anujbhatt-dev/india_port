@@ -3,6 +3,10 @@
   display:flex;
   justify-content: center;
   flex-direction: column;
+  & iframe{
+    margin-top: -15rem;
+    height: calc(100vh + 15rem);
+  }
   &__img{
     margin: 10rem 10vw 0 20vw;
     width: 70vw;
